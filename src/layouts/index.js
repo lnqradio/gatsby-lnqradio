@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions"
 import Header from "../components/header"
-import Sidebar from "../components/sidebar"
+import Sidebar from "../components/Sidebar"
 import Helmet from "react-helmet"
 const Layout = ({ location, children }) => {
   const data = useStaticQuery(graphql`
