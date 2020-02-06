@@ -1,0 +1,30 @@
+.live-btn {
+  opacity: 1;
+  /* border-radius: 0.25rem; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @apply pr-0;
+}
+
+.live-btn:hover {
+  @apply text-red-200 !important;
+}
+
+.live-btn.active {
+}
+
+.live-stream {
+}
+.live-stream h3 {
+  @apply text-red-500 py-6 font-mono text-xl;
+}
+
+.live-stream .live {
+  background: rgb(40, 17, 54);
+  @apply text-center flex justify-center flex-col items-center;
+}
+.live-stream .live iframe {
+  @apply pt-6;
+}

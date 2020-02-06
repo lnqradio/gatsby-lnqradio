@@ -1,0 +1,100 @@
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+.home-post .actions .btn {
+  @apply rounded mx-2 px-4 py-2;
+}
+
+.home-post .awssld__wrapper {
+  height: 430px;
+}
+
+.bg-gray-800 {
+  background-color: #281136;
+}
+
+.home-post .awssld__wrapper .bg-gray-800 {
+  background-color: #281136;
+}
+
+.authors .awssld {
+  height: 90vh;
+}
+
+.posts.soundcloud .post .soundcloud-player {
+  transition: all 2s;
+}
+
+.posts.soundcloud .post:hover .soundcloud-player {
+  height: 300px;
+}
+
+.posts .post {
+  transition: all 2s;
+}
+
+.posts .post .shadow.bg-gray-800 {
+  background-color: #281136;
+}
+
+.posts.columnas .post {
+  flex: 1 1 50%;
+}
+
+.app-player {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  width: 300px;
+  bottom: 0;
+}
+
+@screen sm {
+  .app-player {
+    top: 0;
+  }
+}
+
+.awssld__content {
+  background-color: #281136;
+}
+
+.awssld__bullets {
+  background: #281136;
+  padding: 4px 0;
+  bottom: -20px;
+}
+
+.awssld__bullets button {
+  height: 4px;
+  width: 26px;
+  margin: 5px;
+  border-radius: 0;
+}
+
+.awssld__bullets .awssld__bullets--active,
+.awssld__bullets .awssld__bullets--active:hover {
+  transform: scale(1.1);
+  background: #fff;
+  @apply bg-red-600;
+}
+
+.app-player iframe {
+  height: 100vh;
+}
+
+iframe {
+  margin: 0;
+}

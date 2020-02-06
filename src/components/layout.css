@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-white;
+  background-color: #14061d;
+}
+
+@screen lg {
+  body {
+    margin-left: 0;
+  }
+}
+
+main {
+  @apply min-h-screen;
+}
+
+footer {
+  @apply text-center p-12 pt-6;
+  background-color: #0d0314;
+  padding-bottom: 130px;
+}
+
+aside {
+  top: 25px;
+}
+
+footer a {
+  @apply text-white;
+}
+
+footer a:hover {
+  @apply text-red-600;
+}
+
+.authors a.active {
+  @apply text-white;
+}
+
+@screen md {
+  .authors a {
+    background: #210e2d;
+  }
+
+  .authors a:hover {
+    background: #1b0c25;
+  }
+}
