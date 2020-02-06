@@ -59,12 +59,7 @@
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
-  ],
+
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
