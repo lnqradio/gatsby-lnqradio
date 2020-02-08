@@ -6,6 +6,7 @@ import Navigation from "../components/Navigation"
 export default props => {
   return (
     <Menu>
+      
       <Navigation />
     </Menu>
   )

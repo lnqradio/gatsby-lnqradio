@@ -3,7 +3,9 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import { FaSpotify } from "react-icons/fa"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import ReactTooltip from "react-tooltip"
 
 const RasputinPage = () => {
   const data = useStaticQuery(graphql`
@@ -17,6 +19,9 @@ const RasputinPage = () => {
             id
             title
             slug
+            spotify {
+              spotify
+            }
             soundcloud {
               soundcloud
             }
@@ -107,19 +112,36 @@ const RasputinPage = () => {
                     {item.node.title}
                   </h2>
                 </Link>
+
                 <p className="title px-6 pb-6">
                   {item.node.description.description}
                 </p>
-                <Link
-                  to={`/columnas/${kebabCase(
-                    item.node.author.slug
-                  )}/${kebabCase(item.node.slug)}/`}
-                  className="title "
-                >
-                  <h2 className="hover:text-white font-mono text-xl mb-6 px-6 text-red-500 font-mono">
-                    Escuchar columna
-                  </h2>
-                </Link>
+                <div className="listen flex justify-between items-center">
+                  <Link
+                    to={`/columnas/${kebabCase(
+                      item.node.author.slug
+                    )}/${kebabCase(item.node.slug)}/`}
+                    className="title "
+                  >
+                    <h2 className="hover:text-white font-mono text-xl  px-6 text-red-500 font-mono">
+                      Escuchar columna
+                    </h2>
+                  </Link>
+                  <ReactTooltip
+                    place="bottom"
+                    type="dark"
+                    effect="solid"
+                    className="shadow bg-red-500"
+                  />
+                  <a
+                    href={`${item.node.spotify.spotify}`}
+                    target="_blank"
+                    data-tip="¿Te vas a Spotify?"
+                    className=" block text-2xl hover:text-white  bg-green-700 p-6"
+                  >
+                    <FaSpotify className="text-green-100" />
+                  </a>
+                </div>
               </div>
             ))}
           </div>

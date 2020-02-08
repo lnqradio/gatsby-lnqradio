@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Image from "../components/image"
 import "./header.css"
 
 const Header = ({ siteTitle }) => (
@@ -17,9 +18,9 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <nav className="w-full flex">
+      <nav className="w-full flex none">
         <Link activeClassName="active" to="/columnas/">
-          Columnas
+          Podcasts
         </Link>
         <Link activeClassName="active" to="/entrevistas/">
           Entrevistas
@@ -27,6 +28,7 @@ const Header = ({ siteTitle }) => (
         <Link activeClassName="active" to="/episodios/">
           Episodios
         </Link>
+
         <span className="flex-1"></span>
 
         <Link

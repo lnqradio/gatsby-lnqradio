@@ -66,14 +66,14 @@ const ColumnasPage = () => {
             ))}
           </div>
         </div>
-        <div className="posts columnas soundcloud flex flex-wrap  w-full m-auto p-4 justify-center">
+        <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-4 justify-center">
           <h2 className="text-white block w-full p-4 text-3xl font-mono text-center">
             Destacadas
           </h2>
           {data.contenful.edges.map((item, i) => (
             <div
               key={item.node.id}
-              className="post border-red-500 border-t-4 animated fadeIn slow max-w-md w-full m-3 flex-auto"
+              className="post border-red-500 border-t-4 animated fadeInUp slow max-w-md w-full m-3 flex-auto"
             >
               <div className="px-0 pt-4 shadow bg-gray-800 mb-12 h-full">
                 <Link

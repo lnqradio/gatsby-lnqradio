@@ -39,11 +39,11 @@ const EntrevistasPage = () => {
           Todas entrevistas
         </h1>
       </div>
-      <div className="posts flex flex-wrap w-full m-auto justify-center ">
+      <div className="posts animation flex flex-wrap w-full m-auto justify-center ">
         {data.contenful.edges.map((item, i) => (
           <div
             key={item.node.id}
-            class="post mb-6 w-full md:w-1/3 m-6 bg-gray-800 animated fadeIn slow border-red-500 border-t-4"
+            class="post mb-6 w-full md:w-1/3 m-6 bg-gray-800 animated fadeInUp slow border-red-500 border-t-4"
           >
             <div className="p-0 shadow-lg">
               <div className="heading flex  flex-col-reverse md:flex-row p-4 text-center">
@@ -56,13 +56,6 @@ const EntrevistasPage = () => {
                   </p>
                 </div>
               </div>
-
-              <div
-                className="h-full"
-                dangerouslySetInnerHTML={{
-                  __html: item.node.soundcloud.soundcloud,
-                }}
-              />
             </div>
           </div>
         ))}
