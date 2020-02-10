@@ -102,15 +102,16 @@ const ExpasantePage = () => {
                 />
               </div>
             ))}
-            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full font-mono">
-              Ex-Pasante
+            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full">
+              <h1 className="text-white pb-3 mb-2 border-b">Ex-Pasante</h1>
+
               <a
                 href="https://open.spotify.com/search/lnq%20expasante/episodes"
                 target="_blank"
-                className=" flex items-center text-base hover:text-white p-2 pl-0 text-green-700"
+                className=" flex items-center text-base hover:text-white p-2 pl-0 font-mono text-green-700"
               >
-                <span className="pr-3 pt-0">Reproducir en Spotify</span>
-                <FaSpotify className="text-green-100 text-xl" />
+                <FaSpotify className=" text-xl" />
+                <span className="pl-3 pt-0">Reproducir en Spotify</span>
               </a>
             </div>
           </div>

@@ -106,21 +106,22 @@ const CarlinPage = () => {
                 />
               </div>
             ))}
-            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full font-mono">
-              Carlín
+            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full">
+              <h1 className="text-white pb-3 mb-2 border-b">Carlín</h1>
               <AnchorLink
                 href={`#author-player`}
                 className="text-base block text-red-500 hover:text-white font-mono my-3"
               >
-                Escuchar Playlist
+                <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
+                <span className="pl-3 pt-0">Escuchar Playlist</span>
               </AnchorLink>
               <a
-                href="https://open.spotify.com/show/4ckNz9pdLNTunf82vBEfGm?si=gUsRnjsXTEq9fKXUi3uJUg"
+                href="https://open.spotify.com/search/lnqradio%20carl%C3%ADn/episodes"
                 target="_blank"
-                className=" flex items-center text-base hover:text-white p-2 pl-0 text-green-700"
+                className=" flex items-center text-base hover:text-white p-2 pl-0 font-mono text-green-700"
               >
-                <span className="pr-3 pt-0">Reproducir en Spotify</span>
-                <FaSpotify className="text-green-100 text-xl" />
+                <FaSpotify className=" text-xl" />
+                <span className="pl-3 pt-0">Reproducir en Spotify</span>
               </a>
             </div>
           </div>

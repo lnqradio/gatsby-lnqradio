@@ -7,23 +7,28 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="En VIVO" />
     <div className="live-stream max-w-4xl pt-6 md:pt-16 m-auto text-left">
+      <div className="animated fadeIn slower pt-6 text-xl relative border-purple-900 pb-3 border-b-2">
+        <h1 className="text-white text-left text-3xl w-full animated fadeIn  slow px-0 pt-0 ">
+          Escuchá el programa en vivo
+        </h1>
+        <h2 className="text-red-500 text-xl w-full text-left animated fadeIn slow px-0 pt-3 mb-6 ">
+          Todos los viernes a las 20hs
+        </h2>
+        <iframe
+          width="300px"
+          height="200px"
+          title="live"
+          className="relative right-0 top-0 md:absolute"
+          name="htmlComp-iframe"
+          scrolling="auto"
+          src="https://www-lnqradio-com.filesusr.com/html/80866a_abf8a98d014638b9f83f01f283f520d3.html"
+        ></iframe>
+      </div>
       <div className="animated fadeIn slower pt-6 text-xl">
         <div className="live relative">
-          <h1 className="text-white text-left text-3xl w-full animated fadeIn  slow px-6 pt-12 ">
-            Escuchá el programa en vivo
-          </h1>
-          <h2 className="text-red-500 text-xl w-full text-left animated fadeIn slow px-6 pt-3 mb-6 ">
-            Todos los viernes a las 20hs
+          <h2 className="text-left block w-full text-white p-6 pb-0">
+            Selección LNQRadio
           </h2>
-          <iframe
-            width="300px"
-            height="200px"
-            title="live"
-            className="relative right-0 top-0 md:absolute"
-            name="htmlComp-iframe"
-            scrolling="auto"
-            src="https://www-lnqradio-com.filesusr.com/html/80866a_abf8a98d014638b9f83f01f283f520d3.html"
-          ></iframe>
           <iframe
             width="100%"
             height="850"

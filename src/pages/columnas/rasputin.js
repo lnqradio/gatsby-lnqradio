@@ -4,7 +4,6 @@ import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { FaSpotify } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Img from "gatsby-image"
 
@@ -101,25 +100,26 @@ const RasputinPage = () => {
                 <Img
                   alt=""
                   fluid={image.node.imagen.fluid}
-                  className="mb-6 w-full"
+                  className="mb-3 w-full"
                 />
               </div>
             ))}
-            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full font-mono">
-              Rasputín
+            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full">
+              <h1 className="text-white pb-3 mb-2 border-b">Rasputín</h1>
               <AnchorLink
                 href={`#author-player`}
                 className="text-base block text-red-500 hover:text-white font-mono my-3"
               >
-                Escuchar Playlist
+                <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
+                <span className="pl-3 pt-0">Escuchar Playlist</span>
               </AnchorLink>
               <a
                 href="https://open.spotify.com/search/lnqradio%20rasputin/episodes"
                 target="_blank"
-                className=" flex items-center text-base hover:text-white p-2 pl-0 text-green-700"
+                className=" flex items-center text-base hover:text-white p-2 pl-0 font-mono text-green-700"
               >
-                <span className="pr-3 pt-0">Reproducir en Spotify</span>
-                <FaSpotify className="text-green-100 text-xl" />
+                <FaSpotify className=" text-xl" />
+                <span className="pl-3 pt-0">Reproducir en Spotify</span>
               </a>
             </div>
           </div>
@@ -148,26 +148,29 @@ const RasputinPage = () => {
                     to={`/columnas/${kebabCase(
                       item.node.author.slug
                     )}/${kebabCase(item.node.slug)}/`}
-                    className="title "
+                    className="title w-full "
                   >
                     <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
                       Escuchar columna
                     </h2>
                   </Link>
-                  <ReactTooltip
-                    place="left"
-                    type="dark"
-                    effect="solid"
-                    className="shadow bg-red-500"
-                  />
+
                   <a
                     href={`${item.node.spotify.spotify}`}
                     target="_blank"
-                    data-tip="¿Te vas a Spotify?"
+                    data-tip="¿Te vas para Spotify?"
                     className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                   >
                     <FaSpotify className="text-green-100" />
                   </a>
+
+                  <AnchorLink
+                    href={`#author-player`}
+                    data-tip="Escuchár en Soundcloud"
+                    className=" block text-2xl hover:text-white  hover:bg-orange-700 p-6"
+                  >
+                    <i class="fa fa-soundcloud " aria-hidden="true"></i>
+                  </AnchorLink>
                 </div>
               </div>
             ))}
