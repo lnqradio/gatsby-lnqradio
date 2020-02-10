@@ -4,10 +4,15 @@
   width: 36px;
   height: 30px;
   left: 15px;
+  display: block;
   top: 30px;
-  opacity: 0.5;
+  opacity: 1;
   transform: scale(0.8);
   transition: all 0.5s;
+}
+
+.logo {
+  display: none;
 }
 
 @screen sm {
@@ -15,10 +20,18 @@
     position: absolute;
     width: 36px;
     height: 30px;
+    display: none;
     left: 15px;
     top: 15px;
     opacity: 0.5;
     transition: all 0.5s;
+  }
+
+  .logo {
+    display: block;
+    position: relative;
+    top: 2px;
+    left: 5px;
   }
 }
 

@@ -7,6 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
 import "./index.css"
+import Img from "gatsby-image"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -20,6 +21,11 @@ const IndexPage = () => {
               id
               title
               slug
+              heroImage {
+                fixed(width: 400, height: 200) {
+                  ...GatsbyContentfulFixed
+                }
+              }
               description {
                 description
               }
@@ -65,26 +71,36 @@ const IndexPage = () => {
           <AwesomeSlider>
             {item.node.homePage.map((slider, i) => (
               <div key={slider.slug} className="post ">
-                <div className="p-6  text-center bg-gray-800">
-                  <Link
-                    to={`/columnas/${kebabCase(slider.author.name)}/`}
-                    className="block mb-3 text-gray-500 hover:text-white font-mono"
-                  >
-                    Columna x {slider.author.name}
-                  </Link>
-                  <h2 className="title text-white text-2xl">{slider.title}</h2>
-                  <p className="mt-3 max-w-xl">
-                    {slider.description.description}
-                  </p>
-                  <div className="actions my-6">
+                <div className="p-6 flex text-center bg-gray-800">
+                  <Img
+                    alt=""
+                    fixed={slider.heroImage.fixed}
+                    className="mb-6 max-w-lg mr-3 mt-2 hidden md:block"
+                  />
+                  <div className="description text-left pl-3 max-w-sm">
                     <Link
-                      to={`/columnas/${kebabCase(
-                        slider.author.name
-                      )}/${kebabCase(slider.slug)}`}
-                      className="btn bg-red-700 hover:text-white hover:bg-red-600"
+                      to={`/columnas/${kebabCase(slider.author.name)}/`}
+                      className="block mb-3 text-gray-500 hover:text-white font-mono"
                     >
-                      Escuchar columna
+                      Columna x {slider.author.name}
                     </Link>
+                    <h2 className="title text-white text-2xl">
+                      {slider.title}
+                    </h2>
+                    <p className="mt-3 max-w-xl">
+                      {slider.description.description}
+                    </p>
+                    <div className="actions my-6">
+                      <Link
+                        to={`/columnas/${kebabCase(
+                          slider.author.name
+                        )}/${kebabCase(slider.slug)}`}
+                        className="btn bg-red-700  hover:text-white hover:bg-red-600"
+                        style={{ marginLeft: "0" }}
+                      >
+                        Escuchar columna
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

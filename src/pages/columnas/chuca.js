@@ -4,6 +4,9 @@ import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import { FaSpotify } from "react-icons/fa"
+import ReactTooltip from "react-tooltip"
+import Img from "gatsby-image"
 
 const ChucaPage = () => {
   const data = useStaticQuery(graphql`
@@ -17,6 +20,9 @@ const ChucaPage = () => {
             id
             title
             slug
+            spotify {
+              spotify
+            }
             soundcloud {
               soundcloud
             }
@@ -34,6 +40,11 @@ const ChucaPage = () => {
         edges {
           node {
             id
+            imagen {
+              fluid(maxWidth: 1200, maxHeight: 1000) {
+                ...GatsbyContentfulFluid
+              }
+            }
             allTracksPlayer {
               allTracksPlayer
             }
@@ -83,16 +94,33 @@ const ChucaPage = () => {
         </div>
 
         <section className="flex flex-col justify-center w-full">
-          <div className="hero bg-orange-900  h-64 flex flex-col items-center justify-center">
-            <h1 className="text-3xl text-center px-3 text-white m-0 w-full font-mono">
+          <div className=" flex  w-full md:w-2/3 max-w-6xl p-8 m-auto bg-gray-900 my-12">
+            {data.allContentfulAutores.edges.map((image, i) => (
+              <div className="w-56">
+                <Img
+                  alt=""
+                  fluid={image.node.imagen.fluid}
+                  className="mb-6 w-full"
+                />
+              </div>
+            ))}
+            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full font-mono">
               Chuca
-            </h1>
-            <AnchorLink
-              href={`#author-player`}
-              className="text-base text-red-500 hover:text-white  font-mono my-3"
-            >
-              Playlist listo para escuchar
-            </AnchorLink>
+              <AnchorLink
+                href={`#author-player`}
+                className="text-base block text-red-500 hover:text-white font-mono my-3"
+              >
+                Escuchar Playlist
+              </AnchorLink>
+              <a
+                href="https://open.spotify.com/show/4ckNz9pdLNTunf82vBEfGm?si=gUsRnjsXTEq9fKXUi3uJUg"
+                target="_blank"
+                className=" flex items-center text-base hover:text-white p-2 pl-0 text-green-700"
+              >
+                <span className="pr-3 pt-0">Reproducir en Spotify</span>
+                <FaSpotify className="text-green-100 text-xl" />
+              </a>
+            </div>
           </div>
           <div className="posts soundcloud flex flex-wrap w-full md:w-2/3 max-w-6xl px-6 m-auto">
             {data.contenful.edges.map((item, i) => (
@@ -110,16 +138,32 @@ const ChucaPage = () => {
                 <p className="title px-6 pb-6">
                   {item.node.description.description}
                 </p>
-                <Link
-                  to={`/columnas/${kebabCase(
-                    item.node.author.slug
-                  )}/${kebabCase(item.node.slug)}/`}
-                  className="title "
-                >
-                  <h2 className="hover:text-white font-mono text-xl mb-6 px-6 text-red-500 font-mono">
-                    Escuchar columna
-                  </h2>
-                </Link>
+                <div className="listen flex justify-between items-center bg-gray-900">
+                  <Link
+                    to={`/columnas/${kebabCase(
+                      item.node.author.slug
+                    )}/${kebabCase(item.node.slug)}/`}
+                    className="title "
+                  >
+                    <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
+                      Escuchar columna
+                    </h2>
+                  </Link>
+                  <ReactTooltip
+                    place="bottom"
+                    type="dark"
+                    effect="solid"
+                    className="shadow bg-red-500"
+                  />
+                  <a
+                    href={`${item.node.spotify.spotify}`}
+                    target="_blank"
+                    data-tip="¿Te vas a Spotify?"
+                    className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
+                  >
+                    <FaSpotify className="text-green-100" />
+                  </a>
+                </div>
               </div>
             ))}
           </div>

@@ -4,8 +4,9 @@ import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { FaSpotify } from "react-icons/fa"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 import ReactTooltip from "react-tooltip"
+import AnchorLink from "react-anchor-link-smooth-scroll"
+import Img from "gatsby-image"
 
 const RasputinPage = () => {
   const data = useStaticQuery(graphql`
@@ -19,6 +20,7 @@ const RasputinPage = () => {
             id
             title
             slug
+
             spotify {
               spotify
             }
@@ -39,6 +41,11 @@ const RasputinPage = () => {
         edges {
           node {
             id
+            imagen {
+              fluid(maxWidth: 1200, maxHeight: 1000) {
+                ...GatsbyContentfulFluid
+              }
+            }
             allTracksPlayer {
               allTracksPlayer
             }
@@ -88,18 +95,38 @@ const RasputinPage = () => {
         </div>
 
         <section className="flex flex-col justify-center w-full">
-          <div className="hero bg-orange-900  h-64 flex flex-col items-center justify-center">
-            <h1 className="text-3xl text-center px-3 text-white m-0 w-full font-mono">
+          <div className=" flex  w-full md:w-2/3 max-w-6xl p-8 m-auto bg-gray-900 my-12">
+            {data.allContentfulAutores.edges.map((image, i) => (
+              <div className="w-56">
+                <Img
+                  alt=""
+                  fluid={image.node.imagen.fluid}
+                  className="mb-6 w-full"
+                />
+              </div>
+            ))}
+            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full font-mono">
               Rasputín
-            </h1>
-            <AnchorLink
-              href={`#author-player`}
-              className="text-base text-red-500 hover:text-white  font-mono my-3"
-            >
-              Playlist listo para escuchar
-            </AnchorLink>
+              <AnchorLink
+                href={`#author-player`}
+                className="text-base block text-red-500 hover:text-white font-mono my-3"
+              >
+                Escuchar Playlist
+              </AnchorLink>
+              <a
+                href="https://open.spotify.com/show/4ckNz9pdLNTunf82vBEfGm?si=gUsRnjsXTEq9fKXUi3uJUg"
+                target="_blank"
+                className=" flex items-center text-base hover:text-white p-2 pl-0 text-green-700"
+              >
+                <span className="pr-3 pt-0">Reproducir en Spotify</span>
+                <FaSpotify className="text-green-100 text-xl" />
+              </a>
+            </div>
           </div>
           <div className="posts soundcloud flex flex-wrap w-full md:w-2/3 max-w-6xl px-6 m-auto">
+            <h3 className="text-white py-6 text-2xl font-light">
+              Todas las Columnas
+            </h3>
             {data.contenful.edges.map((item, i) => (
               <div className="post px-0 pt-4 shadow bg-gray-800 mb-12 w-full">
                 <Link
@@ -116,19 +143,19 @@ const RasputinPage = () => {
                 <p className="title px-6 pb-6">
                   {item.node.description.description}
                 </p>
-                <div className="listen flex justify-between items-center">
+                <div className="listen flex justify-between items-center bg-gray-900">
                   <Link
                     to={`/columnas/${kebabCase(
                       item.node.author.slug
                     )}/${kebabCase(item.node.slug)}/`}
                     className="title "
                   >
-                    <h2 className="hover:text-white font-mono text-xl  px-6 text-red-500 font-mono">
+                    <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
                       Escuchar columna
                     </h2>
                   </Link>
                   <ReactTooltip
-                    place="bottom"
+                    place="left"
                     type="dark"
                     effect="solid"
                     className="shadow bg-red-500"
@@ -137,7 +164,7 @@ const RasputinPage = () => {
                     href={`${item.node.spotify.spotify}`}
                     target="_blank"
                     data-tip="¿Te vas a Spotify?"
-                    className=" block text-2xl hover:text-white  bg-green-700 p-6"
+                    className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                   >
                     <FaSpotify className="text-green-100" />
                   </a>

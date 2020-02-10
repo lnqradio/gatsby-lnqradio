@@ -25,7 +25,7 @@ const EpisodiosPage = () => {
             }
             publishDate(formatString: "MMMM Do, YYYY", locale: "es")
             heroImage {
-              fluid(maxWidth: 600, maxHeight: 200) {
+              fluid(maxWidth: 1200, maxHeight: 1000) {
                 ...GatsbyContentfulFluid
               }
             }
@@ -72,7 +72,7 @@ const EpisodiosPage = () => {
                   <Img
                     alt=""
                     fluid={item.node.heroImage.fluid}
-                    className="mb-6 "
+                    className="mb-6 h-48"
                   />
                   <Link
                     to={`/episodios/${kebabCase(item.node.slug)}/`}

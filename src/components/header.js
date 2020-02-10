@@ -2,22 +2,24 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Image from "../components/image"
+
 import "./header.css"
 
 const Header = ({ siteTitle }) => (
   <header className="header fixed z-10 top-0 right-0 left-0 md:relative">
     <div className="inner-header text-left pl-20 block pr-3 md:flex md:items-baseline ">
-      <h1 className="m-0 p-0 md:mr-12 ">
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        <div className="w-16 absolute p-1 mt-1 logo">
+          <Image />
+        </div>
+        <h1 className="m-0 p-0 md:mr-12 text-white">{siteTitle}</h1>
+      </Link>
       <nav className="w-full flex none">
         <Link activeClassName="active" to="/columnas/">
           Podcasts

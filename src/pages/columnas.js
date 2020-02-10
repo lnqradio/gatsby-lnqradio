@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { kebabCase } from "lodash"
+import { FaSpotify } from "react-icons/fa"
+import ReactTooltip from "react-tooltip"
 
 const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
@@ -15,6 +17,9 @@ const ColumnasPage = () => {
             title
             soundcloud {
               soundcloud
+            }
+            spotify {
+              spotify
             }
             slug
             author {
@@ -51,7 +56,7 @@ const ColumnasPage = () => {
     <Layout>
       <SEO title="Columnas" />
       <div className="flex flex-col md:flex-row">
-        <div className="hero bg-gray-800 p-6 md:p-0 xl:sticky inset-x-0 top-0 z-50 mb-0 w-full md:w-48">
+        <div className="hero bg-gray-800 p-6 md:p-0 xl:sticky inset-x-0 top-0 z-50 mb-0 w-full md:w-56">
           <div className="authors flex justify-center md:pt-6 flex-wrap md:justify-start md:px-0 md:sticky md:top-0 m-auto max-w-4xl ">
             <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white">
               Columnas
@@ -75,7 +80,7 @@ const ColumnasPage = () => {
               key={item.node.id}
               className="post border-red-500 border-t-4 animated fadeInUp slow max-w-md w-full m-3 flex-auto"
             >
-              <div className="px-0 pt-4 shadow bg-gray-800 mb-12 h-full">
+              <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">
                 <Link
                   to={`/columnas/${kebabCase(
                     item.node.author.name
@@ -93,6 +98,26 @@ const ColumnasPage = () => {
                 <p className="title px-6 pb-6">
                   {item.node.description.description}
                 </p>
+                <div className="listen flex justify-between items-center bg-gray-900 absolute bottom-0 left-0 right-0">
+                  <Link
+                    to={`/columnas/${kebabCase(
+                      item.node.author.name
+                    )}/${kebabCase(item.node.slug)}/`}
+                    className="title "
+                  >
+                    <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
+                      Escuchar columna
+                    </h2>
+                  </Link>
+
+                  <a
+                    href={`${item.node.spotify.spotify}`}
+                    target="_blank"
+                    className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
+                  >
+                    <FaSpotify className="text-green-100" />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
