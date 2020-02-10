@@ -71,11 +71,11 @@ const IndexPage = () => {
           <AwesomeSlider>
             {item.node.homePage.map((slider, i) => (
               <div key={slider.slug} className="post ">
-                <div className="p-6 flex text-center bg-gray-800">
+                <div className="slider-item p-6 flex text-center bg-gray-800">
                   <Img
                     alt=""
                     fixed={slider.heroImage.fixed}
-                    className="mb-6 max-w-lg mr-3 mt-2 hidden md:block"
+                    className="mb-6 max-w-lg mr-3 mt-2"
                   />
                   <div className="description text-left pl-3 max-w-sm">
                     <Link

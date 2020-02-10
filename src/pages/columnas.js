@@ -69,6 +69,17 @@ const ColumnasPage = () => {
                 {item.node.name}
               </Link>
             ))}
+           
+              <Link
+                to={`/entrevistas/`}
+                className="px-3 hidden md:inline-block font-bold font-sans text-base md:pb-3 pt-3 text-white hover:text-white w-full"
+              >
+                Entrevistas
+              </Link>
+            
+            <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white">
+              Artisticas
+            </h4>
           </div>
         </div>
         <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-4 justify-center">
