@@ -94,9 +94,9 @@ const EricPage = () => {
         </div>
 
         <section className="flex flex-col justify-center w-full">
-          <div className=" flex  w-full md:w-2/3 max-w-6xl p-8 m-auto bg-gray-900 my-12">
+          <div className="flex-col items-center md:flex-row flex w-full md:w-2/3 max-w-6xl p-8 m-auto bg-gray-900 md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
-              <div className="w-56">
+              <div className="w-full md:w-56">
                 <Img
                   alt=""
                   fluid={image.node.imagen.fluid}
@@ -113,7 +113,7 @@ const EricPage = () => {
                 Escuchar Playlist
               </AnchorLink>
               <a
-                href="https://open.spotify.com/show/4ckNz9pdLNTunf82vBEfGm?si=gUsRnjsXTEq9fKXUi3uJUg"
+                href="https://open.spotify.com/search/lnqradio%20eric/episodes"
                 target="_blank"
                 className=" flex items-center text-base hover:text-white p-2 pl-0 text-green-700"
               >

@@ -96,9 +96,9 @@ const CarlinPage = () => {
         </div>
 
         <section className="flex flex-col justify-center  w-full ">
-          <div className=" flex  w-full md:w-2/3 max-w-6xl p-8 m-auto bg-gray-900 my-12">
+          <div className="flex-col items-center md:flex-row flex w-full md:w-2/3 max-w-6xl p-8 m-auto bg-gray-900 md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
-              <div className="w-56">
+              <div className="w-full md:w-56">
                 <Img
                   alt=""
                   fluid={image.node.imagen.fluid}
