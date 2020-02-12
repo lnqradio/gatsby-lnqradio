@@ -95,7 +95,7 @@ const IndexPage = () => {
                         to={`/columnas/${kebabCase(
                           slider.author.name
                         )}/${kebabCase(slider.slug)}`}
-                        className="btn bg-red-700  hover:text-white hover:bg-red-600"
+                        className="btn bg-red-700 scale-0 hover:scale-95  hover:text-white hover:bg-red-600 transition duration-500 ease-in-out hover:bg-red-500 transform hover:scale-110"
                         style={{ marginLeft: "0" }}
                       >
                         Escuchar columna

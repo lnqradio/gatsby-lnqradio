@@ -59,11 +59,12 @@ const EntrevistasPage = () => {
                   <a
                     href={`${item.node.spotify}`}
                     target="_blank"
+                    rel="noopener noreferrer"
                     data-tip="¿Te vas a Spotify?"
-                    className="text-base text-green-600 flex hover:text-white items-center my-6  relative "
+                    className="text-base text-green-600 flex hover:text-white items-center my-6 font-mono relative "
                   >
+                    <FaSpotify className="text-green-100 mr-3" />
                     <span>Reproducir en Spotify</span>
-                    <FaSpotify className="text-green-100 ml-3" />
                   </a>
                   <div
                     className="h-full"

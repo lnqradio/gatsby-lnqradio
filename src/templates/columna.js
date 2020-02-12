@@ -5,7 +5,6 @@ import get from "lodash/get"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { FaSpotify } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
 
 class ColumnaTemplate extends React.Component {
   render() {
@@ -40,6 +39,7 @@ class ColumnaTemplate extends React.Component {
               <a
                 href={`${columna.spotify.spotify}`}
                 target="_blank"
+                rel="noopener noreferrer"
                 className=" block text-2xl hover:text-white bg-green-700 p-6 mt-3 rounded-sm hover:bg-green-800"
               >
                 <h2 className=" flex font-mono text-xl px-6 text-white  font-mono">

@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { kebabCase } from "lodash"
 import { FaSpotify } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
 
 const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
@@ -113,6 +112,7 @@ const ColumnasPage = () => {
                   <a
                     href={`${item.node.spotify.spotify}`}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                   >
                     <FaSpotify className="text-green-100" />

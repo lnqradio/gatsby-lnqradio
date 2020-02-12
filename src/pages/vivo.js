@@ -35,6 +35,7 @@ const NotFoundPage = () => (
             scrolling="no"
             className="w-full  my-6 p-6"
             frameborder="no"
+            title="Spotify"
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/753004221&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
           ></iframe>
@@ -44,6 +45,7 @@ const NotFoundPage = () => (
             <iframe
               src="https://player.twitch.tv/?autoplay=false&video=v549655400"
               frameborder="0"
+              title="twitch"
               allowfullscreen="true"
               scrolling="no"
               height="378"

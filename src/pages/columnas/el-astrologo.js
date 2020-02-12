@@ -116,6 +116,7 @@ const AstrologoPage = () => {
               <a
                 href="https://open.spotify.com/search/lnq%20astrologo/episodes"
                 target="_blank"
+                rel="noopener noreferrer"
                 className=" flex items-center text-base hover:text-white p-2 pl-0 font-mono text-green-700"
               >
                 <FaSpotify className=" text-xl" />
@@ -159,6 +160,7 @@ const AstrologoPage = () => {
                   <a
                     href={`${item.node.spotify.spotify}`}
                     target="_blank"
+                    rel="noopener noreferrer"
                     data-tip="¿Te vas a Spotify?"
                     className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                   >
