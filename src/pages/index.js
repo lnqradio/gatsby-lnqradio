@@ -66,47 +66,25 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Destacados" />
-      <div className="home-post flex flex-wrap w-full m-auto pb-6">
-        {data.contenful.edges.map((item, i) => (
-          <AwesomeSlider>
-            {item.node.homePage.map((slider, i) => (
-              <div key={slider.slug} className="post ">
-                <div className="slider-item p-6 flex text-center bg-gray-800">
-                  <Img
-                    alt=""
-                    fixed={slider.heroImage.fixed}
-                    className="mb-6 max-w-lg mr-3 mt-2"
-                  />
-                  <div className="description text-left pl-3 max-w-sm">
-                    <Link
-                      to={`/columnas/${kebabCase(slider.author.name)}/`}
-                      className="block mb-3 text-gray-500 hover:text-white font-mono"
-                    >
-                      Columna x {slider.author.name}
-                    </Link>
-                    <h2 className="title text-white text-2xl">
-                      {slider.title}
-                    </h2>
-                    <p className="mt-3 max-w-xl">
-                      {slider.description.description}
-                    </p>
-                    <div className="actions my-6">
-                      <Link
-                        to={`/columnas/${kebabCase(
-                          slider.author.name
-                        )}/${kebabCase(slider.slug)}`}
-                        className="btn bg-red-700 scale-0 hover:scale-95  hover:text-white hover:bg-red-600 transition duration-500 ease-in-out hover:bg-red-500 transform hover:scale-110"
-                        style={{ marginLeft: "0" }}
-                      >
-                        Escuchar columna
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </AwesomeSlider>
-        ))}
+      <div className="homeHero py-12 pb-2 bg-gray-800 flex flex-col justify-center items-center">
+        <h1 className="text-2xl pb-6 text-white font-mono w-full text-center">
+          La Noche Que ella soño con el Centro Half
+        </h1>
+        <h1 className="text-white text-center text-3xl w-full animated fadeIn  slow px-0 pt-0 ">
+          Escuchá el programa en vivo
+        </h1>
+        <h2 className="text-red-500 text-xl w-full text-center animated fadeIn slow px-0 pt-3 mb-6 ">
+          Todos los viernes a las 20hs
+        </h2>
+        <iframe
+          width="300px"
+          height="200px"
+          title="live"
+          className="h-40"
+          name="htmlComp-iframe"
+          scrolling="auto"
+          src="https://www-lnqradio-com.filesusr.com/html/80866a_abf8a98d014638b9f83f01f283f520d3.html"
+        ></iframe>
       </div>
       <div className="last-show max-w-xl m-auto mt-12 mb-24 bg-gray-700 ">
         <h1 className="text-white text-sm bg-gray-800 p-6 pb-1 text-left  font-mono flex justify-between border-gray-900 border-t">

@@ -13,7 +13,7 @@ class ColumnaTemplate extends React.Component {
     return (
       <Layout>
         <SEO title={`${columna.title} - ${columna.author.name}`} />
-        <div className="hero bg-orange-900 h-24 pt-4 flex flex-col items-center mb-0 justify-center hover:bg-gray-800">
+        <div className="hero bg-gray-900 h-24 pt-4 flex flex-col items-center mb-0 justify-center hover:bg-gray-800">
           <Link
             to={`/columnas/${kebabCase(columna.author.slug)}/`}
             className="title font-mono text-center px-3 mb-5 hover:text-white text-red-500"

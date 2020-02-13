@@ -5,11 +5,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { kebabCase } from "lodash"
 import { FaSpotify } from "react-icons/fa"
+import AwesomeSlider from "react-awesome-slider"
+import "react-awesome-slider/dist/styles.css"
+import Img from "gatsby-image"
 
 const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
     query ColumnasQuery {
-      contenful: allContentfulColumnas(sort: { fields: [title], order: DESC }) {
+      contenful: allContentfulColumnas(
+        sort: { order: DESC, fields: [updatedAt] }
+        skip: 3
+        limit: 12
+      ) {
         edges {
           node {
             id
@@ -26,6 +33,34 @@ const ColumnasPage = () => {
             }
             description {
               description
+            }
+          }
+        }
+      }
+      destacados: allContentfulDestacados(
+        sort: { fields: [createdAt], order: DESC }
+      ) {
+        edges {
+          node {
+            homePage {
+              id
+              title
+              slug
+              heroImage {
+                fixed(width: 400, height: 200) {
+                  ...GatsbyContentfulFixed
+                }
+              }
+              description {
+                description
+              }
+              soundcloud {
+                soundcloud
+              }
+              author {
+                id
+                name
+              }
             }
           }
         }
@@ -55,8 +90,8 @@ const ColumnasPage = () => {
     <Layout>
       <SEO title="Columnas" />
       <div className="flex flex-col md:flex-row">
-        <div className="hero bg-gray-800 p-6 md:p-0 xl:sticky inset-x-0 top-0 z-50 mb-0 w-full md:w-56">
-          <div className="authors flex justify-center md:pt-6 flex-wrap md:justify-start md:px-0 md:sticky md:top-0 m-auto max-w-4xl ">
+        <div className=" bg-gray-800 p-6 md:p-0 xl:sticky inset-x-0 top-0 z-50 mb-0 w-full md:w-56 border-r border-red-600 hover:border-red-800 duration-500 transition-all">
+          <div className="authors flex justify-center md:pt-6 flex-wrap md:justify-start md:px-0 md:sticky md:top-0 m-auto max-w-4xl">
             <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white">
               Columnas
             </h4>
@@ -70,9 +105,49 @@ const ColumnasPage = () => {
             ))}
           </div>
         </div>
-        <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-4 justify-center">
+        <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-0 justify-center">
+          {data.destacados.edges.map((item, i) => (
+            <AwesomeSlider className="h-64 mb-12">
+              {item.node.homePage.map((slider, i) => (
+                <div key={slider.slug} className="post max-w-4xl pt-6">
+                  <div className="slider-item p-6 flex text-center bg-gray-800">
+                    <Img
+                      alt=""
+                      fixed={slider.heroImage.fixed}
+                      className="mb-6 max-w-lg mr-3 mt-2"
+                    />
+                    <div className="description text-left pl-3 max-w-sm">
+                      <Link
+                        to={`/columnas/${kebabCase(slider.author.name)}/`}
+                        className="block mb-3 text-gray-500 hover:text-white font-mono"
+                      >
+                        Columna x {slider.author.name}
+                      </Link>
+                      <h2 className="title text-white text-2xl">
+                        {slider.title}
+                      </h2>
+                      <p className="mt-3 max-w-xl">
+                        {slider.description.description}
+                      </p>
+                      <div className="actions my-6">
+                        <Link
+                          to={`/columnas/${kebabCase(
+                            slider.author.name
+                          )}/${kebabCase(slider.slug)}`}
+                          className="btn scale-0 hover:scale-95 text-lg hover:text-white text-red-600 transition duration-500 ease-in-out font-bold font-mono transform hover:scale-110"
+                          style={{ marginLeft: "0" }}
+                        >
+                          Escuchar columna
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </AwesomeSlider>
+          ))}
           <h2 className="text-white block w-full p-4 text-3xl font-mono text-center">
-            Destacadas
+            Últimas
           </h2>
           {data.contenful.edges.map((item, i) => (
             <div

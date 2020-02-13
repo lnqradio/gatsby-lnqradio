@@ -21,8 +21,11 @@ const Header = ({ siteTitle }) => (
         <h1 className="m-0 p-0 md:mr-12 text-white">{siteTitle}</h1>
       </Link>
       <nav className="w-full flex none">
-        <Link activeClassName="active" to="/columnas/">
+        <Link activeClassName="active" to="/podcasts/">
           Podcasts
+        </Link>
+        <Link activeClassName="active" to="/columnas/">
+          Columnas
         </Link>
         <Link activeClassName="active" to="/entrevistas/">
           Entrevistas
@@ -35,7 +38,7 @@ const Header = ({ siteTitle }) => (
 
         <Link
           activeClassName="active"
-          className="text-red-600 live-link md:rounded px-6  pb-1"
+          className="text-white live-link md:rounded px-6  pb-1"
           to="/vivo/"
         >
           <svg
