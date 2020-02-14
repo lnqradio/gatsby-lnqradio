@@ -63,26 +63,26 @@ const BlogIndex = props => {
         return (
           <article
             key={id}
-            className="max-w-6xl m-auto mb-2 p-4 text-white relative border-b md:flex"
+            className="max-w-6xl m-auto mb-2 p-4 pb-6 md:p-4 text-white relative border-b "
           >
-            <Link
-              className="title text-white hover:text-gray-500  font-mono pr-2 block md:w-2/12"
-              to={`/columnas/${kebabCase(name)}/`}
-            >
-              {name}
-            </Link>
             <Link
               className="text-red-600 font-bold font-mono hover:text-red-700 text-lg"
               to={`/columnas/${kebabCase(name)}/${kebabCase(slug)}/`}
             >
               {title}
             </Link>
+            <Link
+              className="title text-white hover:text-gray-500 text-md md:text-base font-mono pr-2 block md:w-2/12"
+              to={`/columnas/${kebabCase(name)}/`}
+            >
+              x {name}
+            </Link>
 
-            <div className="listen absolute flex justify-end items-center top-0 right-0">
+            <div className="listen absolute flex justify-end items-center bottom-0 md:top-0 right-0">
               <b className="text-gray-500 text-sm">{publishDate}</b>
               <ReactTooltip
                 place="left"
-                type="success"
+                type="dark"
                 effect="solid"
                 className="shadow bg-red-500"
               />

@@ -169,11 +169,11 @@ iframe {
 }
 
 .awssld__content .slider-item .gatsby-image-wrapper {
-display: none !important; 
+  display: none !important;
 }
 
 @screen sm {
-.awssld__content .slider-item .gatsby-image-wrapper {
-display: block !important; 
+  .awssld__content .slider-item .gatsby-image-wrapper {
+    display: block !important;
   }
 }

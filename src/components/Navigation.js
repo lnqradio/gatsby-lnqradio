@@ -8,14 +8,7 @@ const Navigation = ({ siteTitle }) => (
       to="/columnas/"
       className="my-2 text-gray-100 hover:text-red-700"
     >
-      Columnas
-    </Link>
-    <Link
-      activeClassName="active"
-      to="/entrevistas/"
-      className="my-2 text-gray-100 hover:text-red-700"
-    >
-      Entrevistas
+      Podcasts
     </Link>
     <Link
       activeClassName="active"
@@ -23,6 +16,13 @@ const Navigation = ({ siteTitle }) => (
       className="my-2 text-gray-100 hover:text-red-700"
     >
       Episodios
+    </Link>
+    <Link
+      activeClassName="active"
+      to="/podcasts/"
+      className="my-2 text-gray-100 hover:text-red-700"
+    >
+      Buscar
     </Link>
   </nav>
 )

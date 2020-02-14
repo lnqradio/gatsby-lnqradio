@@ -7,7 +7,7 @@ import "./header.css"
 
 const Header = ({ siteTitle }) => (
   <header className="header fixed z-10 top-0 right-0 left-0 md:relative">
-    <div className="inner-header text-left pl-20 block pr-3 md:flex md:items-baseline ">
+    <div className="inner-header text-left pl-16 md:pl-20 block pr-3 md:flex md:items-baseline ">
       <Link
         to="/"
         style={{
@@ -20,25 +20,22 @@ const Header = ({ siteTitle }) => (
         </div>
         <h1 className="m-0 p-0 md:mr-12 text-white">{siteTitle}</h1>
       </Link>
-      <nav className="w-full flex none">
-        <Link activeClassName="active" to="/podcasts/">
-          Podcasts
-        </Link>
+      <nav className="w-full hidden md:flex">
         <Link activeClassName="active" to="/columnas/">
-          Columnas
-        </Link>
-        <Link activeClassName="active" to="/entrevistas/">
-          Entrevistas
+          Podcasts
         </Link>
         <Link activeClassName="active" to="/episodios/">
           Episodios
+        </Link>
+        <Link activeClassName="active" to="/podcasts/">
+          Buscar
         </Link>
 
         <span className="flex-1"></span>
 
         <Link
           activeClassName="active"
-          className="text-white live-link md:rounded px-6  pb-1"
+          className="text-white live-link md:rounded px-6 bg-gray-800 pb-1"
           to="/vivo/"
         >
           <svg

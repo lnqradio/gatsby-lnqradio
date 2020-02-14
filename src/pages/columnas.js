@@ -89,7 +89,7 @@ const ColumnasPage = () => {
   return (
     <Layout>
       <SEO title="Columnas" />
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col-reverse md:flex-row">
         <div className=" bg-gray-800 p-6 md:p-0 xl:sticky inset-x-0 top-0 z-50 mb-0 w-full md:w-56 border-r border-red-600 hover:border-red-800 duration-500 transition-all">
           <div className="authors flex justify-center md:pt-6 flex-wrap md:justify-start md:px-0 md:sticky md:top-0 m-auto max-w-4xl">
             <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white">
@@ -105,9 +105,9 @@ const ColumnasPage = () => {
             ))}
           </div>
         </div>
-        <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-0 justify-center">
+        <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-0 justify-center ">
           {data.destacados.edges.map((item, i) => (
-            <AwesomeSlider className="h-64 mb-12">
+            <AwesomeSlider className=" mb-12" style={{ maxHeight: "50vh" }}>
               {item.node.homePage.map((slider, i) => (
                 <div key={slider.slug} className="post max-w-4xl pt-6">
                   <div className="slider-item p-6 flex text-center bg-gray-800">
