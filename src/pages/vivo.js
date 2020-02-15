@@ -34,7 +34,7 @@ const NotFoundPage = () => (
           scrolling="no"
           className="mb-12 m-auto"
           height="378"
-          width="620"
+          width="100%"
         ></iframe>
       </div>
       <div className="animated fadeIn slower pt-6 text-xl">

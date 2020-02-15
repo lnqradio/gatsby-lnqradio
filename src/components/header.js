@@ -20,14 +20,14 @@ const Header = ({ siteTitle }) => (
         </div>
         <h1 className="m-0 p-0 md:mr-12 text-white">{siteTitle}</h1>
       </Link>
-      <nav className="w-full hidden md:flex">
-        <Link activeClassName="active" to="/columnas/">
+      <nav className="w-full md:flex">
+        <Link className="hidden" activeClassName="active" to="/columnas/">
           Podcasts
         </Link>
-        <Link activeClassName="active" to="/episodios/">
+        <Link className="hidden" activeClassName="active" to="/episodios/">
           Episodios
         </Link>
-        <Link activeClassName="active" to="/podcasts/">
+        <Link className="hidden" activeClassName="active" to="/podcasts/">
           Buscar
         </Link>
 
