@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => (
         </div>
         <h1 className="m-0 p-0 md:mr-12 text-white">{siteTitle}</h1>
       </Link>
-      <nav className="w-full md:flex">
+      <nav className="w-full hidden md:flex">
         <Link className activeClassName="active" to="/columnas/">
           Podcasts
         </Link>
@@ -35,25 +35,8 @@ const Header = ({ siteTitle }) => (
 
         <Link
           activeClassName="active"
-          className="text-white live-link md:rounded px-6 bg-gray-800 pb-1"
           to="/vivo/"
-        >
-          <svg
-            className="svg-icon inline-block  text-2xl pr-1  pb-1"
-            viewBox="0 0 20 20"
-          >
-            <path
-              className="fill-current"
-              d="M10.403,15.231v2.035h2.827c0.223,0,0.403,0.181,0.403,0.404c0,0.223-0.181,0.403-0.403,0.403H6.77c-0.223,0-0.404-0.181-0.404-0.403c0-0.224,0.181-0.404,0.404-0.404h2.826v-2.035C6.89,15.024,4.751,12.758,4.751,10c0-0.223,0.181-0.403,0.404-0.403S5.559,9.777,5.559,10c0,2.449,1.992,4.441,4.441,4.441c2.449,0,4.441-1.992,4.441-4.441c0-0.223,0.182-0.403,0.404-0.403s0.403,0.18,0.403,0.403C15.248,12.758,13.108,15.024,10.403,15.231 M13.026,4.953V10c0,1.669-1.357,3.027-3.027,3.027S6.972,11.669,6.972,10V4.953c0-1.669,1.358-3.028,3.028-3.028S13.026,3.284,13.026,4.953M12.221,4.953c0-1.225-0.996-2.22-2.221-2.22s-2.221,0.995-2.221,2.22V10c0,1.225,0.996,2.22,2.221,2.22s2.221-0.995,2.221-2.22V4.953z"
-            ></path>
-          </svg>
-          <span className="pt-0 inline-block px-1">Escuchanos en Vivo</span>
-        </Link>
-
-        <Link
-          activeClassName="active"
-          to="/vivo/"
-          className="live-btn animated fadeInUp delay-1s slower hidden "
+          className="live-btn animated fadeInUp delay-1s  hidden "
         >
           <div className="bg-red-800 hover:bg-red-700 text-center py-2 lg:px-4">
             <div
@@ -64,9 +47,8 @@ const Header = ({ siteTitle }) => (
                 <small className=" ">Episodio 31</small>
               </span>
               <span className="font-bold text-sm  mr-2 text-left flex-auto flex-col ">
-                Próximo Viernes 22 de Noviembre,
                 <span className="underline pl-1 block md:inline-block">
-                  EscuChános en vivo a las 20hs
+                  En vivo
                 </span>
               </span>
               <svg
@@ -80,6 +62,22 @@ const Header = ({ siteTitle }) => (
           </div>
         </Link>
       </nav>
+      <Link
+        activeClassName="active"
+        className="text-white live-link md:rounded px-6 bg-gray-800 pb-1"
+        to="/vivo/"
+      >
+        <svg
+          className="svg-icon inline-block  text-2xl pr-1  pb-1"
+          viewBox="0 0 20 20"
+        >
+          <path
+            className="fill-current"
+            d="M10.403,15.231v2.035h2.827c0.223,0,0.403,0.181,0.403,0.404c0,0.223-0.181,0.403-0.403,0.403H6.77c-0.223,0-0.404-0.181-0.404-0.403c0-0.224,0.181-0.404,0.404-0.404h2.826v-2.035C6.89,15.024,4.751,12.758,4.751,10c0-0.223,0.181-0.403,0.404-0.403S5.559,9.777,5.559,10c0,2.449,1.992,4.441,4.441,4.441c2.449,0,4.441-1.992,4.441-4.441c0-0.223,0.182-0.403,0.404-0.403s0.403,0.18,0.403,0.403C15.248,12.758,13.108,15.024,10.403,15.231 M13.026,4.953V10c0,1.669-1.357,3.027-3.027,3.027S6.972,11.669,6.972,10V4.953c0-1.669,1.358-3.028,3.028-3.028S13.026,3.284,13.026,4.953M12.221,4.953c0-1.225-0.996-2.22-2.221-2.22s-2.221,0.995-2.221,2.22V10c0,1.225,0.996,2.22,2.221,2.22s2.221-0.995,2.221-2.22V4.953z"
+          ></path>
+        </svg>
+        <span className="pt-0 inline-block px-1">No tan en Vivo</span>
+      </Link>
     </div>
   </header>
 )

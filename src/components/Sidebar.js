@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation"
 
 export default props => {
   return (
-    <Menu width={190}>
+    <Menu width={190} right>
       <Navigation />
     </Menu>
   )

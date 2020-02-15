@@ -18,6 +18,8 @@ const IndexPage = () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    loop: true,
+
     slidesPerView: 3,
     spaceBetween: 10,
     pagination: {
@@ -34,6 +36,10 @@ const IndexPage = () => {
         spaceBetween: 20,
       },
       320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      100: {
         slidesPerView: 1,
         spaceBetween: 10,
       },
