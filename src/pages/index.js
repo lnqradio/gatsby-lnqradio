@@ -24,6 +24,20 @@ const IndexPage = () => {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+    },
   }
   const data = useStaticQuery(graphql`
     query DestacadosQuery {
@@ -181,6 +195,7 @@ const IndexPage = () => {
           Todos los viernes a las 20hs
         </h2>
       </div>
+      <div className="categories"></div>
       <div className="last-show max-w-xl m-auto mt-12 mb-24 bg-gray-700 hidden">
         <h1 className="text-white text-sm bg-gray-800 p-6 pb-1 text-left  font-mono flex justify-between border-gray-900 border-t">
           Escuchá el último episodio completo
@@ -223,7 +238,7 @@ const IndexPage = () => {
           </div>
         ))}
       </div>
-      <div className="max-w-6xl m m-auto pt-12">
+      <div className="max-w-6xl px-3 m-auto pt-12">
         <h2 className="text-white text-2xl font-mono pb-3">Historias</h2>
         <Swiper {...params}>
           {data.destacados.edges.map((item, i) => (
@@ -234,7 +249,7 @@ const IndexPage = () => {
                 )}/`}
                 className="title "
               >
-                <h2 className="title px-6 pt-6 text-red-500 mb-3 text-2xl font-mono hover:text-white mr-32 font-mono">
+                <h2 className="title px-6 pt-6 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>
@@ -245,7 +260,7 @@ const IndexPage = () => {
           ))}
         </Swiper>
       </div>
-      <div className="max-w-6xl m m-auto">
+      <div className="max-w-6xl px-3 m-auto">
         <h2 className="text-white text-2xl font-mono pb-3">Cine</h2>
         <Swiper {...params}>
           {data.perfiles.edges.map((item, i) => (
@@ -256,7 +271,7 @@ const IndexPage = () => {
                 )}/`}
                 className="title "
               >
-                <h2 className="title px-6 pt-6 text-red-500 mb-3 text-2xl font-mono hover:text-white mr-32 font-mono">
+                <h2 className="title px-6 pt-6 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>
@@ -267,7 +282,7 @@ const IndexPage = () => {
           ))}
         </Swiper>
       </div>
-      <div className="max-w-6xl m m-auto">
+      <div className="max-w-6xl px-3 m-auto">
         <h2 className="text-white text-2xl font-mono pb-3">Musicales</h2>
         <Swiper {...params}>
           {data.musica.edges.map((item, i) => (
@@ -278,7 +293,7 @@ const IndexPage = () => {
                 )}/`}
                 className="title "
               >
-                <h2 className="title px-6 pt-6 text-red-500 mb-3 text-2xl font-mono hover:text-white mr-32 font-mono">
+                <h2 className="title px-6 pt-6 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>

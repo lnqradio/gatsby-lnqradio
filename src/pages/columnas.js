@@ -93,6 +93,11 @@ const ColumnasPage = () => {
         <div className=" bg-gray-800 p-6 md:p-0 xl:sticky inset-x-0 top-0 z-50 mb-0 w-full md:w-56 border-r border-red-600 hover:border-red-800 duration-500 transition-all">
           <div className="authors flex justify-center md:pt-6 flex-wrap md:justify-start md:px-0 md:sticky md:top-0 m-auto max-w-4xl">
             <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white">
+              <Link className="hover:text-white" to={`/entrevistas/`}>
+                Entrevistas
+              </Link>
+            </h4>
+            <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white">
               Columnas
             </h4>
             {data.autores.edges.map((item, i) => (
