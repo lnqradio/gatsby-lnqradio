@@ -24,6 +24,19 @@ const NotFoundPage = () => (
           src="https://www-lnqradio-com.filesusr.com/html/80866a_abf8a98d014638b9f83f01f283f520d3.html"
         ></iframe>
       </div>
+      <div className="bg-gray-900 w-full text-center">
+        <h2 className="text-white text-3xl mt-12 py-12">Beta: Twitch</h2>
+
+        <iframe
+          src="https://player.twitch.tv/?channel=santuuan"
+          frameborder="0"
+          allowfullscreen="true"
+          scrolling="no"
+          className="mb-12 m-auto"
+          height="378"
+          width="620"
+        ></iframe>
+      </div>
       <div className="animated fadeIn slower pt-6 text-xl">
         <div className="live relative">
           <h2 className="text-left block w-full text-white p-6 pb-0">
@@ -39,20 +52,6 @@ const NotFoundPage = () => (
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/753004221&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
           ></iframe>
-
-          <div className="bg-gray-900 w-full text-center">
-            <h2 className="text-white text-3xl mt-12">Beta: Twitch</h2>
-            <iframe
-              src="https://player.twitch.tv/?autoplay=false&video=v549655400"
-              frameborder="0"
-              title="twitch"
-              allowfullscreen="true"
-              scrolling="no"
-              height="378"
-              className="mb-12 m-auto"
-              width="620"
-            ></iframe>
-          </div>
         </div>
       </div>
     </div>
