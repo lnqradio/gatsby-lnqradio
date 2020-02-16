@@ -1,29 +1,36 @@
 import { Link } from "gatsby"
 import React from "react"
 
-const Navigation = ({ siteTitle }) => (
+const routes = [
+  {
+    title: 'Podcasts',
+    slug: '/columnas/'
+  },
+  {
+    title: 'Episodios',
+    slug: '/episodios/'
+  },
+  {
+    title: 'Buscar',
+    slug: '/podcasts/'
+  }
+]
+
+const Navigation = ({ closeMenu }) => (
   <nav className="w-full flex flex-col">
-    <Link
-      activeClassName="active"
-      to="/columnas/"
-      className="my-2 text-gray-100 hover:text-red-700"
-    >
-      Podcasts
-    </Link>
-    <Link
-      activeClassName="active"
-      to="/episodios/"
-      className="my-2 text-gray-100 hover:text-red-700"
-    >
-      Episodios
-    </Link>
-    <Link
-      activeClassName="active"
-      to="/podcasts/"
-      className="my-2 text-gray-100 hover:text-red-700"
-    >
-      Buscar
-    </Link>
+    {
+      routes.map((route, i) => {
+        return <Link
+                key={i}
+                onClick={closeMenu}
+                activeClassName="active"
+                to={route.slug}
+                className="my-2 text-gray-100 hover:text-red-700"
+              >
+                { route.title }
+              </Link>
+      })
+    }
   </nav>
 )
 
