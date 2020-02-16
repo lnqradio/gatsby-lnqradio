@@ -27,8 +27,8 @@ const BlogIndex = props => {
       const { name } = post.node.author
 
       return (
-        title.toLowerCase().includes(query.toLowerCase()) ||
-        name.toLowerCase().includes(query.toLowerCase())
+		  title.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(query.toLowerCase()) ||
+		  name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(query.toLowerCase())
       )
     })
 
