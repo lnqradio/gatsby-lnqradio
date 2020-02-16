@@ -44,12 +44,11 @@ const BlogIndex = props => {
 
   return (
     <>
-      <div className="searchBox text-center mb-2 max-w-6xl m-auto w-full pt-32 md:pt-6 p-6 md:p-0 md:pb-12">
+      <div className="searchBox text-center mb-2 max-w-6xl m-auto w-full pt-16 md:pt-6 p-6 md:p-0 md:pb-12">
         <input
           className="searchInput bg-gray-800 text-gray-100 p-3 w-full  border-b-2"
           type="text"
           aria-label="Search"
-          autoFocus={true}
           placeholder="Filtrá"
           onChange={handleInputChange}
         />
@@ -63,7 +62,7 @@ const BlogIndex = props => {
         return (
           <article
             key={id}
-            className="max-w-6xl m-auto mb-2 p-4 pb-6 md:p-4 text-white relative border-b "
+            className="max-w-6xl m-auto mb-2 p-4 pb-4 md:p-4 text-white relative border-b border-gray-800"
           >
             <Link
               className="text-red-600 font-bold font-mono hover:text-red-700 text-lg"
@@ -78,7 +77,7 @@ const BlogIndex = props => {
               x {name}
             </Link>
 
-            <div className="listen absolute flex justify-end items-center bottom-0 md:top-0 right-0">
+            <div className="listen absolute h-16 md:h-auto flex justify-end items-center bottom-0 md:top-0 right-0">
               <b className="text-gray-500 text-sm">{publishDate}</b>
               <ReactTooltip
                 place="left"

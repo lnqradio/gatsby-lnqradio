@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "santuan <santuan.dg@gmail.com>",
   "dependencies": {
+    "audiocard": "^1.0.0",
     "gatsby": "^2.19.12",
     "gatsby-background-image": "^0.8.19",
     "gatsby-image": "^2.2.30",
@@ -37,6 +38,7 @@
     "react-spring": "^8.0.27",
     "react-tooltip": "^3.11.1",
     "react-typography": "^0.16.19",
+    "styled-components": "^5.0.1",
     "swiper": "^5.3.1",
     "tailwindcss": "^1.2.0",
     "typography": "^0.16.19",

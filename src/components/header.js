@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => (
         </div>
         <h1 className="m-0 p-0 md:mr-12 text-white">{siteTitle}</h1>
       </Link>
-      <nav className="w-full hidden md:flex">
+      <nav className="w-full text-base hidden md:flex">
         <Link className activeClassName="active" to="/columnas/">
           Podcasts
         </Link>

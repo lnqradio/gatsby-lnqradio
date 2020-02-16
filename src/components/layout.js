@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
             Arriba!
           </span>
         </AnchorLink>
-        <main className="pt-20 md:pt-0 overflow-hidden">{children}</main>
+        <main className="pt-6 md:pt-0 overflow-hidden">{children}</main>
         <footer>
           <div className="w-24 max-w-xl text-center m-auto py-6">
             <Image />
