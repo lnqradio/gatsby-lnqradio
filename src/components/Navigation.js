@@ -3,34 +3,50 @@ import React from "react"
 
 const routes = [
   {
-    title: 'Podcasts',
-    slug: '/columnas/'
+    title: "Inicio",
+    slug: "/",
   },
   {
-    title: 'Episodios',
-    slug: '/episodios/'
+    title: "Podcasts",
+    slug: "/podcasts/",
   },
   {
-    title: 'Buscar',
-    slug: '/podcasts/'
-  }
+    title: "Episodios",
+    slug: "/episodios/",
+  },
+  {
+    title: "Entrevistas",
+    slug: "/entrevistas/",
+  },
+  {
+    title: "Ficciones",
+    slug: "/ficciones/",
+  },
+  {
+    title: "Artisticas",
+    slug: "/artisticas/",
+  },
+  {
+    title: "Buscar",
+    slug: "/search/",
+  },
 ]
 
 const Navigation = ({ closeMenu }) => (
   <nav className="w-full flex flex-col">
-    {
-      routes.map((route, i) => {
-        return <Link
-                key={i}
-                onClick={closeMenu}
-                activeClassName="active"
-                to={route.slug}
-                className="my-2 text-gray-100 hover:text-red-700"
-              >
-                { route.title }
-              </Link>
-      })
-    }
+    {routes.map((route, i) => {
+      return (
+        <Link
+          key={i}
+          onClick={closeMenu}
+          activeClassName="text-red-600"
+          to={route.slug}
+          className="my-2 text-gray-100 hover:text-red-700"
+        >
+          {route.title}
+        </Link>
+      )
+    })}
   </nav>
 )
 

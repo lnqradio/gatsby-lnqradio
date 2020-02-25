@@ -12,33 +12,34 @@ import Navigation from "../components/Navigation"
 // }
 
 class Sidebar extends Component {
-  constructor () {
-    super();
+  constructor() {
+    super()
     this.state = {
-      openMenu: false
+      openMenu: false,
     }
   }
 
   closeMenu = () => {
     this.setState({
-      openMenu: false
+      openMenu: false,
     })
   }
-  
-  handleStateChange = (state) => {
+
+  handleStateChange = state => {
     this.setState({
-      openMenu: state.isOpen 
-    });
+      openMenu: state.isOpen,
+    })
   }
-  
+
   render = () => {
     const { openMenu } = this.state
+
     return (
-      <Menu 
-        width={190} 
-        right 
+      <Menu
+        width={240}
+        right
         isOpen={openMenu}
-        onStateChange={(state) => this.handleStateChange(state)}
+        onStateChange={state => this.handleStateChange(state)}
       >
         <Navigation closeMenu={this.closeMenu} />
       </Menu>
@@ -46,4 +47,4 @@ class Sidebar extends Component {
   }
 }
 
-export default Sidebar;
+export default Sidebar

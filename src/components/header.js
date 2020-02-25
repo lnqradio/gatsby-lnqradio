@@ -3,11 +3,13 @@ import PropTypes from "prop-types"
 import React from "react"
 import Image from "../components/image"
 
+import { IoMdSearch } from "react-icons/io"
+
 import "./header.css"
 
 const Header = ({ siteTitle }) => (
   <header className="header fixed z-10 top-0 right-0 left-0 md:relative">
-    <div className="inner-header text-left pl-16 md:pl-20 block pr-3 md:flex md:items-baseline ">
+    <div className="inner-header text-left pl-16 md:pl-20 block pr-3 md:flex md:items-center ">
       <Link
         to="/"
         style={{
@@ -18,20 +20,24 @@ const Header = ({ siteTitle }) => (
         <div className="w-16 absolute p-1 mt-1 logo">
           <Image />
         </div>
-        <h1 className="m-0 p-0 md:mr-12 text-white">{siteTitle}</h1>
+        <h1 className="m-0 p-0 max-w-lg md:mr-12 text-white">{siteTitle}</h1>
       </Link>
-      <nav className="w-full text-base hidden md:flex">
-        <Link className activeClassName="active" to="/columnas/">
+      <nav className="w-full text-base hidden md:flex mt-0">
+        <Link className activeClassName="active" to="/podcasts/">
           Podcasts
         </Link>
         <Link className activeClassName="active" to="/episodios/">
           Episodios
         </Link>
-        <Link className activeClassName="active" to="/podcasts/">
-          Buscar
+        <Link className activeClassName="active" to="/entrevistas/">
+          Entrevistas
         </Link>
-
-        <span className="flex-1"></span>
+        <Link className activeClassName="active" to="/artisticas/">
+          Artisticas
+        </Link>
+        <Link className activeClassName="active" to="/ficciones/">
+          Ficciones
+        </Link>
 
         <Link
           activeClassName="active"
@@ -63,12 +69,19 @@ const Header = ({ siteTitle }) => (
         </Link>
       </nav>
       <Link
+        className="nav-search text-white pl-3 text-right hidden md:flex items-center justify-end text-white hover:text-red-600 "
         activeClassName="active"
-        className="text-white live-link md:rounded px-6 bg-gray-800 pb-1"
+        to="/search/"
+      >
+        <IoMdSearch className="mr-3 w-6 h-6" />
+      </Link>
+      <Link
+        activeClassName="active"
+        className="text-white live-link px-6 bg-red-600 pb-1 hover:text-gray-300"
         to="/vivo/"
       >
         <svg
-          className="svg-icon inline-block  text-2xl pr-1  pb-1"
+          className="svg-icon inline-block text-2xl pr-1  pb-1"
           viewBox="0 0 20 20"
         >
           <path

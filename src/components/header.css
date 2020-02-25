@@ -9,7 +9,7 @@
 
 @screen sm {
   #nprogress .bar {
-    top: 72px !important;
+    top: 0 !important;
   }
   #nprogress .spinner {
     top: 85px !important;
@@ -30,28 +30,34 @@ header .inner-header {
 }
 
 header nav a {
-  @apply text-white pr-4 inline-block pt-1;
+  @apply text-white pr-4 inline-block pt-1 font-mono;
   opacity: 0.7;
 }
-header .live-link {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  top: initial;
-  margin-left: 0;
-  opacity: 1;
-  @apply pl-3 text-gray-500 px-2 py-3 text-sm font-mono uppercase font-bold;
+
+header .nav-search {
 }
 
 header nav .live-link:hover {
   @apply text-gray-600 !important;
 }
 
-@screen sm {
-  header nav .live-link {
+.live-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: initial;
+  margin-left: 0;
+  min-width: 190px;
+  opacity: 1;
+  @apply pl-3 px-2 py-2 text-sm font-mono uppercase font-bold text-center;
+}
+
+@screen lg {
+  .live-link {
     position: relative;
     top: 0;
     left: initial;
+    bottom: initial;
     @apply pl-2 py-1 ml-2;
   }
 }

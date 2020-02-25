@@ -44,10 +44,7 @@ const EpisodiosPage = () => {
       <SEO title="Episodios" />
       <div className="h-24 md:sticky md:top-0 bg-gray-900 flex items-center justify-center z-10 hero px-6 m-0 mb-6">
         <h1 className="  text-xl text-white  text-center ">
-          Todos los episodios de la Nueva Era
-          <small className="uppercase text-gray-600 font-thin block pt-1">
-            (completos)
-          </small>
+          2019. Todos episodios completos
         </h1>
       </div>
       <div className="posts flex flex-wrap max-w-3xl m-auto">
@@ -69,11 +66,6 @@ const EpisodiosPage = () => {
                   </Link>
                 </div>
                 <div className="content md:pl-3 w-full md:flex-1">
-                  <Img
-                    alt=""
-                    fluid={item.node.heroImage.fluid}
-                    className="mb-6 h-48"
-                  />
                   <Link
                     to={`/episodios/${kebabCase(item.node.slug)}/`}
                     className="title "

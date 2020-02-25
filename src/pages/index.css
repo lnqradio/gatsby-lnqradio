@@ -178,6 +178,11 @@ iframe {
   }
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+}
+
 .swiper-container {
   overflow: visible !important;
 }
@@ -196,6 +201,10 @@ iframe {
 .swiper-container-rtl .swiper-button-next {
   right: 60px !important;
   left: auto !important;
+}
+
+.swiper-slide {
+  min-height: 220px !important;
 }
 
 .homeHero {
@@ -253,4 +262,32 @@ iframe {
     background-position: 0% 100%;
     background-size: 100% 100%;
   }
+}
+
+.home-hero-links {
+  @apply border-red-600 border-b pt-12 mb-12;
+  background: #220c2f;
+}
+
+.home-hero-links a {
+  @apply flex flex-col items-center justify-center transition-all duration-200;
+  flex: 1;
+}
+
+.home-hero-links span {
+  @apply pt-2 hidden;
+}
+
+@screen sm {
+  .home-hero-links span {
+    @apply block;
+  }
+}
+
+.home-hero-links svg {
+  @apply w-8 h-8;
+}
+
+.columna-article iframe {
+  @apply my-6;
 }

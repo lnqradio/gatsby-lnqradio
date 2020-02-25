@@ -6,11 +6,25 @@ import SEO from "../components/seo"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="Laboratorios Garmendia" />
-    <div className="max-w-4xl pt-32 m-auto text-center">
-      <h1 className="text-white text-3xl font-thin">Laboratorios Garmendia</h1>
-      <p className="animated flash infinite slower pt-6 text-xl">
-        Proximamente
-      </p>
+    <div className="max-w-2xl pt-6  md:pt-20 m-auto text-left">
+      <h1 className="text-white text-3xl font-thin animated fadeInUp slow text-center md:text-left px-6">
+        <span className="animated hinge delay-3s block slower  ">
+          Laboratorios Garmendia
+        </span>
+        <span className="animated block flash infinite slower text-red-500  pt-2 text-xl uppercase mb-3 font-mono tracking-widest">
+          Ensayo sobre las formas de ver
+        </span>
+      </h1>
+      <div className="flex justify-center mt-6 max-w-2xl m-auto">
+        <iframe
+          src="https://player.twitch.tv/?autoplay=false&video=v555746285"
+          frameborder="0"
+          allowfullscreen="true"
+          scrolling="no"
+          height="380"
+          width="100%"
+        ></iframe>
+      </div>
     </div>
   </Layout>
 )
