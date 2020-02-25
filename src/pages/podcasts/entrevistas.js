@@ -3,10 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 import { FaSpotify } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
-import Img from "gatsby-image"
 
 const PodcastPage = () => {
   const data = useStaticQuery(graphql`
@@ -43,9 +40,7 @@ const PodcastPage = () => {
     <Layout>
       <SEO title="Entrevistas" />
       <div className="h-64 md:sticky md:top-0 bg-gray-900 flex items-center justify-center hero z-10 px-6 m-0 mb-2">
-        <h1 className="  text-xl text-white  text-center ">
-          <span className="text-red-500">Podcasts:</span> Entrevistas
-        </h1>
+        <h1 className="  text-xl text-white  text-center ">Entrevistas</h1>
       </div>
       <div className="posts animation flex flex-wrap w-full m-auto justify-center ">
         {data.collection.edges.map((item, i) => (
@@ -85,7 +80,7 @@ const PodcastPage = () => {
                   rel="noopener noreferrer"
                   className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                 >
-                  <FaSpotify className="text-green-100" />
+                  <FaSpotify className="text-white" />
                 </a>
               </div>
             </div>

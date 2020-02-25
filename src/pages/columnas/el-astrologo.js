@@ -51,7 +51,10 @@ const AstrologoPage = () => {
           }
         }
       }
-      autores: allContentfulAutores(sort: { fields: [name], order: DESC }) {
+      autores: allContentfulAutores(
+        sort: { fields: [name], order: DESC }
+        skip: 1
+      ) {
         edges {
           node {
             id
@@ -164,7 +167,7 @@ const AstrologoPage = () => {
                     data-tip="¿Te vas a Spotify?"
                     className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                   >
-                    <FaSpotify className="text-green-100" />
+                    <FaSpotify className="text-white" />
                   </a>
                   <AnchorLink
                     href={`#author-player`}

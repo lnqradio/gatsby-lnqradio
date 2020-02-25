@@ -61,7 +61,7 @@ const SearchIndex = props => {
     <>
       <div className="searchBox text-center mb-0 max-w-6xl m-auto w-full pt-16 md:pt-6 p-6 md:p-0 md:pb-6">
         <h2 className="text-white text-left py-3 pb-6 text-2xl font-mono flex items-baseline">
-          <span className="flex-1">Buscador</span>
+          <span className="flex-1">Buscador de podcazt</span>
           <small className="text-gray-600">{totales} en total</small>
         </h2>
 
@@ -114,7 +114,7 @@ const SearchIndex = props => {
                 data-tip="¿Te vas para Spotify?"
                 className=" block text-2xl p-6"
               >
-                <FaSpotify className="text-green-100 hover:text-green-700 transition duration-200 ease-in-out" />
+                <FaSpotify className="text-white hover:text-green-700 transition duration-200 ease-in-out" />
               </a>
             </div>
           </article>
@@ -143,7 +143,7 @@ export const pageQuery = graphql`
           author {
             name
           }
-          publishDate(formatString: "Do MMM YYYY", locale: "es")
+          publishDate(locale: "es", fromNow: true)
         }
       }
       totalCount

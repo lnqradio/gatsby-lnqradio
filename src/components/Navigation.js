@@ -16,7 +16,7 @@ const routes = [
   },
   {
     title: "Entrevistas",
-    slug: "/entrevistas/",
+    slug: "/podcasts/entrevistas/",
   },
   {
     title: "Ficciones",

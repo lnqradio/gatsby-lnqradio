@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
         <Link className activeClassName="active" to="/episodios/">
           Episodios
         </Link>
-        <Link className activeClassName="active" to="/entrevistas/">
+        <Link className activeClassName="active" to="/podcasts/entrevistas/">
           Entrevistas
         </Link>
         <Link className activeClassName="active" to="/artisticas/">

@@ -1,9 +1,7 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { kebabCase } from "lodash"
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
 
 const FiccionesPage = () => {
   const data = useStaticQuery(graphql`

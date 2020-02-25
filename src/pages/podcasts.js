@@ -16,7 +16,7 @@ const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
     query ColumnasQuery {
       contenful: allContentfulColumnas(
-        sort: { order: DESC, fields: [updatedAt] }
+        sort: { order: DESC, fields: [publishDate] }
         limit: 12
       ) {
         edges {
@@ -34,6 +34,7 @@ const ColumnasPage = () => {
             author {
               name
             }
+            publishDate(locale: "es", fromNow: true)
             description {
               description
             }
@@ -95,55 +96,57 @@ const ColumnasPage = () => {
       <SEO title="Podcasts" />
       <div className="flex flex-col">
         <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-0 justify-center ">
-          {data.destacados.edges.map((item, i) => (
-            <AwesomeSlider className="mb-0" style={{ maxHeight: "60vh" }}>
-              {item.node.homePage.map((slider, i) => (
-                <div key={slider.slug} className="post max-w-4xl pt-6">
-                  <div className="slider-item p-6 flex text-center bg-gray-800">
-                    <Img
-                      alt=""
-                      fixed={slider.heroImage.fixed}
-                      className="mb-6 max-w-lg mr-3 mt-2"
-                    />
-                    <div className="description text-left pl-3 max-w-sm">
-                      <Link
-                        to={`/columnas/${kebabCase(slider.author.name)}/`}
-                        className="block mb-3 text-gray-500 hover:text-white font-mono"
-                      >
-                        Columna x {slider.author.name}
-                      </Link>
-                      <Link
-                        to={`/columnas/${kebabCase(
-                          slider.author.name
-                        )}/${kebabCase(slider.slug)}`}
-                        className="title text-white text-2xl font-bold hover:text-white text-red-500"
-                        style={{ marginLeft: "0" }}
-                      >
-                        {slider.title}
-                      </Link>
-                      <p className="mt-3 max-w-xl">
-                        {slider.description.description}
-                      </p>
-                      <div className="actions my-6">
+          <div className="hidden">
+            {data.destacados.edges.map((item, i) => (
+              <AwesomeSlider className="mb-0" style={{ maxHeight: "70vh" }}>
+                {item.node.homePage.map((slider, i) => (
+                  <div key={slider.slug} className="post max-w-4xl pt-6">
+                    <div className="slider-item p-6 flex text-center bg-gray-800">
+                      <Img
+                        alt=""
+                        fixed={slider.heroImage.fixed}
+                        className="mb-6 max-w-lg mr-3 mt-2"
+                      />
+                      <div className="description text-left pl-3 max-w-sm">
+                        <Link
+                          to={`/columnas/${kebabCase(slider.author.name)}/`}
+                          className="block mb-3 text-gray-500 hover:text-white font-mono"
+                        >
+                          Columna x {slider.author.name}
+                        </Link>
                         <Link
                           to={`/columnas/${kebabCase(
                             slider.author.name
                           )}/${kebabCase(slider.slug)}`}
-                          className="btn scale-0 hover:scale-95 text-lg hover:text-white text-red-500 transition duration-500 ease-in-out font-bold font-mono transform hover:scale-110"
+                          className="title text-white text-2xl font-bold hover:text-white text-red-500"
                           style={{ marginLeft: "0" }}
                         >
-                          Escuchar columna
+                          {slider.title}
                         </Link>
+                        <p className="mt-3 max-w-xl">
+                          {slider.description.description}
+                        </p>
+                        <div className="actions my-6">
+                          <Link
+                            to={`/columnas/${kebabCase(
+                              slider.author.name
+                            )}/${kebabCase(slider.slug)}`}
+                            className="btn scale-0 hover:scale-95 text-lg hover:text-white text-red-500 transition duration-500 ease-in-out font-bold font-mono transform hover:scale-110"
+                            style={{ marginLeft: "0" }}
+                          >
+                            Escuchar columna
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </AwesomeSlider>
-          ))}
+                ))}
+              </AwesomeSlider>
+            ))}
+          </div>
           <div className="home-hero-links bg-gray-800 flex justify-around py-6 w-full">
             <Link
-              to={`/entrevistas`}
+              to={`/podcasts/entrevistas/`}
               className="text-base block text-red-500 hover:text-white font-mono my-3"
             >
               <IoMdMicrophone />
@@ -207,6 +210,9 @@ const ColumnasPage = () => {
                 </Link>
                 <p className="title px-6 pb-6">
                   {item.node.description.description}
+                  <time className="text-sm block pt-2 text-gray-500 italic">
+                    {item.node.publishDate}
+                  </time>
                 </p>
                 <div className="listen flex justify-between items-center bg-gray-900 absolute bottom-0 left-0 right-0">
                   <Link
@@ -226,7 +232,7 @@ const ColumnasPage = () => {
                     rel="noopener noreferrer"
                     className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                   >
-                    <FaSpotify className="text-green-100" />
+                    <FaSpotify className="text-white" />
                   </a>
                 </div>
               </div>

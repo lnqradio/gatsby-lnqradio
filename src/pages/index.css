@@ -207,6 +207,12 @@ iframe {
   min-height: 220px !important;
 }
 
+.post-hero {
+  background-image: url(../images/bg-pattern-1.svg);
+  background-position: 40% 50%;
+  background-size: cover;
+}
+
 .homeHero {
   background-image: url(../images/bg-pattern-1.svg);
   background-position: 40% 50%;

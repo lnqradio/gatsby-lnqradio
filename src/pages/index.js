@@ -6,10 +6,6 @@ import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import "react-awesome-slider/dist/styles.css"
 import "./index.css"
-import AnchorLink from "react-anchor-link-smooth-scroll"
-import { GiSpellBook } from "react-icons/gi"
-import { MdPersonPin, MdLocalMovies } from "react-icons/md"
-import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
 
 import Swiper from "react-id-swiper"
 
@@ -148,18 +144,25 @@ const IndexPage = () => {
           }
         }
       }
-      entrevistas: allContentfulEntrevistas(
+      entrevistas: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
+        filter: { author: {}, tipoDePodcast: { eq: "Entrevistas" } }
       ) {
         edges {
           node {
             id
             title
             slug
+            spotify {
+              spotify
+            }
             soundcloud {
               soundcloud
             }
-
+            author {
+              name
+              slug
+            }
             description {
               description
             }
@@ -200,7 +203,7 @@ const IndexPage = () => {
 
       <div className="max-w-6xl px-3 m-auto pt-12">
         <Link
-          to={`/entrevistas`}
+          to={`/podcasts/entrevistas`}
           className="text-red-500 text-2xl font-mono pb-3 block pt-12 hover:text-white"
         >
           Entrevistas
@@ -208,7 +211,12 @@ const IndexPage = () => {
         <Swiper {...params}>
           {data.entrevistas.edges.map((item, i) => (
             <div className="post h-full px-0 pt-4 shadow bg-gray-800 mb-12 w-full">
-              <Link to={`/entrevistas/`} className="title ">
+              <Link
+                to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
+                  item.node.slug
+                )}/`}
+                className="title "
+              >
                 <h2 className="title px-6 py-6 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>

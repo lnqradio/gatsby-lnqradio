@@ -3,10 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 import { FaSpotify } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
-import Img from "gatsby-image"
 
 const PodcastPage = () => {
   const data = useStaticQuery(graphql`
@@ -91,7 +88,7 @@ const PodcastPage = () => {
                   rel="noopener noreferrer"
                   className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                 >
-                  <FaSpotify className="text-green-100" />
+                  <FaSpotify className="text-white" />
                 </a>
               </div>
             </div>
