@@ -11,6 +11,7 @@ import Img from "gatsby-image"
 import { GiSpellBook } from "react-icons/gi"
 import { MdPersonPin, MdLocalMovies } from "react-icons/md"
 import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
+import ReactTooltip from "react-tooltip"
 
 const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
@@ -146,30 +147,35 @@ const ColumnasPage = () => {
           </div>
           <div className="home-hero-links bg-gray-800 flex justify-around py-6 w-full">
             <Link
-              to={`/podcasts/entrevistas/`}
-              className="text-base block text-red-500 hover:text-white font-mono my-3"
-            >
-              <IoMdMicrophone />
-              <span>entrevistas</span>
-            </Link>
-            <Link
               to={`/podcasts/musicales`}
               className="text-base block text-red-500 hover:text-white font-mono my-3"
+              data-tip="Podcasts de Musicales"
             >
               <IoMdMusicalNotes />
 
               <span>musicales</span>
             </Link>
             <Link
-              to={`/podcasts/historias`}
+              to={`/podcasts/cine`}
+              data-tip="Podcasts de Cine"
               className="text-base block text-red-500 hover:text-white font-mono my-3"
             >
-              <GiSpellBook />
+              <MdLocalMovies />
 
-              <span>historias</span>
+              <span>cine</span>
+            </Link>
+
+            <Link
+              to={`/podcasts/entrevistas/`}
+              className="text-base block text-red-500 hover:text-white font-mono my-3"
+              data-tip="Podcasts de Entrevistas"
+            >
+              <IoMdMicrophone />
+              <span>entrevistas</span>
             </Link>
             <Link
               to={`/podcasts/perfiles`}
+              data-tip="Podcasts de Perfiles"
               className="text-base block text-red-500 hover:text-white font-mono my-3"
             >
               <MdPersonPin />
@@ -177,12 +183,13 @@ const ColumnasPage = () => {
               <span>perfiles</span>
             </Link>
             <Link
-              to={`/podcasts/cine`}
+              to={`/podcasts/historias`}
+              data-tip="Podcasts de Historias"
               className="text-base block text-red-500 hover:text-white font-mono my-3"
             >
-              <MdLocalMovies />
+              <GiSpellBook />
 
-              <span>cine</span>
+              <span>historias</span>
             </Link>
           </div>
           <h2 className="text-white block w-full p-4 text-3xl font-mono text-center">
@@ -191,7 +198,7 @@ const ColumnasPage = () => {
           {data.contenful.edges.map((item, i) => (
             <div
               key={item.node.id}
-              className="post border-red-500 border-t-4 animated fadeInUp slow max-w-md w-full m-3 flex-auto"
+              className="post border-red-500 border-t-4 animated fadeIn relative slow max-w-md w-full m-3 flex-auto"
             >
               <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">
                 <Link

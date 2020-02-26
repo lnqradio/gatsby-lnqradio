@@ -4,6 +4,7 @@ import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { FaSpotify } from "react-icons/fa"
+import { MdPersonPin } from "react-icons/md"
 
 const PodcastPage = () => {
   const data = useStaticQuery(graphql`
@@ -40,15 +41,16 @@ const PodcastPage = () => {
     <Layout>
       <SEO title="Perfiles" />
       <div className="h-64 md:sticky md:top-0 bg-gray-900 flex items-center justify-center hero z-10 px-6 m-0 mb-2">
-        <h1 className="  text-xl text-white  text-center ">
-          <span className="text-red-500">Podcasts:</span> Perfiles
+        <h1 className="  text-xl text-white  text-center flex flex-col items-center justify-center">
+          <MdPersonPin className="text-6xl" />
+          <span className="block pt-3 text-2xl font-mono">Perfiles</span>
         </h1>
       </div>
       <div className="posts animation flex flex-wrap w-full m-auto justify-center ">
         {data.collection.edges.map((item, i) => (
           <div
             key={item.node.id}
-            className="post border-red-500 border-t-4 animated fadeInUp slow max-w-md w-full m-3 flex-auto"
+            className="post border-red-500 border-t-4 animated fadeIn relative slow max-w-md w-full m-3 flex-auto"
           >
             <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">
               <Link

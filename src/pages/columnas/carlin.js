@@ -83,7 +83,7 @@ const CarlinPage = () => {
           <div className="authors flex justify-center md:pt-6 flex-wrap md:justify-start md:px-0 md:sticky md:top-0 m-auto max-w-4xl ">
             <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white ">
               <Link to={`/columnas/`} className="hover:text-gray-200">
-                Columnas
+                Autores
               </Link>
             </h4>
             {data.autores.edges.map((item, i) => (
@@ -110,23 +110,16 @@ const CarlinPage = () => {
               </div>
             ))}
             <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full">
-              <h1 className="text-white pb-3 mb-2 border-b">Carlín</h1>
+              <h1 className="text-white font-mono pb-3 mb-2 border-b">
+                Carlín
+              </h1>
               <AnchorLink
                 href={`#author-player`}
                 className="text-base block text-red-500 hover:text-white font-mono my-3"
               >
                 <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
-                <span className="pl-3 pt-0">Escuchar Playlist</span>
+                <span className="pl-3 pt-0">Escuchar Selección</span>
               </AnchorLink>
-              <a
-                href="https://open.spotify.com/search/lnqradio%20carl%C3%ADn/episodes"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" flex items-center text-base hover:text-white p-2 pl-0 font-mono text-green-700"
-              >
-                <FaSpotify className=" text-xl" />
-                <span className="pl-3 pt-0">Reproducir en Spotify</span>
-              </a>
             </div>
           </div>
           <div className="posts soundcloud flex flex-wrap w-full md:w-2/3 max-w-6xl px-6 m-auto">
@@ -150,26 +143,31 @@ const CarlinPage = () => {
                     to={`/columnas/${kebabCase(
                       item.node.author.slug
                     )}/${kebabCase(item.node.slug)}/`}
-                    className="title "
+                    className="title w-full "
                   >
                     <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
                       Escuchar columna
                     </h2>
                   </Link>
-                  <ReactTooltip
-                    place="bottom"
-                    type="dark"
-                    effect="solid"
-                    className="shadow bg-red-500"
-                  />
+
                   <a
                     href={`${item.node.spotify.spotify}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    data-tip="¿Te vas a Spotify?"
+                    data-tip="¿Te vas para Spotify?"
                     className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
                   >
                     <FaSpotify className="text-white" />
+                  </a>
+
+                  <a
+                    href={`${item.node.soundcloud.soundcloud}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-tip="Escuchár en Soundcloud"
+                    className=" block text-2xl hover:text-white  hover:bg-orange-700 p-6"
+                  >
+                    <i class="fa fa-soundcloud " aria-hidden="true"></i>
                   </a>
                 </div>
               </div>
@@ -181,8 +179,8 @@ const CarlinPage = () => {
           >
             {data.allContentfulAutores.edges.map((item, i) => (
               <div className="post mb-12 w-full">
-                <h2 className="text-center text-white text-2xl my-6">
-                  Colecciones
+                <h2 className="text-center font-mono text-white text-2xl my-6">
+                  Selección de Carlin
                 </h2>
                 <div
                   className="soundcloud-player"

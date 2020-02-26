@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./vivo.css"
+import Image from "../components/image"
 
 const NotFoundPage = () => (
   <Layout>
@@ -47,22 +48,34 @@ const NotFoundPage = () => (
 
       <div className="animated fadeIn slower pt-6 text-xl">
         <div className="live relative">
-          <h2 className="text-left block w-full text-white p-6 pb-0">
-            Selección LNQRadio
+          <h2 className="text-right font-mono block w-full text-white p-6 pb-0">
+            <span className="text-red-500  text-3xl block pb-2">
+              No Tan en Vivo.
+            </span>
+            Todos los programas.
+            <span className="text-gray-500 pl-2 block">
+              Mas de 66 horas con 23 minutos y algunos segundos.
+            </span>
           </h2>
-          <h2 className="text-white font-mono text-xl w-full text-left animated fadeIn slow px-6 pt-3 mb-0 pb-0">
+          <div className="w-32 absolute hidden md:block right-0 top-0 m-6 mt-8 mt-1 logo">
+            <Image />
+          </div>
+          <h2 className="text-white font-mono text-xl w-full text-right animated fadeIn slow px-6 pt-3 mb-0 pb-0">
             Ponele play y escucha de todo.{" "}
-            <span className="text-red-500"> Sin publicidad y Sin pagar.</span>
+            <span className="text-red-500 block py-3">
+              {" "}
+              Sin publicidad y gratarola.
+            </span>
           </h2>
+
           <iframe
             width="100%"
             height="850"
-            scrolling="no"
             className="w-full  my-6 mt-2 p-6 pt-2"
+            scrolling="no"
             frameborder="no"
-            title="Spotify"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/753004221&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/749768106&color=%23f56565&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
           ></iframe>
         </div>
       </div>

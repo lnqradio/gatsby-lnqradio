@@ -7,6 +7,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import "react-awesome-slider/dist/styles.css"
 import "./index.css"
 
+import { FiChevronsDown } from "react-icons/fi"
+
 import Swiper from "react-id-swiper"
 
 const IndexPage = () => {
@@ -180,9 +182,10 @@ const IndexPage = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
       ></link>
 
-      <div className="homeHero py-12 pb-12 bg-gray-800 flex flex-col justify-center items-center">
-        <h1 className="text-2xl pt-0 pb-12 text-white font-mono w-full text-center">
-          La Noche Que ella soño con el Centro Half
+      <div className="homeHero py-12 pb-12 bg-gray-800 flex flex-col justify-center items-center relative">
+        <h1 className="text-2xl pt-0 pb-12 px-6 md text-white font-mono w-full text-left md:text-center leading-10">
+          <span className="block text-gray-400">La Noche Que </span>
+          ella soño con el Centro Half
         </h1>
         <iframe
           width="300px"
@@ -199,11 +202,12 @@ const IndexPage = () => {
         <h2 className="text-red-500 text-xl w-full text-center animated fadeIn slow px-0 pt-3 mb-12 ">
           Todos los viernes a las 20hs
         </h2>
+        <FiChevronsDown className="md:hidden text-5xl absolute bottom-0 animated bounce infinite slower delay-2s text-gray-400" />
       </div>
 
       <div className="max-w-6xl px-3 m-auto pt-12">
         <Link
-          to={`/podcasts/entrevistas`}
+          to={`/podcasts/entrevistas/`}
           className="text-red-500 text-2xl font-mono pb-3 block pt-12 hover:text-white"
         >
           Entrevistas
@@ -217,7 +221,7 @@ const IndexPage = () => {
                 )}/`}
                 className="title "
               >
-                <h2 className="title px-6 py-6 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="title px-6 py-6 pb-2 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>
@@ -248,9 +252,12 @@ const IndexPage = () => {
                 <h2 className="title px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
-                <span className="text-white px-6 pb-6 block font-mono">
-                  x {item.node.author.name}
-                </span>
+              </Link>
+              <Link
+                to={`/columnas/${kebabCase(item.node.author.slug)}/`}
+                className="text-gray-500 px-6 pb-6 block font-mono hover:text-white"
+              >
+                x {item.node.author.name}
               </Link>
               <p className="title px-6 pb-6 hidden">
                 {item.node.description.description}
@@ -278,9 +285,12 @@ const IndexPage = () => {
                 <h2 className="title px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
-                <span className="text-white px-6 pb-6 block font-mono">
-                  x {item.node.author.name}
-                </span>
+              </Link>
+              <Link
+                to={`/columnas/${kebabCase(item.node.author.slug)}/`}
+                className="text-gray-500 px-6 pb-6 block font-mono hover:text-white"
+              >
+                x {item.node.author.name}
               </Link>
               <p className="title px-6 pb-6 hidden">
                 {item.node.description.description}
@@ -308,9 +318,12 @@ const IndexPage = () => {
                 <h2 className="title px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
-                <span className="text-white px-6 pb-6 block font-mono">
-                  x {item.node.author.name}
-                </span>
+              </Link>
+              <Link
+                to={`/columnas/${kebabCase(item.node.author.slug)}/`}
+                className="text-gray-500 px-6 pb-6 block font-mono hover:text-white"
+              >
+                x {item.node.author.name}
               </Link>
               <p className="title px-6 pb-6 hidden">
                 {item.node.description.description}
@@ -338,9 +351,12 @@ const IndexPage = () => {
                 <h2 className="title px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
-                <span className="text-white px-6 pb-6 block font-mono">
-                  x {item.node.author.name}
-                </span>
+              </Link>
+              <Link
+                to={`/columnas/${kebabCase(item.node.author.slug)}/`}
+                className="text-gray-500 px-6 pb-6 block font-mono hover:text-white"
+              >
+                x {item.node.author.name}
               </Link>
               <p className="title px-6 pb-6 hidden">
                 {item.node.description.description}

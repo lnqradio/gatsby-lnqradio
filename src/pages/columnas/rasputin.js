@@ -82,7 +82,7 @@ const RasputinPage = () => {
         <div className="hero bg-gray-800 p-6 md:p-0 xl:sticky inset-x-0 top-0 z-50 mb-0 w-full md:w-48 hidden md:block">
           <div className="authors flex justify-center md:pt-6 flex-wrap md:justify-start md:px-0 md:sticky md:top-0 m-auto max-w-4xl ">
             <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white">
-              Columnas
+              Autores
             </h4>
             {data.autores.edges.map((item, i) => (
               <Link
@@ -108,27 +108,20 @@ const RasputinPage = () => {
               </div>
             ))}
             <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full">
-              <h1 className="text-white pb-3 mb-2 border-b">Rasputín</h1>
+              <h1 className="text-white font-mono pb-3 mb-2 border-b">
+                Rasputín
+              </h1>
               <AnchorLink
                 href={`#author-player`}
                 className="text-base block text-red-500 hover:text-white font-mono my-3"
               >
                 <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
-                <span className="pl-3 pt-0">Escuchar Playlist</span>
+                <span className="pl-3 pt-0">Escuchar Selección</span>
               </AnchorLink>
-              <a
-                href="https://open.spotify.com/search/lnqradio%20rasputin/episodes"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" flex items-center text-base hover:text-white p-2 pl-0 font-mono text-green-700"
-              >
-                <FaSpotify className=" text-xl" />
-                <span className="pl-3 pt-0">Reproducir en Spotify</span>
-              </a>
             </div>
           </div>
           <div className="posts soundcloud flex flex-wrap w-full md:w-2/3 max-w-6xl px-6 m-auto">
-            <h3 className="text-white py-6 text-2xl font-light">
+            <h3 className="text-white font-mono py-6 text-2xl font-light">
               Todas las Columnas
             </h3>
             {data.contenful.edges.map((item, i) => (
@@ -169,13 +162,15 @@ const RasputinPage = () => {
                     <FaSpotify className="text-white" />
                   </a>
 
-                  <AnchorLink
-                    href={`#author-player`}
+                  <a
+                    href={`${item.node.soundcloud.soundcloud}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     data-tip="Escuchár en Soundcloud"
                     className=" block text-2xl hover:text-white  hover:bg-orange-700 p-6"
                   >
                     <i class="fa fa-soundcloud " aria-hidden="true"></i>
-                  </AnchorLink>
+                  </a>
                 </div>
               </div>
             ))}
@@ -186,6 +181,9 @@ const RasputinPage = () => {
           >
             {data.allContentfulAutores.edges.map((item, i) => (
               <div className="post mb-8 w-full max-w-xl m-auto">
+                <h2 className="text-center font-mono text-white text-2xl my-6">
+                  Selección de Rasputín
+                </h2>
                 <div
                   className="soundcloud-player"
                   dangerouslySetInnerHTML={{

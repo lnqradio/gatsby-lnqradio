@@ -24,6 +24,18 @@ SVG Icons - svgicons.sparkk.fr
   height: 430px;
 }
 
+a.text-red-500,
+a.text-gray-500,
+h2.text-red-500 {
+  @apply transition-all duration-200;
+}
+
+a.text-red-500:hover,
+a.text-gray-500:hover,
+h2.text-red-500:hover {
+  @apply underline;
+}
+
 .bg-gray-800 {
   background-color: #281136;
 }
@@ -194,6 +206,13 @@ iframe {
 .swiper-button-next,
 .swiper-button-prev {
   filter: hue-rotate(145deg);
+  top: 0 !important;
+  @apply transition-all duration-200;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  filter: grayscale(1) hue-rotate(-50deg) sepia(1);
   top: 0 !important;
 }
 

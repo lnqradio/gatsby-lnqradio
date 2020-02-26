@@ -43,7 +43,7 @@ const EpisodiosPage = () => {
       <SEO title="Episodios" />
       <div className="h-24 md:sticky md:top-0 bg-gray-900 flex items-center justify-center z-10 hero px-6 m-0 mb-6">
         <h1 className="  text-xl text-white  text-center ">
-          2019. Todos episodios completos
+          Listado de episodios completos
         </h1>
       </div>
       <div className="posts flex flex-wrap max-w-3xl m-auto">
