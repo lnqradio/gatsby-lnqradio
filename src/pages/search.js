@@ -103,8 +103,8 @@ const SearchIndex = props => {
             </Link>
             <p className="hidden">{description}</p>
 
-            <div className="listen absolute h-16 md:h-auto flex justify-end items-center bottom-0 md:top-0 right-0">
-              <b className="text-gray-500 text-sm">{publishDate}</b>
+            <div className="listen md:absolute  h-auto flex justify-start md:justify-end items-center bottom-0 md:top-0 right-0">
+              <b className="text-gray-500 text-sm w-full">{publishDate}</b>
               <ReactTooltip
                 place="left"
                 type="dark"
@@ -116,7 +116,7 @@ const SearchIndex = props => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-tip="¿Te vas para Spotify?"
-                className=" block text-2xl p-6"
+                className=" block text-base p-3 md:text-2xl md:p-6"
               >
                 <FaSpotify className="text-white hover:text-green-700 transition duration-200 ease-in-out" />
               </a>
@@ -125,7 +125,7 @@ const SearchIndex = props => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-tip="¿Te vas para Soundcloud?"
-                className=" block text-2xl p-6"
+                className=" block text-base p-3 md:text-2xl md:p-6"
               >
                 <FaSoundcloud className="text-white hover:text-orange-700 transition duration-200 ease-in-out" />
               </a>
