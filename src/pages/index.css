@@ -226,8 +226,11 @@ iframe {
   min-height: 220px !important;
   transform: scale(1);
   transition:  all .8s;
+  cursor: grab;
+}
 
-
+.swiper-slide:active {
+  cursor: grabbing;
 }
 
 .swiper-slide:hover {
