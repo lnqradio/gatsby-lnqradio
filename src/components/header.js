@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
         <Link className activeClassName="active" to="/podcasts/">
           Podcasts
         </Link>
-        <Link className activeClassName="active" to="/episodios/">
+        <Link className="hidden" activeClassName="active" to="/episodios/">
           Episodios
         </Link>
         <Link className activeClassName="active" to="/podcasts/entrevistas/">
@@ -38,36 +38,8 @@ const Header = ({ siteTitle }) => (
         <Link className activeClassName="active" to="/ficciones/">
           Ficciones
         </Link>
-
-        <Link
-          activeClassName="active"
-          to="/vivo/"
-          className="live-btn animated fadeInUp delay-1s  hidden "
-        >
-          <div className="bg-red-800 hover:bg-red-700 text-center py-2 lg:px-4">
-            <div
-              className="p-2 items-center text-red-100 leading-normal  lg:rounded-full flex lg:inline-flex "
-              role="alert"
-            >
-              <span className="flex rounded bg-red-700 uppercase leading-relaxed px-2 py-1 font-bold mr-3 text-base">
-                <small className=" ">Episodio 31</small>
-              </span>
-              <span className="font-bold text-sm  mr-2 text-left flex-auto flex-col ">
-                <span className="underline pl-1 block md:inline-block">
-                  En vivo
-                </span>
-              </span>
-              <svg
-                className="fill-current opacity-75 h-4 w-4"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
-              </svg>
-            </div>
-          </div>
-        </Link>
       </nav>
+
       <Link
         className="nav-search text-white pl-3 text-right hidden md:flex items-center justify-end text-white hover:text-red-600 "
         activeClassName="active"
@@ -92,6 +64,35 @@ const Header = ({ siteTitle }) => (
         <span className="pt-0 inline-block px-1">No tan en Vivo</span>
       </Link>
     </div>
+    <Link
+      activeClassName="active"
+      to="/"
+      style={{ zIndex: "9999" }}
+      className="animated fadeInUp delay-1s left-0 right-0 bottom-0 p-0 fixed hidden"
+    >
+      <div className="bg-red-800 hover:bg-red-700 text-center py-2 lg:px-4">
+        <div
+          className="p-2 items-center text-red-100 leading-normal  lg:rounded-full flex lg:inline-flex "
+          role="alert"
+        >
+          <span className="flex rounded bg-red-700 uppercase leading-relaxed px-2 py-1 font-bold mr-3 text-base">
+            <small className=" ">Episodio 240</small>
+          </span>
+          <span className="font-bold text-sm  mr-2 text-left flex-auto flex-col ">
+            <span className="underline pl-1 block md:inline-block">
+              Estamos ahora ao vivo
+            </span>
+          </span>
+          <svg
+            className="fill-current opacity-75 h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+          </svg>
+        </div>
+      </div>
+    </Link>
   </header>
 )
 

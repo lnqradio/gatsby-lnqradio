@@ -59,16 +59,23 @@ const SearchIndex = props => {
 
   return (
     <>
-      <div className="searchBox text-center mb-0 max-w-6xl m-auto w-full pt-16 md:pt-6 p-6 md:p-0 md:pb-6">
+      <div className="searchBox text-center mb-0 max-w-6xl m-auto w-full pt-16 md:pt-6 p-6 md:p-0 md:pb-6 animated fadeIn slower">
         <h2 className="text-white text-left py-3 pb-6 text-2xl font-mono flex items-baseline flex-col md:flex-row">
           <span className="flex-1">Buscador de podcazt</span>
           <small className="text-gray-600">
-            subidos {totales} de <span data-tip="Número random">3885</span>
+            subidos{" "}
+            <span className="text-gray-400" data-tip="Número Posta">
+              {totales}
+            </span>{" "}
+            de{" "}
+            <span className="text-gray-400" data-tip="Número random">
+              3885
+            </span>
           </small>
         </h2>
 
         <input
-          className="searchInput bg-gray-800 text-gray-100 p-3 w-full  border-b-2"
+          className="searchInput bg-gray-800 text-gray-100 p-3 w-full  border-b-2 "
           type="text"
           tabindex="0"
           aria-label="Search"
@@ -87,7 +94,7 @@ const SearchIndex = props => {
         return (
           <article
             key={id}
-            className="max-w-6xl m-auto mb-2 p-4 pb-4 md:p-4 text-white relative border-b border-gray-800 bg-gray-800"
+            className="search-item max-w-6xl m-auto mb-2 p-4 pb-4 md:p-4 text-white relative border-b border-gray-800 bg-gray-800 animated fadeInUp"
           >
             <Link
               className="text-red-500 font-bold font-mono hover:text-white text-lg"
