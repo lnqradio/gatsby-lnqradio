@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import "react-awesome-slider/dist/styles.css"
+import Img from "gatsby-image"
+
 import "./index.css"
 
 import { FiChevronsDown } from "react-icons/fi"
@@ -61,6 +63,11 @@ const IndexPage = () => {
             soundcloud {
               soundcloud
             }
+            heroImage {
+              fixed(width: 400, height: 300) {
+                ...GatsbyContentfulFixed
+              }
+            }
             author {
               name
               slug
@@ -85,6 +92,11 @@ const IndexPage = () => {
             }
             soundcloud {
               soundcloud
+            }
+            heroImage {
+              fixed(width: 400, height: 300) {
+                ...GatsbyContentfulFixed
+              }
             }
             author {
               name
@@ -111,6 +123,11 @@ const IndexPage = () => {
             soundcloud {
               soundcloud
             }
+            heroImage {
+              fixed(width: 400, height: 300) {
+                ...GatsbyContentfulFixed
+              }
+            }
             author {
               name
               slug
@@ -132,6 +149,11 @@ const IndexPage = () => {
             slug
             spotify {
               spotify
+            }
+            heroImage {
+              fixed(width: 400, height: 300) {
+                ...GatsbyContentfulFixed
+              }
             }
             soundcloud {
               soundcloud
@@ -157,6 +179,11 @@ const IndexPage = () => {
             slug
             spotify {
               spotify
+            }
+            heroImage {
+              fixed(width: 400, height: 300) {
+                ...GatsbyContentfulFixed
+              }
             }
             soundcloud {
               soundcloud
@@ -214,20 +241,26 @@ const IndexPage = () => {
         </Link>
         <Swiper {...params}>
           {data.entrevistas.edges.map((item, i) => (
-            <div className="post h-full px-0 pt-4 shadow bg-gray-800 mb-12 w-full">
+            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 mb-12 w-full relative overflow-hidden">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title "
+                className="title  z-10 relative "
               >
-                <h2 className="title px-6 py-6 pb-2 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="title  z-10 relative  px-6 py-6 pb-2 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>
-              <p className="title px-6 pb-6 ">
+              <p className="description px-6 pb-6 z-10 relative">
                 {item.node.description.description}
               </p>
+              <Img
+                alt=""
+                fixed={item.node.heroImage.fixed}
+                style={{ position: "absolute", opacity: ".1" }}
+                className="absolute hover:opacity-75 inset-0"
+              />
             </div>
           ))}
         </Swiper>
@@ -242,14 +275,14 @@ const IndexPage = () => {
         </Link>
         <Swiper {...params}>
           {data.musica.edges.map((item, i) => (
-            <div className="post h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full">
+            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full relative overflow-hidden">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title "
+                className="title  z-10 relative  "
               >
-                <h2 className="title px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="title  z-10 relative  px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>
@@ -259,9 +292,15 @@ const IndexPage = () => {
               >
                 x {item.node.author.name}
               </Link>
-              <p className="title px-6 pb-6 hidden">
+              <p className="title  z-10 relative  px-6 pb-6 hidden">
                 {item.node.description.description}
               </p>
+              <Img
+                alt=""
+                fixed={item.node.heroImage.fixed}
+                style={{ position: "absolute", opacity: ".1" }}
+                className="absolute hover:opacity-75 inset-0"
+              />
             </div>
           ))}
         </Swiper>
@@ -275,26 +314,32 @@ const IndexPage = () => {
         </Link>
         <Swiper {...params}>
           {data.historias.edges.map((item, i) => (
-            <div className="post h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full">
+            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full relative overflow-hidden">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title "
+                className="title  z-10 relative  "
               >
-                <h2 className="title px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="title  z-10 relative  px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/`}
-                className="text-gray-500 px-6 pb-6 block font-mono hover:text-white"
+                className="text-gray-500  z-10 relative  px-6 pb-6 block font-mono hover:text-white"
               >
                 x {item.node.author.name}
               </Link>
-              <p className="title px-6 pb-6 hidden">
+              <p className="title  z-10 relative  px-6 pb-6 hidden">
                 {item.node.description.description}
               </p>
+              <Img
+                alt=""
+                fixed={item.node.heroImage.fixed}
+                style={{ position: "absolute", opacity: ".1" }}
+                className="absolute hover:opacity-75 inset-0"
+              />
             </div>
           ))}
         </Swiper>
@@ -308,14 +353,14 @@ const IndexPage = () => {
         </Link>
         <Swiper {...params}>
           {data.perfiles.edges.map((item, i) => (
-            <div className="post h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full">
+            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full relative overflow-hidden">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title "
+                className="title  z-10 relative  "
               >
-                <h2 className="title px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="title  z-10 relative  px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>
@@ -325,9 +370,15 @@ const IndexPage = () => {
               >
                 x {item.node.author.name}
               </Link>
-              <p className="title px-6 pb-6 hidden">
+              <p className="title  z-10 relative  px-6 pb-6 hidden">
                 {item.node.description.description}
               </p>
+              <Img
+                alt=""
+                fixed={item.node.heroImage.fixed}
+                style={{ position: "absolute", opacity: ".1" }}
+                className="absolute hover:opacity-75 inset-0"
+              />
             </div>
           ))}
         </Swiper>
@@ -341,26 +392,32 @@ const IndexPage = () => {
         </Link>
         <Swiper {...params}>
           {data.cine.edges.map((item, i) => (
-            <div className="post h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full">
+            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full relative overflow-hidden">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title "
+                className="title  z-10 relative  "
               >
-                <h2 className="title px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="title  z-10 relative  px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
                   {item.node.title}
                 </h2>
               </Link>
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/`}
-                className="text-gray-500 px-6 pb-6 block font-mono hover:text-white"
+                className="text-gray-500  z-10 relative  px-6 pb-6 block font-mono hover:text-white"
               >
                 x {item.node.author.name}
               </Link>
-              <p className="title px-6 pb-6 hidden">
+              <p className="title  z-10 relative  px-6 pb-6 hidden">
                 {item.node.description.description}
               </p>
+              <Img
+                alt=""
+                fixed={item.node.heroImage.fixed}
+                style={{ position: "absolute", opacity: ".1" }}
+                className="absolute hover:opacity-75 inset-0"
+              />
             </div>
           ))}
         </Swiper>

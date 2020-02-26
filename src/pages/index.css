@@ -226,6 +226,20 @@ iframe {
   min-height: 220px !important;
 }
 
+.swiper-slide .gatsby-image-wrapper,
+.swiper-slide:hover .description {
+  transition:  all .8s;
+}
+
+.swiper-slide:hover .gatsby-image-wrapper {
+  opacity: .2 !important;
+  width: 100% !important;
+}
+
+.swiper-slide:hover .description {
+  opacity: 0 !important;
+}
+
 .post-hero {
   background-image: url(../images/bg-pattern-1.svg);
   background-position: 40% 50%;
