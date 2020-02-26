@@ -224,20 +224,41 @@ iframe {
 
 .swiper-slide {
   min-height: 220px !important;
+  transform: scale(1);
+  transition:  all .8s;
+
+
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05);
+}
+
+.swiper-slide .gatsby-image-wrapper {
+  transform: scale(1);
 }
 
 .swiper-slide .gatsby-image-wrapper,
-.swiper-slide:hover .description {
+.swiper-slide .description {
   transition:  all .8s;
 }
 
 .swiper-slide:hover .gatsby-image-wrapper {
   opacity: .2 !important;
-  width: 100% !important;
+  transform: scale(1.1);
 }
 
 .swiper-slide:hover .description {
   opacity: 0 !important;
+}
+
+.swiper-slide .title {
+  transition:  all .8s;
+}
+
+.swiper-slide:hover .title {
+  transform: scale(1.1) translateX(5px);
+
 }
 
 .post-hero {

@@ -241,7 +241,7 @@ const IndexPage = () => {
         </Link>
         <Swiper {...params}>
           {data.entrevistas.edges.map((item, i) => (
-            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 mb-12 w-full relative overflow-hidden">
+            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 mb-12 w-full relative overflow-hidden ">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
