@@ -193,6 +193,34 @@ iframe {
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
+  bottom: 30px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+  width: 15px !important;
+  height: 4px !important;
+  border-radius: 0 !important;
+  opacity: 0.5 !important;
+  transition: all 0.8s;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px !important;
+}
+
+@screen sm {
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: initial !important;
+    top: -40px !important;
+  }
 }
 
 .swiper-container {
@@ -225,7 +253,7 @@ iframe {
 .swiper-slide {
   min-height: 220px !important;
   transform: scale(1);
-  transition:  all .8s;
+  transition: all 0.8s;
   cursor: grab;
 }
 
@@ -243,25 +271,28 @@ iframe {
 
 .swiper-slide .gatsby-image-wrapper,
 .swiper-slide .description {
-  transition:  all .8s;
+  transition: all 0.8s;
 }
 
 .swiper-slide:hover .gatsby-image-wrapper {
-  opacity: .2 !important;
+  opacity: 0.2 !important;
   transform: scale(1.1);
 }
 
 .swiper-slide:hover .description {
+  opacity: 10 !important;
+}
+
+.swiper-slide .description {
   opacity: 0 !important;
 }
 
 .swiper-slide .title {
-  transition:  all .8s;
+  transition: all 0.8s;
 }
 
 .swiper-slide:hover .title {
   transform: scale(1.1) translateX(5px);
-
 }
 
 .post-hero {
@@ -418,4 +449,27 @@ iframe {
 .posts.animation .post:nth-child(16) {
   animation-delay: 0.85s;
   -webkit-animation-delay: 0.85s;
+}
+
+.entrevista-item {
+}
+
+.entrevista-item:hover .title {
+  background: transparent !important;
+  opacity: 1;
+}
+
+.entrevista-item .title {
+  @apply z-10 relative  px-6 py-4 text-red-500 text-center text-2xl font-mono font-mono w-full block;
+  bottom: 0;
+  opacity: 0;
+}
+
+.entrevista-item .title:hover {
+  @apply text-white;
+  opacity: 1;
+}
+
+.entrevista-item .description {
+  @apply px-6 pb-6 z-10 relative text-center  bottom-0;
 }

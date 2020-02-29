@@ -41,7 +41,7 @@ const NotFoundPage = () => (
         <iframe
           width="300px"
           height="200px"
-          title="live"
+          title="LNQRadio en vivo"
           className="relative right-0 top-0 md:absolute"
           name="htmlComp-iframe"
           scrolling="auto"
@@ -57,7 +57,7 @@ const NotFoundPage = () => (
             </span>
             Todos los programas.
             <span className="text-gray-500 pl-2 block">
-              Mas de 66 horas con 23 minutos y algunos segundos.
+              Muchas horas, muchos minutos y algunos segundos.
             </span>
           </h2>
           <div className="w-32 absolute hidden md:block right-0 top-0 m-6 mt-8 mt-1 logo">

@@ -5,7 +5,6 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { FaSpotify } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
 import Img from "gatsby-image"
 
 const AstrologoPage = () => {

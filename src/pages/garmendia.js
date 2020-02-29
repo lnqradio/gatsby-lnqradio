@@ -20,6 +20,7 @@ const NotFoundPage = () => (
           src="https://player.twitch.tv/?autoplay=false&video=v555746285"
           frameborder="0"
           allowfullscreen="true"
+          title="Video transmisión"
           scrolling="no"
           height="380"
           width="100%"

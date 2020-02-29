@@ -1,42 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const ArtisticasPage = () => {
-  const data = useStaticQuery(graphql`
-    query ArtisticasQuery {
-      contenful: allContentfulProgramas(
-        sort: { fields: [episode], order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            title
-            slug
-            soundcloud {
-              soundcloud
-            }
-            episode
-            description {
-              description
-            }
-            publishDate(formatString: "MMMM Do, YYYY", locale: "es")
-            heroImage {
-              fluid(maxWidth: 1200, maxHeight: 1000) {
-                ...GatsbyContentfulFluid
-              }
-            }
-            body {
-              body
-            }
-          }
-        }
-        totalCount
-      }
-    }
-  `)
-
   return (
     <Layout>
       <SEO title="Artisticas" />
@@ -48,6 +14,7 @@ const ArtisticasPage = () => {
               width="300"
               height="450"
               scrolling="no"
+              title="La Pereza"
               className="m-2 search-item animated fadeIn"
               frameborder="no"
               allow="autoplay"
@@ -57,6 +24,7 @@ const ArtisticasPage = () => {
               width="300"
               height="450"
               scrolling="no"
+              title="aRadio - a dos charlas"
               className="m-2 search-item animated fadeIn"
               frameborder="no"
               allow="autoplay"
@@ -67,6 +35,7 @@ const ArtisticasPage = () => {
               height="450"
               className="m-2 search-item animated fadeIn"
               scrolling="no"
+              title="Claudicacion de un no-prólogo"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/708948864&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
@@ -76,6 +45,7 @@ const ArtisticasPage = () => {
               height="450"
               className="m-2 search-item animated fadeIn"
               scrolling="no"
+              title="Momento Flaming Lips"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/708878205&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
@@ -84,6 +54,7 @@ const ArtisticasPage = () => {
               width="300"
               height="450"
               scrolling="no"
+              title="Prologo"
               className="m-2 search-item animated fadeIn"
               frameborder="no"
               allow="autoplay"

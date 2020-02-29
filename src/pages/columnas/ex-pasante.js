@@ -4,7 +4,6 @@ import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { FaSpotify } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
 import Img from "gatsby-image"
 const ExpasantePage = () => {
   const data = useStaticQuery(graphql`

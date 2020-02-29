@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import { FaSpotify, FaSoundcloud } from "react-icons/fa"
 import ReactTooltip from "react-tooltip"
+import SEO from "../components/seo"
 
 const SearchIndex = props => {
   const { data } = props
@@ -62,6 +63,8 @@ const SearchIndex = props => {
       <div className="searchBox text-center mb-0 max-w-6xl m-auto w-full pt-16 md:pt-6 p-6 md:p-0 md:pb-6 animated fadeIn slower">
         <h2 className="text-white text-left py-3 pb-6 text-2xl font-mono flex items-baseline flex-col md:flex-row">
           <span className="flex-1">Buscador de podcazt</span>
+          <SEO title={totales} />
+
           <small className="text-gray-600">
             subidos{" "}
             <span className="text-gray-400" data-tip="Número Posta">

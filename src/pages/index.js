@@ -51,6 +51,7 @@ const IndexPage = () => {
       musica: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Musicales" } }
+        limit: 3
       ) {
         edges {
           node {
@@ -81,6 +82,7 @@ const IndexPage = () => {
       historias: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Historias" } }
+        limit: 3
       ) {
         edges {
           node {
@@ -111,6 +113,7 @@ const IndexPage = () => {
       perfiles: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Perfiles" } }
+        limit: 3
       ) {
         edges {
           node {
@@ -141,6 +144,7 @@ const IndexPage = () => {
       cine: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Cine" } }
+        limit: 3
       ) {
         edges {
           node {
@@ -169,8 +173,9 @@ const IndexPage = () => {
         }
       }
       entrevistas: allContentfulColumnas(
-        sort: { fields: [createdAt], order: DESC }
+        sort: { fields: [publishDate], order: ASC }
         filter: { author: {}, tipoDePodcast: { eq: "Entrevistas" } }
+        limit: 3
       ) {
         edges {
           node {
@@ -235,30 +240,29 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto pt-12">
         <Link
           to={`/podcasts/entrevistas/`}
-          className="text-red-500 text-2xl font-mono pb-3 block pt-12 hover:text-white"
+          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
         >
           Entrevistas
         </Link>
         <Swiper {...params}>
           {data.entrevistas.edges.map((item, i) => (
-            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 mb-12 w-full relative overflow-hidden ">
+            <div className="entrevista-item post font-mono h-full p-0 shadow bg-gray-800 mb-12 w-full relative overflow-hidden ">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title  z-10 relative "
+                className="title"
               >
-                <h2 className="title  z-10 relative  px-6 py-6 pb-2 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
-                  {item.node.title}
-                </h2>
+                {item.node.title}
               </Link>
-              <p className="description px-6 pb-6 z-10 relative">
+              <p className="description ">
                 {item.node.description.description}
               </p>
+
               <Img
                 alt=""
                 fixed={item.node.heroImage.fixed}
-                style={{ position: "absolute", opacity: ".1" }}
+                style={{ position: "absolute", opacity: ".5" }}
                 className="absolute hover:opacity-75 inset-0"
               />
             </div>
@@ -269,7 +273,7 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/musicales`}
-          className="text-red-500 text-2xl font-mono pb-3 block pt-12 hover:text-white"
+          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
         >
           Musicales
         </Link>
@@ -308,7 +312,7 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/historias`}
-          className="text-red-500 text-2xl font-mono pb-3 block pt-12 hover:text-white"
+          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
         >
           Historias
         </Link>
@@ -347,7 +351,7 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/perfiles`}
-          className="text-red-500 text-2xl font-mono pb-3 block pt-12 hover:text-white"
+          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
         >
           Perfiles
         </Link>
@@ -386,7 +390,7 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/cine`}
-          className="text-red-500 text-2xl font-mono pb-3 block pt-12 hover:text-white"
+          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
         >
           Cine
         </Link>

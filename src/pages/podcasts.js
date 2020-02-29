@@ -11,7 +11,6 @@ import Img from "gatsby-image"
 import { GiSpellBook } from "react-icons/gi"
 import { MdPersonPin, MdLocalMovies } from "react-icons/md"
 import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
-import ReactTooltip from "react-tooltip"
 
 const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
