@@ -219,15 +219,21 @@ const IndexPage = () => {
           <span className="block text-gray-400">La Noche Que </span>
           ella soño con el Centro Half
         </h1>
-        <iframe
-          width="300px"
-          height="200px"
-          title="live"
-          className="h-40"
-          name="htmlComp-iframe"
-          scrolling="auto"
-          src="https://www-lnqradio-com.filesusr.com/html/80866a_abf8a98d014638b9f83f01f283f520d3.html"
-        ></iframe>
+        <div class="solumedia">
+          <iframe
+            border="0"
+            frameborder="NO"
+            width="300px"
+            height="200px"
+            className="h-40"
+            scrolling="NO"
+            marginheight="0px"
+            marginwidth="0px"
+            allowtransparency="yes"
+            src="https://www.solumedia.com.ar/radios/8772/index.html"
+          ></iframe>
+        </div>
+
         <h1 className="text-white text-center text-3xl w-full animated fadeIn  slow px-0 pt-0 ">
           Escuchá el programa en vivo
         </h1>

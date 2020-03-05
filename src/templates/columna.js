@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import get from "lodash/get"
 import SEO from "../components/seo"
+import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import { FaSpotify, FaSoundcloud } from "react-icons/fa"
 import { GoLinkExternal } from "react-icons/go"
@@ -14,7 +15,18 @@ class ColumnaTemplate extends React.Component {
     return (
       <Layout>
         <SEO title={`${columna.title} x ${columna.author.name}`} />
-
+        <Helmet
+          meta={[
+            {
+              name: `og:image`,
+              content: columna.heroImage.file.url,
+            },
+            {
+              name: `twitter:image`,
+              content: columna.heroImage.file.url,
+            },
+          ]}
+        />
         <div className="posts soundcloud flex flex-wrap flex-col m-auto pt-0 px-2">
           <div className="post flex pt-0 shadow  flex-col mb-12 m-auto w-full">
             <div className="post-hero w-full bg-pattern bg-indigo-900">
@@ -97,6 +109,9 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 1600, maxHeight: 500) {
           ...GatsbyContentfulFluid
+        }
+        file {
+          url
         }
       }
       description {
