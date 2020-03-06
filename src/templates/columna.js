@@ -21,7 +21,7 @@ class ColumnaTemplate extends React.Component {
         <Helmet
           meta={[
             {
-              name: `og:image`,
+              property: `og:image`,
               content: `https:${columna.heroImage.file.url}`,
             },
             {
@@ -29,63 +29,63 @@ class ColumnaTemplate extends React.Component {
               content: `https:${columna.heroImage.file.url}`,
             },
             {
-              name: `og:url`,
+              property: `og:url`,
               content: url,
             },
           ]}
         />
 
-        <div className="posts soundcloud flex flex-wrap flex-col m-auto pt-0 px-2">
-          <div className="post flex pt-0 shadow  flex-col mb-12 m-auto w-full">
-            <div className="post-hero w-full bg-pattern bg-indigo-900">
+        <div className="flex flex-col flex-wrap px-2 pt-0 m-auto posts soundcloud">
+          <div className="flex flex-col w-full pt-0 m-auto mb-12 shadow post">
+            <div className="w-full bg-indigo-900 post-hero bg-pattern">
               <div
-                className="columna-article mt-0 w-full max-w-2xl m-auto text-lg animated fadeIn delay-1s slower "
+                className="w-full max-w-2xl m-auto mt-0 text-lg columna-article animated fadeIn delay-1s slower "
                 dangerouslySetInnerHTML={{
                   __html: columna.soundcloudPlayer.soundcloudPlayer,
                 }}
               />
 
-              <div className="listen text-3xl flex mb-6 justify-between items-center max-w-2xl m-auto w-full">
+              <div className="flex items-center justify-between w-full max-w-2xl m-auto mb-6 text-3xl listen">
                 <a
                   href={`${columna.spotify.spotify}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mr-2 block w-full text-lg hover:text-white bg-gray-800 p-5 mt-3 rounded-sm hover:bg-green-800"
+                  className="block w-full p-5 mt-3 mr-2 text-lg bg-gray-800 rounded-sm hover:text-white hover:bg-green-800"
                 >
-                  <h2 className=" flex font-mono text-base font-bold text-white  font-mono items-center">
-                    <FaSpotify className="text-white mr-3 w-6 h-6" />
+                  <h2 className="flex items-center font-mono text-base font-bold text-white ">
+                    <FaSpotify className="w-6 h-6 mr-3 text-white" />
                     <span className="w-full">Player Spotify</span>
-                    <GoLinkExternal className="text-white ml-3 text-base" />
+                    <GoLinkExternal className="ml-3 text-base text-white" />
                   </h2>
                 </a>
                 <a
                   href={`${columna.soundcloud.soundcloud}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-2 block w-full text-lg hover:text-white  bg-gray-800 p-5 mt-3 rounded-sm hover:bg-orange-800"
+                  className="block w-full p-5 mt-3 ml-2 text-lg bg-gray-800 rounded-sm hover:text-white hover:bg-orange-800"
                 >
-                  <h2 className=" flex font-mono text-base font-bold text-white  font-mono  items-center">
-                    <FaSoundcloud className="text-orange-100 mr-3 w-6 h-6" />
+                  <h2 className="flex items-center font-mono text-base font-bold text-white ">
+                    <FaSoundcloud className="w-6 h-6 mr-3 text-orange-100" />
                     <span className="w-full">Player Soundcloud</span>
-                    <GoLinkExternal className="text-orange-100 ml-3 text-base" />
+                    <GoLinkExternal className="ml-3 text-base text-orange-100" />
                   </h2>
                 </a>
               </div>
               <Link
                 to={`/columnas/${kebabCase(columna.author.slug)}/`}
-                className="title font-mono block max-w-2xl m-auto text-center px-0 py-6 mb-5 w-full hover:text-white text-gray-500 m-auto bg-gray-900"
+                className="block w-full max-w-2xl px-0 py-6 m-auto mb-5 font-mono text-center text-gray-500 bg-gray-900 title hover:text-white"
               >
                 Escuchá todas las columnas de {columna.author.name}
               </Link>
             </div>
-            <h1 className="text-3xl text-white mt-6 w-full max-w-2xl m-auto font-mono  text-left ">
+            <h1 className="w-full max-w-2xl m-auto mt-6 font-mono text-3xl text-left text-white ">
               {columna.title}
             </h1>
-            <div className="text-md text-gray-500 mt-1 w-full max-w-2xl m-auto font-mono  text-left ">
+            <div className="w-full max-w-2xl m-auto mt-1 font-mono text-left text-gray-500 text-md ">
               x {columna.author.name} - <i>publicado {columna.publishDate}</i>
             </div>
             <p
-              className="columna-article mt-6 w-full max-w-2xl m-auto text-lg pb-20"
+              className="w-full max-w-2xl pb-20 m-auto mt-6 text-lg columna-article"
               dangerouslySetInnerHTML={{
                 __html: columna.body.body,
               }}
