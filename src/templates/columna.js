@@ -19,11 +19,11 @@ class ColumnaTemplate extends React.Component {
           meta={[
             {
               name: `og:image`,
-              content: columna.heroImage.file.url,
+              content: `https:${columna.heroImage.file.url}`,
             },
             {
               name: `twitter:image`,
-              content: columna.heroImage.file.url,
+              content: `https:${columna.heroImage.file.url}`,
             },
           ]}
         />

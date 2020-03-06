@@ -38,15 +38,6 @@ const NotFoundPage = () => (
         <h2 className="text-red-500 text-xl w-full text-left animated fadeIn slow px-0 pt-3 mb-6 ">
           Todos los viernes a las 20hs
         </h2>
-        <iframe
-          width="300px"
-          height="200px"
-          title="LNQRadio en vivo"
-          className="relative right-0 top-0 md:absolute"
-          name="htmlComp-iframe"
-          scrolling="auto"
-          src="https://www-lnqradio-com.filesusr.com/html/80866a_abf8a98d014638b9f83f01f283f520d3.html"
-        ></iframe>
       </div>
 
       <div className="animated fadeIn slower pt-6 text-xl">
@@ -66,7 +57,6 @@ const NotFoundPage = () => (
           <h2 className="text-white font-mono text-xl w-full text-right animated fadeIn slow px-6 pt-3 mb-0 pb-0">
             Ponele play y escucha de todo.{" "}
             <span className="text-red-500 block py-3">
-              {" "}
               Sin publicidad y gratarola.
             </span>
           </h2>
@@ -76,6 +66,7 @@ const NotFoundPage = () => (
             height="850"
             className="w-full  my-6 mt-2 p-6 pt-2"
             scrolling="no"
+            title="soundcloud episodios"
             frameborder="no"
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/749768106&color=%23f56565&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"

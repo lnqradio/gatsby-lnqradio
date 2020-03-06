@@ -224,17 +224,16 @@ const IndexPage = () => {
             border="0"
             frameborder="NO"
             width="300px"
+            title="En vivo"
             height="200px"
             className="h-40"
             scrolling="NO"
-            marginheight="0px"
-            marginwidth="0px"
             allowtransparency="yes"
             src="https://www.solumedia.com.ar/radios/8772/index.html"
           ></iframe>
         </div>
 
-        <h1 className="text-white text-center text-3xl w-full animated fadeIn  slow px-0 pt-0 ">
+        <h1 className="text-white text-center text-3xl w-full animated fadeIn slow px-0 pt-0 ">
           Escuchá el programa en vivo
         </h1>
         <h2 className="text-red-500 text-xl w-full text-center animated fadeIn slow px-0 pt-3 mb-12 ">

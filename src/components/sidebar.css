@@ -7,7 +7,7 @@
   display: block;
   top: 15px;
   opacity: 1;
-  transform: scale(0.8);
+  transform: scale(1);
   transition: all 0.5s;
 }
 
@@ -67,7 +67,8 @@
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: #f46565;
+  opacity: 1 !important;
 }
 
 /* Position and sizing of clickable cross button */
