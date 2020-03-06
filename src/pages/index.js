@@ -214,12 +214,12 @@ const IndexPage = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
       ></link>
 
-      <div className="homeHero py-12 pb-12 bg-gray-800 flex flex-col justify-center items-center relative">
-        <h1 className="text-2xl pt-0 pb-12 px-6 md text-white font-mono w-full text-left md:text-center leading-10">
+      <div className="relative flex flex-col items-center justify-center py-12 pb-12 bg-gray-800 homeHero">
+        <h1 className="w-full px-6 pt-0 pb-12 font-mono text-2xl leading-10 text-left text-white md md:text-center">
           <span className="block text-gray-400">La Noche Que </span>
           ella soño con el Centro Half
         </h1>
-        <div class="solumedia">
+        <div className="solumedia">
           <iframe
             border="0"
             frameborder="NO"
@@ -233,25 +233,25 @@ const IndexPage = () => {
           ></iframe>
         </div>
 
-        <h1 className="text-white text-center text-3xl w-full animated fadeIn slow px-0 pt-0 ">
+        <h1 className="w-full px-0 pt-0 text-3xl text-center text-white animated fadeIn slow ">
           Escuchá el programa en vivo
         </h1>
-        <h2 className="text-red-500 text-xl w-full text-center animated fadeIn slow px-0 pt-3 mb-12 ">
+        <h2 className="w-full px-0 pt-3 mb-12 text-xl text-center text-red-500 animated fadeIn slow ">
           Todos los viernes a las 20hs
         </h2>
-        <FiChevronsDown className="md:hidden text-5xl absolute bottom-0 animated bounce infinite slower delay-2s text-gray-400" />
+        <FiChevronsDown className="absolute bottom-0 text-5xl text-gray-400 md:hidden animated bounce infinite slower delay-2s" />
       </div>
 
-      <div className="max-w-6xl px-3 m-auto pt-12">
+      <div className="max-w-6xl px-3 pt-12 m-auto">
         <Link
           to={`/podcasts/entrevistas/`}
-          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
+          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
         >
           Entrevistas
         </Link>
         <Swiper {...params}>
           {data.entrevistas.edges.map((item, i) => (
-            <div className="entrevista-item post font-mono h-full p-0 shadow bg-gray-800 mb-12 w-full relative overflow-hidden ">
+            <div className="relative w-full h-full p-0 mb-12 overflow-hidden font-mono bg-gray-800 shadow entrevista-item post ">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
@@ -268,7 +268,7 @@ const IndexPage = () => {
                 alt=""
                 fixed={item.node.heroImage.fixed}
                 style={{ position: "absolute", opacity: ".5" }}
-                className="absolute hover:opacity-75 inset-0"
+                className="absolute inset-0 hover:opacity-75"
               />
             </div>
           ))}
@@ -278,37 +278,37 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/musicales`}
-          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
+          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
         >
           Musicales
         </Link>
         <Swiper {...params}>
           {data.musica.edges.map((item, i) => (
-            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full relative overflow-hidden">
+            <div className="relative w-full h-64 h-full px-0 pt-4 mb-12 overflow-hidden font-mono bg-gray-800 shadow post">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title  z-10 relative  "
+                className="relative z-10 title "
               >
-                <h2 className="title  z-10 relative  px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="relative z-10 px-6 py-6 pb-1 mb-3 font-mono text-2xl text-red-500 title hover:text-white lg:mr-32">
                   {item.node.title}
                 </h2>
               </Link>
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/`}
-                className="text-gray-500 px-6 pb-6 block font-mono hover:text-white"
+                className="block px-6 pb-6 font-mono text-gray-500 hover:text-white"
               >
                 x {item.node.author.name}
               </Link>
-              <p className="title  z-10 relative  px-6 pb-6 hidden">
+              <p className="relative z-10 hidden px-6 pb-6 title">
                 {item.node.description.description}
               </p>
               <Img
                 alt=""
                 fixed={item.node.heroImage.fixed}
                 style={{ position: "absolute", opacity: ".1" }}
-                className="absolute hover:opacity-75 inset-0"
+                className="absolute inset-0 hover:opacity-75"
               />
             </div>
           ))}
@@ -317,37 +317,37 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/historias`}
-          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
+          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
         >
           Historias
         </Link>
         <Swiper {...params}>
           {data.historias.edges.map((item, i) => (
-            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full relative overflow-hidden">
+            <div className="relative w-full h-64 h-full px-0 pt-4 mb-12 overflow-hidden font-mono bg-gray-800 shadow post">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title  z-10 relative  "
+                className="relative z-10 title "
               >
-                <h2 className="title  z-10 relative  px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="relative z-10 px-6 py-6 pb-1 mb-3 font-mono text-2xl text-red-500 title hover:text-white lg:mr-32">
                   {item.node.title}
                 </h2>
               </Link>
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/`}
-                className="text-gray-500  z-10 relative  px-6 pb-6 block font-mono hover:text-white"
+                className="relative z-10 block px-6 pb-6 font-mono text-gray-500 hover:text-white"
               >
                 x {item.node.author.name}
               </Link>
-              <p className="title  z-10 relative  px-6 pb-6 hidden">
+              <p className="relative z-10 hidden px-6 pb-6 title">
                 {item.node.description.description}
               </p>
               <Img
                 alt=""
                 fixed={item.node.heroImage.fixed}
                 style={{ position: "absolute", opacity: ".1" }}
-                className="absolute hover:opacity-75 inset-0"
+                className="absolute inset-0 hover:opacity-75"
               />
             </div>
           ))}
@@ -356,37 +356,37 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/perfiles`}
-          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
+          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
         >
           Perfiles
         </Link>
         <Swiper {...params}>
           {data.perfiles.edges.map((item, i) => (
-            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full relative overflow-hidden">
+            <div className="relative w-full h-64 h-full px-0 pt-4 mb-12 overflow-hidden font-mono bg-gray-800 shadow post">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title  z-10 relative  "
+                className="relative z-10 title "
               >
-                <h2 className="title  z-10 relative  px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="relative z-10 px-6 py-6 pb-1 mb-3 font-mono text-2xl text-red-500 title hover:text-white lg:mr-32">
                   {item.node.title}
                 </h2>
               </Link>
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/`}
-                className="text-gray-500 px-6 pb-6 block font-mono hover:text-white"
+                className="block px-6 pb-6 font-mono text-gray-500 hover:text-white"
               >
                 x {item.node.author.name}
               </Link>
-              <p className="title  z-10 relative  px-6 pb-6 hidden">
+              <p className="relative z-10 hidden px-6 pb-6 title">
                 {item.node.description.description}
               </p>
               <Img
                 alt=""
                 fixed={item.node.heroImage.fixed}
                 style={{ position: "absolute", opacity: ".1" }}
-                className="absolute hover:opacity-75 inset-0"
+                className="absolute inset-0 hover:opacity-75"
               />
             </div>
           ))}
@@ -395,37 +395,37 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/cine`}
-          className="text-red-500 text-2xl font-mono pb-3 pt-12 hover:text-white"
+          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
         >
           Cine
         </Link>
         <Swiper {...params}>
           {data.cine.edges.map((item, i) => (
-            <div className="post font-mono h-full px-0 pt-4 shadow bg-gray-800 h-64 mb-12 w-full relative overflow-hidden">
+            <div className="relative w-full h-64 h-full px-0 pt-4 mb-12 overflow-hidden font-mono bg-gray-800 shadow post">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title  z-10 relative  "
+                className="relative z-10 title "
               >
-                <h2 className="title  z-10 relative  px-6 py-6 pb-1 text-red-500 mb-3 text-2xl font-mono hover:text-white lg:mr-32 font-mono">
+                <h2 className="relative z-10 px-6 py-6 pb-1 mb-3 font-mono text-2xl text-red-500 title hover:text-white lg:mr-32">
                   {item.node.title}
                 </h2>
               </Link>
               <Link
                 to={`/columnas/${kebabCase(item.node.author.slug)}/`}
-                className="text-gray-500  z-10 relative  px-6 pb-6 block font-mono hover:text-white"
+                className="relative z-10 block px-6 pb-6 font-mono text-gray-500 hover:text-white"
               >
                 x {item.node.author.name}
               </Link>
-              <p className="title  z-10 relative  px-6 pb-6 hidden">
+              <p className="relative z-10 hidden px-6 pb-6 title">
                 {item.node.description.description}
               </p>
               <Img
                 alt=""
                 fixed={item.node.heroImage.fixed}
                 style={{ position: "absolute", opacity: ".1" }}
-                className="absolute hover:opacity-75 inset-0"
+                className="absolute inset-0 hover:opacity-75"
               />
             </div>
           ))}

@@ -28,29 +28,29 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="app-container m-auto w-full">
+      <div className="w-full m-auto app-container">
         <AnchorLink
           href={`#top`}
-          className="to-top hover:text-white p-3 text-red-500 z-50 font-mono min-w-xm"
+          className="z-50 p-3 font-mono text-red-500 to-top hover:text-white min-w-xm"
         >
-          <span className="text-sm  block" role="img">
+          <span className="block text-sm" role="img">
             Arriba!
           </span>
         </AnchorLink>
 
-        <main className="pt-12 md:pt-0 overflow-hidden">{children}</main>
+        <main className="pt-12 overflow-hidden md:pt-0">{children}</main>
         <footer>
-          <div className="w-24 max-w-xl text-center m-auto py-6">
+          <div className="w-24 max-w-xl py-6 m-auto text-center">
             <Image />
-            <h4 className="text-white my-2">LNQRadio</h4>
+            <h4 className="my-2 text-white">LNQRadio</h4>
           </div>
           <ReactTooltip
             place="bottom"
             type="dark"
             effect="solid"
-            className="shadow bg-red-500"
+            className="bg-red-500 shadow"
           />
-          <div className="social inline-block my-3 text-3xl mb-12">
+          <div className="inline-block my-3 mb-12 text-3xl social">
             <a
               href="https://www.facebook.com/lnqradio/"
               target="_blank"
@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
               className="mx-2"
             >
               <i
-                class="fa fa-facebook  "
+                className="fa fa-facebook "
                 data-tip="Facebook"
                 aria-hidden="true"
               ></i>
@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
               className="mx-2"
             >
               <i
-                class="fa fa-twitter  "
+                className="fa fa-twitter "
                 data-tip="Twitter"
                 aria-hidden="true"
               ></i>
@@ -82,7 +82,7 @@ const Layout = ({ children }) => {
               className="mx-2"
             >
               <i
-                class="fa fa-instagram  "
+                className="fa fa-instagram "
                 data-tip="Instagram"
                 aria-hidden="true"
               ></i>
@@ -94,7 +94,7 @@ const Layout = ({ children }) => {
               className="mx-2"
             >
               <i
-                class="fa fa-spotify "
+                className="fa fa-spotify "
                 data-tip="Spotify"
                 aria-hidden="true"
               ></i>
@@ -106,19 +106,19 @@ const Layout = ({ children }) => {
               className="mx-2"
             >
               <i
-                class="fa fa-soundcloud "
+                className="fa fa-soundcloud "
                 data-tip="Soundcloud"
                 aria-hidden="true"
               ></i>
             </a>
           </div>
           <p>© {new Date().getFullYear()}, Realizado con el apoyo de </p>
-          <Link to={`/garmendia/`} className=" font-bold text-red-600">
+          <Link to={`/garmendia/`} className="font-bold text-red-600 ">
             Laboratorios Garmendia
           </Link>
-          <p className="text-gray-500 pt-6 text-sm">
+          <p className="pt-6 text-sm text-gray-500">
             Última: actualización
-            <span className="block font-bold uppercase pt-1 ">
+            <span className="block pt-1 font-bold uppercase ">
               {data.site.buildTime}
             </span>
           </p>

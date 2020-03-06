@@ -41,43 +41,43 @@ const EpisodiosPage = () => {
   return (
     <Layout>
       <SEO title="Episodios" />
-      <div className="h-24 md:sticky md:top-0 bg-gray-900 flex items-center justify-center z-10 hero px-6 m-0 mb-6">
-        <h1 className="  text-xl text-white  text-center ">
+      <div className="z-10 flex items-center justify-center h-24 px-6 m-0 mb-6 bg-gray-900 md:sticky md:top-0 hero">
+        <h1 className="text-xl text-center text-white ">
           Listado de episodios completos
         </h1>
       </div>
-      <div className="posts flex flex-wrap max-w-3xl m-auto">
+      <div className="flex flex-wrap max-w-3xl m-auto posts">
         {data.contenful.edges.map((item, i) => (
           <div
             key={item.node.id}
-            class="post mb-6 w-full bg-gray-800 border-red-500 border-t-4"
+            className="w-full mb-6 bg-gray-800 border-t-4 border-red-500 post"
           >
             <div className="p-0 shadow-lg">
-              <div className="heading flex flex-col-reverse md:flex-row md:p-6">
+              <div className="flex flex-col-reverse heading md:flex-row md:p-6">
                 <div className>
                   <Link
                     to={`/episodios/${kebabCase(item.node.slug)}/`}
                     className="title "
                   >
-                    <b className="text-indigo-300 font-mono block mb-2 w-40 px-5 text-left pb-5">
+                    <b className="block w-40 px-5 pb-5 mb-2 font-mono text-left text-indigo-300">
                       Episodio {item.node.episode}
                     </b>
                   </Link>
                 </div>
-                <div className="content md:pl-3 w-full md:flex-1">
+                <div className="w-full content md:pl-3 md:flex-1">
                   <Link
                     to={`/episodios/${kebabCase(item.node.slug)}/`}
                     className="title "
                   >
-                    <h2 className="text-red-500 text-xl mb-3 hover:text-white px-5">
+                    <h2 className="px-5 mb-3 text-xl text-red-500 hover:text-white">
                       {item.node.title}{" "}
-                      <b className="text-gray-500 font-mono text-sm pt-2 mb-2  text-left capitalize inline-block">
+                      <b className="inline-block pt-2 mb-2 font-mono text-sm text-left text-gray-500 capitalize">
                         / {item.node.publishDate}
                       </b>
                     </h2>
                   </Link>
 
-                  <p className="title text-base mb-3  pb-3 px-5">
+                  <p className="px-5 pb-3 mb-3 text-base title">
                     {item.node.description.description}
                   </p>
                 </div>

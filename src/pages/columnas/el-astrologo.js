@@ -78,16 +78,16 @@ const AstrologoPage = () => {
     <Layout>
       <SEO title="Astrologo" />
       <div className="flex flex-col md:flex-row">
-        <div className="hero bg-gray-800 p-6 md:p-0 xl:sticky inset-x-0 top-0 z-50 mb-0 w-full md:w-48 hidden md:block">
-          <div className="authors flex justify-center md:pt-6 flex-wrap md:justify-start md:px-0 md:sticky md:top-0 m-auto max-w-4xl ">
-            <h4 className="px-3 hidden md:inline-block md:pb-3 pt-3 text-white">
+        <div className="inset-x-0 top-0 z-50 hidden w-full p-6 mb-0 bg-gray-800 hero md:p-0 xl:sticky md:w-48 md:block">
+          <div className="flex flex-wrap justify-center max-w-4xl m-auto authors md:pt-6 md:justify-start md:px-0 md:sticky md:top-0 ">
+            <h4 className="hidden px-3 pt-3 text-white md:inline-block md:pb-3">
               Autores
             </h4>
             {data.autores.edges.map((item, i) => (
               <Link
                 to={`/columnas/${kebabCase(item.node.name)}/`}
                 activeClassName="active"
-                className="hover:text-white py-3 md:py-2 md:px-3 md:w-full px-4 text-red-500 text-sm font-mono min-w-xm"
+                className="px-4 py-3 font-mono text-sm text-red-500 hover:text-white md:py-2 md:px-3 md:w-full min-w-xm"
               >
                 {item.node.name}
               </Link>
@@ -96,53 +96,53 @@ const AstrologoPage = () => {
         </div>
 
         <section className="flex flex-col justify-center w-full">
-          <div className="flex-col items-center md:flex-row flex w-full md:w-2/3 max-w-6xl p-8 m-auto bg-gray-900 md:my-12">
+          <div className="flex flex-col items-center w-full max-w-6xl p-8 m-auto bg-gray-900 md:flex-row md:w-2/3 md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
               <div className="w-full md:w-56">
                 <Img
                   alt=""
                   fluid={image.node.imagen.fluid}
-                  className="mb-6 w-full"
+                  className="w-full mb-6"
                 />
               </div>
             ))}
-            <div className="text-3xl text-left px-3 pl-10 text-white m-0 w-full">
-              <h1 className="text-white font-mono pb-3 mb-2 border-b">
+            <div className="w-full px-3 pl-10 m-0 text-3xl text-left text-white">
+              <h1 className="pb-3 mb-2 font-mono text-white border-b">
                 El Astrólogo
               </h1>
               <AnchorLink
                 href={`#author-player`}
-                className="text-base block text-red-500 hover:text-white font-mono my-3"
+                className="block my-3 font-mono text-base text-red-500 hover:text-white"
               >
                 <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
-                <span className="pl-3 pt-0">Escuchar Selección</span>
+                <span className="pt-0 pl-3">Escuchar Selección</span>
               </AnchorLink>
             </div>
           </div>
-          <div className="posts soundcloud flex flex-wrap w-full md:w-2/3 max-w-6xl px-6 m-auto">
+          <div className="flex flex-wrap w-full max-w-6xl px-6 m-auto posts soundcloud md:w-2/3">
             {data.contenful.edges.map((item, i) => (
-              <div className="post px-0 pt-4 shadow bg-gray-800 mb-12 w-full">
+              <div className="w-full px-0 pt-4 mb-12 bg-gray-800 shadow post">
                 <Link
                   to={`/columnas/${kebabCase(
                     item.node.author.slug
                   )}/${kebabCase(item.node.slug)}/`}
                   className="title "
                 >
-                  <h2 className="title px-6 pt-6 text-red-500 mb-3 text-2xl font-mono hover:text-white mr-32 font-mono">
+                  <h2 className="px-6 pt-6 mb-3 mr-32 font-mono text-2xl text-red-500 title hover:text-white">
                     {item.node.title}
                   </h2>
                 </Link>
-                <p className="title px-6 pb-6">
+                <p className="px-6 pb-6 title">
                   {item.node.description.description}
                 </p>
-                <div className="listen flex justify-between items-center bg-gray-900">
+                <div className="flex items-center justify-between bg-gray-900 listen">
                   <Link
                     to={`/columnas/${kebabCase(
                       item.node.author.slug
                     )}/${kebabCase(item.node.slug)}/`}
-                    className="title w-full "
+                    className="w-full title "
                   >
-                    <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
+                    <h2 className="px-6 font-mono text-xl text-red-500 hover:text-white">
                       Escuchar columna
                     </h2>
                   </Link>
@@ -152,7 +152,7 @@ const AstrologoPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-tip="¿Te vas para Spotify?"
-                    className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
+                    className="block p-6 text-2xl  hover:text-white hover:bg-green-700"
                   >
                     <FaSpotify className="text-white" />
                   </a>
@@ -162,9 +162,9 @@ const AstrologoPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-tip="Escuchár en Soundcloud"
-                    className=" block text-2xl hover:text-white  hover:bg-orange-700 p-6"
+                    className="block p-6 text-2xl  hover:text-white hover:bg-orange-700"
                   >
-                    <i class="fa fa-soundcloud " aria-hidden="true"></i>
+                    <i className="fa fa-soundcloud " aria-hidden="true"></i>
                   </a>
                 </div>
               </div>
@@ -172,11 +172,11 @@ const AstrologoPage = () => {
           </div>
           <aside
             id="author-player"
-            className="w-full  px-6 max-w-2xl min-h-64 relative md:sticky m-auto pt-6"
+            className="relative w-full max-w-2xl px-6 pt-6 m-auto min-h-64 md:sticky"
           >
             {data.allContentfulAutores.edges.map((item, i) => (
-              <div className="post mb-12 w-full">
-                <h2 className="text-center font-mono text-white text-2xl my-6">
+              <div className="w-full mb-12 post">
+                <h2 className="my-6 font-mono text-2xl text-center text-white">
                   Selección de El Astrologo
                 </h2>
                 <div

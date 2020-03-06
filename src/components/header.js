@@ -8,8 +8,8 @@ import { IoMdSearch } from "react-icons/io"
 import "./header.css"
 
 const Header = ({ siteTitle }) => (
-  <header className="header fixed z-10 top-0 right-0 left-0 md:relative">
-    <div className="inner-header text-left pl-16 md:pl-20 block pr-3 md:flex md:items-center ">
+  <header className="fixed top-0 left-0 right-0 z-10 header md:relative">
+    <div className="block pl-16 pr-3 text-left inner-header md:pl-20 md:flex md:items-center ">
       <Link
         to="/"
         style={{
@@ -17,12 +17,12 @@ const Header = ({ siteTitle }) => (
           textDecoration: `none`,
         }}
       >
-        <div className="w-16 absolute p-1 mt-1 logo">
+        <div className="absolute w-16 p-1 mt-1 logo">
           <Image />
         </div>
-        <h1 className="m-0 p-0 max-w-lg md:mr-12 text-white">{siteTitle}</h1>
+        <h1 className="max-w-lg p-0 m-0 text-white md:mr-12">{siteTitle}</h1>
       </Link>
-      <nav className="w-full text-base hidden md:flex mt-0">
+      <nav className="hidden w-full mt-0 text-base md:flex">
         <Link className activeClassName="active" to="/podcasts/">
           Podcasts
         </Link>
@@ -41,19 +41,19 @@ const Header = ({ siteTitle }) => (
       </nav>
 
       <Link
-        className="nav-search text-white pl-3 text-right hidden md:flex items-center justify-end text-white hover:text-red-600 "
+        className="items-center justify-end hidden pl-3 text-right text-white nav-search md:flex hover:text-red-600 "
         activeClassName="active"
         to="/search/"
       >
-        <IoMdSearch className="mr-3 w-6 h-6" />
+        <IoMdSearch className="w-6 h-6 mr-3" />
       </Link>
       <Link
         activeClassName="active"
-        className="text-white live-link px-6 bg-red-600 pb-1 hover:text-gray-300"
-        to="/vivo/"
+        className="px-6 pb-1 text-white bg-red-600 live-link hover:text-gray-300"
+        to="/notanenvivo/"
       >
         <svg
-          className="svg-icon inline-block text-2xl pr-1  pb-1"
+          className="inline-block pb-1 pr-1 text-2xl svg-icon"
           viewBox="0 0 20 20"
         >
           <path
@@ -61,8 +61,8 @@ const Header = ({ siteTitle }) => (
             d="M10.403,15.231v2.035h2.827c0.223,0,0.403,0.181,0.403,0.404c0,0.223-0.181,0.403-0.403,0.403H6.77c-0.223,0-0.404-0.181-0.404-0.403c0-0.224,0.181-0.404,0.404-0.404h2.826v-2.035C6.89,15.024,4.751,12.758,4.751,10c0-0.223,0.181-0.403,0.404-0.403S5.559,9.777,5.559,10c0,2.449,1.992,4.441,4.441,4.441c2.449,0,4.441-1.992,4.441-4.441c0-0.223,0.182-0.403,0.404-0.403s0.403,0.18,0.403,0.403C15.248,12.758,13.108,15.024,10.403,15.231 M13.026,4.953V10c0,1.669-1.357,3.027-3.027,3.027S6.972,11.669,6.972,10V4.953c0-1.669,1.358-3.028,3.028-3.028S13.026,3.284,13.026,4.953M12.221,4.953c0-1.225-0.996-2.22-2.221-2.22s-2.221,0.995-2.221,2.22V10c0,1.225,0.996,2.22,2.221,2.22s2.221-0.995,2.221-2.22V4.953z"
           ></path>
         </svg>
-        <span className="pt-0 inline-block px-1">
-          <span className="text-red-400">No tan</span> en Vivo
+        <span className="inline-block px-1 pt-0">
+          <span className="text-red-400 ">No tan</span> en Vivo
         </span>
       </Link>
     </div>
@@ -70,23 +70,23 @@ const Header = ({ siteTitle }) => (
       activeClassName="active"
       to="/"
       style={{ zIndex: "9999" }}
-      className="animated fadeInUp delay-1s left-0 right-0 bottom-0 p-0 fixed hidden"
+      className="fixed bottom-0 left-0 right-0 hidden p-0 animated fadeInUp delay-1s"
     >
-      <div className="bg-red-800 hover:bg-red-700 text-center py-2 lg:px-4">
+      <div className="py-2 text-center bg-red-800 hover:bg-red-700 lg:px-4">
         <div
-          className="p-2 items-center text-red-100 leading-normal  lg:rounded-full flex lg:inline-flex "
+          className="flex items-center p-2 leading-normal text-red-100 lg:rounded-full lg:inline-flex "
           role="alert"
         >
-          <span className="flex rounded bg-red-700 uppercase leading-relaxed px-2 py-1 font-bold mr-3 text-base">
-            <small className=" ">Episodio 240</small>
+          <span className="flex px-2 py-1 mr-3 text-base font-bold leading-relaxed uppercase bg-red-700 rounded">
+            <small className="">Episodio 240</small>
           </span>
-          <span className="font-bold text-sm  mr-2 text-left flex-auto flex-col ">
-            <span className="underline pl-1 block md:inline-block">
+          <span className="flex-col flex-auto mr-2 text-sm font-bold text-left ">
+            <span className="block pl-1 underline md:inline-block">
               Estamos ahora ao vivo
             </span>
           </span>
           <svg
-            className="fill-current opacity-75 h-4 w-4"
+            className="w-4 h-4 opacity-75 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
           >
