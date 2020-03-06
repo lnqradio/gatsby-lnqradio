@@ -11,10 +11,13 @@ import { GoLinkExternal } from "react-icons/go"
 class ColumnaTemplate extends React.Component {
   render() {
     const columna = get(this.props, "data.contentfulColumnas")
-
+    const url = typeof window !== "undefined" ? window.location.href : ""
     return (
       <Layout>
-        <SEO title={`${columna.title} x ${columna.author.name}`} />
+        <SEO
+          title={`${columna.title} x ${columna.author.name}`}
+          description={columna.description.description}
+        />
         <Helmet
           meta={[
             {
@@ -25,8 +28,13 @@ class ColumnaTemplate extends React.Component {
               name: `twitter:image`,
               content: `https:${columna.heroImage.file.url}`,
             },
+            {
+              name: `og:url`,
+              content: url,
+            },
           ]}
         />
+
         <div className="posts soundcloud flex flex-wrap flex-col m-auto pt-0 px-2">
           <div className="post flex pt-0 shadow  flex-col mb-12 m-auto w-full">
             <div className="post-hero w-full bg-pattern bg-indigo-900">
