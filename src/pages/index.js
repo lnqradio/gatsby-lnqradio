@@ -229,7 +229,7 @@ const IndexPage = () => {
             className="h-40"
             scrolling="NO"
             allowtransparency="yes"
-            src="https://www.solumedia.com.ar/radios/8772/index.html"
+            src="https://www.solumedia.com.ar/radios/8772"
           ></iframe>
         </div>
 
@@ -245,7 +245,8 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 pt-12 m-auto">
         <Link
           to={`/podcasts/entrevistas/`}
-          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
+          style={{ zIndex: "9999" }}
+          className="pt-12 pb-3 inline-block relative font-mono text-2xl text-red-500 hover:text-white"
         >
           Entrevistas
         </Link>
@@ -278,7 +279,8 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/musicales`}
-          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
+          style={{ zIndex: "9999" }}
+          className="pt-12 pb-3 inline-block relative font-mono text-2xl text-red-500 hover:text-white"
         >
           Musicales
         </Link>
@@ -317,7 +319,8 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/historias`}
-          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
+          style={{ zIndex: "9999" }}
+          className="pt-12 pb-3 inline-block relative font-mono text-2xl text-red-500 hover:text-white"
         >
           Historias
         </Link>
@@ -356,7 +359,8 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/perfiles`}
-          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
+          style={{ zIndex: "9999" }}
+          className="pt-12 pb-3 inline-block relative font-mono text-2xl text-red-500 hover:text-white"
         >
           Perfiles
         </Link>
@@ -395,7 +399,8 @@ const IndexPage = () => {
       <div className="max-w-6xl px-3 m-auto">
         <Link
           to={`/podcasts/cine`}
-          className="pt-12 pb-3 font-mono text-2xl text-red-500 hover:text-white"
+          style={{ zIndex: "9999" }}
+          className="pt-12 pb-3 inline-block relative font-mono text-2xl text-red-500 hover:text-white"
         >
           Cine
         </Link>

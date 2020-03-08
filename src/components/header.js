@@ -9,7 +9,7 @@ import "./header.css"
 
 const Header = ({ siteTitle }) => (
   <header className="fixed top-0 left-0 right-0 z-10 header md:relative">
-    <div className="block pl-16 pr-3 text-left inner-header md:pl-20 md:flex md:items-center ">
+    <div className="inline-block pl-16 pr-3 text-left inner-header md:pl-20 md:flex md:items-center ">
       <Link
         to="/"
         style={{
@@ -68,16 +68,16 @@ const Header = ({ siteTitle }) => (
     </div>
     <Link
       activeClassName="active"
-      to="/"
+      to="/vivo"
       style={{ zIndex: "9999" }}
-      className="fixed bottom-0 left-0 right-0 hidden p-0 animated fadeInUp delay-1s"
+      className="fixed bottom-0 left-0 right-0 p-0 animated fadeInUp hidden delay-1s"
     >
       <div className="py-2 text-center bg-red-800 hover:bg-red-700 lg:px-4">
         <div
           className="flex items-center p-2 leading-normal text-red-100 lg:rounded-full lg:inline-flex "
           role="alert"
         >
-          <span className="flex px-2 py-1 mr-3 text-base font-bold leading-relaxed uppercase bg-red-700 rounded">
+          <span className="flex px-2 hidden py-1 mr-3 text-base font-bold leading-relaxed uppercase bg-red-700 rounded">
             <small className="">Episodio 240</small>
           </span>
           <span className="flex-col flex-auto mr-2 text-sm font-bold text-left ">
