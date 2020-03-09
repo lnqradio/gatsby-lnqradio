@@ -5,9 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { kebabCase } from "lodash"
 import { FaSpotify } from "react-icons/fa"
-import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
-import Img from "gatsby-image"
 import { GiSpellBook } from "react-icons/gi"
 import { MdPersonPin, MdLocalMovies } from "react-icons/md"
 import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
@@ -96,54 +94,6 @@ const ColumnasPage = () => {
       <SEO title="Podcasts" />
       <div className="flex flex-col">
         <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-0 justify-center ">
-          <div className="hidden">
-            {data.destacados.edges.map((item, i) => (
-              <AwesomeSlider className="mb-0" style={{ maxHeight: "70vh" }}>
-                {item.node.homePage.map((slider, i) => (
-                  <div key={slider.slug} className="post max-w-4xl pt-6">
-                    <div className="slider-item p-6 flex text-center bg-gray-800">
-                      <Img
-                        alt=""
-                        fixed={slider.heroImage.fixed}
-                        className="mb-6 max-w-lg mr-3 mt-2"
-                      />
-                      <div className="description text-left pl-3 max-w-sm">
-                        <Link
-                          to={`/columnas/${kebabCase(slider.author.name)}/`}
-                          className="block mb-3 text-gray-500 hover:text-white font-mono"
-                        >
-                          Columna x {slider.author.name}
-                        </Link>
-                        <Link
-                          to={`/columnas/${kebabCase(
-                            slider.author.name
-                          )}/${kebabCase(slider.slug)}`}
-                          className="title text-white text-2xl font-bold hover:text-white text-red-500"
-                          style={{ marginLeft: "0" }}
-                        >
-                          {slider.title}
-                        </Link>
-                        <p className="mt-3 max-w-xl">
-                          {slider.description.description}
-                        </p>
-                        <div className="actions my-6">
-                          <Link
-                            to={`/columnas/${kebabCase(
-                              slider.author.name
-                            )}/${kebabCase(slider.slug)}`}
-                            className="btn scale-0 hover:scale-95 text-lg hover:text-white text-red-500 transition duration-500 ease-in-out font-bold font-mono transform hover:scale-110"
-                            style={{ marginLeft: "0" }}
-                          >
-                            Escuchar columna
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </AwesomeSlider>
-            ))}
-          </div>
           <div className="home-hero-links bg-gray-800 flex justify-around py-6 w-full">
             <Link
               to={`/podcasts/musicales`}
@@ -196,7 +146,7 @@ const ColumnasPage = () => {
           </h2>
           {data.contenful.edges.map((item, i) => (
             <div
-              key={item.node.id}
+              key={item.node.slug}
               className="post border-red-500 border-t-4 animated fadeIn relative slow max-w-md w-full m-3 flex-auto"
             >
               <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">

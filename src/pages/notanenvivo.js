@@ -13,7 +13,7 @@ const NotFoundPage = () => (
       <Link
         className="flex items-center p-2 leading-none text-red-100 transition-all duration-200 bg-red-800 hover:text-white hover:bg-red-600 lg:rounded-full lg:inline-flex"
         role="alert"
-        to="/"
+        to="/vivo"
       >
         <span className="flex px-2 py-1 mr-3 text-xs font-bold uppercase bg-red-500 rounded-full">
           En vivo

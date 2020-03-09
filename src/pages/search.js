@@ -62,18 +62,11 @@ const SearchIndex = props => {
     <>
       <div className="searchBox text-center mb-0 max-w-6xl m-auto w-full pt-16 md:pt-6 p-6 md:p-0 md:pb-6 animated fadeIn slower">
         <h2 className="text-white text-left py-3 pb-6 text-2xl font-mono flex items-baseline flex-col md:flex-row">
-          <span className="flex-1">Buscador de podcazt</span>
+          <span className="flex-1">Buscador de podcasts</span>
           <SEO title={totales} />
 
           <small className="text-gray-600">
-            subidos{" "}
-            <span className="text-gray-400" data-tip="Número Posta">
-              {totales}
-            </span>{" "}
-            de{" "}
-            <span className="text-gray-400" data-tip="Número random">
-              3885
-            </span>
+            <span className="text-gray-400">{totales}</span> subidos
           </small>
         </h2>
 

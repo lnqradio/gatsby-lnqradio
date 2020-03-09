@@ -12,6 +12,13 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import Image from "../components/image"
 import "./layout.css"
 import "./animate.css"
+import {
+  FaSoundcloud,
+  FaSpotify,
+  FaInstagram,
+  FaFacebookSquare,
+  FaTwitter,
+} from "react-icons/fa"
 import ReactTooltip from "react-tooltip"
 
 const Layout = ({ children }) => {
@@ -50,18 +57,14 @@ const Layout = ({ children }) => {
             effect="solid"
             className="bg-red-500 shadow"
           />
-          <div className="inline-block my-3 mb-12 text-3xl social">
+          <div className="flex justify-center my-3 mb-12 text-3xl social">
             <a
               href="https://www.facebook.com/lnqradio/"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <i
-                className="fa fa-facebook "
-                data-tip="Facebook"
-                aria-hidden="true"
-              ></i>
+              <FaFacebookSquare />
             </a>
             <a
               href="https://twitter.com/lnqradio"
@@ -69,11 +72,7 @@ const Layout = ({ children }) => {
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <i
-                className="fa fa-twitter "
-                data-tip="Twitter"
-                aria-hidden="true"
-              ></i>
+              <FaTwitter />
             </a>
             <a
               href="https://www.instagram.com/lnqradio/"
@@ -81,11 +80,7 @@ const Layout = ({ children }) => {
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <i
-                className="fa fa-instagram "
-                data-tip="Instagram"
-                aria-hidden="true"
-              ></i>
+              <FaInstagram />
             </a>
             <a
               href="https://open.spotify.com/show/4ckNz9pdLNTunf82vBEfGm?si=kp7apoksQnmpTJ5ciITONA"
@@ -93,11 +88,7 @@ const Layout = ({ children }) => {
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <i
-                className="fa fa-spotify "
-                data-tip="Spotify"
-                aria-hidden="true"
-              ></i>
+              <FaSpotify />
             </a>
             <a
               href="https://soundcloud.com/lnqescech"
@@ -105,11 +96,7 @@ const Layout = ({ children }) => {
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <i
-                className="fa fa-soundcloud "
-                data-tip="Soundcloud"
-                aria-hidden="true"
-              ></i>
+              <FaSoundcloud />
             </a>
           </div>
           <p>© {new Date().getFullYear()}, Realizado con el apoyo de </p>

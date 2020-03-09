@@ -49,7 +49,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <Link
         activeClassName="active"
-        className="px-6 pb-1 text-white bg-red-600 live-link hover:text-gray-300"
+        className="px-6 pb-1 hidden text-white bg-gray-600 live-link hover:text-gray-300"
         to="/notanenvivo/"
       >
         <svg
@@ -62,7 +62,7 @@ const Header = ({ siteTitle }) => (
           ></path>
         </svg>
         <span className="inline-block px-1 pt-0">
-          <span className="text-red-400 ">No tan</span> en Vivo
+          <span className="text-gray-400 ">No tan</span> en Vivo
         </span>
       </Link>
     </div>
