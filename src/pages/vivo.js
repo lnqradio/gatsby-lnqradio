@@ -1,6 +1,6 @@
 import React from "react"
-
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "./vivo.css"
 
@@ -9,10 +9,10 @@ const VivoPage = () => (
     <SEO title="En VIVO" />
     <div className="max-w-4xl pt-6 m-auto text-center live-stream md:pt-6">
       <div
-        className="relative pt-6 pb-3 text-xl"
+        className="relative pt-6 pb-3 text-xl z-50"
         style={{ background: "#281136" }}
       >
-        <div className="solumedia text-center ">
+        <div className="solumedia text-center">
           <iframe
             border="0"
             frameborder="NO"
@@ -32,6 +32,13 @@ const VivoPage = () => (
           <span className="block text-gray-400">La Noche Que </span>
           ella soño con el Centro Half
         </h1>
+        <Link
+          activeClassName="active"
+          className="block md:inline-block px-6 py-2 mt-2 mr-2 text-white bg-indigo-800 font-mono hover:bg-indigo-900 hover:text-white mb-12"
+          to="/notanenvivo/"
+        >
+          Episodios anteriores
+        </Link>
       </div>
     </div>
   </Layout>

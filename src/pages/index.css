@@ -302,9 +302,11 @@ iframe {
 }
 
 .homeHero {
+  /*
   background-image: url(../images/bg-pattern-1.svg);
   background-position: 40% 50%;
   background-size: cover;
+  */
   /*-webkit-animation: AnimationName 60s ease infinite;
   -moz-animation: AnimationName 60s ease infinite;
   animation: AnimationName 60s ease infinite;*/

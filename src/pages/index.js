@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { kebabCase } from "lodash"
+import Particles from "react-particles-js"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
@@ -214,22 +215,84 @@ const IndexPage = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
       ></link>
 
-      <div className="relative flex flex-col items-center justify-start py-12 pb-12 bg-gray-800 homeHero pb-18 ">
-        <h1 className="w-full px-6 pt-0 pb-3 font-mono text-2xl leading-10 text-center text-white">
+      <div
+        className="relative flex flex-col items-center justify-center  md:mt-0 md:pt-0 bg-gray-800 homeHero"
+        style={{ minHeight: "90vh" }}
+      >
+        <h1 className="w-full px-6 pt-0 pb-3 font-mono text-2xl leading-10 text-center text-white relative  z-50">
           La Noche Que ella soño con el Centro Half
         </h1>
-        <h1 className="w-full px-0 pt-0 text-3xl text-center text-red-500 animated fadeIn slow font-mono pb-3 ">
+        <h1 className="w-full px-0 pt-0 text-3xl text-center text-red-500 animated fadeIn slow font-mono pb-3 relative  z-50">
           Programa en vivo los viernes a las 20hs
         </h1>
-        <Link
-          activeClassName="active"
-          className="px-6 py-2 mt-2 text-white bg-indigo-800 font-mono hover:bg-indigo-900"
-          to="/notanenvivo/"
-        >
-          Escuchanos <span className="text-gray-400 ">No tan</span> en Vivo
-        </Link>
-
-        <FiChevronsDown className="absolute bottom-0 text-5xl text-gray-400 md:hidden animated bounce infinite slower delay-2s" />
+        <div className="block sm:flex w-full justify-center relative  z-50">
+          <Link
+            activeClassName="active"
+            className="block md:inline-block px-6 py-2 mt-2 mr-2 text-white bg-red-800 font-mono hover:bg-red-700 hover:text-white md:w-56 text-center font-bold"
+            to="/vivo/"
+          >
+            En Vivo
+          </Link>
+          <Link
+            activeClassName="active"
+            className="block md:inline-block px-6 py-2 mt-2 mr-2 text-white border-indigo-100 font-bold border font-mono hover:bg-indigo-800 hover:text-white text-center hover:border-indigo-800"
+            to="/notanenvivo/"
+          >
+            Episodios anteriores
+          </Link>
+        </div>
+        <FiChevronsDown className="absolute bottom-0 text-5xl text-gray-400  animated bounce infinite slower delay-2s" />
+        <Particles
+          style={{ cursor: "crosshair" }}
+          className="absolute inset-0 z-10 opacity-75"
+          params={{
+            particles: {
+              number: {
+                value: 90,
+                density: {
+                  enable: true,
+                  value_area: 1500,
+                },
+              },
+              line_linked: {
+                enable: true,
+                opacity: 0.2,
+              },
+              move: {
+                direction: "random",
+                speed: 1,
+              },
+              size: {
+                value: 2,
+              },
+              opacity: {
+                anim: {
+                  enable: true,
+                  speed: 1,
+                  opacity_min: 0.05,
+                },
+              },
+            },
+            interactivity: {
+              events: {
+                onclick: {
+                  enable: true,
+                  mode: "push",
+                },
+                onhover: {
+                  enable: true,
+                  mode: "grab",
+                },
+              },
+              modes: {
+                push: {
+                  particles_nb: 1,
+                },
+              },
+            },
+            retina_detect: true,
+          }}
+        />
       </div>
 
       <div className="max-w-6xl px-3 pt-12 m-auto">
@@ -255,8 +318,9 @@ const IndexPage = () => {
               </Link>
 
               <Img
-                alt=""
+                alt="{item.node.title}"
                 fixed={item.node.heroImage.fixed}
+                loading="lazy"
                 style={{ position: "absolute", opacity: ".5" }}
                 className="absolute inset-0 hover:opacity-75"
               />
@@ -296,8 +360,9 @@ const IndexPage = () => {
                 {item.node.description.description}
               </p>
               <Img
-                alt=""
+                alt="{item.node.title}"
                 fixed={item.node.heroImage.fixed}
+                loading="lazy"
                 style={{ position: "absolute", opacity: ".1" }}
                 className="absolute inset-0 hover:opacity-75"
               />
@@ -336,8 +401,9 @@ const IndexPage = () => {
                 {item.node.description.description}
               </p>
               <Img
-                alt=""
+                alt="{item.node.title}"
                 fixed={item.node.heroImage.fixed}
+                loading="lazy"
                 style={{ position: "absolute", opacity: ".1" }}
                 className="absolute inset-0 hover:opacity-75"
               />
@@ -376,8 +442,9 @@ const IndexPage = () => {
                 {item.node.description.description}
               </p>
               <Img
-                alt=""
+                alt="{item.node.title}"
                 fixed={item.node.heroImage.fixed}
+                loading="lazy"
                 style={{ position: "absolute", opacity: ".1" }}
                 className="absolute inset-0 hover:opacity-75"
               />
@@ -416,8 +483,9 @@ const IndexPage = () => {
                 {item.node.description.description}
               </p>
               <Img
-                alt=""
+                alt="{item.node.title}"
                 fixed={item.node.heroImage.fixed}
+                loading="lazy"
                 style={{ position: "absolute", opacity: ".1" }}
                 className="absolute inset-0 hover:opacity-75"
               />
