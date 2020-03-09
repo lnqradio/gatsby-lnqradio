@@ -216,15 +216,15 @@ const IndexPage = () => {
       ></link>
 
       <div
-        className="relative flex flex-col items-center justify-center  md:mt-0 md:pt-0 bg-gray-800 homeHero"
+        className="relative flex flex-col items-center justify-center  md:mt-0 md:pt-0 homeHero"
         style={{ minHeight: "90vh" }}
       >
-        <h1 className="w-full px-6 pt-0 pb-3 font-mono text-2xl leading-10 text-center text-white relative  z-50">
+        <h2 className="w-full px-6 pt-0 pb-3 font-mono text-lg md:text-2xl md:leading-10 text-center text-red-500   relative  z-50">
           La Noche Que ella soño con el Centro Half
-        </h1>
-        <h1 className="w-full px-0 pt-0 text-3xl text-center text-red-500 animated fadeIn slow font-mono pb-3 relative  z-50">
+        </h2>
+        <h2 className="w-full px-0 pt-0 text-lg md:text-3xl text-center text-white animated fadeIn slow font-mono pb-3 relative  z-50">
           Programa en vivo los viernes a las 20hs
-        </h1>
+        </h2>
         <div className="block sm:flex w-full justify-center relative  z-50">
           <Link
             activeClassName="active"
@@ -244,7 +244,7 @@ const IndexPage = () => {
         <FiChevronsDown className="absolute bottom-0 text-5xl text-gray-400  animated bounce infinite slower delay-2s" />
         <Particles
           style={{ cursor: "crosshair" }}
-          className="absolute inset-0 z-10 opacity-75"
+          className="fixed inset-0 z-10 opacity-75"
           params={{
             particles: {
               number: {
@@ -295,7 +295,7 @@ const IndexPage = () => {
         />
       </div>
 
-      <div className="max-w-6xl px-3 pt-12 m-auto">
+      <div className="max-w-6xl px-3 pt-12 m-auto relative z-50">
         <Link
           to={`/podcasts/entrevistas/`}
           style={{ zIndex: "9999" }}
@@ -329,7 +329,7 @@ const IndexPage = () => {
         </Swiper>
       </div>
 
-      <div className="max-w-6xl px-3 m-auto">
+      <div className="max-w-6xl px-3 m-auto relative z-50">
         <Link
           to={`/podcasts/musicales`}
           style={{ zIndex: "9999" }}
@@ -370,7 +370,7 @@ const IndexPage = () => {
           ))}
         </Swiper>
       </div>
-      <div className="max-w-6xl px-3 m-auto">
+      <div className="max-w-6xl px-3 m-auto relative z-50">
         <Link
           to={`/podcasts/historias`}
           style={{ zIndex: "9999" }}
@@ -411,7 +411,7 @@ const IndexPage = () => {
           ))}
         </Swiper>
       </div>
-      <div className="max-w-6xl px-3 m-auto">
+      <div className="max-w-6xl px-3 m-auto relative z-50">
         <Link
           to={`/podcasts/perfiles`}
           style={{ zIndex: "9999" }}
@@ -452,7 +452,7 @@ const IndexPage = () => {
           ))}
         </Swiper>
       </div>
-      <div className="max-w-6xl px-3 m-auto">
+      <div className="max-w-6xl px-3 m-auto relative z-50">
         <Link
           to={`/podcasts/cine`}
           style={{ zIndex: "9999" }}

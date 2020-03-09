@@ -40,13 +40,13 @@ const Layout = ({ children }) => {
           href={`#top`}
           className="z-50 p-3 font-mono text-red-500 to-top hover:text-white min-w-xm"
         >
-          <span className="block text-sm" role="img">
+          <span className="block text-sm z-50" role="img">
             Arriba!
           </span>
         </AnchorLink>
 
         <main className="pt-12 overflow-hidden md:pt-0">{children}</main>
-        <footer>
+        <footer className="relative z-40">
           <div className="w-24 max-w-xl py-6 m-auto text-center">
             <Image />
             <h4 className="my-2 text-white">LNQRadio</h4>
