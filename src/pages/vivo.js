@@ -22,7 +22,7 @@ const VivoPage = () => (
             className="h-40 min-w-64 m-auto"
             scrolling="NO"
             allowtransparency="yes"
-            src="http://www.solumedia.com.ar/radios/8772"
+            src="https://www.solumedia.com.ar/radios/8772"
           ></iframe>
         </div>
         <h1 className="w-full px-0 pt-0 text-3xl text-center text-red-500 animated fadeIn slow font-mono pb-3 ">
