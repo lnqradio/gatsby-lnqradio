@@ -223,7 +223,7 @@ const IndexPage = () => {
           La Noche Que ella soño con el Centro Half
         </h2>
         <h2 className="w-full px-0 pt-0 text-lg md:text-3xl text-center text-white animated fadeIn slow font-mono pb-3 relative  z-50">
-          Programa en vivo los viernes a las 20hs
+          Un <span className="text-gray-300">nuevo</span> episodio los viernes
         </h2>
         <div className="block sm:flex w-full justify-center relative  z-50">
           <Link
@@ -231,7 +231,7 @@ const IndexPage = () => {
             className="block md:inline-block px-6 py-2 mt-2 mr-2 text-white bg-red-800 font-mono hover:bg-red-700 hover:text-white md:w-56 text-center font-bold"
             to="/vivo/"
           >
-            En Vivo
+            20hs en Vivo
           </Link>
           <Link
             activeClassName="active"
