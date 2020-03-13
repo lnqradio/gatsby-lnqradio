@@ -40,40 +40,40 @@ const PodcastPage = () => {
   return (
     <Layout>
       <SEO title="Entrevistas" />
-      <div className="h-64 md:sticky md:top-0 bg-gray-900 flex items-center justify-center hero z-10 px-6 m-0 mb-2">
-        <h1 className="  text-xl text-white  text-center flex flex-col items-center justify-center">
+      <div className="z-10 flex items-center justify-center h-64 px-6 m-0 mb-2 bg-gray-900 md:sticky md:top-0 hero">
+        <h1 className="flex flex-col items-center justify-center text-xl text-center text-white ">
           <IoMdMicrophone className="text-6xl" />
-          <span className="block pt-3 text-2xl font-mono">Entrevistas</span>
+          <span className="block pt-3 font-mono text-2xl">Entrevistas</span>
         </h1>
       </div>
-      <div className="posts animation flex flex-wrap w-full m-auto justify-center ">
+      <div className="flex flex-wrap justify-center w-full m-auto posts animation ">
         {data.collection.edges.map((item, i) => (
           <div
             key={item.node.id}
-            className="post border-red-500 border-t-4 animated fadeIn relative slow max-w-md w-full m-3 flex-auto"
+            className="relative flex-auto w-full max-w-md m-3 border-t-4 border-red-500 post animated fadeIn slow"
           >
-            <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">
+            <div className="h-full px-0 pt-4 mb-20 bg-gray-800 shadow">
               <Link
                 to={`/columnas/${kebabCase(item.node.author.name)}/${kebabCase(
                   item.node.slug
                 )}/`}
-                className="title block px-6 pt-2 text-red-500 mb-1 text-2xl font-mono hover:text-white min-h-20"
+                className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
               >
                 {item.node.title}
               </Link>
 
               <span className="px-6">{item.node.tipoDePodcast}</span>
-              <p className="title px-6 pb-6">
+              <p className="px-6 pb-6 title">
                 {item.node.description.description}
               </p>
-              <div className="listen flex justify-between items-center bg-gray-900 absolute bottom-0 left-0 right-0">
+              <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-gray-900 listen">
                 <Link
                   to={`/columnas/${kebabCase(
                     item.node.author.name
                   )}/${kebabCase(item.node.slug)}/`}
                   className="title "
                 >
-                  <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
+                  <h2 className="px-6 font-mono text-xl text-red-500 hover:text-white">
                     Escuchar podcast
                   </h2>
                 </Link>
@@ -82,7 +82,7 @@ const PodcastPage = () => {
                   href={`${item.node.spotify.spotify}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
+                  className="block p-6 text-2xl  hover:text-white hover:bg-green-700"
                 >
                   <FaSpotify className="text-white" />
                 </a>
