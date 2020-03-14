@@ -17,7 +17,7 @@ const NotFoundPage = () => (
       </h1>
       <div className="flex justify-center mt-6 max-w-2xl m-auto">
         <iframe
-          src="https://player.twitch.tv/?autoplay=false&video=v555746285"
+          src="https://player.twitch.tv/?autoplay=false&video=v566775017"
           frameborder="0"
           allowfullscreen="true"
           title="Video transmisión"
