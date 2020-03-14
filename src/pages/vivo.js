@@ -5,11 +5,14 @@ import SEO from "../components/seo"
 import Particles from "react-particles-js"
 import "./vivo.css"
 import { GoLinkExternal } from "react-icons/go"
-
+import Helmet from "react-helmet"
 
 const VivoPage = () => (
   <Layout>
     <SEO title="En VIVO" />
+    <Helmet>
+      <body className="app-vivo" />
+    </Helmet>
     <div className="max-w-lg pt-6 m-auto text-center live-stream md:pt-6">
       <div className="relative z-50 pt-6 pb-3 text-xl">
         <h1 className="w-full px-6 pt-0 pb-12 font-mono text-2xl leading-10 text-left text-white md md:text-center">
@@ -39,12 +42,12 @@ const VivoPage = () => (
           </a>
         </div>
         <h1 className="w-full px-0 pt-0 pb-3 font-mono text-3xl text-center text-red-500 animated fadeIn slow ">
-          Un nuevo episodio en vivo <br /> cada viernes a las 20hs
+          Un nuevo episodio en vivo cada viernes a las 20hs
         </h1>
 
         <Link
           activeClassName="active"
-          className="block px-6 py-2 mt-2 mb-12 mr-2 font-mono text-white bg-indigo-800 md:inline-block hover:bg-indigo-900 hover:text-white"
+          className="block px-6 py-2 mt-2 mb-12 mx-2 font-mono text-white bg-indigo-800 md:inline-block hover:bg-indigo-900 hover:text-white"
           to="/notanenvivo/"
         >
           Episodios anteriores

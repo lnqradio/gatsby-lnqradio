@@ -8,7 +8,7 @@ import { IoMdSearch } from "react-icons/io"
 import "./header.css"
 
 const Header = ({ siteTitle }) => (
-  <header className="fixed top-0 left-0 right-0 z-10 header md:relative">
+  <header className="fixed top-0 left-0 right-0 z-10 header">
     <div className="inline-block pl-16 pr-3 text-left inner-header md:pl-20 md:flex md:items-center ">
       <Link
         to="/"
@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
         </div>
         <h1 className="max-w-lg p-0 m-0 text-white md:mr-12">{siteTitle}</h1>
       </Link>
-      <nav className="hidden w-full mt-0 text-base md:flex">
+      <nav className="hidden w-full mt-0 text-base md:flex justify-center pr-32">
         <Link className activeClassName="active" to="/podcasts/">
           Podcasts
         </Link>

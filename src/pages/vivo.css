@@ -28,3 +28,33 @@
 .live-stream .live iframe {
   @apply pt-6;
 }
+
+header nav {
+  transition: all 0.8s;
+  transition-delay: 0.8s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+header {
+  transition: all 0.8s;
+}
+.app-vivo header {
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.app-vivo.notanenvivo header {
+  background: #9b2c2c;
+}
+
+@screen lg {
+  .app-vivo.notanenvivo header {
+    background: transparent;
+  }
+}
+
+.app-vivo header nav {
+  transform: translateY(-200px);
+  opacity: 0;
+}

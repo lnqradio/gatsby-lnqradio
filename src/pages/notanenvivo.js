@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Helmet from "react-helmet"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,7 +10,10 @@ import Image from "../components/image"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="En VIVO" />
-    <div className="py-4 text-center bg-red-900 lg:px-4">
+    <Helmet>
+      <body className="app-vivo notanenvivo" />
+    </Helmet>
+    <div className="alert-live py-4 text-center bg-red-800 lg:px-4 relative md:fixed top-0 left-0 right-0 animated fadeInDown delay-1s">
       <Link
         className="flex items-center p-2 leading-none text-red-100 transition-all duration-200 bg-red-800 hover:text-white hover:bg-red-600 lg:rounded-full lg:inline-flex"
         role="alert"
@@ -18,8 +22,8 @@ const NotFoundPage = () => (
         <span className="flex px-2 py-1 mr-3 text-xs font-bold uppercase bg-red-500 rounded-full">
           En vivo
         </span>
-        <span className="flex-auto mr-2 font-semibold text-left">
-          Todos los viernes a las 20hs
+        <span className="flex-auto mr-2 font-semibold text-center sm:text-left pr-12">
+          Viernes a las 20hs
         </span>
         <svg
           className="w-4 h-4 opacity-75 fill-current"
