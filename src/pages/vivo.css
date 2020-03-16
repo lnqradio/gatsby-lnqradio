@@ -54,7 +54,7 @@ header {
   }
 }
 
-.app-vivo header nav {
+.app-vivo.notanenvivo header nav {
   transform: translateY(-200px);
   opacity: 0;
 }

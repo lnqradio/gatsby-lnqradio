@@ -36,7 +36,9 @@
     "swiper": "^5.3.1",
     "tailwindcss": "^1.2.0",
     "typography": "^0.16.19",
-    "typography-theme-grand-view": "^0.16.19"
+    "typography-theme-grand-view": "^0.16.19",
+    "typography-theme-irving": "^0.16.19",
+    "typography-theme-ocean-beach": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2",

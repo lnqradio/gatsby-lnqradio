@@ -99,7 +99,7 @@ const SearchIndex = props => {
               {title}
             </Link>
             <Link
-              className="title text-gray-500 hover:text-white text-md md:text-base font-mono pr-2 block md:w-2/12"
+              className="title text-gray-200 hover:text-white text-md md:text-base font-mono pr-2 inline-block pl-3 md:w-2/12"
               to={`/columnas/${kebabCase(name)}/`}
             >
               x {name}
@@ -107,7 +107,6 @@ const SearchIndex = props => {
             <p className="hidden">{description}</p>
 
             <div className="listen md:absolute  h-auto flex justify-start md:justify-end items-center bottom-0 md:top-0 right-0">
-              <b className="text-gray-500 text-sm w-full">{publishDate}</b>
               <ReactTooltip
                 place="left"
                 type="dark"

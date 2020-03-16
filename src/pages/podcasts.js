@@ -39,35 +39,7 @@ const ColumnasPage = () => {
           }
         }
       }
-      destacados: allContentfulDestacados(
-        sort: { fields: [createdAt], order: DESC }
-        filter: { slider: { eq: "Hero" } }
-      ) {
-        edges {
-          node {
-            homePage {
-              id
-              title
-              slug
-              heroImage {
-                fixed(width: 400, height: 200) {
-                  ...GatsbyContentfulFixed
-                }
-              }
-              description {
-                description
-              }
-              soundcloud {
-                soundcloud
-              }
-              author {
-                id
-                name
-              }
-            }
-          }
-        }
-      }
+
       autores: allContentfulAutores(sort: { fields: [name], order: DESC }) {
         edges {
           node {
