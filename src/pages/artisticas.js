@@ -11,6 +11,26 @@ const ArtisticasPage = () => {
           <h1 className="text-white text-3xl mb-5 font-thin">Artisticas</h1>
           <div className="flex flex-col flex-wrap lg:flex-row justify-center">
             <iframe
+              width="100%"
+              height="20"
+              scrolling="no"
+              title="La audio de la pereza"
+              frameborder="no"
+              className="my-3 bg-gray-800 block rounded-full pr-2"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610356171&color=%23ff5500&inverse=true&auto_play=true&show_user=false"
+            ></iframe>
+            <iframe
+              width="100%"
+              height="20"
+              scrolling="no"
+              title="La audio de la pereza"
+              frameborder="no"
+              className="my-3 bg-gray-800 block rounded-full pr-2"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610354974&color=%23ff5500&inverse=true&auto_play=true&show_user=false"
+            ></iframe>
+            <iframe
               width="300"
               height="450"
               scrolling="no"

@@ -22,7 +22,7 @@ const NotFoundPage = () => (
         <span className="flex px-2 py-1 mr-3 text-xs font-bold uppercase bg-red-500 rounded-full">
           En vivo
         </span>
-        <span className="flex-auto mr-2 font-semibold text-center sm:text-left pr-12">
+        <span className="flex-auto mr-2 font-semibold text-center sm:text-left pr-12 md:pr-0">
           Viernes a las 20hs
         </span>
         <svg

@@ -1,9 +1,9 @@
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ["Roboto Slab", "sans-serif"],
-      serif: ["Roboto", "sans-serif"],
-      mono: ["Roboto Slab", "sans-serif"],
+      sans: ["PT Sans", "sans-serif"],
+      serif: ["PT Sans", "sans-serif"],
+      mono: ["Oswald", "sans-serif"],
     },
   },
   variants: {},

@@ -26,6 +26,14 @@ const NotFoundPage = () => (
           width="100%"
         ></iframe>
       </div>
+      <article className="hidden">
+        <h1 className="text-white text-3xl py-6 mt-12 italic"># Changelog</h1>
+        <h2 className="text-white text-lg py-3">Artisticas</h2>
+        <ul>
+          <li className="text-gray-300 text-base">Proximamente</li>
+          <li>Quitar playlists de soundcloud y pasarlo al modelo</li>
+        </ul>
+      </article>
     </div>
   </Layout>
 )

@@ -46,12 +46,12 @@ class ColumnaTemplate extends React.Component {
                 }}
               />
 
-              <div className="flex items-center justify-between w-full max-w-2xl m-auto mb-6 text-3xl listen">
+              <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-2xl m-auto mb-6 text-3xl listen">
                 <a
                   href={`${columna.spotify.spotify}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full p-5 mt-3 mr-2 text-lg bg-gray-800 rounded-sm hover:text-white hover:bg-green-800"
+                  className="block w-full p-5 m-0 md:mt-3 md:mr-2 text-lg bg-gray-800 rounded-sm hover:text-white hover:bg-green-800"
                 >
                   <h2 className="flex items-center font-mono text-base font-bold text-white ">
                     <FaSpotify className="w-6 h-6 mr-3 text-white" />
@@ -63,7 +63,7 @@ class ColumnaTemplate extends React.Component {
                   href={`${columna.soundcloud.soundcloud}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full p-5 mt-3 ml-2 text-lg bg-gray-800 rounded-sm hover:text-white hover:bg-orange-800"
+                  className="block w-full p-5 md:mt-3 md:ml-2 text-lg bg-gray-800 rounded-sm hover:text-white hover:bg-orange-800"
                 >
                   <h2 className="flex items-center font-mono text-base font-bold text-white ">
                     <FaSoundcloud className="w-6 h-6 mr-3 text-orange-100" />
@@ -72,19 +72,17 @@ class ColumnaTemplate extends React.Component {
                   </h2>
                 </a>
               </div>
-              <Link
-                to={`/columnas/${kebabCase(columna.author.slug)}/`}
-                className="block w-full max-w-2xl px-0 py-6 m-auto mb-5 font-mono text-center text-gray-500 bg-gray-900 title hover:text-white"
-              >
-                Escuchá todas las columnas de {columna.author.name}
-              </Link>
             </div>
             <h1 className="w-full max-w-2xl m-auto mt-6 font-mono text-3xl text-left text-white ">
               {columna.title}
+              <Link
+                to={`/columnas/${kebabCase(columna.author.slug)}/`}
+                className="text-gray-500 mt-1 font-mono text-left  text-sm pl-3 "
+              >
+                x {columna.author.name}
+              </Link>
             </h1>
-            <div className="w-full max-w-2xl m-auto mt-1 font-mono text-left text-gray-500 text-md ">
-              x {columna.author.name} - <i>publicado {columna.publishDate}</i>
-            </div>
+            <div className="w-full max-w-2xl "></div>
             <p
               className="w-full max-w-2xl pb-20 m-auto mt-6 text-lg columna-article"
               dangerouslySetInnerHTML={{

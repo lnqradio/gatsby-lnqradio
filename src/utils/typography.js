@@ -1,9 +1,9 @@
 import Typography from "typography"
-import grandViewTheme from "typography-theme-grand-view"
+import elkGlenTheme from "typography-theme-elk-glen"
 
-grandViewTheme.baseFontSize = "16px" // was 20px.
+elkGlenTheme.baseFontSize = "18px" // was 20px.
 
-const typography = new Typography(grandViewTheme)
+const typography = new Typography(elkGlenTheme)
 
 // Export helper functions
 export const { scale, rhythm, options } = typography

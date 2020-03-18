@@ -37,7 +37,7 @@ const VivoPage = () => (
             className="relative z-50 block mt-6 mb-12 text-sm text-red-200 underline hover:text-white"
             rel="noopener noreferrer"
           >
-            Si no se reproduce probá, con un click aqui
+            Si no se reproduce, probá con un click aquí
             <GoLinkExternal className="inline-block ml-3 text-base text-white" />
           </a>
         </div>

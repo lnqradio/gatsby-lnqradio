@@ -7,6 +7,11 @@ body {
   background-color: #14061d;
 }
 
+a {
+  text-shadow: none !important;
+  background-image: none !important;
+}
+
 @screen lg {
   body {
     margin-left: 0;

@@ -138,7 +138,7 @@ const ColumnasPage = () => {
                 </Link>
                 <p className="title px-6 pb-6">
                   {item.node.description.description}
-                  <time className="text-sm block pt-2 text-gray-500 italic">
+                  <time className="text-sm block pt-2 text-gray-500 italic hidden">
                     {item.node.publishDate}
                   </time>
                 </p>

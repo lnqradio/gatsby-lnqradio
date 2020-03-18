@@ -219,7 +219,7 @@ const IndexPage = () => {
         className="relative flex flex-col items-center justify-center  md:mt-0 md:pt-0 homeHero"
         style={{ minHeight: "90vh" }}
       >
-        <h2 className="w-full px-6 pt-0 pb-3 font-mono text-lg md:text-2xl md:leading-10 text-center text-red-500   relative  z-50">
+        <h2 className=" w-full px-6 pt-0 pb-3 font-mono text-lg md:text-2xl md:leading-10 text-center text-red-500   relative  z-50">
           La Noche Que ella soño con el Centro Half
         </h2>
         <h2 className="w-full px-0 pt-0 text-lg md:text-3xl text-center text-white animated fadeIn slow font-mono pb-3 relative  z-50">
@@ -228,27 +228,31 @@ const IndexPage = () => {
         <div className="block sm:flex w-full justify-center relative  z-50">
           <Link
             activeClassName="active"
-            className="block md:inline-block px-6 py-2 mt-2 mr-2 text-white bg-red-800 font-mono hover:bg-red-700 hover:text-white md:w-64 text-center font-bold"
+            className="block md:inline-block px-6 py-2 mt-2 sm:mr-2 text-white bg-red-800 font-mono hover:bg-red-700 hover:text-white md:w-64 text-center font-bold"
             to="/vivo/"
           >
             En Vivo desde las 20hs
           </Link>
           <Link
             activeClassName="active"
-            className="block md:inline-block px-6 py-2 mt-2 mr-2 text-white border-indigo-100 font-bold border font-mono hover:bg-indigo-800 hover:text-white text-center hover:border-indigo-800 md:w-64"
+            className="block md:inline-block px-6 py-2 mt-2 sm:mr-2 text-white border-indigo-100 font-bold border font-mono hover:bg-indigo-800 hover:text-white text-center hover:border-indigo-800 md:w-64"
             to="/notanenvivo/"
           >
             Episodios anteriores
           </Link>
         </div>
-        <FiChevronsDown className="absolute bottom-0 text-5xl text-gray-400  animated bounce infinite slower delay-2s" />
+
+        <FiChevronsDown
+          style={{ bottom: "30px" }}
+          className="absolute bottom-0 text-5xl text-gray-400  animated bounce infinite slower delay-2s"
+        />
         <Particles
           style={{ cursor: "crosshair" }}
           className="fixed inset-0 z-10 opacity-75"
           params={{
             particles: {
               number: {
-                value: 90,
+                value: 190,
                 density: {
                   enable: true,
                   value_area: 1500,

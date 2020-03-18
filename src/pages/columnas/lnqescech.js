@@ -95,16 +95,7 @@ const LnqescechPage = () => {
 
         <section className="flex flex-col justify-center w-full">
           <div className="flex flex-col items-center w-full max-w-6xl p-8 m-auto bg-gray-900 md:flex-row md:w-2/3 md:my-12">
-            {data.allContentfulAutores.edges.map((image, i) => (
-              <div className="w-full md:w-56">
-                <Img
-                  alt=""
-                  fluid={image.node.imagen.fluid}
-                  className="w-full mb-6"
-                />
-              </div>
-            ))}
-            <div className="w-full px-3 pl-10 m-0 text-3xl text-left text-white">
+            <div className="w-full px-3 pl-10 m-0 text-3xl text-center text-white">
               <h1 className="pb-3 mb-2 font-mono text-white border-b">
                 La Noche que Ella soño con el Centro Half
               </h1>

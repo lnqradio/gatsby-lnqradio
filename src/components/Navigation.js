@@ -41,7 +41,7 @@ const Navigation = ({ closeMenu }) => (
           onClick={closeMenu}
           activeClassName="text-red-600"
           to={route.slug}
-          className="my-2 text-gray-100 hover:text-red-700"
+          className="my-2 font-mono text-gray-100 hover:text-red-700"
         >
           {route.title}
         </Link>

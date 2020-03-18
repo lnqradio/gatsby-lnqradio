@@ -2,10 +2,10 @@
   "name": "lnqradio",
   "private": true,
   "description": "Radio Starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "santuan <santuan.dg@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.19.12",
+    "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-facebook-pixel": "^1.0.3",
     "gatsby-plugin-google-analytics": "^2.1.36",
@@ -26,6 +26,7 @@
     "react-awesome-slider": "^2.2.0",
     "react-burger-menu": "^2.6.11",
     "react-dom": "^16.11.0",
+    "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
     "react-id-swiper": "^2.4.0",
@@ -36,9 +37,7 @@
     "swiper": "^5.3.1",
     "tailwindcss": "^1.2.0",
     "typography": "^0.16.19",
-    "typography-theme-grand-view": "^0.16.19",
-    "typography-theme-irving": "^0.16.19",
-    "typography-theme-ocean-beach": "^0.16.19"
+    "typography-theme-elk-glen": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2",

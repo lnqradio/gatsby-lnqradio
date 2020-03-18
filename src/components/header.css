@@ -122,6 +122,36 @@ header nav {
   }
 }
 
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  position: fixed !important;
+  transition: transform 800ms ease-in-out;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 800ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(0);
+}
+
+@screen md {
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+
 .hero {
   background-color: #281136 !important;
 }

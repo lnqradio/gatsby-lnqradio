@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
           </span>
         </AnchorLink>
 
-        <main className="pt-12 overflow-hidden">{children}</main>
+        <main className="pt-0 overflow-hidden">{children}</main>
         <footer className="relative z-40">
           <div className="w-24 max-w-xl py-6 m-auto text-center">
             <Image />
