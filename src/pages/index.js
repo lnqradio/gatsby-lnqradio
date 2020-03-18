@@ -9,6 +9,7 @@ import "react-awesome-slider/dist/styles.css"
 import Img from "gatsby-image"
 
 import "./index.css"
+import Helmet from "react-helmet"
 
 import { FiChevronsDown } from "react-icons/fi"
 
@@ -209,7 +210,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Destacados" />
+      <SEO title="Inicio" />
+      <Helmet>
+        <body className="home headroom-top-transparent" />
+      </Helmet>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"

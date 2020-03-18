@@ -361,22 +361,33 @@ iframe {
 }
 
 .home-hero-links {
-  @apply border-red-600 border-b pt-12 mb-12;
+  @apply border-red-600 border-b mb-12 flex flex-wrap;
   background: #220c2f;
 }
 
 .home-hero-links a {
-  @apply flex flex-col items-center justify-center transition-all duration-200;
-  flex: 1;
+  @apply flex flex-col items-center justify-center transition-all duration-200 py-8 m-1;
+  width: 46%;
+  background: #281136;
+}
+
+.home-hero-links a:hover {
+  @apply shadow-sm;
 }
 
 .home-hero-links span {
-  @apply pt-2 hidden;
+  @apply pt-2;
 }
 
 @screen sm {
   .home-hero-links span {
     @apply block;
+  }
+}
+
+@screen md {
+  .home-hero-links a {
+    width: 20%;
   }
 }
 

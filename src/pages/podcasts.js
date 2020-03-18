@@ -6,7 +6,12 @@ import SEO from "../components/seo"
 import { kebabCase } from "lodash"
 import { FaSpotify } from "react-icons/fa"
 import "react-awesome-slider/dist/styles.css"
-import { GiSpellBook } from "react-icons/gi"
+import {
+  GiSpellBook,
+  GiAstronautHelmet,
+  GiPestleMortar,
+  GiRomanToga,
+} from "react-icons/gi"
 import { MdPersonPin, MdLocalMovies } from "react-icons/md"
 import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
 
@@ -14,8 +19,8 @@ const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
     query ColumnasQuery {
       contenful: allContentfulColumnas(
-        sort: { order: DESC, fields: [publishDate] }
-        limit: 12
+        sort: { order: DESC, fields: [updatedAt] }
+        filter: { author: {}, destacar: { eq: "Si" } }
       ) {
         edges {
           node {
@@ -66,11 +71,10 @@ const ColumnasPage = () => {
       <SEO title="Podcasts" />
       <div className="flex flex-col">
         <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-0 justify-center ">
-          <div className="home-hero-links bg-gray-800 flex justify-around py-6 w-full">
+          <div className="home-hero-links bg-gray-800 flex justify-center py-6 w-full md:py-8">
             <Link
               to={`/podcasts/musicales`}
-              className="text-base block text-red-500 hover:text-white font-mono my-3"
-              data-tip="Podcasts de Musicales"
+              className="text-base block text-red-500 hover:text-white font-mono"
             >
               <IoMdMusicalNotes />
 
@@ -78,8 +82,7 @@ const ColumnasPage = () => {
             </Link>
             <Link
               to={`/podcasts/cine`}
-              data-tip="Podcasts de Cine"
-              className="text-base block text-red-500 hover:text-white font-mono my-3"
+              className="text-base block text-red-500 hover:text-white font-mono"
             >
               <MdLocalMovies />
 
@@ -88,16 +91,14 @@ const ColumnasPage = () => {
 
             <Link
               to={`/podcasts/entrevistas/`}
-              className="text-base block text-red-500 hover:text-white font-mono my-3"
-              data-tip="Podcasts de Entrevistas"
+              className="text-base block text-red-500 hover:text-white font-mono"
             >
               <IoMdMicrophone />
               <span>entrevistas</span>
             </Link>
             <Link
               to={`/podcasts/perfiles`}
-              data-tip="Podcasts de Perfiles"
-              className="text-base block text-red-500 hover:text-white font-mono my-3"
+              className="text-base block text-red-500 hover:text-white font-mono"
             >
               <MdPersonPin />
 
@@ -105,16 +106,39 @@ const ColumnasPage = () => {
             </Link>
             <Link
               to={`/podcasts/historias`}
-              data-tip="Podcasts de Historias"
-              className="text-base block text-red-500 hover:text-white font-mono my-3"
+              className="text-base block text-red-500 hover:text-white font-mono"
             >
               <GiSpellBook />
 
               <span>historias</span>
             </Link>
+            <Link
+              to={`/podcasts/astrologia`}
+              className="text-base block text-red-500 hover:text-white font-mono"
+            >
+              <GiAstronautHelmet />
+
+              <span>psiconáutica</span>
+            </Link>
+            <Link
+              to={`/podcasts/politica`}
+              className="text-base block text-red-500 hover:text-white font-mono"
+            >
+              <GiRomanToga />
+
+              <span>política</span>
+            </Link>
+            <Link
+              to={`/podcasts/intermezzo`}
+              className="text-base block text-red-500 hover:text-white font-mono"
+            >
+              <GiPestleMortar />
+
+              <span>intermezzo</span>
+            </Link>
           </div>
           <h2 className="text-white block w-full p-4 text-3xl font-mono text-center">
-            Últimas actualizaciones
+            Destacadas
           </h2>
           {data.contenful.edges.map((item, i) => (
             <div

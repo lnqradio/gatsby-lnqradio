@@ -24,6 +24,9 @@ const Header = ({ siteTitle }) => (
           <h1 className="max-w-lg p-0 m-0 text-white md:mr-12">{siteTitle}</h1>
         </Link>
         <nav className="hidden w-full mt-0 text-base md:flex justify-center pr-32">
+          <Link activeClassName="font-bold active" to="/">
+            Inicio
+          </Link>
           <Link className activeClassName="font-bold active" to="/podcasts/">
             Podcasts
           </Link>
@@ -35,7 +38,7 @@ const Header = ({ siteTitle }) => (
             Episodios
           </Link>
           <Link
-            className
+            className="hidden"
             activeClassName="font-bold active"
             to="/podcasts/entrevistas/"
           >

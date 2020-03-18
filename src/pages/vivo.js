@@ -11,7 +11,7 @@ const VivoPage = () => (
   <Layout>
     <SEO title="En VIVO" />
     <Helmet>
-      <body className="app-vivo" />
+      <body className="app-vivo headroom-top-transparent" />
     </Helmet>
     <div className="max-w-lg pt-6 m-auto text-center live-stream md:pt-6">
       <div className="relative z-50 pt-6 pb-3 text-xl">

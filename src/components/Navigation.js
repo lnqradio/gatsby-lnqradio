@@ -14,10 +14,10 @@ const routes = [
   //title: "Episodios",
   //slug: "/episodios/",
   //},
-  {
-    title: "Entrevistas",
-    slug: "/podcasts/entrevistas/",
-  },
+  //{
+  //  title: "Entrevistas",
+  //  slug: "/podcasts/entrevistas/",
+  //},
   {
     title: "Ficciones",
     slug: "/ficciones/",
