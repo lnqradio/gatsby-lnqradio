@@ -17,6 +17,7 @@ const Layout = ({ location, children }) => {
   return (
     <TransitionProvider location={location}>
       <div id="top"></div>
+
       <Sidebar />
       <Header siteTitle={data.site.siteMetadata.title} />
       <TransitionViews>{children}</TransitionViews>

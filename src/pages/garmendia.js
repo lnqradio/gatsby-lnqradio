@@ -10,7 +10,7 @@ const NotFoundPage = () => (
     <div className="max-w-6xl pt-6  md:pt-12 m-auto text-left relative z-50">
       <div className="flex flex-col justify-center mt-6 max-w-2xl m-auto">
         <iframe
-          src="https://mixlr.com/users/7717035/embed?color=0d0314&autoplay=true"
+          src="https://mixlr.com/users/7718965/embed?color=0d0314&autoplay=true"
           width="100%"
           className="max-w-sm m-auto my-6"
           height="150px"
@@ -35,9 +35,14 @@ const NotFoundPage = () => (
         ></iframe>
       </div>
       <article className="changelog">
-        <h1 className="text-white text-xl py-6  italic">
+        <a
+          href="https://github.com/lnqradio/gatsby-lnqradio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-xl py-6  italic"
+        >
           # Registro de cambios. v.0.1.3
-        </h1>
+        </a>
         <p>
           + Se agregaron mas de 3 items por categoria en la home. <br />
           <i>Avisen si llega a andar para atrás</i>
