@@ -19,7 +19,7 @@ const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
     query ColumnasQuery {
       contenful: allContentfulColumnas(
-        sort: { order: DESC, fields: [updatedAt] }
+        sort: { order: ASC, fields: [title] }
         filter: { author: {}, destacar: { eq: "Si" } }
       ) {
         edges {
@@ -113,7 +113,7 @@ const ColumnasPage = () => {
               <span>historias</span>
             </Link>
             <Link
-              to={`/podcasts/astrologia`}
+              to={`/podcasts/psiconautica`}
               className="text-base block text-red-500 hover:text-white font-mono"
             >
               <GiAstronautHelmet />

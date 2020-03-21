@@ -4,14 +4,14 @@ import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { FaSpotify } from "react-icons/fa"
-import { GiSpellBook } from "react-icons/gi"
+import { GiAstronautHelmet } from "react-icons/gi"
 
 const PodcastPage = () => {
   const data = useStaticQuery(graphql`
-    query HistoriasQuery {
+    query psiconauticaQuery {
       collection: allContentfulColumnas(
         sort: { fields: [destacar], order: ASC }
-        filter: { author: {}, tipoDePodcast: { eq: "Historias" } }
+        filter: { author: {}, tipoDePodcast: { eq: "Astrología" } }
       ) {
         edges {
           node {
@@ -40,11 +40,11 @@ const PodcastPage = () => {
 
   return (
     <Layout>
-      <SEO title="Historias" />
+      <SEO title="Psiconáutica" />
       <div className="h-64 md:sticky md:top-0 bg-gray-900 flex items-center justify-center hero z-10 px-6 m-0 mb-2">
         <h1 className="  text-xl text-white  text-center flex flex-col items-center justify-center">
-          <GiSpellBook className="text-6xl" />
-          <span className="block pt-3 text-2xl font-mono">Historias</span>
+          <GiAstronautHelmet className="text-6xl" />
+          <span className="block pt-3 text-2xl font-mono">Psiconáutica</span>
         </h1>
       </div>
       <div className="posts animation flex flex-wrap w-full m-auto justify-center ">

@@ -38,9 +38,21 @@ class ColumnaTemplate extends React.Component {
 
         <div className="flex flex-col flex-wrap px-2 pt-0 m-auto posts soundcloud">
           <div className="flex flex-col w-full pt-0 m-auto mb-12 shadow post">
+            {columna.destacar ? (
+              <div
+                class="bg-gray-900 border-t-4 border-gray-800 font-mono rounded-b text-red-00 px-4 py-3 shadow-md"
+                role="alert"
+              >
+                <div class="flex justify-center">
+                  <p class="font-bold">Contenido destacado</p>
+                </div>
+              </div>
+            ) : (
+              <span className="hidden"></span>
+            )}
             <div className="w-full bg-indigo-900 post-hero bg-pattern">
               <div
-                className="w-full max-w-2xl m-auto mt-0 text-lg columna-article animated fadeIn delay-1s slower "
+                className="w-full max-w-2xl m-auto mt-0 md:mt-6 text-lg columna-article animated fadeIn delay-1s slower "
                 dangerouslySetInnerHTML={{
                   __html: columna.soundcloudPlayer.soundcloudPlayer,
                 }}
@@ -91,6 +103,9 @@ class ColumnaTemplate extends React.Component {
             />
           </div>
           <div className="posts animation flex flex-wrap w-full m-auto justify-center ">
+            <h1 className="block w-full text-white text-center text-3xl mb-3">
+              Destacadas
+            </h1>
             {columnas.edges.map((item, i) => (
               <div
                 key={item.node.id}
@@ -158,6 +173,7 @@ export const pageQuery = graphql`
         slug
         name
       }
+      destacar
       spotify {
         spotify
       }

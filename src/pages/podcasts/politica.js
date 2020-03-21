@@ -10,7 +10,7 @@ const PodcastPage = () => {
   const data = useStaticQuery(graphql`
     query PoliticaQuery {
       collection: allContentfulColumnas(
-        sort: { fields: [createdAt], order: DESC }
+        sort: { fields: [destacar], order: ASC }
         filter: { author: {}, tipoDePodcast: { eq: "Politica" } }
       ) {
         edges {
@@ -24,6 +24,7 @@ const PodcastPage = () => {
             soundcloud {
               soundcloud
             }
+            destacar
             author {
               name
               slug
@@ -52,47 +53,94 @@ const PodcastPage = () => {
             key={item.node.id}
             className="post border-red-500 border-t-4 animated fadeIn relative slow max-w-md w-full m-3 flex-auto"
           >
-            <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">
-              <Link
-                to={`/columnas/${kebabCase(item.node.author.name)}/${kebabCase(
-                  item.node.slug
-                )}/`}
-                className="title block px-6 pt-2 text-red-500 mb-1 text-2xl font-mono hover:text-white min-h-20"
-              >
-                {item.node.title}
-              </Link>
-              <Link
-                to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                className="block px-6 pb-1 text-gray-500 hover:text-white font-mono text-base"
-              >
-                x {item.node.author.name}
-              </Link>
-              <span className="px-6">{item.node.tipoDePodcast}</span>
-              <p className="title px-6 pb-6">
-                {item.node.description.description}
-              </p>
-              <div className="listen flex justify-between items-center bg-gray-900 absolute bottom-0 left-0 right-0">
+            {item.node.destacar ? (
+              <div className="px-0 pt-4 shadow bg-gray-900 mb-20 h-full">
                 <Link
                   to={`/columnas/${kebabCase(
                     item.node.author.name
                   )}/${kebabCase(item.node.slug)}/`}
-                  className="title "
+                  className="title block px-6 pt-2 text-red-300 mb-1 text-2xl font-mono hover:text-white min-h-20"
                 >
-                  <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
-                    Escuchar podcast
-                  </h2>
+                  {item.node.title}
+                </Link>
+                <Link
+                  to={`/columnas/${kebabCase(item.node.author.name)}/`}
+                  className="block px-6 pb-1 text-red-300 hover:text-white font-mono text-base"
+                >
+                  x {item.node.author.name}
+                  <p className="title ml-1 sm:ml-6 px-2  bg-red-400 rounded-full inline-block text-white uppercase font-serif font-bold text-xs">
+                    contenido destacado
+                  </p>
                 </Link>
 
-                <a
-                  href={`${item.node.spotify.spotify}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
-                >
-                  <FaSpotify className="text-white" />
-                </a>
+                <p className="title px-6 pb-6 text-gray-400">
+                  {item.node.description.description}
+                </p>
+                <div className="listen flex justify-between items-center bg-gray-900 absolute bottom-0 left-0 right-0">
+                  <Link
+                    to={`/columnas/${kebabCase(
+                      item.node.author.name
+                    )}/${kebabCase(item.node.slug)}/`}
+                    className="title "
+                  >
+                    <h2 className="hover:underline font-mono text-xl px-6 text-red-100 font-mono">
+                      Escuchar podcast
+                    </h2>
+                  </Link>
+
+                  <a
+                    href={`${item.node.spotify.spotify}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
+                  >
+                    <FaSpotify className="text-white" />
+                  </a>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">
+                <Link
+                  to={`/columnas/${kebabCase(
+                    item.node.author.name
+                  )}/${kebabCase(item.node.slug)}/`}
+                  className="title block px-6 pt-2 text-red-500 mb-1 text-2xl font-mono hover:text-white min-h-20"
+                >
+                  {item.node.title}
+                </Link>
+                <Link
+                  to={`/columnas/${kebabCase(item.node.author.name)}/`}
+                  className="block px-6 pb-1 text-gray-500 hover:text-white font-mono text-base"
+                >
+                  x {item.node.author.name}
+                </Link>
+
+                <p className="title px-6 pb-6">
+                  {item.node.description.description}
+                </p>
+                <div className="listen flex justify-between items-center bg-gray-900 absolute bottom-0 left-0 right-0">
+                  <Link
+                    to={`/columnas/${kebabCase(
+                      item.node.author.name
+                    )}/${kebabCase(item.node.slug)}/`}
+                    className="title "
+                  >
+                    <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
+                      Escuchar podcast
+                    </h2>
+                  </Link>
+
+                  <a
+                    href={`${item.node.spotify.spotify}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
+                  >
+                    <FaSpotify className="text-white" />
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>

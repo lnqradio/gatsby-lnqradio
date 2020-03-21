@@ -21,7 +21,7 @@ const IndexPage = () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    loop: false,
+    loop: true,
 
     slidesPerView: 3,
     spaceBetween: 10,
@@ -53,7 +53,7 @@ const IndexPage = () => {
       musica: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Musicales" } }
-        limit: 3
+        limit: 6
       ) {
         edges {
           node {
@@ -84,7 +84,7 @@ const IndexPage = () => {
       historias: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Historias" } }
-        limit: 3
+        limit: 6
       ) {
         edges {
           node {
@@ -115,7 +115,7 @@ const IndexPage = () => {
       perfiles: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Perfiles" } }
-        limit: 3
+        limit: 6
       ) {
         edges {
           node {
@@ -146,7 +146,7 @@ const IndexPage = () => {
       cine: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Cine" } }
-        limit: 3
+        limit: 6
       ) {
         edges {
           node {
@@ -177,7 +177,7 @@ const IndexPage = () => {
       entrevistas: allContentfulColumnas(
         sort: { fields: [publishDate], order: ASC }
         filter: { author: {}, tipoDePodcast: { eq: "Entrevistas" } }
-        limit: 3
+        limit: 6
       ) {
         edges {
           node {
@@ -460,7 +460,7 @@ const IndexPage = () => {
           ))}
         </Swiper>
       </div>
-      <div className="max-w-6xl px-3 m-auto relative z-50">
+      <div className="max-w-6xl px-3 m-auto relative z-50 mb-20 md:mb-40">
         <Link
           to={`/podcasts/cine`}
           style={{ zIndex: "9999" }}

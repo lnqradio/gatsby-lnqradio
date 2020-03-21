@@ -18,7 +18,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: `LNQRadio`,
+    title: `LNQradio`,
     description: `LNQWeb`,
     author: `@lnqradio`,
   },
@@ -39,6 +39,7 @@ module.exports = {
         pixelId: "314380382848388",
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
