@@ -10,7 +10,7 @@ const NotFoundPage = () => (
     <div className="max-w-6xl pt-6  md:pt-12 m-auto text-left relative z-50">
       <div className="flex flex-col justify-center mt-6 max-w-2xl m-auto">
         <iframe
-          src="https://mixlr.com/users/7717035/embed?color=0d0314"
+          src="https://mixlr.com/users/7717035/embed?color=0d0314&autoplay=true"
           width="100%"
           className="max-w-sm m-auto my-6"
           height="150px"
@@ -47,6 +47,7 @@ const NotFoundPage = () => (
           /Podcasts. Como recomendacion cuando entras a cada columna. Y dentro
           de cada categoria aparece primero.
         </p>
+        <p>+ Prueba de servidor de streaming</p>
         <b>Artisticas</b> <br />
         <p>+ Se puso a prueba el mini reproductor.</p>
         <h4>Proximamente</h4>
