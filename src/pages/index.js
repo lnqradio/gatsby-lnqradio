@@ -223,26 +223,14 @@ const IndexPage = () => {
         className="relative flex flex-col items-center justify-center  md:mt-0 md:pt-0 homeHero"
         style={{ minHeight: "90vh" }}
       >
-        <h2 className=" w-full px-6 pt-0 pb-3 font-mono text-lg md:text-2xl md:leading-10 text-center text-red-500   relative  z-50">
+        <h2 className="max-w-lg m-auto my-0 w-full px-6 pt-0 pb-3 font-mono text-lg md:text-2xl md:leading-10 text-center text-red-500   relative  z-50">
           La Noche Que ella soño con el Centro Half
         </h2>
-        <h2 className="w-full px-0 pt-0 text-lg md:text-3xl text-center text-white animated fadeIn slow font-mono pb-3 relative  z-50">
+        <h2 className="max-w-lg m-auto my-0 w-full px-0 pt-0 text-lg md:text-3xl text-center text-white animated fadeIn slow font-mono pb-3 relative  z-50">
           Un nuevo episodio cada viernes
         </h2>
-        <div>
-          <iframe
-            src="https://mixlr.com/users/7718965/embed?color=0d0314&autoplay=true"
-            width="100%"
-            className="max-w-lg m-auto my-6 relative z-50"
-            height="150px"
-            scrolling="no"
-            frameborder="no"
-            marginheight="0"
-            marginwidth="0"
-          ></iframe>
-        </div>
 
-        <div className="block sm:flex w-full justify-center relative  z-50">
+        <div className="max-w-lg m-auto my-0 block sm:flex w-full justify-center relative  z-50">
           <Link
             activeClassName="active"
             className="block md:inline-block px-6 py-2 mt-2 sm:mr-2 text-white bg-red-800 font-mono hover:bg-red-700 hover:text-white md:w-64 text-center font-bold"
