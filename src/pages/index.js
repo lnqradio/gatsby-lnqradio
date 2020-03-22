@@ -227,7 +227,7 @@ const IndexPage = () => {
           La Noche Que ella soño con el Centro Half
         </h2>
         <h2 className="w-full px-0 pt-0 text-lg md:text-3xl text-center text-white animated fadeIn slow font-mono pb-3 relative  z-50">
-          Sábado. 20hs. Episodio <span> la peste</span>
+          Un nuevo episodio cada viernes
         </h2>
         <div>
           <iframe
