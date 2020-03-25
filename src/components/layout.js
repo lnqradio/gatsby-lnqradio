@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Image from "../components/image"
+import Mailchimp from "../components/mailchimp"
+
 import "./layout.css"
 import "./animate.css"
 import {
@@ -51,6 +53,7 @@ const Layout = ({ children }) => {
             <Image />
             <h4 className="my-2 text-white">LNQRadio</h4>
           </div>
+
           <ReactTooltip
             place="bottom"
             type="dark"
@@ -99,6 +102,7 @@ const Layout = ({ children }) => {
               <FaSoundcloud />
             </a>
           </div>
+          <Mailchimp />
           <p>© {new Date().getFullYear()}, Realizado con el apoyo de </p>
           <Link to={`/garmendia/`} className="font-bold text-red-600 ">
             Laboratorios Garmendia

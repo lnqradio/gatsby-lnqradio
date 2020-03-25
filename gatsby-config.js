@@ -62,6 +62,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://COM.us4.list-manage.com/subscribe/post?u=90c048d44b824ed69cb0b9718&amp;id=19537166fc", // add your MC list endpoint here; see instructions below
+      },
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.

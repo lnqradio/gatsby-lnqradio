@@ -1,0 +1,87 @@
+.subscribe-form {
+  align-items: center;
+
+  border-radius: 5px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-height: 320px;
+  justify-content: space-around;
+  margin: 40px auto;
+  max-width: 350px;
+  padding: 20px;
+  width: 100%;
+}
+
+.subscribe-form__button {
+  @apply block px-6 py-2 mt-2 text-white bg-red-800 font-mono text-center font-bold;
+}
+
+.subscribe-form__button:hover {
+  cursor: pointer;
+}
+
+.subscribe-form__button:active {
+  background-color: #007acc;
+  box-shadow: 0 0 2px 1px #33adff;
+}
+
+.subscribe-form__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.subscribe-form__text {
+  color: #808080;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.subscribe-form__title,
+.subscribe-form__text {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.subscribe-form__content {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  /*
+  height: 85px;
+  margin-bottom: 20px;
+  */
+  line-height: 1.4;
+  width: 100%;
+}
+
+.subscribe-form__input {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  height: 35px;
+  outline: none;
+  padding: 5px;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+
+.subscribe-form__input:focus {
+  border: 1px solid transparent;
+  box-shadow: 0 0 2px 1px #007acc;
+}
+
+.subscribe-form__message_success,
+.subscribe-form__message_failure {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.subscribe-form__message_success {
+  color: #007acc;
+}
+
+.subscribe-form__message_failure {
+  color: #ff474c;
+}

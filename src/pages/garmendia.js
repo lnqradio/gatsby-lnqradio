@@ -43,7 +43,6 @@ const NotFoundPage = () => (
         >
           # Registro de cambios. v.0.1.3
         </a>
-        
       </article>
     </div>
     <Particles
