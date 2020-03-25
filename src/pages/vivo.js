@@ -24,19 +24,20 @@ const VivoPage = () => (
         </h1>
         <div className="text-center solumedia">
           <iframe
-            src="https://mixlr.com/users/7718965/embed?color=0d0314&autoplay=true"
-            width="100%"
-            className="max-w-sm m-auto m-0 p-0 relative z-50"
-            height="150px"
-            scrolling="no"
-            frameborder="no"
-            marginheight="0"
-            marginwidth="0"
+            border="0"
+            frameborder="NO"
+            width="300px"
+            title="En vivo"
+            height="100px"
+            className="m-auto min-w-64"
+            scrolling="NO"
+            allowtransparency="yes"
+            src="https://www.solumedia.com.ar/radios/8772"
           ></iframe>
           <a
             href="https://www.solumedia.com.ar/radios/8772/"
             target="_blank"
-            className="relative hidden z-50 block mt-2 mb-12 text-xs text-white hover:underline"
+            className="relative z-50 block mt-2 mb-12 text-xs text-white hover:underline"
             rel="noopener noreferrer"
           >
             Si no se reproduce, probá con un click aquí

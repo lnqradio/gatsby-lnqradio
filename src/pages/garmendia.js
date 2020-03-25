@@ -39,24 +39,11 @@ const NotFoundPage = () => (
           href="https://github.com/lnqradio/gatsby-lnqradio"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-xl py-6  italic"
+          className="text-red-500 text-xl py-6 italic"
         >
           # Registro de cambios. v.0.1.3
         </a>
-        <p>
-          + Se agregaron mas de 3 items por categoria en la home. <br />
-          <i>Avisen si llega a andar para atrás</i>
-        </p>
-        <p>
-          + Se agrego <b>contenido destcado.</b> <br /> Aparece apenas entras a
-          /Podcasts. Como recomendacion cuando entras a cada columna. Y dentro
-          de cada categoria aparece primero.
-        </p>
-        <p>+ Prueba de servidor de streaming</p>
-        <b>Artisticas</b> <br />
-        <p>+ Se puso a prueba el mini reproductor.</p>
-        <h4>Proximamente</h4>
-        <p>- Sección artisticas y ficciones</p>
+        
       </article>
     </div>
     <Particles
