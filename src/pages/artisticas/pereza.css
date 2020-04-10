@@ -1,0 +1,50 @@
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6,
+.article blockquote
+ {
+	@apply text-white;
+}
+
+.article hr {
+	@apply my-3;
+	border-top: 1px solid ;
+	opacity: .5;
+}
+
+.article h1 {
+@apply text-4xl
+}
+
+.article h2 {
+@apply text-3xl
+
+}
+
+.article h3 {
+@apply text-2xl
+
+}
+
+.article h4 {
+@apply text-xl
+
+}
+
+.article h5 {
+@apply text-lg
+
+}
+
+.article h6 {
+@apply text-base
+
+}
+
+.article blockquote {
+	
+}
