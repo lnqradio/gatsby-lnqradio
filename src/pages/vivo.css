@@ -18,12 +18,12 @@
 .live-stream {
 }
 .live-stream h3 {
-  @apply text-red-500 py-6 font-mono text-xl;
+  @apply py-6 font-mono text-xl text-red-500;
 }
 
 .live-stream .live {
   background: rgb(40, 17, 54);
-  @apply text-center flex justify-center flex-col items-center;
+  @apply flex flex-col items-center justify-center text-center;
 }
 .live-stream .live iframe {
   @apply pt-6;

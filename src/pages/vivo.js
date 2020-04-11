@@ -16,13 +16,24 @@ const VivoPage = () => (
     <div className="max-w-lg pt-6 m-auto text-center live-stream md:pt-6">
       <div className="relative z-50 pt-6 pb-3 text-xl">
         <h1 className="w-full px-6 pt-0 pb-2 font-mono text-2xl leading-10 text-left text-white md md:text-center">
-          <span className="block text-gray-400">La Noche Que </span>
-          ella soño con el Centro Half
+          La Noche Que ella soño con el Centro Half
         </h1>
-        <h1 className="w-full px-0 text-2xl mb-2 pt-0 pb-3 font-mono text-center text-red-500 animated fadeIn slow ">
+        <h1 className="block w-full px-0 pt-0 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
           Un nuevo episodio en vivo cada viernes a las 20hs
         </h1>
-        <div className="text-center solumedia">
+        <div>
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            className="p-2"
+            title="Último episodio"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/795738772&color=%23281136&inverse=true&auto_play=false&show_user=false"
+          ></iframe>
+        </div>
+        <div className="hidden text-center solumedia">
           <iframe
             border="0"
             frameborder="NO"
@@ -41,13 +52,13 @@ const VivoPage = () => (
             rel="noopener noreferrer"
           >
             Si no se reproduce, probá con un click aquí
-            <GoLinkExternal className="inline-block ml-3 text-xm text-white" />
+            <GoLinkExternal className="inline-block ml-3 text-white text-xm" />
           </a>
         </div>
 
         <Link
           activeClassName="active"
-          className="block px-6 py-2 mt-2 mb-12 mx-2 font-mono text-white bg-indigo-800 md:inline-block hover:bg-indigo-900 hover:text-white"
+          className="block px-6 py-2 mx-2 mt-2 mb-12 font-mono text-white bg-indigo-800 md:inline-block hover:bg-indigo-900 hover:text-white"
           to="/notanenvivo/"
         >
           Episodios anteriores

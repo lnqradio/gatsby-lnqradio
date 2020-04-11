@@ -20,6 +20,7 @@ const Layout = ({ location, children }) => {
 
       <Sidebar />
       <Header siteTitle={data.site.siteMetadata.title} />
+
       <TransitionViews>{children}</TransitionViews>
     </TransitionProvider>
   )
