@@ -136,7 +136,7 @@ const IndexPage = () => {
       </div>
       <div className="max-w-5xl m-auto mt-12 mb-24 last-show ">
         {data.lastShow.edges.map((show, i) => (
-          <div key={show.node.slug} className="px-12 ">
+          <div key={show.node.slug} className="md:px-2 ">
             <h1 className="flex justify-start p-6 pb-1 font-mono text-sm text-left text-white bg-gray-800">
               Escuchá el último episodio completo{" "}
               <b className="mb-2 ml-2 font-mono text-sm text-left text-gray-500 capitalize">
@@ -186,7 +186,7 @@ const IndexPage = () => {
                           width="100%"
                           height="20"
                           scrolling="no"
-                          className="w-full px-12 transform scale-125"
+                          className="w-full px-8 transform scale-125 md:px-12"
                           frameborder="no"
                           allow="autoplay"
                           src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
