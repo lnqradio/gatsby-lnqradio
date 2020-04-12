@@ -7,6 +7,37 @@ import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import { FaSpotify, FaSoundcloud } from "react-icons/fa"
 import { GoLinkExternal } from "react-icons/go"
+import "./columna.css"
+
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+
+const Bold = ({ children }) => <span className="font-bold">{children}</span>
+const Text = ({ children }) => <p className="my-3 text-lg">{children}</p>
+
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+    [MARKS.CODE]: embedded => (
+      <div dangerouslySetInnerHTML={{ __html: embedded }} />
+    ),
+  },
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: node => {
+      if (!node.data || !node.data.target.fields) {
+        return <span className="hidden">Embedded asset is broken</span>
+      }
+      return (
+        <img
+          className="w-full"
+          src={node.data.target.fields.file["es-AR"].url}
+        />
+      )
+    },
+
+    [BLOCKS.PARAGRAPH]: (_, children) => <Text>{children}</Text>,
+  },
+}
 
 class ColumnaTemplate extends React.Component {
   render() {
@@ -52,18 +83,18 @@ class ColumnaTemplate extends React.Component {
             )}
             <div className="w-full bg-indigo-900 post-hero bg-pattern">
               <div
-                className="w-full max-w-2xl m-auto mt-0 md:mt-6 text-lg columna-article animated fadeIn delay-1s slower "
+                className="w-full max-w-2xl m-auto mt-0 text-lg md:mt-6 columna-article animated fadeIn delay-1s slower "
                 dangerouslySetInnerHTML={{
                   __html: columna.soundcloudPlayer.soundcloudPlayer,
                 }}
               />
 
-              <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-2xl m-auto mb-6 text-3xl listen">
+              <div className="flex flex-col items-center justify-between w-full max-w-2xl m-auto mb-6 text-3xl md:flex-row listen">
                 <a
                   href={`${columna.spotify.spotify}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full p-5 m-0 md:mt-3 md:mr-2 text-lg bg-gray-800 rounded-sm hover:text-white hover:bg-green-800"
+                  className="block w-full p-5 m-0 text-lg bg-gray-800 rounded-sm md:mt-3 md:mr-2 hover:text-white hover:bg-green-800"
                 >
                   <h2 className="flex items-center font-mono text-base font-bold text-white ">
                     <FaSpotify className="w-6 h-6 mr-3 text-white" />
@@ -75,7 +106,7 @@ class ColumnaTemplate extends React.Component {
                   href={`${columna.soundcloud.soundcloud}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full p-5 md:mt-3 md:ml-2 text-lg bg-gray-800 rounded-sm hover:text-white hover:bg-orange-800"
+                  className="block w-full p-5 text-lg bg-gray-800 rounded-sm md:mt-3 md:ml-2 hover:text-white hover:bg-orange-800"
                 >
                   <h2 className="flex items-center font-mono text-base font-bold text-white ">
                     <FaSoundcloud className="w-6 h-6 mr-3 text-orange-100" />
@@ -89,55 +120,55 @@ class ColumnaTemplate extends React.Component {
               {columna.title}
               <Link
                 to={`/columnas/${kebabCase(columna.author.slug)}/`}
-                className="text-gray-500 mt-1 font-mono text-left  text-sm pl-3 "
+                className="pl-3 mt-1 font-mono text-sm text-left text-gray-500 "
               >
                 x {columna.author.name}
               </Link>
             </h1>
-            <div className="w-full max-w-2xl "></div>
-            <p
-              className="w-full max-w-2xl pb-20 m-auto mt-6 text-lg columna-article"
-              dangerouslySetInnerHTML={{
-                __html: columna.body.body,
-              }}
-            />
+
+            <div className="w-full max-w-2xl m-auto mt-2 text-white article">
+              {documentToReactComponents(
+                columna.childContentfulColumnasContenidoRichTextNode.json,
+                options
+              )}
+            </div>
           </div>
-          <div className="posts animation flex flex-wrap w-full m-auto justify-center ">
-            <h1 className="block w-full text-white text-center text-3xl mb-3">
+          <div className="flex flex-wrap justify-center w-full m-auto posts animation ">
+            <h1 className="block w-full mb-3 text-3xl text-center text-white">
               Destacadas
             </h1>
             {columnas.edges.map((item, i) => (
               <div
                 key={item.node.id}
-                className="post border-red-500 border-t-4 relative animated fadeIn slow max-w-md w-full m-3 flex-auto"
+                className="relative flex-auto w-full max-w-md m-3 border-t-4 border-red-500 post animated fadeIn slow"
               >
-                <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">
+                <div className="h-full px-0 pt-4 mb-20 bg-gray-800 shadow">
                   <Link
                     to={`/columnas/${kebabCase(
                       item.node.author.name
                     )}/${kebabCase(item.node.slug)}/`}
-                    className="title block px-6 pt-2 text-red-500 mb-1 text-2xl font-mono hover:text-white min-h-20"
+                    className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
                   >
                     {item.node.title}
                   </Link>
                   <Link
                     to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                    className="block px-6 pb-1 text-gray-500 hover:text-white font-mono text-base"
+                    className="block px-6 pb-1 font-mono text-base text-gray-500 hover:text-white"
                   >
                     x {item.node.author.name}
                   </Link>
                   <span className="px-6">{item.node.tipoDePodcast}</span>
-                  <p className="title px-6 pb-6">
+                  <p className="px-6 pb-6 title">
                     {item.node.description.description}
                   </p>
-                  <div className="listen flex justify-between items-center bg-gray-900 absolute bottom-0 left-0 right-0">
+                  <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-gray-900 listen">
                     <Link
                       to={`/columnas/${kebabCase(
                         item.node.author.name
                       )}/${kebabCase(item.node.slug)}/`}
                       className="title "
                     >
-                      <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
+                      <h2 className="px-6 font-mono text-xl text-red-500 hover:text-white">
                         Escuchar podcast
                       </h2>
                     </Link>
@@ -146,7 +177,7 @@ class ColumnaTemplate extends React.Component {
                       href={`${item.node.spotify.spotify}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
+                      className="block p-6 text-2xl hover:text-white hover:bg-green-700"
                     >
                       <FaSpotify className="text-white" />
                     </a>
@@ -187,15 +218,16 @@ export const pageQuery = graphql`
           url
         }
       }
+      childContentfulColumnasContenidoRichTextNode {
+        json
+      }
       description {
         description
       }
       soundcloudPlayer {
         soundcloudPlayer
       }
-      body {
-        body
-      }
+
       soundcloud {
         soundcloud
       }
