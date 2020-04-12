@@ -11,6 +11,16 @@ a {
   text-shadow: none !important;
   background-image: none !important;
 }
+.post .bg-image-hover-opacity,
+.slider-item .bg-image-hover-opacity {
+  @apply transition-all duration-500;
+}
+
+.post:hover .bg-image-hover-opacity,
+.slider-item:hover .bg-image-hover-opacity {
+  opacity: 0.2 !important;
+  transform: scale(1.05);
+}
 
 @screen lg {
   body {
@@ -23,7 +33,7 @@ main {
 }
 
 footer {
-  @apply text-center p-12 pt-6;
+  @apply p-12 pt-6 text-center;
   background-color: #0d0314;
   padding-bottom: 130px;
 }

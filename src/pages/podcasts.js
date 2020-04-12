@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { kebabCase } from "lodash"
 import { FaSpotify } from "react-icons/fa"
+import Img from "gatsby-image"
+
 import "react-awesome-slider/dist/styles.css"
 import {
   GiSpellBook,
@@ -33,6 +35,12 @@ const ColumnasPage = () => {
             spotify {
               spotify
             }
+            heroImage {
+              fixed(width: 600, height: 300) {
+                ...GatsbyContentfulFixed
+              }
+            }
+            soundcloudTrackID
             slug
             author {
               name
@@ -70,11 +78,11 @@ const ColumnasPage = () => {
     <Layout>
       <SEO title="Podcasts" />
       <div className="flex flex-col">
-        <div className="posts animation columnas soundcloud flex flex-wrap  w-full m-auto p-0 justify-center ">
-          <div className="home-hero-links bg-gray-800 flex justify-center py-6 w-full md:py-8">
+        <div className="flex flex-wrap justify-center w-full p-0 m-auto posts animation columnas soundcloud ">
+          <div className="flex justify-center w-full py-6 bg-gray-800 home-hero-links md:py-8">
             <Link
               to={`/podcasts/musicales`}
-              className="text-base block text-red-500 hover:text-white font-mono"
+              className="block font-mono text-base text-red-500 hover:text-white"
             >
               <IoMdMusicalNotes />
 
@@ -82,7 +90,7 @@ const ColumnasPage = () => {
             </Link>
             <Link
               to={`/podcasts/cine`}
-              className="text-base block text-red-500 hover:text-white font-mono"
+              className="block font-mono text-base text-red-500 hover:text-white"
             >
               <MdLocalMovies />
 
@@ -91,14 +99,14 @@ const ColumnasPage = () => {
 
             <Link
               to={`/podcasts/entrevistas/`}
-              className="text-base block text-red-500 hover:text-white font-mono"
+              className="block font-mono text-base text-red-500 hover:text-white"
             >
               <IoMdMicrophone />
               <span>entrevistas</span>
             </Link>
             <Link
               to={`/podcasts/perfiles`}
-              className="text-base block text-red-500 hover:text-white font-mono"
+              className="block font-mono text-base text-red-500 hover:text-white"
             >
               <MdPersonPin />
 
@@ -106,7 +114,7 @@ const ColumnasPage = () => {
             </Link>
             <Link
               to={`/podcasts/historias`}
-              className="text-base block text-red-500 hover:text-white font-mono"
+              className="block font-mono text-base text-red-500 hover:text-white"
             >
               <GiSpellBook />
 
@@ -114,7 +122,7 @@ const ColumnasPage = () => {
             </Link>
             <Link
               to={`/podcasts/psiconautica`}
-              className="text-base block text-red-500 hover:text-white font-mono"
+              className="block font-mono text-base text-red-500 hover:text-white"
             >
               <GiAstronautHelmet />
 
@@ -122,7 +130,7 @@ const ColumnasPage = () => {
             </Link>
             <Link
               to={`/podcasts/politica`}
-              className="text-base block text-red-500 hover:text-white font-mono"
+              className="block font-mono text-base text-red-500 hover:text-white"
             >
               <GiRomanToga />
 
@@ -130,63 +138,61 @@ const ColumnasPage = () => {
             </Link>
             <Link
               to={`/podcasts/intermezzo`}
-              className="text-base block text-red-500 hover:text-white font-mono"
+              className="block font-mono text-base text-red-500 hover:text-white"
             >
               <GiPestleMortar />
 
               <span>intermezzo</span>
             </Link>
           </div>
-          <h2 className="text-white block w-full p-4 text-3xl font-mono text-center">
+          <h2 className="block w-full p-4 font-mono text-3xl text-center text-white">
             Destacadas
           </h2>
           {data.contenful.edges.map((item, i) => (
             <div
               key={item.node.slug}
-              className="post border-red-500 border-t-4 animated fadeIn relative slow max-w-md w-full m-3 flex-auto"
+              className="relative flex-auto w-full max-w-md m-3 overflow-hidden bg-gray-800 post animated fadeIn slow"
             >
-              <div className="px-0 pt-4 shadow bg-gray-800 mb-20 h-full">
+              <div className="relative z-50 h-full px-0 pt-4 mb-20 shadow">
                 <Link
                   to={`/columnas/${kebabCase(
                     item.node.author.name
                   )}/${kebabCase(item.node.slug)}/`}
-                  className="title block px-6 pt-2 text-red-500 mb-1 text-2xl font-mono hover:text-white min-h-20"
+                  className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
                 >
                   {item.node.title}
                 </Link>
                 <Link
                   to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                  className="block px-6 pb-1 text-gray-500 hover:text-white font-mono text-base"
+                  className="block px-6 pb-1 mb-32 font-mono text-base text-gray-500 hover:text-white"
                 >
                   x {item.node.author.name}
                 </Link>
-                <p className="title px-6 pb-6">
+                <p className="hidden px-6 pb-6 title">
                   {item.node.description.description}
-                  <time className="text-sm block pt-2 text-gray-500 italic hidden">
-                    {item.node.publishDate}
-                  </time>
                 </p>
-                <div className="listen flex justify-between items-center bg-gray-900 absolute bottom-0 left-0 right-0">
-                  <Link
-                    to={`/columnas/${kebabCase(
-                      item.node.author.name
-                    )}/${kebabCase(item.node.slug)}/`}
-                    className="title "
-                  >
-                    <h2 className="hover:text-white font-mono text-xl px-6 text-red-500 font-mono">
-                      Escuchar columna
-                    </h2>
-                  </Link>
-
-                  <a
-                    href={`${item.node.spotify.spotify}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className=" block text-2xl hover:text-white  hover:bg-green-700 p-6"
-                  >
-                    <FaSpotify className="text-white" />
-                  </a>
+                <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
+                  <iframe
+                    width="100%"
+                    height="20"
+                    scrolling="no"
+                    className="w-full px-12 transform scale-125"
+                    frameborder="no"
+                    allow="autoplay"
+                    src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
+                      item.node.soundcloudTrackID
+                    )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
+                  ></iframe>
                 </div>
+              </div>
+              <div
+                className="absolute inset-0 bg-image-hover-opacity"
+                style={{ opacity: ".1" }}
+              >
+                <Img
+                  alt="{item.node.title}"
+                  fixed={item.node.heroImage.fixed}
+                />
               </div>
             </div>
           ))}

@@ -22,6 +22,7 @@ const EpisodiosPage = () => {
             description {
               description
             }
+            temporada
             publishDate(formatString: "MMMM Do, YYYY", locale: "es")
             heroImage {
               fluid(maxWidth: 1200, maxHeight: 1000) {
@@ -60,7 +61,10 @@ const EpisodiosPage = () => {
                     className="title "
                   >
                     <b className="block w-40 px-5 pb-5 mb-2 font-mono text-left text-indigo-300">
-                      Episodio {item.node.episode}
+                      Episodio {item.node.episode} <br />
+                      <span className="text-xs text-gray-400">
+                        Temporada {item.node.temporada}
+                      </span>
                     </b>
                   </Link>
                 </div>

@@ -2,7 +2,6 @@
 SVG Icons - svgicons.sparkk.fr
 ----- */
 
-
 .svg-icon {
   width: 1em;
   height: 1em;
@@ -18,7 +17,7 @@ SVG Icons - svgicons.sparkk.fr
 }
 
 .home-post .actions .btn {
-  @apply rounded mx-2 px-4 py-2;
+  @apply px-4 py-2 mx-2 rounded;
 }
 
 .home-post .awssld__wrapper {
@@ -54,7 +53,6 @@ h2.text-red-500:hover {
 }
 
 .posts.soundcloud .post:hover .soundcloud-player {
-  height: 300px;
 }
 
 .posts .post {
@@ -241,7 +239,7 @@ iframe {
 .swiper-button-prev {
   filter: grayscale(1) hue-rotate(145deg);
   top: 0 !important;
-  @apply transition-all duration-200 block;
+  @apply block transition-all duration-200;
 }
 
 .swiper-button-next:hover,
@@ -367,12 +365,12 @@ iframe {
 }
 
 .home-hero-links {
-  @apply border-red-600 border-b mb-12 flex flex-wrap;
+  @apply flex flex-wrap mb-12 border-b border-red-600;
   background: #220c2f;
 }
 
 .home-hero-links a {
-  @apply flex flex-col items-center justify-center transition-all duration-200 py-8 m-1;
+  @apply flex flex-col items-center justify-center py-8 m-1 transition-all duration-200;
   width: 46%;
   background: #281136;
 }
@@ -479,7 +477,7 @@ iframe {
 }
 
 .entrevista-item .title {
-  @apply z-10 relative  px-6 py-4 text-red-500 text-center text-2xl font-mono font-mono w-full block;
+  @apply relative z-10 block w-full px-6 py-4 font-mono text-2xl text-center text-red-500;
   bottom: 0;
   opacity: 0;
 }
@@ -490,15 +488,15 @@ iframe {
 }
 
 .entrevista-item .description {
-  @apply px-6 pb-6 z-10 relative text-center  bottom-0;
+  @apply relative bottom-0 z-10 px-6 pb-6 text-center;
 }
 
 .changelog {
-  @apply max-w-xl m-auto bg-gray-800 p-6 my-6;
+  @apply max-w-xl p-6 m-auto my-6 bg-gray-800;
 }
 
 .changelog h4 {
-  @apply text-white mt-6 text-lg;
+  @apply mt-6 text-lg text-white;
 }
 
 .changelog p {

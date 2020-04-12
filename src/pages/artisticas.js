@@ -1,22 +1,30 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
 
 const ArtisticasPage = () => {
   return (
     <Layout>
       <SEO title="Artisticas" />
-      <div className="posts flex  flex-wrap max-w-full m-auto">
-        <div className=" max-w-6xl pt-12 m-auto text-center">
-          <h1 className="text-white text-3xl mb-5 font-thin">Artisticas</h1>
-          <div className="flex flex-col flex-wrap lg:flex-row justify-center">
+      <div className="flex flex-wrap max-w-full m-auto posts">
+        <div className="max-w-6xl pt-12 m-auto text-center ">
+          <h1 className="mb-5 text-3xl font-thin text-white">Artisticas</h1>
+          <Link
+            activeClassName="active"
+            className="block px-6 py-2 mt-2 font-mono font-bold text-center text-white bg-red-800 md:inline-block sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
+            to="/artisticas/pereza"
+          >
+            A dos Charlas
+          </Link>
+          <div className="flex flex-col flex-wrap justify-center lg:flex-row">
             <iframe
               width="100%"
               height="20"
               scrolling="no"
               title="La audio de la pereza"
               frameborder="no"
-              className="my-3 bg-gray-800 block rounded-full pr-2"
+              className="block pr-2 my-3 bg-gray-800 rounded-full"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610356171&color=%23ff5500&inverse=true&auto_play=true&show_user=false"
             ></iframe>
@@ -26,7 +34,7 @@ const ArtisticasPage = () => {
               scrolling="no"
               title="La audio de la pereza"
               frameborder="no"
-              className="my-3 bg-gray-800 block rounded-full pr-2"
+              className="block pr-2 my-3 bg-gray-800 rounded-full"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610354974&color=%23ff5500&inverse=true&auto_play=true&show_user=false"
             ></iframe>
