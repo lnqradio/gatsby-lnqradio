@@ -19,26 +19,6 @@ const ArtisticasPage = () => {
           </Link>
           <div className="flex flex-col flex-wrap justify-center lg:flex-row">
             <iframe
-              width="100%"
-              height="20"
-              scrolling="no"
-              title="La audio de la pereza"
-              frameborder="no"
-              className="block pr-2 my-3 bg-gray-800 rounded-full"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610356171&color=%23ff5500&inverse=true&auto_play=true&show_user=false"
-            ></iframe>
-            <iframe
-              width="100%"
-              height="20"
-              scrolling="no"
-              title="La audio de la pereza"
-              frameborder="no"
-              className="block pr-2 my-3 bg-gray-800 rounded-full"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610354974&color=%23ff5500&inverse=true&auto_play=true&show_user=false"
-            ></iframe>
-            <iframe
               width="300"
               height="450"
               scrolling="no"

@@ -176,8 +176,8 @@ const ColumnasPage = () => {
                     width="100%"
                     height="20"
                     scrolling="no"
-                    className="w-full px-12 transform scale-125"
                     frameborder="no"
+                    className="w-full px-8 transform scale-125 sm:px-12"
                     allow="autoplay"
                     src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
                       item.node.soundcloudTrackID
