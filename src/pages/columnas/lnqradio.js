@@ -3,15 +3,14 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 import Img from "gatsby-image"
 
-const ChucaPage = () => {
+const LnqradioPage = () => {
   const data = useStaticQuery(graphql`
-    query ChucaQuery {
+    query LnqradioQuery {
       contenful: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
-        filter: { author: { name: { eq: "Chuca" } } }
+        filter: { author: { name: { eq: "lnqradio" } } }
       ) {
         edges {
           node {
@@ -40,7 +39,7 @@ const ChucaPage = () => {
           }
         }
       }
-      allContentfulAutores(filter: { name: { eq: "Chuca" } }) {
+      allContentfulAutores(filter: { name: { eq: "lnqradio" } }) {
         edges {
           node {
             id
@@ -48,9 +47,6 @@ const ChucaPage = () => {
               fluid(maxWidth: 1200, maxHeight: 1200) {
                 ...GatsbyContentfulFluid
               }
-            }
-            allTracksPlayer {
-              allTracksPlayer
             }
           }
         }
@@ -81,7 +77,7 @@ const ChucaPage = () => {
 
   return (
     <Layout>
-      <SEO title="Chuca" />
+      <SEO title="La Noche que Ella soño con el Centro Half" />
       <div className="flex flex-col md:flex-row">
         <div className="inset-x-0 top-0 z-50 hidden w-full p-6 mb-0 bg-gray-800 hero md:p-0 xl:sticky md:w-48 md:inline-block">
           <div className="flex flex-wrap justify-center max-w-4xl m-auto authors md:pt-6 md:justify-start md:px-0 md:sticky md:top-0 ">
@@ -112,17 +108,12 @@ const ChucaPage = () => {
               </div>
             ))}
             <div className="w-full px-3 mt-6 text-3xl text-center text-white">
-              <h1 className="font-mono text-white ">Chuca</h1>
-              <AnchorLink
-                href={`#author-player`}
-                className="block my-1 font-mono text-base text-red-500 hover:text-white"
-              >
-                <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
-                <span className="pt-0">Escuchar Playlist</span>
-              </AnchorLink>
+              <h1 className="font-mono text-white ">
+                La Noche que Ella soño con el Centro Half
+              </h1>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center w-full m-auto sm:px-6 posts soundcloud">
+          <div className="flex flex-wrap justify-center w-full px-6 m-auto posts soundcloud">
             {data.contenful.edges.map((item, i) => (
               <div
                 key={item.node.slug}
@@ -173,28 +164,10 @@ const ChucaPage = () => {
               </div>
             ))}
           </div>
-          <aside
-            id="author-player"
-            className="relative flex items-center justify-center w-full min-h-screen px-6 m-auto bg-gray-800"
-          >
-            {data.allContentfulAutores.edges.map((item, i) => (
-              <div className="w-full max-w-xl m-auto post">
-                <h2 className="font-mono text-2xl text-center text-white">
-                  Playlist de Chuca
-                </h2>
-                <div
-                  className="mt-2 soundcloud-player"
-                  dangerouslySetInnerHTML={{
-                    __html: item.node.allTracksPlayer.allTracksPlayer,
-                  }}
-                />
-              </div>
-            ))}
-          </aside>
         </section>
       </div>
     </Layout>
   )
 }
 
-export default ChucaPage
+export default LnqradioPage

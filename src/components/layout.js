@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
           href={`#top`}
           className="z-50 p-3 font-mono text-red-500 to-top hover:text-white min-w-xm"
         >
-          <span className="block text-sm z-50" role="img">
+          <span className="z-50 block text-sm" role="img">
             Arriba!
           </span>
         </AnchorLink>

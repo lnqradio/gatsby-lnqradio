@@ -23,18 +23,14 @@ const Header = ({ siteTitle }) => (
           </div>
           <h1 className="max-w-lg p-0 m-0 text-white md:mr-12">{siteTitle}</h1>
         </Link>
-        <nav className="hidden w-full mt-0 text-base md:flex justify-center pr-32">
+        <nav className="justify-center hidden w-full pr-32 mt-0 text-base md:flex">
           <Link activeClassName="font-bold active" to="/">
             Inicio
           </Link>
           <Link className activeClassName="font-bold active" to="/podcasts/">
             Podcasts
           </Link>
-          <Link
-            className="hidden"
-            activeClassName="font-bold active"
-            to="/episodios/"
-          >
+          <Link activeClassName="font-bold active" to="/notanenvivo/">
             Episodios
           </Link>
           <Link
@@ -61,7 +57,7 @@ const Header = ({ siteTitle }) => (
         </Link>
         <Link
           activeClassName="active"
-          className="px-6 pb-1 hidden text-white bg-gray-600 live-link hover:text-gray-300"
+          className="hidden px-6 pb-1 text-white bg-gray-600 live-link hover:text-gray-300"
           to="/notanenvivo/"
         >
           <svg
@@ -82,14 +78,14 @@ const Header = ({ siteTitle }) => (
         activeClassName="active"
         to="/vivo"
         style={{ zIndex: "9999" }}
-        className="fixed bottom-0 left-0 right-0 p-0 animated fadeInUp hidden delay-1s"
+        className="fixed bottom-0 left-0 right-0 hidden p-0 animated fadeInUp delay-1s"
       >
         <div className="py-2 text-center bg-red-800 hover:bg-red-700 lg:px-4">
           <div
             className="flex items-center p-2 leading-normal text-red-100 lg:rounded-full lg:inline-flex "
             role="alert"
           >
-            <span className="flex px-2 hidden py-1 mr-3 text-base font-bold leading-relaxed uppercase bg-red-700 rounded">
+            <span className="flex hidden px-2 py-1 mr-3 text-base font-bold leading-relaxed uppercase bg-red-700 rounded">
               <small className="">Episodio 240</small>
             </span>
             <span className="flex-col flex-auto mr-2 text-sm font-bold text-left ">

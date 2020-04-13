@@ -60,8 +60,8 @@ const SearchIndex = props => {
 
   return (
     <>
-      <div className="searchBox text-center mb-0 max-w-2xl m-auto w-full pt-6 md:pt-6 p-2 md:p-0 md:pb-6 animated fadeIn slower">
-        <h2 className="text-white text-left py-3 pb-6 text-2xl font-mono flex items-baseline flex-col md:flex-row">
+      <div className="w-full max-w-2xl p-2 pt-6 m-auto mb-0 text-center searchBox md:pt-6 md:p-0 md:pb-6 animated fadeIn slower">
+        <h2 className="flex flex-col items-baseline py-3 pb-6 font-mono text-2xl text-left text-white md:flex-row">
           <span className="flex-1">Buscador de podcasts</span>
           <SEO title={totales} />
 
@@ -71,7 +71,7 @@ const SearchIndex = props => {
         </h2>
 
         <input
-          className="searchInput bg-gray-800 text-gray-100 p-3 w-full  border-b-2 "
+          className="w-full p-3 text-gray-100 bg-gray-800 border-b-2 searchInput "
           type="text"
           tabindex="0"
           aria-label="Search"
@@ -90,16 +90,16 @@ const SearchIndex = props => {
         return (
           <article
             key={id}
-            className="search-item max-w-2xl m-auto mb-2 p-2 pb-2 md:p-2 md:pr-32 text-white relative border-b border-gray-800 bg-gray-800 animated fadeInUp "
+            className="relative max-w-2xl p-2 pb-2 m-auto mb-2 text-white bg-gray-800 border-b border-gray-800 search-item md:p-2 md:pr-32 animated fadeInUp "
           >
             <Link
-              className="text-red-500 font-bold font-mono hover:text-white text-lg pr-20 mb-2 sm:pr-0 block sm:inline-block"
+              className="block pr-20 mb-2 font-mono text-lg font-bold text-red-500 hover:text-white sm:pr-0 sm:inline-block"
               to={`/columnas/${kebabCase(name)}/${kebabCase(slug)}/`}
             >
               {title}{" "}
             </Link>
             <Link
-              className="title text-gray-400 block hover:text-gray-200 hover:underline text-sm md:text-base font-sans font-bold pr-2 sm:inline-block sm:pl-2 pl-0  "
+              className="block pl-0 pr-2 font-sans text-sm font-bold text-gray-400 title hover:text-gray-200 hover:underline md:text-base sm:inline-block sm:pl-2 "
               to={`/columnas/${kebabCase(name)}/`}
             >
               x {name}
@@ -107,9 +107,9 @@ const SearchIndex = props => {
 
             <p className="hidden">{description}</p>
 
-            <div className="listen absolute  h-auto flex justify-start md:justify-end items-center bottom-0 md:top-0 right-0">
+            <div className="absolute bottom-0 right-0 flex items-center justify-start h-auto listen md:justify-end md:top-0">
               {destacar ? (
-                <span className="bg-red-500 px-3 py-0 text-xs inline-block uppercase rounded-full">
+                <span className="inline-block px-3 py-0 text-xs uppercase bg-red-500 rounded-full">
                   destacado
                 </span>
               ) : (
@@ -119,25 +119,25 @@ const SearchIndex = props => {
                 place="left"
                 type="dark"
                 effect="solid"
-                className="shadow bg-red-500"
+                className="bg-red-500 shadow"
               />
               <a
                 href={`${spotify}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-tip="¿Te vas para Spotify?"
-                className=" block text-base p-3 md:text-2xl"
+                className="block p-3 text-base md:text-2xl"
               >
-                <FaSpotify className="text-white hover:text-green-700 transition duration-200 ease-in-out text-base" />
+                <FaSpotify className="text-base text-white transition duration-200 ease-in-out hover:text-green-700" />
               </a>
               <a
                 href={`${soundcloud}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-tip="¿Te vas para Soundcloud?"
-                className=" block text-base p-3 md:text-2xl"
+                className="block p-3 text-base md:text-2xl"
               >
-                <FaSoundcloud className="text-white hover:text-orange-700 transition duration-200 ease-in-out text-base" />
+                <FaSoundcloud className="text-base text-white transition duration-200 ease-in-out hover:text-orange-700" />
               </a>
             </div>
           </article>
@@ -151,7 +151,7 @@ export default SearchIndex
 
 export const pageQuery = graphql`
   query {
-    allContentfulColumnas(sort: { order: ASC, fields: [title] }) {
+    allContentfulColumnas(sort: { order: DESC, fields: [publishDate] }) {
       edges {
         node {
           id

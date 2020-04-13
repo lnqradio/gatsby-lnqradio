@@ -6,12 +6,12 @@ import SEO from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Img from "gatsby-image"
 
-const ChucaPage = () => {
+const MuzzoPage = () => {
   const data = useStaticQuery(graphql`
-    query ChucaQuery {
+    query MuzzoQuery {
       contenful: allContentfulColumnas(
         sort: { fields: [createdAt], order: DESC }
-        filter: { author: { name: { eq: "Chuca" } } }
+        filter: { author: { name: { eq: "Muzzo" } } }
       ) {
         edges {
           node {
@@ -40,7 +40,7 @@ const ChucaPage = () => {
           }
         }
       }
-      allContentfulAutores(filter: { name: { eq: "Chuca" } }) {
+      allContentfulAutores(filter: { name: { eq: "Muzzo" } }) {
         edges {
           node {
             id
@@ -81,7 +81,7 @@ const ChucaPage = () => {
 
   return (
     <Layout>
-      <SEO title="Chuca" />
+      <SEO title="Muzzo" />
       <div className="flex flex-col md:flex-row">
         <div className="inset-x-0 top-0 z-50 hidden w-full p-6 mb-0 bg-gray-800 hero md:p-0 xl:sticky md:w-48 md:inline-block">
           <div className="flex flex-wrap justify-center max-w-4xl m-auto authors md:pt-6 md:justify-start md:px-0 md:sticky md:top-0 ">
@@ -112,13 +112,13 @@ const ChucaPage = () => {
               </div>
             ))}
             <div className="w-full px-3 mt-6 text-3xl text-center text-white">
-              <h1 className="font-mono text-white ">Chuca</h1>
+              <h1 className="font-mono text-white ">Muzzo</h1>
               <AnchorLink
                 href={`#author-player`}
                 className="block my-1 font-mono text-base text-red-500 hover:text-white"
               >
                 <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
-                <span className="pt-0">Escuchar Playlist</span>
+                <span className="pt-0">Escuchar identikit</span>
               </AnchorLink>
             </div>
           </div>
@@ -139,11 +139,11 @@ const ChucaPage = () => {
                   </Link>
                   <Link
                     to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                    className="hidden px-6 pb-1 mb-32 font-mono text-base text-gray-500 hover:text-white"
+                    className="block px-6 pb-1 mb-32 font-mono text-base text-gray-500 hover:text-white"
                   >
                     x {item.node.author.name}
                   </Link>
-                  <p className="px-6 pb-6 text-sm">
+                  <p className="hidden px-6 pb-6 title">
                     {item.node.description.description}
                   </p>
                   <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
@@ -180,7 +180,7 @@ const ChucaPage = () => {
             {data.allContentfulAutores.edges.map((item, i) => (
               <div className="w-full max-w-xl m-auto post">
                 <h2 className="font-mono text-2xl text-center text-white">
-                  Playlist de Chuca
+                  Identikit Muzzopapi
                 </h2>
                 <div
                   className="mt-2 soundcloud-player"
@@ -197,4 +197,4 @@ const ChucaPage = () => {
   )
 }
 
-export default ChucaPage
+export default MuzzoPage

@@ -1,26 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 import { kebabCase } from "lodash"
-import Particles from "react-particles-js"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import "react-awesome-slider/dist/styles.css"
 import Img from "gatsby-image"
-import AnchorLink from "react-anchor-link-smooth-scroll"
 import AwesomeSlider from "react-awesome-slider"
-import {
-  GiSpellBook,
-  GiAstronautHelmet,
-  GiPestleMortar,
-  GiRomanToga,
-} from "react-icons/gi"
-import { MdPersonPin, MdLocalMovies } from "react-icons/md"
-import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
+
 import "./index.css"
 import Helmet from "react-helmet"
-
-import { FiChevronsDown } from "react-icons/fi"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -174,7 +163,7 @@ const IndexPage = () => {
                         to={`/columnas/${kebabCase(
                           slider.author.name
                         )}/${kebabCase(slider.slug)}`}
-                        className="block px-5 mt-0 mb-2 font-mono text-3xl text-left text-red-600 hover:text-white"
+                        className="block px-5 mt-0 mb-2 font-mono text-3xl text-left text-red-500 hover:text-white"
                       >
                         {slider.title}
                       </Link>
@@ -186,7 +175,8 @@ const IndexPage = () => {
                           width="100%"
                           height="20"
                           scrolling="no"
-                          className="w-full px-8 transform scale-125 md:px-12"
+                          title={slider.title}
+                          className="w-full px-12 transform scale-125 md:px-18"
                           frameborder="no"
                           allow="autoplay"
                           src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
@@ -197,7 +187,7 @@ const IndexPage = () => {
                     </div>
                     <div
                       className="absolute inset-0 bg-image-hover-opacity"
-                      style={{ opacity: ".1" }}
+                      style={{ opacity: ".2" }}
                     >
                       <Img
                         alt="{slider.title}"

@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { kebabCase } from "lodash"
-import { FaSpotify } from "react-icons/fa"
 import Img from "gatsby-image"
 
 import "react-awesome-slider/dist/styles.css"
@@ -145,7 +144,10 @@ const ColumnasPage = () => {
               <span>intermezzo</span>
             </Link>
           </div>
-          <h2 className="block w-full p-4 font-mono text-3xl text-center text-white">
+          <h2
+            className="block w-full p-4 font-mono text-3xl text-center text-white"
+            id="destacadas"
+          >
             Destacadas
           </h2>
           {data.contenful.edges.map((item, i) => (
@@ -162,12 +164,9 @@ const ColumnasPage = () => {
                 >
                   {item.node.title}
                 </Link>
-                <Link
-                  to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                  className="block px-6 pb-1 mb-32 font-mono text-base text-gray-500 hover:text-white"
-                >
-                  x {item.node.author.name}
-                </Link>
+                <div className="inline-block px-6 pb-1 mb-16 font-mono text-base text-gray-500">
+                  {item.node.tipoDePodcast} x {item.node.author.name}
+                </div>
                 <p className="hidden px-6 pb-6 title">
                   {item.node.description.description}
                 </p>
@@ -177,7 +176,8 @@ const ColumnasPage = () => {
                     height="20"
                     scrolling="no"
                     frameborder="no"
-                    className="w-full px-8 transform scale-125 sm:px-12"
+                    title={item.node.title}
+                    className="w-full px-12 transform scale-125 md:px-18"
                     allow="autoplay"
                     src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
                       item.node.soundcloudTrackID
@@ -187,7 +187,7 @@ const ColumnasPage = () => {
               </div>
               <div
                 className="absolute inset-0 bg-image-hover-opacity"
-                style={{ opacity: ".1" }}
+                style={{ opacity: ".2" }}
               >
                 <Img
                   alt="{item.node.title}"

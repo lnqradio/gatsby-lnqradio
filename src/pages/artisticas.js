@@ -12,8 +12,15 @@ const ArtisticasPage = () => {
           <h1 className="mb-5 text-3xl font-thin text-white">Artisticas</h1>
           <Link
             activeClassName="active"
-            className="block px-6 py-2 mt-2 font-mono font-bold text-center text-white bg-red-800 md:inline-block sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
+            className="hidden px-6 py-2 mt-2 font-mono font-bold text-center text-white bg-red-800 sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
             to="/artisticas/pereza"
+          >
+            La pereza
+          </Link>
+          <Link
+            activeClassName="active"
+            className="hidden px-6 py-2 mt-2 font-mono font-bold text-center text-white bg-red-800 sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
+            to="/artisticas/aradio-a-dos-charlas"
           >
             A dos Charlas
           </Link>

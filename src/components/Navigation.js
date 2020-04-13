@@ -10,10 +10,10 @@ const routes = [
     title: "Podcasts",
     slug: "/podcasts/",
   },
-  //{
-  //title: "Episodios",
-  //slug: "/episodios/",
-  //},
+  {
+    title: "Episodios",
+    slug: "/notanenvivo/",
+  },
   //{
   //  title: "Entrevistas",
   //  slug: "/podcasts/entrevistas/",
@@ -33,7 +33,7 @@ const routes = [
 ]
 
 const Navigation = ({ closeMenu }) => (
-  <nav className="w-full flex flex-col">
+  <nav className="flex flex-col w-full">
     {routes.map((route, i) => {
       return (
         <Link

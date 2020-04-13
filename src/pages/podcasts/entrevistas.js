@@ -3,7 +3,6 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { FaSpotify } from "react-icons/fa"
 import { IoMdMicrophone } from "react-icons/io"
 import Img from "gatsby-image"
 
@@ -81,6 +80,7 @@ const PodcastPage = () => {
                   width="100%"
                   height="20"
                   scrolling="no"
+                  title={item.node.title}
                   frameborder="no"
                   className="w-full px-8 transform scale-125 sm:px-12"
                   allow="autoplay"

@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import { FaSpotify, FaSoundcloud } from "react-icons/fa"
 import { GoLinkExternal } from "react-icons/go"
 import "./columna.css"
+import Img from "gatsby-image"
 
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -30,6 +31,7 @@ const options = {
       return (
         <img
           className="w-full"
+          alt={node.data.target.fields.title["es-AR"]}
           src={node.data.target.fields.file["es-AR"].url}
         />
       )
@@ -69,26 +71,21 @@ class ColumnaTemplate extends React.Component {
 
         <div className="flex flex-col flex-wrap px-2 pt-0 m-auto posts soundcloud">
           <div className="flex flex-col w-full pt-0 m-auto mb-12 shadow post">
-            {columna.destacar ? (
-              <div
-                class="bg-gray-900 border-t-4 border-gray-800 font-mono rounded-b text-red-00 px-4 py-3 shadow-md"
-                role="alert"
-              >
-                <div class="flex justify-center">
-                  <p class="font-bold">Contenido destacado</p>
-                </div>
-              </div>
-            ) : (
-              <span className="hidden"></span>
-            )}
             <div className="w-full bg-indigo-900 post-hero bg-pattern">
-              <div
-                className="w-full max-w-2xl m-auto mt-0 text-lg md:mt-6 columna-article animated fadeIn delay-1s slower "
-                dangerouslySetInnerHTML={{
-                  __html: columna.soundcloudPlayer.soundcloudPlayer,
-                }}
-              />
-
+              <div className="w-full max-w-2xl m-auto mt-0 text-lg md:mt-6 columna-article animated fadeIn delay-1s slower ">
+                <iframe
+                  width="100%"
+                  height="300"
+                  scrolling="no"
+                  frameborder="no"
+                  title={columna.title}
+                  className=""
+                  allow="autoplay"
+                  src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
+                    columna.soundcloudTrackID
+                  )}&color=%23281136&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true`}
+                ></iframe>
+              </div>
               <div className="flex flex-col items-center justify-between w-full max-w-2xl m-auto mb-6 text-3xl md:flex-row listen">
                 <a
                   href={`${columna.spotify.spotify}`}
@@ -98,7 +95,7 @@ class ColumnaTemplate extends React.Component {
                 >
                   <h2 className="flex items-center font-mono text-base font-bold text-white ">
                     <FaSpotify className="w-6 h-6 mr-3 text-white" />
-                    <span className="w-full">Player Spotify</span>
+                    <span className="w-full">Reproducir en Spotify</span>
                     <GoLinkExternal className="ml-3 text-base text-white" />
                   </h2>
                 </a>
@@ -110,20 +107,31 @@ class ColumnaTemplate extends React.Component {
                 >
                   <h2 className="flex items-center font-mono text-base font-bold text-white ">
                     <FaSoundcloud className="w-6 h-6 mr-3 text-orange-100" />
-                    <span className="w-full">Player Soundcloud</span>
+                    <span className="w-full">Reproducir en Soundcloud</span>
                     <GoLinkExternal className="ml-3 text-base text-orange-100" />
                   </h2>
                 </a>
               </div>
             </div>
+
             <h1 className="w-full max-w-2xl m-auto mt-6 font-mono text-3xl text-left text-white ">
               {columna.title}
-              <Link
-                to={`/columnas/${kebabCase(columna.author.slug)}/`}
-                className="pl-3 mt-1 font-mono text-sm text-left text-gray-500 "
-              >
-                x {columna.author.name}
-              </Link>
+
+              {columna.destacar ? (
+                <Link
+                  to={`/podcasts/`}
+                  class="pl-3 mt-1 font-mono text-sm text-left text-gray-500 font-bold "
+                >
+                  Contenido destacado
+                </Link>
+              ) : (
+                <Link
+                  to={`/columnas/${kebabCase(columna.author.slug)}/`}
+                  className="pl-3 mt-1 font-mono text-sm text-left text-gray-500 "
+                >
+                  x {columna.author.name}
+                </Link>
+              )}
             </h1>
 
             <div className="w-full max-w-2xl m-auto mt-2 text-white article">
@@ -140,9 +148,9 @@ class ColumnaTemplate extends React.Component {
             {columnas.edges.map((item, i) => (
               <div
                 key={item.node.id}
-                className="relative flex-auto w-full max-w-md m-3 border-t-4 border-red-500 post animated fadeIn slow"
+                className="relative flex-auto w-full max-w-md m-3 overflow-hidden bg-gray-800 post animated fadeIn slow"
               >
-                <div className="h-full px-0 pt-4 mb-20 bg-gray-800 shadow">
+                <div className="relative z-50 h-full px-0 pt-4 mb-20 shadow">
                   <Link
                     to={`/columnas/${kebabCase(
                       item.node.author.name
@@ -153,35 +161,34 @@ class ColumnaTemplate extends React.Component {
                   </Link>
                   <Link
                     to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                    className="block px-6 pb-1 font-mono text-base text-gray-500 hover:text-white"
+                    className="block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
                   >
                     x {item.node.author.name}
                   </Link>
-                  <span className="px-6">{item.node.tipoDePodcast}</span>
-                  <p className="px-6 pb-6 title">
-                    {item.node.description.description}
-                  </p>
-                  <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-gray-900 listen">
-                    <Link
-                      to={`/columnas/${kebabCase(
-                        item.node.author.name
-                      )}/${kebabCase(item.node.slug)}/`}
-                      className="title "
-                    >
-                      <h2 className="px-6 font-mono text-xl text-red-500 hover:text-white">
-                        Escuchar podcast
-                      </h2>
-                    </Link>
-
-                    <a
-                      href={`${item.node.spotify.spotify}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block p-6 text-2xl hover:text-white hover:bg-green-700"
-                    >
-                      <FaSpotify className="text-white" />
-                    </a>
+                  <p className="px-6">{item.node.description.description}</p>
+                  <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
+                    <iframe
+                      width="100%"
+                      height="20"
+                      scrolling="no"
+                      frameborder="no"
+                      title={item.node.title}
+                      className="w-full px-8 transform scale-125 sm:px-12"
+                      allow="autoplay"
+                      src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
+                        item.node.soundcloudTrackID
+                      )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
+                    ></iframe>
                   </div>
+                </div>
+                <div
+                  className="absolute inset-0 bg-image-hover-opacity"
+                  style={{ opacity: ".05" }}
+                >
+                  <Img
+                    alt="{item.node.title}"
+                    fixed={item.node.heroImage.fixed}
+                  />
                 </div>
               </div>
             ))}
@@ -224,9 +231,7 @@ export const pageQuery = graphql`
       description {
         description
       }
-      soundcloudPlayer {
-        soundcloudPlayer
-      }
+      soundcloudTrackID
 
       soundcloud {
         soundcloud
@@ -247,6 +252,12 @@ export const pageQuery = graphql`
           soundcloud {
             soundcloud
           }
+          heroImage {
+            fixed(width: 600, height: 300) {
+              ...GatsbyContentfulFixed
+            }
+          }
+          soundcloudTrackID
           author {
             name
             slug

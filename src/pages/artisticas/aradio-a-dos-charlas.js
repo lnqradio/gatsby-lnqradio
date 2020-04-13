@@ -36,7 +36,7 @@ const options = {
   },
 }
 
-class ArtisticaPerezaTemplate extends React.Component {
+class ArtisticaDoscharlasTemplate extends React.Component {
   render() {
     const post = get(this.props, "data.contentfulArtisticas")
 
@@ -61,11 +61,11 @@ class ArtisticaPerezaTemplate extends React.Component {
   }
 }
 
-export default ArtisticaPerezaTemplate
+export default ArtisticaDoscharlasTemplate
 
 export const pageQuery = graphql`
-  query ArtisticaPerezaQuery {
-    contentfulArtisticas(slug: { eq: "la-pereza" }) {
+  query ArtisticaDoscharlasQuery {
+    contentfulArtisticas(slug: { eq: "aradio-a-dos-charlas" }) {
       id
       title
       childContentfulArtisticasArticleRichTextNode {

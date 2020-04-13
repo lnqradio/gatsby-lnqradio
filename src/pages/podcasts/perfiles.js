@@ -3,7 +3,6 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { FaSpotify } from "react-icons/fa"
 import { MdPersonPin } from "react-icons/md"
 import Img from "gatsby-image"
 
@@ -75,13 +74,16 @@ const PodcastPage = () => {
               >
                 x {item.node.author.name}
               </Link>
-              <p className="px-6">{item.node.description.description}</p>
+              <p className="px-6 text-sm">
+                {item.node.description.description}
+              </p>
               <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
                 <iframe
                   width="100%"
                   height="20"
                   scrolling="no"
                   frameborder="no"
+                  title={item.node.title}
                   className="w-full px-8 transform scale-125 sm:px-12"
                   allow="autoplay"
                   src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(

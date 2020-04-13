@@ -97,12 +97,6 @@ export const pageQuery = graphql`
           ...GatsbyContentfulFluid
         }
       }
-      audio {
-        id
-        file {
-          url
-        }
-      }
       description {
         description
       }

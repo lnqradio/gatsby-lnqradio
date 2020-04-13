@@ -4,7 +4,6 @@ import { kebabCase } from "lodash"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
-import { FaSpotify } from "react-icons/fa"
 import Img from "gatsby-image"
 
 const AstrologoPage = () => {
@@ -25,6 +24,12 @@ const AstrologoPage = () => {
             soundcloud {
               soundcloud
             }
+            heroImage {
+              fixed(width: 600, height: 300) {
+                ...GatsbyContentfulFixed
+              }
+            }
+            soundcloudTrackID
             author {
               name
               slug
@@ -40,7 +45,7 @@ const AstrologoPage = () => {
           node {
             id
             imagen {
-              fluid(maxWidth: 1200, maxHeight: 1000) {
+              fluid(maxWidth: 1200, maxHeight: 1200) {
                 ...GatsbyContentfulFluid
               }
             }
@@ -78,7 +83,7 @@ const AstrologoPage = () => {
     <Layout>
       <SEO title="Astrologo" />
       <div className="flex flex-col md:flex-row">
-        <div className="inset-x-0 top-0 z-50 hidden w-full p-6 mb-0 bg-gray-800 hero md:p-0 xl:sticky md:w-48 md:block">
+        <div className="inset-x-0 top-0 z-50 hidden w-full p-6 mb-0 bg-gray-800 hero md:p-0 xl:sticky md:w-48 md:inline-block">
           <div className="flex flex-wrap justify-center max-w-4xl m-auto authors md:pt-6 md:justify-start md:px-0 md:sticky md:top-0 ">
             <h4 className="hidden px-3 pt-3 text-white md:inline-block md:pb-3">
               Autores
@@ -96,91 +101,89 @@ const AstrologoPage = () => {
         </div>
 
         <section className="flex flex-col justify-center w-full">
-          <div className="flex flex-col items-center w-full max-w-6xl p-8 m-auto bg-gray-900 md:flex-row md:w-2/3 md:my-12">
+          <div className="flex flex-col items-center w-full p-8 m-auto jutify-center md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
-              <div className="w-full md:w-56">
+              <div className="flex items-center justify-center w-full ">
                 <Img
-                  alt=""
+                  alt={image.node.name}
                   fluid={image.node.imagen.fluid}
-                  className="w-full mb-6"
+                  className="w-48 h-48 m-0 rounded-full"
                 />
               </div>
             ))}
-            <div className="w-full px-3 pl-10 m-0 text-3xl text-left text-white">
-              <h1 className="pb-3 mb-2 font-mono text-white border-b">
-                El Astrólogo
-              </h1>
+            <div className="w-full px-3 mt-6 text-3xl text-center text-white">
+              <h1 className="font-mono text-white ">Astrólogo</h1>
               <AnchorLink
                 href={`#author-player`}
-                className="block my-3 font-mono text-base text-red-500 hover:text-white"
+                className="block my-1 font-mono text-base text-red-500 hover:text-white"
               >
                 <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
-                <span className="pt-0 pl-3">Escuchar Selección</span>
+                <span className="pt-0">Escuchar Playlist</span>
               </AnchorLink>
             </div>
           </div>
-          <div className="flex flex-wrap w-full max-w-6xl px-6 m-auto posts soundcloud md:w-2/3">
+          <div className="flex flex-wrap justify-center w-full px-6 m-auto posts soundcloud">
             {data.contenful.edges.map((item, i) => (
-              <div className="w-full px-0 pt-4 mb-12 bg-gray-800 shadow post">
-                <Link
-                  to={`/columnas/${kebabCase(
-                    item.node.author.slug
-                  )}/${kebabCase(item.node.slug)}/`}
-                  className="title "
-                >
-                  <h2 className="px-6 pt-6 mb-3 mr-32 font-mono text-2xl text-red-500 title hover:text-white">
-                    {item.node.title}
-                  </h2>
-                </Link>
-                <p className="px-6 pb-6 title">
-                  {item.node.description.description}
-                </p>
-                <div className="flex items-center justify-between bg-gray-900 listen">
+              <div
+                key={item.node.slug}
+                className="relative flex-auto w-full max-w-md m-3 overflow-hidden bg-gray-800 post animated fadeIn slow"
+              >
+                <div className="relative z-50 h-full px-0 pt-4 mb-20 shadow">
                   <Link
                     to={`/columnas/${kebabCase(
-                      item.node.author.slug
+                      item.node.author.name
                     )}/${kebabCase(item.node.slug)}/`}
-                    className="w-full title "
+                    className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
                   >
-                    <h2 className="px-6 font-mono text-xl text-red-500 hover:text-white">
-                      Escuchar columna
-                    </h2>
+                    {item.node.title}
                   </Link>
-
-                  <a
-                    href={`${item.node.spotify.spotify}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-tip="¿Te vas para Spotify?"
-                    className="block p-6 text-2xl  hover:text-white hover:bg-green-700"
+                  <Link
+                    to={`/columnas/${kebabCase(item.node.author.name)}/`}
+                    className="hidden px-6 pb-1 mb-32 font-mono text-base text-gray-500 hover:text-white"
                   >
-                    <FaSpotify className="text-white" />
-                  </a>
-
-                  <a
-                    href={`${item.node.soundcloud.soundcloud}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-tip="Escuchár en Soundcloud"
-                    className="block p-6 text-2xl  hover:text-white hover:bg-orange-700"
-                  >
-                    <i className="fa fa-soundcloud " aria-hidden="true"></i>
-                  </a>
+                    x {item.node.author.name}
+                  </Link>
+                  <p className="px-6 pb-6 text-sm">
+                    {item.node.description.description}
+                  </p>
+                  <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
+                    <iframe
+                      width="100%"
+                      height="20"
+                      scrolling="no"
+                      frameborder="no"
+                      title={item.node.title}
+                      className="w-full px-12 transform scale-125 md:px-18"
+                      allow="autoplay"
+                      src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
+                        item.node.soundcloudTrackID
+                      )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
+                    ></iframe>
+                  </div>
+                </div>
+                <div
+                  className="absolute inset-0 bg-image-hover-opacity"
+                  style={{ opacity: ".1" }}
+                >
+                  <Img
+                    alt="{item.node.title}"
+                    fixed={item.node.heroImage.fixed}
+                  />
                 </div>
               </div>
             ))}
           </div>
           <aside
             id="author-player"
-            className="relative w-full max-w-2xl px-6 pt-6 m-auto min-h-64 md:sticky"
+            className="relative flex items-center justify-center w-full min-h-screen px-6 m-auto bg-gray-800"
           >
             {data.allContentfulAutores.edges.map((item, i) => (
-              <div className="w-full mb-12 post">
-                <h2 className="my-6 font-mono text-2xl text-center text-white">
-                  Selección de El Astrologo
+              <div className="w-full max-w-xl m-auto post">
+                <h2 className="font-mono text-2xl text-center text-white">
+                  Playlist de Astrólogo
                 </h2>
                 <div
-                  className="soundcloud-player"
+                  className="mt-2 soundcloud-player"
                   dangerouslySetInnerHTML={{
                     __html: item.node.allTracksPlayer.allTracksPlayer,
                   }}
