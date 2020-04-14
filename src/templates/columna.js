@@ -40,7 +40,7 @@ const options = {
       return (
         <a
           href={node.data.uri}
-          className="font-bold transition duration-150 ease-in-out border-b border-red-500 hover:bg-red-700 hover:text-white"
+          className="font-bold border-b border-red-500 hover:bg-red-700 hover:text-white"
           target={`${
             node.data.uri.startsWith(website_url) ? "_self" : "_blank"
           }`}
