@@ -10,7 +10,7 @@ const PodcastPage = () => {
   const data = useStaticQuery(graphql`
     query PerfilesQuery {
       collection: allContentfulColumnas(
-        sort: { fields: [destacar], order: ASC }
+        sort: { fields: [updatedAt], order: DESC }
         filter: { author: {}, tipoDePodcast: { eq: "Perfiles" } }
       ) {
         edges {

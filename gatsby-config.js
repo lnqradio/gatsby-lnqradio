@@ -21,6 +21,7 @@ module.exports = {
     title: `LNQradio`,
     description: `LNQWeb`,
     author: `@lnqradio`,
+    siteUrl: `https://www.lnqradio.com`,
   },
   plugins: [
     {
@@ -38,7 +39,7 @@ module.exports = {
         pixelId: "314380382848388",
       },
     },
-
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -65,9 +65,7 @@ const IndexPage = () => {
             podcastRelacionados {
               title
               slug
-              soundcloudPlayer {
-                soundcloudPlayer
-              }
+
               heroImage {
                 fixed(width: 600, height: 300) {
                   ...GatsbyContentfulFixed

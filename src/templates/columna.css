@@ -37,3 +37,7 @@
 .article h6 {
   @apply text-base;
 }
+
+.article p a {
+  @apply text-red-500;
+}

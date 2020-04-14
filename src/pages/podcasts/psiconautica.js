@@ -11,7 +11,7 @@ const PodcastPage = () => {
     query psiconauticaQuery {
       collection: allContentfulColumnas(
         sort: { fields: [destacar], order: ASC }
-        filter: { author: {}, tipoDePodcast: { eq: "Astrología" } }
+        filter: { author: {}, tipoDePodcast: { eq: "Psiconáutica" } }
       ) {
         edges {
           node {
