@@ -7,6 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import "react-awesome-slider/dist/styles.css"
 import Img from "gatsby-image"
 import AwesomeSlider from "react-awesome-slider"
+import { GoLinkExternal } from "react-icons/go"
 
 import "./index.css"
 import Helmet from "react-helmet"
@@ -89,6 +90,31 @@ const IndexPage = () => {
       <Helmet>
         <body className="home headroom-top-transparent" />
       </Helmet>
+      <h1 className="block w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
+        Un nuevo episodio <br /> cada viernes a las 20hs
+      </h1>
+      <div className="mt-8 text-center solumedia">
+        <iframe
+          border="0"
+          frameborder="NO"
+          width="300px"
+          title="En vivo"
+          height="100px"
+          className="m-auto min-w-64"
+          scrolling="NO"
+          allowtransparency="yes"
+          src="https://www.solumedia.com.ar/radios/8772"
+        ></iframe>
+        <a
+          href="https://www.solumedia.com.ar/radios/8772/"
+          target="_blank"
+          className="relative z-50 block mt-2 mb-12 text-xs text-white hover:underline"
+          rel="noopener noreferrer"
+        >
+          Si no se reproduce, probá con un click aquí
+          <GoLinkExternal className="inline-block ml-3 text-white text-xm" />
+        </a>
+      </div>
 
       <div className="flex-wrap hidden w-full pb-6 m-auto mt-0 home-post">
         <AwesomeSlider>

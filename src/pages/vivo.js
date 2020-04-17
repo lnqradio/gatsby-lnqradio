@@ -21,19 +21,7 @@ const VivoPage = () => (
         <h1 className="block w-full px-0 pt-0 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
           Un nuevo episodio en vivo cada viernes a las 20hs
         </h1>
-        <div>
-          <iframe
-            width="100%"
-            height="166"
-            scrolling="no"
-            frameborder="no"
-            className="p-2"
-            title="Último episodio"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/795738772&color=%23281136&inverse=true&auto_play=false&show_user=false"
-          ></iframe>
-        </div>
-        <div className="hidden text-center solumedia">
+        <div className="text-center solumedia">
           <iframe
             border="0"
             frameborder="NO"
