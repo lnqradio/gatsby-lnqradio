@@ -43,9 +43,7 @@ const EpisodiosPage = () => {
     <Layout>
       <SEO title="Episodios" />
       <div className="z-10 flex items-center justify-center h-24 px-6 m-0 mb-6 bg-gray-900 md:sticky md:top-0 hero">
-        <h1 className="text-xl text-center text-white ">
-          Listado de episodios completos
-        </h1>
+        <h1 className="text-xl text-center text-white ">Temporada 6</h1>
       </div>
       <div className="flex flex-wrap max-w-3xl m-auto posts">
         {data.contenful.edges.map((item, i) => (

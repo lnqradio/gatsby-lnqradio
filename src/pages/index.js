@@ -90,10 +90,10 @@ const IndexPage = () => {
       <Helmet>
         <body className="home headroom-top-transparent" />
       </Helmet>
-      <h1 className="block w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
-        Un nuevo episodio <br /> cada viernes a las 20hs
+      <h1 className="hidden w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
+        Un nuevo episodio cada viernes a las 20hs
       </h1>
-      <div className="mt-8 text-center solumedia">
+      <div className="hidden mt-8 text-center solumedia">
         <iframe
           border="0"
           frameborder="NO"
@@ -126,7 +126,7 @@ const IndexPage = () => {
                     to={`/columnas/${kebabCase(
                       item.node.author.name
                     )}/${kebabCase(item.node.slug)}`}
-                    className="font-mono text-2xl text-white title"
+                    className="font-mono text-xl text-white title"
                     style={{ marginLeft: "0" }}
                   >
                     {item.node.title}
@@ -187,7 +187,7 @@ const IndexPage = () => {
                         to={`/columnas/${kebabCase(
                           slider.author.name
                         )}/${kebabCase(slider.slug)}`}
-                        className="block px-5 mt-0 mb-2 font-mono text-3xl text-left text-red-500 hover:text-white"
+                        className="block px-5 mt-0 mb-2 font-mono text-2xl text-left text-red-500 lg:pr-12 hover:text-white"
                       >
                         {slider.title}
                       </Link>
