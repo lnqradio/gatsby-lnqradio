@@ -62,7 +62,7 @@ const SearchIndex = props => {
     <>
       <div className="w-full max-w-2xl p-2 pt-6 m-auto mb-0 text-center searchBox md:pt-6 md:p-0 md:pb-6 animated fadeIn slower">
         <h2 className="flex flex-col items-baseline py-3 pb-6 font-mono text-2xl text-left text-white md:flex-row">
-          <span className="flex-1">Buscador de podcasts</span>
+          <span className="flex-1">Todos podcasts</span>
           <SEO title={totales} />
 
           <small className="text-gray-600">
@@ -71,11 +71,11 @@ const SearchIndex = props => {
         </h2>
 
         <input
-          className="w-full p-3 text-gray-100 bg-gray-800 border-b-2 searchInput "
+          className="w-full p-3 text-gray-100 placeholder-gray-100 bg-gray-800 border-b-2 searchInput "
           type="text"
           tabindex="0"
           aria-label="Search"
-          placeholder="Filtrá"
+          placeholder="Flasheala buscando&hellip;"
           onChange={handleInputChange}
         />
       </div>
@@ -90,10 +90,10 @@ const SearchIndex = props => {
         return (
           <article
             key={id}
-            className="relative max-w-2xl p-2 pb-2 m-auto mb-2 text-white bg-gray-800 border-b border-gray-800 search-item md:p-2 md:pr-32 animated fadeInUp "
+            className="relative max-w-2xl p-2 pb-2 m-auto mb-2 text-white bg-gray-800 border-b border-gray-800 search-item md:p-2 sm:pr-32 animated fadeIn "
           >
             <Link
-              className="block pr-20 mb-2 font-mono text-lg font-bold text-red-500 hover:text-white sm:pr-0 sm:inline-block"
+              className="block pr-8 mb-2 font-mono text-lg font-bold text-red-500 truncate md:break-normal md:pr-0 sm:overflow-visible md:mb-0 md:break-all hover:text-white sm:pr-0 sm:inline-block"
               to={`/columnas/${kebabCase(name)}/${kebabCase(slug)}/`}
             >
               {title}{" "}
@@ -151,7 +151,7 @@ export default SearchIndex
 
 export const pageQuery = graphql`
   query {
-    allContentfulColumnas(sort: { order: DESC, fields: [publishDate] }) {
+    allContentfulColumnas(sort: { order: ASC, fields: [destacar] }) {
       edges {
         node {
           id

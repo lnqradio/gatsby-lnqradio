@@ -19,7 +19,7 @@ const VivoPage = () => (
           La Noche Que ella soño con el Centro Half
         </h1>
         <h1 className="block w-full px-0 pt-0 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
-          Un nuevo episodio en vivo cada viernes a las 20hs
+          Un nuevo episodio cada viernes a las 20hs
         </h1>
         <div className="text-center solumedia">
           <iframe

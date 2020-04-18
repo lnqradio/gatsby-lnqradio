@@ -31,7 +31,7 @@ class EpisodiosTemplate extends React.Component {
         </div>
         <section className="flex flex-col md:flex-row">
           <div className="flex flex-wrap w-full max-w-6xl px-6 m-auto posts soundcloud">
-            <div className="w-full p-0 px-0 mb-12 bg-gray-800 shadow post">
+            <div className="w-full p-0 px-0 mb-2 bg-gray-800 shadow post">
               <h2 className="px-6 pt-6 mb-3 text-2xl text-white title">
                 {episodios.title}
               </h2>
@@ -48,9 +48,12 @@ class EpisodiosTemplate extends React.Component {
             </div>
           </div>
         </section>
-        <div className="max-w-6xl p-6 m-auto">
+        <div className="max-w-6xl p-6 pt-6 m-auto">
+          <h2 className="mt-3 text-xl text-center text-gray-700">
+            Podcast en este episodio
+          </h2>
           {episodios.podcastRelacionados ? (
-            <div className="flex flex-wrap justify-around py-8 ">
+            <div className="flex flex-wrap justify-center py-8 ">
               {episodios.podcastRelacionados.map((slider, i) => (
                 <div
                   key={slider.slug}

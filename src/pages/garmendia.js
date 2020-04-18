@@ -7,44 +7,30 @@ import SEO from "../components/seo"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="Laboratorios Garmendia" />
-    <div className="max-w-6xl pt-6  md:pt-12 m-auto text-left relative z-50">
-      <div className="flex flex-col justify-center mt-6 max-w-2xl m-auto">
-	      <iframe
-	        border="0"
-	        frameborder="NO"
-	        width="300px"
-	        title="En vivo"
-	        height="100px"
-	        className="m-auto min-w-64"
-	        scrolling="NO"
-	        allowtransparency="yes"
-	        src="https://www.solumedia.com.ar/radios/8772"
-	      ></iframe>
-        <h1 className="text-white text-xl font-thin animated fadeInUp slow text-center pt-6">
-          <span className="animated block flash infinite slower text-red-500  pt-2 text-xl uppercase mb-3 font-mono tracking-widest">
-            Ensayo sobre formas de ver
-          </span>
-        </h1>
-        <iframe
-          src="https://player.twitch.tv/?autoplay=false&video=v571546383"
-          frameborder="0"
-          allowfullscreen="true"
-          title="Video transmisión"
-          scrolling="no"
-          height="426"
-          width="100%"
-        ></iframe>
-      </div>
-      <article className="changelog">
+    <div className="relative z-50 max-w-6xl pt-6 m-auto text-left md:pt-12">
+      <article className="max-w-sm text-center changelog ">
         <a
           href="https://github.com/lnqradio/gatsby-lnqradio"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-500 text-xl py-6 italic"
+          className="w-full py-6 text-xl italic text-red-500"
         >
-          # Registro de cambios. v.0.1.3
+          # Registro de cambios. v.0.2.1
         </a>
       </article>
+      <div className="flex flex-col justify-center max-w-2xl m-auto mt-6">
+        <iframe
+          border="0"
+          frameborder="NO"
+          width="100%"
+          title="En vivo"
+          height="100px"
+          className="m-auto min-w-64"
+          scrolling="NO"
+          allowtransparency="yes"
+          src="https://www.solumedia.com.ar/radios/8772"
+        ></iframe>
+      </div>
     </div>
     <Particles
       style={{ cursor: "crosshair" }}

@@ -7,20 +7,16 @@
   LNQRadio
 </h1>
 
-## 🎓 Registro de cambios. v.0.1.3
+# 🎓 Registro de cambios. v.0.2.1
 
-+ Se agregaron mas de 3 items por categoria en la home.
-Avisen si llega a andar para atrás
+- Pagina de inicio con el ultimo episodio con los podcast relacionados
+- Se implemento el nuevo reproductor de soundcloud para todas las secciones
+- Prueba de servidor de streaming
 
-+ Se agrego contenido destcado.
-Aparece apenas entras a /Podcasts. Como recomendacion cuando entras a cada columna. Y dentro de cada categoria aparece primero.
+#### 🚀 Próximamente agregar artisticas
 
-+ Prueba de servidor de streaming
+### V.0.1.3 // Deprecados
 
-Artisticas
-+ Se puso a prueba el mini reproductor.
-
-## 🚀 Próximamente
-- Sección artisticas y ficciones
-
-
+- ~~Se agregaron mas de 3 items por categoria en la home. Avisen si llega a andar para atrás~~
+- ~~Se agrego contenido destcado. Aparece apenas entras a /Podcasts. Como recomendacion cuando entras a cada columna. Y dentro de cada categoria aparece primero.~~
+- ~~Prueba de servidor de streaming~~

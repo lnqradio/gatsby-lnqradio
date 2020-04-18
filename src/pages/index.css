@@ -492,7 +492,7 @@ iframe {
 }
 
 .changelog {
-  @apply max-w-xl p-6 m-auto my-6 bg-gray-800;
+  @apply p-6 m-auto my-6 bg-gray-800;
 }
 
 .changelog h4 {

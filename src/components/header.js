@@ -24,26 +24,40 @@ const Header = ({ siteTitle }) => (
           <h1 className="max-w-lg p-0 m-0 text-white md:mr-12">{siteTitle}</h1>
         </Link>
         <nav className="justify-center hidden w-full pr-32 mt-0 text-base md:flex">
-          <Link activeClassName="font-bold active" to="/">
+          <Link
+            className="cursor-pointer"
+            activeClassName="font-bold active"
+            to="/"
+          >
             Inicio
           </Link>
-          <Link className activeClassName="font-bold active" to="/podcasts/">
+          <Link
+            className="cursor-pointer"
+            activeClassName="font-bold active"
+            to="/podcasts/"
+          >
             Podcasts
           </Link>
-          <Link activeClassName="font-bold active" to="/notanenvivo/">
+          <Link
+            className="cursor-pointer"
+            activeClassName="font-bold active"
+            to="/notanenvivo/"
+          >
             Episodios
           </Link>
+
           <Link
-            className="hidden"
+            className="cursor-pointer"
             activeClassName="font-bold active"
-            to="/podcasts/entrevistas/"
+            to="/artisticas/"
           >
-            Entrevistas
-          </Link>
-          <Link className activeClassName="font-bold active" to="/artisticas/">
             Artisticas
           </Link>
-          <Link className activeClassName="font-bold active" to="/ficciones/">
+          <Link
+            className="cursor-pointer"
+            activeClassName="font-bold active"
+            to="/ficciones/"
+          >
             Ficciones
           </Link>
         </nav>

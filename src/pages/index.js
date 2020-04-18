@@ -147,7 +147,7 @@ const IndexPage = () => {
           ))}
         </AwesomeSlider>
       </div>
-      <div className="max-w-5xl m-auto mt-12 mb-24 last-show ">
+      <div className="max-w-5xl m-auto mb-24 md:mt-6 lg:mt-12 last-show ">
         {data.lastShow.edges.map((show, i) => (
           <div key={show.node.slug} className="md:px-2 ">
             <h1 className="flex justify-start p-6 pb-1 font-mono text-sm text-left text-white bg-gray-800">
@@ -157,9 +157,12 @@ const IndexPage = () => {
               </b>
             </h1>
             <div className="relative w-auto px-0 pt-0 pb-0 text-left bg-gray-800">
-              <b className="relative right-0 block px-6 pt-2 pb-3 font-mono text-gray-400 md:absolute md:pt-0">
+              <Link
+                to={`/episodios/`}
+                className="relative right-0 block px-6 pt-2 pb-3 font-mono text-gray-400 transition-all duration-200 ease-in-out md:absolute md:pt-0 hover:text-white hover:underline"
+              >
                 Temporada {show.node.temporada}
-              </b>
+              </Link>
 
               <h2 className="max-w-sm px-6 text-2xl leading-normal text-red-500 hover:no-underline">
                 {show.node.title}

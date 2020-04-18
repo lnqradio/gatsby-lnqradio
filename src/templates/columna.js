@@ -90,7 +90,7 @@ class ColumnaTemplate extends React.Component {
               <div className="w-full max-w-2xl m-auto mt-0 text-lg md:mt-6 columna-article animated fadeIn delay-1s slower ">
                 <iframe
                   width="100%"
-                  height="300"
+                  height="160"
                   scrolling="no"
                   frameborder="no"
                   title={columna.title}
@@ -98,7 +98,7 @@ class ColumnaTemplate extends React.Component {
                   allow="autoplay"
                   src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
                     columna.soundcloudTrackID
-                  )}&color=%23281136&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true`}
+                  )}&color=%23000000&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true`}
                 ></iframe>
               </div>
               <div className="flex flex-col items-center justify-between w-full max-w-2xl m-auto mb-6 text-3xl md:flex-row listen">
@@ -129,24 +129,28 @@ class ColumnaTemplate extends React.Component {
               </div>
             </div>
 
+            {columna.destacar ? (
+              <div className="w-full max-w-2xl m-auto mt-6 text-left">
+                <Link
+                  to={`/podcasts/`}
+                  class=" px-3 py-1 text-xs uppercase bg-red-500 rounded-full"
+                >
+                  podcast destacado
+                </Link>
+              </div>
+            ) : (
+              <span className="hidden"></span>
+            )}
+
             <h1 className="w-full max-w-2xl m-auto mt-6 font-mono text-3xl text-left text-white ">
               {columna.title}
 
-              {columna.destacar ? (
-                <Link
-                  to={`/podcasts/`}
-                  class="pl-3 mt-1 font-mono text-sm text-left text-gray-500 font-bold "
-                >
-                  Contenido destacado
-                </Link>
-              ) : (
-                <Link
-                  to={`/columnas/${kebabCase(columna.author.slug)}/`}
-                  className="pl-3 mt-1 font-mono text-sm text-left text-gray-500 "
-                >
-                  x {columna.author.name}
-                </Link>
-              )}
+              <Link
+                to={`/columnas/${kebabCase(columna.author.slug)}/`}
+                className="pl-3 mt-1 font-mono text-sm text-left text-gray-500 "
+              >
+                x {columna.author.name}
+              </Link>
             </h1>
 
             <div className="w-full max-w-2xl m-auto mt-2 text-white article">
@@ -254,7 +258,7 @@ export const pageQuery = graphql`
     }
     allContentfulColumnas(
       sort: { order: DESC, fields: [updatedAt] }
-      filter: { author: {}, destacar: { eq: "Si" } }
+      filter: { slug: { ne: $slug }, destacar: { eq: "Si" } }
     ) {
       edges {
         node {
