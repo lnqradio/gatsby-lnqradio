@@ -109,7 +109,7 @@ const SearchIndex = props => {
 
             <div className="absolute bottom-0 right-0 flex items-center justify-start h-auto listen md:justify-end md:top-0">
               {destacar ? (
-                <span className="inline-block px-3 py-0 text-xs uppercase bg-red-500 rounded-full">
+                <span className="inline-block px-2 py-0 font-sans text-xs font-bold tracking-wider text-gray-500 uppercase bg-gray-800 rounded-full opacity-25">
                   destacado
                 </span>
               ) : (

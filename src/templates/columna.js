@@ -133,7 +133,7 @@ class ColumnaTemplate extends React.Component {
               <div className="w-full max-w-2xl m-auto mt-6 text-left">
                 <Link
                   to={`/podcasts/`}
-                  class=" px-3 py-1 text-xs uppercase bg-red-500 rounded-full"
+                  class=" px-3 py-1 text-xs uppercase bg-red-500 rounded-full font-bold tracking-wide"
                 >
                   podcast destacado
                 </Link>

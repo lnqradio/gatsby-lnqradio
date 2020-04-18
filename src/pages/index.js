@@ -165,7 +165,10 @@ const IndexPage = () => {
               </Link>
 
               <h2 className="max-w-sm px-6 text-2xl leading-normal text-red-500 hover:no-underline">
-                {show.node.title}
+                {show.node.title}{" "}
+                <span className="text-gray-500 opacity-50">
+                  ({show.node.episode})
+                </span>
               </h2>
 
               <p className="max-w-6xl px-6 pb-6 mt-3">
