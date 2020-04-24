@@ -34,6 +34,7 @@ const IndexPage = () => {
             description {
               description
             }
+
             soundcloud {
               soundcloud
             }
@@ -61,8 +62,13 @@ const IndexPage = () => {
             soundcloud {
               soundcloud
             }
-
+            soundcloudTrackId
             temporada
+            heroImage {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyContentfulFluid
+              }
+            }
             podcastRelacionados {
               title
               slug
@@ -90,10 +96,10 @@ const IndexPage = () => {
       <Helmet>
         <body className="home headroom-top-transparent" />
       </Helmet>
-      <h1 className="hidden w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
+      <h1 className="w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
         Un nuevo episodio cada viernes a las 20hs
       </h1>
-      <div className="hidden mt-8 text-center solumedia">
+      <div className="mt-8 text-center  solumedia">
         <iframe
           border="0"
           frameborder="NO"
@@ -174,12 +180,26 @@ const IndexPage = () => {
               <p className="max-w-6xl px-6 pb-6 mt-3">
                 {show.node.description.description}
               </p>
-              <div
-                className="border-b-4 border-orange-700 soundcloud-player"
-                dangerouslySetInnerHTML={{
-                  __html: show.node.soundcloud.soundcloud,
-                }}
-              />
+              <div className="relative bottom-0 left-0 right-0 flex items-center justify-between px-2 py-3 bg-red-800 listen">
+                <iframe
+                  width="78%"
+                  height="20"
+                  scrolling="no"
+                  title={show.node.title}
+                  className="px-1 m-auto transform scale-125 sm:px-0"
+                  frameborder="no"
+                  allow="autoplay"
+                  src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
+                    show.node.soundcloudTrackId
+                  )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
+                ></iframe>
+                <Img
+                  alt="{item.node.title}"
+                  fluid={show.node.heroImage.fluid}
+                  className="absolute inset-0 m-0 opacity-50 hover:opacity-75"
+                  style={{ opacity: ".5" }}
+                />
+              </div>
             </div>
             <div className="flex flex-wrap justify-center py-8 ">
               {show.node.podcastRelacionados.map((slider, i) => (
@@ -202,11 +222,11 @@ const IndexPage = () => {
                       </h3>
                       <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-2 py-3 bg-gray-800 listen">
                         <iframe
-                          width="100%"
+                          width="80%"
                           height="20"
                           scrolling="no"
                           title={slider.title}
-                          className="w-full px-12 transform scale-125 md:px-18"
+                          className="m-auto transform scale-125"
                           frameborder="no"
                           allow="autoplay"
                           src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
