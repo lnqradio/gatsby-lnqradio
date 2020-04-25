@@ -96,10 +96,10 @@ const IndexPage = () => {
       <Helmet>
         <body className="home headroom-top-transparent" />
       </Helmet>
-      <h1 className="w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
+      <h1 className="hidden w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
         Un nuevo episodio cada viernes a las 20hs
       </h1>
-      <div className="mt-8 text-center  solumedia">
+      <div className="hidden mt-8 text-center  solumedia">
         <iframe
           border="0"
           frameborder="NO"
