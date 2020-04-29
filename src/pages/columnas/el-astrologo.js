@@ -143,7 +143,7 @@ const AstrologoPage = () => {
                   >
                     x {item.node.author.name}
                   </Link>
-                  <p className="px-6 pb-6 text-sm">
+                  <p className="px-6 pb-6 text-sm description">
                     {item.node.description.description}
                   </p>
                   <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">

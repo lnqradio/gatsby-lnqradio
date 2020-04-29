@@ -72,7 +72,9 @@ const IndexPage = () => {
             podcastRelacionados {
               title
               slug
-
+              description {
+                description
+              }
               heroImage {
                 fixed(width: 600, height: 300) {
                   ...GatsbyContentfulFixed
@@ -99,7 +101,7 @@ const IndexPage = () => {
       <h1 className="hidden w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
         Un nuevo episodio cada viernes a las 20hs
       </h1>
-      <div className="hidden mt-8 text-center  solumedia">
+      <div className="hidden mt-8 text-center solumedia">
         <iframe
           border="0"
           frameborder="NO"
@@ -208,7 +210,7 @@ const IndexPage = () => {
                   className="w-full max-w-md m-2 bg-gray-800"
                 >
                   <div className="relative flex h-56 p-0 m-0 overflow-hidden text-center p slider-item">
-                    <div className="relative z-40 w-full pt-2 mt-2 text-left description">
+                    <div className="relative z-40 w-full pt-2 mt-2 text-left ">
                       <Link
                         to={`/columnas/${kebabCase(
                           slider.author.name
@@ -217,9 +219,15 @@ const IndexPage = () => {
                       >
                         {slider.title}
                       </Link>
-                      <h3 className="block px-5 font-mono text-left text-gray-500">
-                        {slider.tipoDePodcast} x {slider.author.name}
-                      </h3>
+                      <Link
+                        to={`/columnas/${kebabCase(slider.author.name)}/`}
+                        className="block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
+                      >
+                        x {slider.author.name}
+                      </Link>
+                      <p className="hidden px-5 pb-6 sm:block description">
+                        {slider.description.description}
+                      </p>
                       <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-2 py-3 bg-gray-800 listen">
                         <iframe
                           width="80%"

@@ -14,14 +14,24 @@ a {
 .post .bg-image-hover-opacity,
 .slider-item .bg-image-hover-opacity {
   @apply transition-all duration-500;
-  filter: blur(0);
+  filter: blur(3px);
 }
 
 .post:hover .bg-image-hover-opacity,
 .slider-item:hover .bg-image-hover-opacity {
   opacity: 0.1 !important;
   transform: scale(1.05);
-  filter: blur(3px);
+  filter: blur(0);
+}
+
+.post .description,
+.slider-item .description {
+  @apply transition-all duration-500;
+}
+
+.post:hover .description,
+.slider-item:hover .description {
+  opacity: 0;
 }
 
 @screen lg {

@@ -164,10 +164,14 @@ const ColumnasPage = () => {
                 >
                   {item.node.title}
                 </Link>
-                <div className="inline-block px-6 pb-1 mb-16 font-mono text-base text-gray-500">
-                  {item.node.tipoDePodcast} x {item.node.author.name}
-                </div>
-                <p className="hidden px-6 pb-6 title">
+                <Link
+                  to={`/columnas/${kebabCase(item.node.author.name)}/`}
+                  className="block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
+                >
+                  x {item.node.author.name}
+                </Link>
+
+                <p className="px-6 pb-6 description">
                   {item.node.description.description}
                 </p>
                 <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
