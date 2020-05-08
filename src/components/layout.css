@@ -19,19 +19,19 @@ a {
 
 .post:hover .bg-image-hover-opacity,
 .slider-item:hover .bg-image-hover-opacity {
-  opacity: 0.1 !important;
+  opacity: 0.3 !important;
   transform: scale(1.05);
   /*filter: blur(0);*/
 }
 
 .post .description,
 .slider-item .description {
-  @apply transition-all duration-500;
+  @apply transition-all duration-1000 opacity-0;
 }
 
 .post:hover .description,
 .slider-item:hover .description {
-  opacity: 0;
+  opacity: 1;
 }
 
 @screen lg {

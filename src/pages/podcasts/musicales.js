@@ -95,7 +95,7 @@ const PodcastPage = () => {
             </div>
             <div
               className="absolute inset-0 bg-image-hover-opacity"
-              style={{ opacity: ".05" }}
+              style={{ opacity: ".2" }}
             >
               <Img alt="{item.node.title}" fixed={item.node.heroImage.fixed} />
             </div>
