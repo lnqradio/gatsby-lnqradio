@@ -114,17 +114,17 @@ const IndexPage = () => {
         <body className="home headroom-top-transparent" />
       </Helmet>
       <div className="relative max-w-5xl ml-auto mr-auto overflow-hidden md:mt-8 solumedia">
-        <h1 className="inline-block px-3 py-6 my-2 mt-6 font-mono text-xl text-center text-white bg-gray-800 md:text-left md:text-3xl md:px-8">
+        <h1 className="inline-block w-full px-4 py-6 mt-48 font-mono text-base text-center text-white bg-gray-800 shadow-sm sm:px-8 sm:w-auto md:mt-48 sm:text-left md:text-3xl md:px-8">
           <span className="inline-block text-gray-200">Nuevos episodios</span>{" "}
           los Viernes a las 20hs
         </h1>
         <iframe
           border="0"
           frameborder="NO"
-          width="390px"
+          width="360px"
           title="En vivo"
           height="160px"
-          className="pt-6 pl-0 m-auto mb-12 bg-gray-800 md:mx-0 md:my-4"
+          className="pt-6 pl-0 m-auto mb-12 bg-gray-800 sm:mx-0 md:my-4"
           scrolling="NO"
           allowtransparency="yes"
           src="https://www.solumedia.com.ar/radios/8772"
@@ -133,7 +133,7 @@ const IndexPage = () => {
           className="bg-gray-800 "
           style={{
             top: "0",
-            maxHeight: "50vh",
+            maxHeight: "80vh",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -174,7 +174,7 @@ const IndexPage = () => {
               <div className="relative bottom-0 left-0 right-0 flex items-center justify-between listen">
                 <iframe
                   width="100%"
-                  height="180"
+                  height="166"
                   scrolling="no"
                   title={show.node.title}
                   className=""

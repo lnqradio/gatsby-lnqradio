@@ -15,16 +15,14 @@ const FiccionesPage = () => {
         duration={5}
         query={useStaticQuery(graphql`
           query {
-            backgrounds: allFile(
-              filter: { relativePath: { eq: "img233.jpg" } }
-            ) {
+            backgrounds: allFile(filter: { relativePath: { eq: "4511.jpg" } }) {
               nodes {
                 relativePath
                 childImageSharp {
                   fluid(
                     maxWidth: 2000
                     quality: 100
-                    duotone: { highlight: "#f00e2e", shadow: "#281136" }
+                    duotone: { highlight: "#281136", shadow: "#f00e2e" }
                     traceSVG: { color: "#281136" }
                   ) {
                     ...GatsbyImageSharpFluid_tracedSVG

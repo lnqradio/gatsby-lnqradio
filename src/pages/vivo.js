@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "./vivo.css"
-import { GoLinkExternal } from "react-icons/go"
 import Helmet from "react-helmet"
 import BgSlider from "../components/BgSlider"
 

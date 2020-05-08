@@ -17,6 +17,7 @@ const TarantosPage = () => {
             <iframe
               width="100%"
               height="365"
+              title="En la Terraza: Tarantos Dúo"
               src="https://www.youtube-nocookie.com/embed/videoseries?list=PL7X4WhEiBg4oiF4Mn5SUtRVr_vNTew-jg"
               frameborder="0"
               className="bg-gray-800 shadow-lg"

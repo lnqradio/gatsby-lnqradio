@@ -160,13 +160,13 @@ const ColumnasPage = () => {
                   to={`/columnas/${kebabCase(
                     item.node.author.name
                   )}/${kebabCase(item.node.slug)}/`}
-                  className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
+                  className="inline-block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
                 >
                   {item.node.title}
                 </Link>
                 <Link
                   to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                  className="block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
+                  className="inline-block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
                 >
                   x {item.node.author.name}
                 </Link>
