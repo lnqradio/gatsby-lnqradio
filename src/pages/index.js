@@ -6,8 +6,8 @@ import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import "react-awesome-slider/dist/styles.css"
 import Img from "gatsby-image"
-import AwesomeSlider from "react-awesome-slider"
-import { GoLinkExternal } from "react-icons/go"
+
+import BackgroundSlider from "gatsby-image-background-slider"
 
 import "./index.css"
 import Helmet from "react-helmet"
@@ -41,6 +41,21 @@ const IndexPage = () => {
             author {
               id
               name
+            }
+          }
+        }
+      }
+      backgrounds: allFile(filter: { relativePath: { eq: "img233.jpg" } }) {
+        nodes {
+          relativePath
+          childImageSharp {
+            fluid(
+              maxWidth: 800
+              quality: 100
+              duotone: { highlight: "#281136", shadow: "#f00e2e" }
+              traceSVG: { color: "#f00e2e" }
+            ) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -98,66 +113,40 @@ const IndexPage = () => {
       <Helmet>
         <body className="home headroom-top-transparent" />
       </Helmet>
-      <h1 className="w-full px-3 pt-8 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
-        Un nuevo episodio cada viernes a las 20hs
-      </h1>
-      <div className="mt-8 text-center solumedia">
+      <div className="relative max-w-5xl ml-auto mr-auto overflow-hidden md:mt-8 solumedia">
+        <h1 className="inline-block px-3 py-6 my-2 mt-6 font-mono text-xl text-center text-white bg-gray-800 md:text-left md:text-3xl md:px-8">
+          <span className="inline-block text-gray-200">Nuevos episodios</span>{" "}
+          los Viernes a las 20hs
+        </h1>
         <iframe
           border="0"
           frameborder="NO"
-          width="300px"
+          width="390px"
           title="En vivo"
-          height="100px"
-          className="m-auto min-w-64"
+          height="160px"
+          className="pt-6 pl-0 m-auto mb-12 bg-gray-800 md:mx-0 md:my-4"
           scrolling="NO"
           allowtransparency="yes"
           src="https://www.solumedia.com.ar/radios/8772"
         ></iframe>
-        <a
-          href="https://www.solumedia.com.ar/radios/8772/"
-          target="_blank"
-          className="relative z-50 block mt-2 mb-12 text-xs text-white hover:underline"
-          rel="noopener noreferrer"
-        >
-          Si no se reproduce, probá con un click aquí
-          <GoLinkExternal className="inline-block ml-3 text-white text-xm" />
-        </a>
+        <BackgroundSlider
+          className="bg-gray-800 "
+          style={{
+            top: "0",
+            maxHeight: "50vh",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          initDelay={1}
+          transition={2}
+          duration={5}
+          query={data}
+        />
       </div>
 
-      <div className="flex-wrap hidden w-full pb-6 m-auto mt-0 home-post">
-        <AwesomeSlider>
-          {data.destacados.edges.map((item, i) => (
-            <div key={item.node.slug} className="post ">
-              <div className="relative inset-0 z-40 flex flex-col justify-end text-center md:absolute description">
-                <div className="mb-2 actions">
-                  <Link
-                    to={`/columnas/${kebabCase(
-                      item.node.author.name
-                    )}/${kebabCase(item.node.slug)}`}
-                    className="font-mono text-xl text-white title"
-                    style={{ marginLeft: "0" }}
-                  >
-                    {item.node.title}
-                  </Link>
-                  <h3 className="block mb-3 font-mono text-gray-500">
-                    {item.node.tipoDePodcast}
-                  </h3>
-                </div>
-              </div>
-
-              <Img
-                alt="{item.node.title}"
-                fixed={item.node.heroImage.fixed}
-                className="absolute inset-0 m-0 opacity-50 hover:opacity-75"
-                style={{ opacity: ".5" }}
-              />
-            </div>
-          ))}
-        </AwesomeSlider>
-      </div>
       <div className="max-w-5xl m-auto mb-24 md:mt-6 lg:mt-12 last-show ">
         {data.lastShow.edges.map((show, i) => (
-          <div key={show.node.slug} className="md:px-2 ">
+          <div key={show.node.slug} className="">
             <h1 className="flex justify-start p-6 pb-1 font-mono text-sm text-left text-white bg-gray-800">
               Escuchá el último episodio completo{" "}
               <b className="mb-2 ml-2 font-mono text-sm text-left text-gray-500 capitalize">
@@ -172,7 +161,7 @@ const IndexPage = () => {
                 Temporada {show.node.temporada}
               </Link>
 
-              <h2 className="max-w-sm px-6 text-2xl leading-normal text-red-500 hover:no-underline">
+              <h2 className="max-w-sm px-6 text-2xl leading-normal text-white hover:no-underline">
                 {show.node.title}{" "}
                 <span className="text-gray-500 opacity-50">
                   ({show.node.episode})
@@ -182,14 +171,14 @@ const IndexPage = () => {
               <p className="max-w-6xl px-6 pb-6 mt-3">
                 {show.node.description.description}
               </p>
-              <div className="relative bottom-0 left-0 right-0 flex items-center justify-between px-2 py-3 bg-red-800 listen">
+              <div className="relative bottom-0 left-0 right-0 flex items-center justify-between listen">
                 <iframe
-                  width="78%"
-                  height="20"
+                  width="100%"
+                  height="180"
                   scrolling="no"
                   title={show.node.title}
-                  className="px-1 m-auto transform scale-125 sm:px-0"
-                  frameborder="no"
+                  className=""
+                  frameBorder="no"
                   allow="autoplay"
                   src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
                     show.node.soundcloudTrackId

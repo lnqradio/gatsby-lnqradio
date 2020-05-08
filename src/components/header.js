@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) => (
           </div>
           <h1 className="max-w-lg p-0 m-0 text-white md:mr-12">{siteTitle}</h1>
         </Link>
-        <nav className="justify-center hidden w-full pr-32 mt-0 text-base md:flex">
+        <nav className="justify-center hidden w-full pr-24 mt-0 text-base lg:flex">
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"
@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) => (
         </nav>
 
         <Link
-          className="items-center justify-end hidden pl-3 text-right text-white nav-search md:flex hover:text-red-600 "
+          className="items-center justify-end hidden pl-3 text-right text-white nav-search lg:flex hover:text-red-600 "
           activeClassName="active"
           to="/search/"
         >

@@ -2,108 +2,52 @@ import React from "react"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
-import Particles from "react-particles-js"
 import "./vivo.css"
 import { GoLinkExternal } from "react-icons/go"
 import Helmet from "react-helmet"
+import BgSlider from "../components/BgSlider"
 
 const VivoPage = () => (
   <Layout>
     <SEO title="En VIVO" />
     <Helmet>
-      <body className="app-vivo headroom-top-transparent" />
+      <body className="" />
     </Helmet>
-    <div className="max-w-lg pt-6 m-auto text-center live-stream md:pt-6">
+    <div className="max-w-lg pt-6 m-auto text-center live-stream md:pt-24">
       <div className="relative z-50 pt-6 pb-3 text-xl">
-        <h1 className="w-full px-6 pt-0 pb-2 font-mono text-2xl leading-10 text-left text-white md md:text-center">
+        <h1 className="inline-block p-6 py-2 my-0 font-mono text-2xl leading-10 text-left text-white bg-gray-800 md:text-left">
           La Noche Que ella soño con el Centro Half
         </h1>
-        <h1 className="block w-full px-0 pt-0 pb-3 mb-2 font-mono text-2xl text-center text-red-500 ">
-          Un nuevo episodio cada viernes a las 20hs
+        <h1 className="inline-block p-6 py-4 mt-2 mb-2 font-mono text-2xl text-left text-red-500 bg-gray-800 ">
+          <span className="inline-block mr-1 text-gray-200">
+            Nuevos episodios
+          </span>{" "}
+          los Viernes a las 20hs
         </h1>
         <div className="text-center solumedia">
           <iframe
             border="0"
             frameborder="NO"
-            width="300px"
+            width="390px"
             title="En vivo"
-            height="100px"
-            className="m-auto min-w-64"
+            height="160px"
+            className="pt-6 pl-0 m-auto mb-12 bg-gray-800"
             scrolling="NO"
             allowtransparency="yes"
             src="https://www.solumedia.com.ar/radios/8772"
           ></iframe>
-          <a
-            href="https://www.solumedia.com.ar/radios/8772/"
-            target="_blank"
-            className="relative z-50 block mt-2 mb-12 text-xs text-white hover:underline"
-            rel="noopener noreferrer"
-          >
-            Si no se reproduce, probá con un click aquí
-            <GoLinkExternal className="inline-block ml-3 text-white text-xm" />
-          </a>
         </div>
 
         <Link
           activeClassName="active"
-          className="block px-6 py-2 mx-2 mt-2 mb-12 font-mono text-white bg-indigo-800 md:inline-block hover:bg-indigo-900 hover:text-white"
+          className="hidden px-6 py-2 mx-2 mt-2 mb-12 font-mono text-white bg-red-700 border-4 border-purple-900 shadow-xl md:hidden hover:bg-red-800 hover:text-white"
           to="/notanenvivo/"
         >
           Episodios anteriores
         </Link>
       </div>
-      <Particles
-        style={{ cursor: "crosshair" }}
-        className="fixed inset-0 z-10 opacity-75"
-        params={{
-          particles: {
-            number: {
-              value: 90,
-              density: {
-                enable: true,
-                value_area: 1500,
-              },
-            },
-            line_linked: {
-              enable: true,
-              opacity: 0.2,
-            },
-            move: {
-              direction: "random",
-              speed: 1,
-            },
-            size: {
-              value: 2,
-            },
-            opacity: {
-              anim: {
-                enable: true,
-                speed: 1,
-                opacity_min: 0.05,
-              },
-            },
-          },
-          interactivity: {
-            events: {
-              onclick: {
-                enable: true,
-                mode: "push",
-              },
-              onhover: {
-                enable: true,
-                mode: "grab",
-              },
-            },
-            modes: {
-              push: {
-                particles_nb: 1,
-              },
-            },
-          },
-          retina_detect: true,
-        }}
-      />
     </div>
+    <BgSlider />
   </Layout>
 )
 
