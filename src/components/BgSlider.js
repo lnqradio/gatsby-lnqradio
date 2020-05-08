@@ -5,7 +5,7 @@ import BackgroundSlider from "gatsby-image-background-slider"
 
 const HomeSlider = props => (
   <BackgroundSlider
-    className="bg-gray-800 bgslider"
+    className="bgslider"
     initDelay={3}
     transition={3}
     duration={6}

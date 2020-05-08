@@ -9,7 +9,7 @@ const ArtisticasPage = () => {
     <Layout>
       <SEO title="Artisticas" />
       <BgSlider />
-      <div className="flex justify-center pt-20 md:pt-0 md:items-center tarantos">
+      <div className="flex justify-center pt-40 md:pt-0 md:items-center tarantos">
         <div className="w-full max-w-lg px-3 m-auto my-0">
           <h1 className="inline-block px-6 py-3 text-xl text-center text-gray-400 bg-gray-800 shadow-2xl tarantos-title">
             En la Terraza: Tarantos Dúo
@@ -23,7 +23,7 @@ const ArtisticasPage = () => {
               frameborder="0"
               className="bg-gray-800 shadow-lg"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""
+              allowFullScreen=""
             ></iframe>
           </div>
         </div>
@@ -51,29 +51,29 @@ const ArtisticasPage = () => {
           </Link>
           <div className="flex flex-col flex-wrap justify-center lg:flex-row">
             <iframe
-              width="300"
+              width="100%"
               height="450"
               scrolling="no"
               title="La Pereza"
-              className="m-2 search-item animated fadeIn"
+              className="max-w-md p-4 search-item animated fadeIn"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/762926454&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
             <iframe
-              width="300"
+              width="100%"
               height="450"
               scrolling="no"
               title="aRadio - a dos charlas"
-              className="m-2 search-item animated fadeIn"
+              className="max-w-md p-4 search-item animated fadeIn"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/772452537&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
             <iframe
-              width="300"
+              width="100%"
               height="450"
-              className="m-2 search-item animated fadeIn"
+              className="max-w-md p-4 search-item animated fadeIn"
               scrolling="no"
               title="Claudicacion de un no-prólogo"
               frameborder="no"
@@ -81,9 +81,9 @@ const ArtisticasPage = () => {
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/708948864&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
             <iframe
-              width="300"
+              width="100%"
               height="450"
-              className="m-2 search-item animated fadeIn"
+              className="max-w-md p-4 search-item animated fadeIn"
               scrolling="no"
               title="Momento Flaming Lips"
               frameborder="no"
@@ -91,11 +91,11 @@ const ArtisticasPage = () => {
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/708878205&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
             <iframe
-              width="300"
+              width="100%"
               height="450"
               scrolling="no"
               title="Prologo"
-              className="m-2 search-item animated fadeIn"
+              className="max-w-md p-4 search-item animated fadeIn"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/761934822&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"

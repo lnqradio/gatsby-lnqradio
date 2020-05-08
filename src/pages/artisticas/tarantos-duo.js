@@ -22,7 +22,7 @@ const TarantosPage = () => {
               frameborder="0"
               className="bg-gray-800 shadow-lg"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""
+              allowFullScreen=""
             ></iframe>
           </div>
         </div>

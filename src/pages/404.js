@@ -6,15 +6,15 @@ import SEO from "../components/seo"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
-    <div className="max-w-2xl pt-6  md:pt-20 m-auto text-left">
-      <h1 className="text-white pl-12 text-6xl font-thin animated fadeInUp slow text-center md:text-left px-6">
-        <span className="animated hinge delay-3s block slower  ">404</span>
+    <div className="max-w-2xl pt-6 m-auto text-left md:pt-20">
+      <h1 className="px-6 pl-12 text-6xl font-thin text-center text-white animated fadeInUp slow md:text-left">
+        <span className="block animated hinge delay-3s slower ">404</span>
       </h1>
-      <div className="flex justify-center mt-6 max-w-2xl m-auto">
+      <div className="flex justify-center max-w-2xl m-auto mt-6">
         <iframe
           src="https://player.twitch.tv/?autoplay=false&video=v555746285"
           frameborder="0"
-          allowfullscreen="true"
+          allowFullScreen="true"
           title="Video transmisión"
           scrolling="no"
           height="380"

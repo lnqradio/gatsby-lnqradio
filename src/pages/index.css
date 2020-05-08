@@ -2,6 +2,84 @@
 SVG Icons - svgicons.sparkk.fr
 ----- */
 
+.page-ficciones main {
+  min-height: auto;
+}
+.page-ficciones .to-top {
+  display: none;
+}
+
+.ficciones .awssld__content {
+  @apply bg-transparent;
+}
+.ficciones .awssld__wrapper {
+  max-height: calc(100vh - 169px);
+  height: 100vh;
+}
+
+.ficciones .awssld__controls button {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: rgb(40, 17, 54);
+  transition: all 0.42s;
+  width: 76px;
+}
+
+.ficciones .awssld__controls button:hover {
+  background: rgba(40, 17, 54, 0.73);
+  width: 90px;
+}
+
+.ficciones .awssld__bullets {
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  height: 100px;
+}
+
+.ficciones .awssld__bullets button {
+  height: 10px;
+  width: 50px;
+  margin: 5px 10px;
+  border-radius: 0;
+}
+
+.ficciones .awssld__controls__arrow-left:after,
+.ficciones .awssld__controls__arrow-left:before,
+.ficciones .awssld__controls__arrow-right:after,
+.ficciones .awssld__controls__arrow-right:before {
+  @apply bg-white opacity-100;
+}
+
+.ficciones .awssld__content > div {
+  min-width: 600px;
+}
+
+@media (max-width: 520px) {
+  .awssld__controls {
+    visibility: visible;
+  }
+  .ficciones .awssld__controls button {
+    top: initial;
+    height: 70px;
+  }
+
+  .ficciones .awssld__wrapper {
+    max-height: calc(100vh - 60px);
+  }
+  .ficciones .awssld__bullets {
+    bottom: 80px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 730px) {
+  .ficciones .awssld__content > div {
+    min-width: auto;
+  }
+}
+
 .svg-icon {
   width: 1em;
   height: 1em;
