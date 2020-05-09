@@ -28,8 +28,8 @@ const FiccionesPage = () => {
                   fluid(
                     maxWidth: 2000
                     quality: 100
-                    duotone: { highlight: "#f00e2e", shadow: "#281136" }
-                    traceSVG: { color: "#f00e2e" }
+                    duotone: { highlight: "#281136", shadow: "#f00e2e" }
+                    traceSVG: { color: "#281136" }
                   ) {
                     ...GatsbyImageSharpFluid_tracedSVG
                   }

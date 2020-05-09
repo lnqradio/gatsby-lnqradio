@@ -50,7 +50,7 @@ const IndexPage = () => {
           relativePath
           childImageSharp {
             fluid(
-              maxWidth: 800
+              maxWidth: 1155
               quality: 100
               duotone: { highlight: "#281136", shadow: "#f00e2e" }
               traceSVG: { color: "#f00e2e" }

@@ -72,6 +72,10 @@ SVG Icons - svgicons.sparkk.fr
     bottom: 80px;
     height: 90px;
   }
+
+  .ficciones .awssld__content {
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 730px) {
