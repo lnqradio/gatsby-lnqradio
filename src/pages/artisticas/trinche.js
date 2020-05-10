@@ -18,6 +18,7 @@ const TrinchePage = () => {
           <iframe
             width="100%"
             height="300"
+            title="Carlovich. No te voy a mentir"
             scrolling="no"
             frameborder="no"
             allow="autoplay"
@@ -60,8 +61,8 @@ const TrinchePage = () => {
               Carlovich era un tipo solitario, y esto lo perjudicó en su carrera
               deportiva, muchas veces faltó a entrenar porque prefería quedarse
               sólo: “sí, sí, a veces soy de juntarme con alguien, pero no mucho
-              ¿viste? Me gusta más la tranquilidad . Para mí ir a entrenar es
-              una reunión”.
+              ¿viste? Me gusta más la tranquilidad. Para mí ir a entrenar es una
+              reunión”.
             </cite>
             Otra historia cuenta que Carlovich la pisaba con las dos piernas y
             que caminaba todo el partido. La constante es que siempre se puede
@@ -157,6 +158,8 @@ const TrinchePage = () => {
             <cite className="block py-6 font-mono text-xl">
               Macedonio decía: <br /> “lo que se puede imaginar sucede y <br />
               pasa a formar parte de lo que es”.
+              <br />
+              Lo decía por Carlovich, y por él.
               <br />
               Lo decía por Carlovich, y por él.
             </cite>
