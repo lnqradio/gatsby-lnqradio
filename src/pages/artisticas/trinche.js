@@ -102,7 +102,7 @@ const TrinchePage = () => {
             </cite>
             Claro que la respuesta no podría haber sido otra porque Maradona,
             que también es mito, tiene la obligación literaria de reproducir
-            ampliadamente la historia de Carlovich. Cuando Maradona declara
+            ampliamente la historia de Carlovich. Cuando Maradona declara
             “Carlovich era mejor que yo” Se refiere a ellos como mitos y no como
             jugadores. Y tiene razón, porque Carlovich necesitó mostrar menos su
             fútbol que él para serlo. Sin embargo, Maradona tomó un camino
@@ -153,7 +153,7 @@ const TrinchePage = () => {
             Macedonio: él y Carlovich son el murmullo sobre el cual acontece la
             ciudad. Esto no es extraño pues se rumoreaba que físicamente eran
             muy parecidos, y si el cuerpo es el que delimita la percepción del
-            mundo, Macedonio y Carlovich habitaban mundos similares.
+            mundo, Macedonio y Carlovich habita mundos similares.
             <br />
             <cite className="block py-6 font-mono text-xl">
               Macedonio decía: <br /> “lo que se puede imaginar sucede y <br />
