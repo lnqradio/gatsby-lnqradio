@@ -46,7 +46,7 @@ const TrinchePage = () => {
             suplente en honor a un surubí: en esa época la numeración de las
             camisetas iba del 1 al 11 para los titulares, y del 12 al 18 para
             los suplentes. Carlovich había decidido jugar con la 17, que era lo
-            que pesaba un surubí que había pescado.
+            que pesaba el surubí que él había pescado.
             <br />
             <br />
             Quienes lo vieron en Central Córdoba afirman que una vez, en la
@@ -136,7 +136,7 @@ const TrinchePage = () => {
             Cuando Maradona dijo que Carlovich era mejor que él, trasladó la
             discusión al plano de lo mitológico. Este plano queda vedado en una
             discusión sobre Macedonio y Borges, ya que al haber documentos de lo
-            que hizo Macedonio la discusión queda en el ámbito de un litigio
+            que hizo Macedonio la discusión queda en el ámbito del litigio
             positivo, negándole el ingreso a la zona de imágenes y creencias.
             <br />
             <br />
@@ -155,7 +155,7 @@ const TrinchePage = () => {
             muy parecidos, y si el cuerpo es el que delimita la percepción del
             mundo, Macedonio y Carlovich habita mundos similares.
             <br />
-            <cite className="block py-6 font-mono text-xl">
+            <cite className="block py-6 font-mono text-xl text-center">
               Macedonio decía: <br /> “lo que se puede imaginar sucede y <br />
               pasa a formar parte de lo que es”.
               <br />
@@ -166,10 +166,10 @@ const TrinchePage = () => {
           </p>
           <BackgroundSlider
             className=" bgslider"
-            initDelay={1}
+            initDelay={3}
             images={["trinche.jpg", "trinche-fc.jpg"]}
             transition={2}
-            duration={5}
+            duration={8}
             query={useStaticQuery(graphql`
               query {
                 backgrounds: allFile(
