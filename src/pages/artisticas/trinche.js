@@ -20,7 +20,7 @@ const TrinchePage = () => {
             height="300"
             title="Carlovich. No te voy a mentir"
             scrolling="no"
-            frameborder="no"
+            frameBorder="no"
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/788682118&color=%23281136&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
           ></iframe>
@@ -50,8 +50,8 @@ const TrinchePage = () => {
             <br />
             <br />
             Quienes lo vieron en Central Córdoba afirman que una vez, en la
-            temporada ´82, jugó todo el partido de primera. Nunca necesitó dos
-            tiempos para resolver.
+            temporada del ´82, jugó todo el partido de primera. Nunca necesitó
+            dos tiempos para resolver.
             <br />
             <br />
             Ante la consulta de un periodista por su falta de cualidades para
@@ -76,7 +76,8 @@ const TrinchePage = () => {
             Son necesarios para el mito Carlovich tanto sus divulgadores, sobre
             todo la legitimidad de ellos (Maradona, Menotti, Bielsa, Pekerman, y
             los demás.), como también la falta de evidencias. Esta ausencia es
-            fundamental para romper con la vieja medida de Verdad-Mentira.
+            fundamental para romper con la vieja medida de <i>Verdad-Mentira</i>
+            .
             <br />
             <br />
             Lo que no creemos nos hace tanto como nuestras creencias. Creer en
@@ -91,9 +92,8 @@ const TrinchePage = () => {
             <br />
             El mito Carlovich tiene una configuración inversa a la del acertijo,
             porque se sabe cuál es el resultado pero se desconocen sus
-            características, las cuales debe proveer la imaginación. Además, los
-            acertijos son un juego de la razón, y el de Carlovich es un juego de
-            la fantasía.
+            características, las cuales debe proveer la imaginación y el de
+            Carlovich es un juego de la fantasía.
             <cite className="block py-6 font-mono text-xl">
               El día que Maradona llegó a Rosario para jugar en Newell´s le
               gritaron que era un orgullo tener al mejor del mundo en la ciudad,
@@ -102,13 +102,15 @@ const TrinchePage = () => {
             </cite>
             Claro que la respuesta no podría haber sido otra porque Maradona,
             que también es mito, tiene la obligación literaria de reproducir
-            ampliamente la historia de Carlovich. Cuando Maradona declara
-            “Carlovich era mejor que yo” Se refiere a ellos como mitos y no como
-            jugadores. Y tiene razón, porque Carlovich necesitó mostrar menos su
-            fútbol que él para serlo. Sin embargo, Maradona tomó un camino
-            inverso al de Carlovich: primero mostró todas sus habilidades que
-            dejaron el terreno listo para albergar cualquier historia. Carlovich
-            parte de historias diversas que traslucen sus destrezas.
+            ampliamente la historia de Carlovich. <br />
+            Cuando Maradona declara
+            <b>“Carlovich era mejor que yo”</b>, se refiere a ellos como mitos y
+            no como jugadores. Y tiene razón, porque Carlovich necesitó mostrar
+            menos su fútbol que él para serlo. <br /> Sin embargo, Maradona tomó
+            un camino inverso al de Carlovich: primero mostró todas sus
+            habilidades que dejaron el terreno listo para albergar cualquier
+            historia. Carlovich parte de historias diversas que traslucen sus
+            destrezas.
             <br />
             <br />
             Puede ser discutible que Maradona sea el mejor jugador de todos los
@@ -119,11 +121,11 @@ const TrinchePage = () => {
             <br />
             Macedonio Fernández es el mito de la literatura porteña. En relación
             a la configuración mítica de Carlovich, se ve perjudicado porque de
-            lo suyo hay registro. Su hijo, que editó El museo de la novela de la
-            eterna, atentó contra la vocación mitológica de Macedonio, a quién
-            se lo puede interpretar como un homicida imperfecto, alguien que se
-            propone realizar el acto sin dejar huellas, pero que de todas formas
-            descubren su autoría.
+            lo suyo hay registro. Su hijo, que editó{" "}
+            <i>El museo de la novela de la eterna</i>, atentó contra la vocación
+            mitológica de Macedonio, a quién se lo puede interpretar como un
+            homicida imperfecto, alguien que se propone realizar el acto sin
+            dejar huellas, pero que de todas formas descubren su autoría.
             <br />
             <br />
             Si su hijo funciona como el detective que descubre las pruebas y
@@ -151,12 +153,13 @@ const TrinchePage = () => {
             eso nos pone de frente ante nuestra imaginación, y no hay nadie que
             haya estimulado más la imaginación en la ciudad que el propio
             Macedonio: él y Carlovich son el murmullo sobre el cual acontece la
-            ciudad. Esto no es extraño pues se rumoreaba que físicamente eran
-            muy parecidos, y si el cuerpo es el que delimita la percepción del
-            mundo, Macedonio y Carlovich habita mundos similares.
+            ciudad.
+            <br /> Esto no es extraño pues se rumoreaba que físicamente eran muy
+            parecidos, y si el cuerpo es el que delimita la percepción del
+            mundo, Macedonio y Carlovich habitan mundos similares.
             <br />
-            <cite className="block py-6 font-mono text-xl text-center">
-              Macedonio decía: <br /> “lo que se puede imaginar sucede y <br />
+            <cite className="block py-6 font-mono text-lg text-center">
+              Macedonio decía: <br /> “lo que se puede imaginar sucede <br /> y
               pasa a formar parte de lo que es”.
               <br />
               Lo decía por Carlovich, y por él.
