@@ -118,7 +118,7 @@ const IndexPage = () => {
       <div className="relative max-w-5xl ml-auto mr-auto overflow-hidden md:mt-8 solumedia">
         <Link
           to={`/artisticas/trinche`}
-          className="block w-full px-4 py-4 mt-48 font-mono text-base text-center text-red-500 underline shadow-sm sm:px-8 sm:w-auto md:mt-64 md:text-3xl md:px-8 hover:text-gray-100"
+          className="block w-full max-w-lg px-4 py-4 my-48 mb-24 ml-auto mr-auto font-mono text-base text-center text-red-500 underline shadow-sm sm:px-8 sm:w-auto md:mt-64 md:text-3xl md:px-8 hover:text-gray-100"
           style={{
             background: "rgba(40, 17, 54, 0.9)",
           }}

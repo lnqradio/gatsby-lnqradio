@@ -15,6 +15,7 @@ a {
 .slider-item .bg-image-hover-opacity {
   @apply transition-all duration-500;
   /*filter: blur(3px);*/
+  filter: grayscale(1);
 }
 
 .post:hover .bg-image-hover-opacity,
@@ -22,6 +23,7 @@ a {
   opacity: 0.3 !important;
   transform: scale(1.05);
   /*filter: blur(0);*/
+  filter: grayscale(0);
 }
 
 .post .description,

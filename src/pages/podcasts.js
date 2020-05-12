@@ -20,7 +20,7 @@ const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
     query ColumnasQuery {
       contenful: allContentfulColumnas(
-        sort: { order: DESC, fields: [publishDate] }
+        sort: { order: ASC, fields: [title] }
         filter: { author: {}, destacar: { eq: "Si" } }
       ) {
         edges {
@@ -166,12 +166,12 @@ const ColumnasPage = () => {
                 </Link>
                 <Link
                   to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                  className="block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
+                  className="block px-6 pb-12 mb-2 font-mono text-base text-gray-500 hover:text-white"
                 >
                   x {item.node.author.name}
                 </Link>
 
-                <p className="px-6 pb-6 description">
+                <p className="hidden px-6 pb-6 description">
                   {item.node.description.description}
                 </p>
                 <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
