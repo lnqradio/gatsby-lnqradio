@@ -118,19 +118,24 @@ const IndexPage = () => {
       <div className="relative max-w-5xl ml-auto mr-auto overflow-hidden md:mt-8 solumedia">
         <Link
           to={`/artisticas/trinche`}
-          className="block w-full max-w-lg px-4 py-4 my-48 mb-24 ml-auto mr-auto font-mono text-base text-center text-red-500 underline shadow-sm sm:px-8 sm:w-auto md:mt-64 md:text-3xl md:px-8 hover:text-gray-100"
+          className="hidden w-full max-w-lg px-4 py-4 my-48 mb-24 ml-auto mr-auto font-mono text-base text-center text-red-500 underline shadow-sm sm:px-8 sm:w-auto md:mt-64 md:text-3xl md:px-8 hover:text-gray-100"
           style={{
             background: "rgba(40, 17, 54, 0.9)",
           }}
         >
-          <span className="block inline-block text-base text-gray-200 uppercase">
+          <span className="hidden text-base text-gray-200 uppercase">
             artística
           </span>
           <br />
           Carlovich. No te voy a mentir
         </Link>
 
-        <h1 className="hidden w-full px-4 py-6 mt-48 font-mono text-base text-center text-white bg-gray-800 shadow-sm sm:px-8 sm:w-auto md:mt-48 sm:text-left md:text-3xl md:px-8">
+        <h1
+          className="inline-block px-4 py-6 mt-24 font-mono text-base text-center text-white shadow-sm sm:px-8 md:mt-48 sm:text-left md:text-xl md:px-8"
+          style={{
+            background: "rgba(40, 17, 54, 0.6)",
+          }}
+        >
           <span className="inline-block text-gray-200">Nuevos episodios</span>{" "}
           los Viernes a las 20hs
         </h1>
@@ -140,7 +145,7 @@ const IndexPage = () => {
           width="360px"
           title="En vivo"
           height="160px"
-          className="hidden pt-6 pl-0 m-auto mb-12 bg-gray-800 sm:mx-0 md:my-4"
+          className="pt-6 pl-0 m-auto mb-12 bg-gray-800 sm:mx-0 md:my-4"
           scrolling="NO"
           allowtransparency="yes"
           src="https://www.solumedia.com.ar/radios/8772"
@@ -154,7 +159,7 @@ const IndexPage = () => {
             backgroundPosition: "center",
           }}
           initDelay={1}
-          images={["trinche.jpg", "trinche-fc.jpg"]}
+          images={["rotring10.jpg", "rotring13.jpg"]}
           transition={2}
           duration={5}
           query={data}
