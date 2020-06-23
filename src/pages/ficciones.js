@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSlider from "gatsby-image-background-slider"
 import AwesomeSlider from "react-awesome-slider"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
+
 
 import "react-awesome-slider/dist/styles.css"
 const FiccionesPage = () => {

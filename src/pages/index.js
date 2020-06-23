@@ -10,7 +10,7 @@ import Img from "gatsby-image"
 import BackgroundSlider from "gatsby-image-background-slider"
 
 import "./index.css"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -266,6 +266,14 @@ const IndexPage = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="text-center">
+              <Link
+                to={`/podcasts/`}
+                className="px-4 py-2 my-6 font-mono text-lg text-white uppercase transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
+              >
+                o escuchá los que más se destacan
+              </Link>
             </div>
           </div>
         ))}

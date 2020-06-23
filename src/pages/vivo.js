@@ -3,7 +3,8 @@ import Layout from "../components/layout"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "./vivo.css"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
+
 import BgSlider from "../components/BgSlider"
 
 const VivoPage = () => (

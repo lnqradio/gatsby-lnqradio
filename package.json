@@ -6,7 +6,7 @@
   "author": "santuan <santuan.dg@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
-    "gatsby": "^2.19.45",
+    "gatsby": "^2.22.6",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.2.30",
     "gatsby-image-background-slider": "0.0.2",
@@ -34,7 +34,7 @@
     "react-burger-menu": "^2.6.11",
     "react-dom": "^16.11.0",
     "react-headroom": "^3.0.0",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.0.0",
     "react-icons": "^3.9.0",
     "react-id-swiper": "^2.4.0",
     "react-particles-js": "^2.7.1",
