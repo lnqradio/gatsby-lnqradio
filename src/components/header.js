@@ -41,7 +41,7 @@ const Header = ({ siteTitle }) => (
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"
-            to="/notanenvivo/"
+            to="/episodios/"
           >
             Episodios
           </Link>

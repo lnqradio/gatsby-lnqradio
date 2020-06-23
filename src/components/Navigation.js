@@ -12,7 +12,7 @@ const routes = [
   },
   {
     title: "Episodios",
-    slug: "/notanenvivo/",
+    slug: "/episodios/",
   },
   //{
   //  title: "Entrevistas",

@@ -15,9 +15,7 @@ const EpisodiosPage = () => {
             id
             title
             slug
-            soundcloud {
-              soundcloud
-            }
+            soundcloudTrackId
             episode
             description {
               description
@@ -42,36 +40,43 @@ const EpisodiosPage = () => {
   return (
     <Layout>
       <SEO title="Episodios" />
-      <div className="z-10 flex items-center justify-center h-24 px-6 m-0 mb-6 bg-gray-900 md:sticky md:top-0 hero">
-        <h1 className="text-xl text-center text-white ">Temporada 6</h1>
+      <div className="z-10 flex flex-col items-center justify-center h-48 px-6 m-0 mb-6 bg-gray-900 md:sticky md:top-0 hero">
+        <h1 className="text-xl text-center text-white uppercase">
+          Episodios de la sexta temporada
+        </h1>
+        <Link
+          to={`/notanenvivo/`}
+          className="px-4 pb-1 my-3 font-mono text-lg text-white transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
+        >
+          o escuchate las temporadas anteriores
+        </Link>
       </div>
-      <div className="flex flex-wrap max-w-3xl m-auto posts">
+      <div className="flex flex-wrap justify-center m-auto mb-12 posts">
         {data.contenful.edges.map((item, i) => (
           <div
             key={item.node.id}
-            className="w-full mb-6 bg-gray-800 border-t-4 border-red-500 post"
+            className="w-full m-2 bg-gray-800 border-t-4 border-red-500 lg:w-1/3 post"
           >
             <div className="p-0 shadow-lg">
-              <div className="flex flex-col-reverse heading md:flex-row md:p-6">
-                <div className>
+              <iframe
+                width="100%"
+                height="166"
+                scrolling="no"
+                title={item.node.title}
+                className=""
+                frameBorder="no"
+                allow="autoplay"
+                src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
+                  item.node.soundcloudTrackId
+                )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
+              ></iframe>
+              <div className="flex flex-col-reverse p-6 heading md:flex-row">
+                <div className="w-full content md:pl-0 md:flex-1">
                   <Link
                     to={`/episodios/${kebabCase(item.node.slug)}/`}
                     className="title "
                   >
-                    <b className="block w-40 px-5 pb-5 mb-2 font-mono text-left text-indigo-300">
-                      Episodio {item.node.episode} <br />
-                      <span className="text-xs text-gray-400">
-                        Temporada {item.node.temporada}
-                      </span>
-                    </b>
-                  </Link>
-                </div>
-                <div className="w-full content md:pl-3 md:flex-1">
-                  <Link
-                    to={`/episodios/${kebabCase(item.node.slug)}/`}
-                    className="title "
-                  >
-                    <h2 className="px-5 mb-3 text-xl text-red-500 hover:text-white">
+                    <h2 className="px-0 mb-3 text-xl text-red-500 hover:text-white">
                       {item.node.title}{" "}
                       <b className="inline-block pt-2 mb-2 font-mono text-sm text-left text-gray-500 capitalize">
                         / {item.node.publishDate}
@@ -79,7 +84,7 @@ const EpisodiosPage = () => {
                     </h2>
                   </Link>
 
-                  <p className="px-5 pb-3 mb-3 text-base title">
+                  <p className="px-0 pb-3 mb-3 text-base title">
                     {item.node.description.description}
                   </p>
                 </div>
