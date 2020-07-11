@@ -149,7 +149,7 @@ const ColumnasPage = () => {
             className="block w-full p-4 font-mono text-3xl text-center text-white"
             id="destacadas"
           >
-            Destacadas
+            Últimas Subidas
           </h2>
           {data.contenful.edges.map((item, i) => (
             <div

@@ -131,7 +131,7 @@ const IndexPage = () => {
         </Link>
 
         <h1
-          className="inline-block px-4 py-6 mt-24 font-mono text-base text-center text-white shadow-sm sm:px-8 md:mt-48 sm:text-left md:text-xl md:px-8"
+          className="inline-block px-4 py-6 mt-24 font-mono text-base text-center text-white shadow-sm sm:px-8 md:mt-4 sm:text-left md:text-xl md:px-8"
           style={{
             background: "rgba(40, 17, 54, 0.6)",
           }}
@@ -272,7 +272,7 @@ const IndexPage = () => {
                 to={`/podcasts/`}
                 className="px-4 py-2 my-6 font-mono text-lg text-white uppercase transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
               >
-                o escuchá los que más se destacan
+                o escuchá los últimas.
               </Link>
             </div>
           </div>
