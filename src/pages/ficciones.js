@@ -6,7 +6,6 @@ import BackgroundSlider from "gatsby-image-background-slider"
 import AwesomeSlider from "react-awesome-slider"
 import { Helmet } from "react-helmet"
 
-
 import "react-awesome-slider/dist/styles.css"
 const FiccionesPage = () => {
   return (
@@ -32,7 +31,7 @@ const FiccionesPage = () => {
                     duotone: { highlight: "#281136", shadow: "#f00e2e" }
                     traceSVG: { color: "#281136" }
                   ) {
-                    ...GatsbyImageSharpFluid_tracedSVG
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

@@ -187,7 +187,7 @@ const TrinchePage = () => {
                         duotone: { highlight: "#f00e2e", shadow: "#281136" }
                         traceSVG: { color: "#281136" }
                       ) {
-                        ...GatsbyImageSharpFluid_tracedSVG
+                        ...GatsbyImageSharpFluid
                       }
                     }
                   }

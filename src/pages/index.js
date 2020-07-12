@@ -57,7 +57,7 @@ const IndexPage = () => {
               duotone: { highlight: "#f00e2e", shadow: "#281136" }
               traceSVG: { color: "#f00e2e" }
             ) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }

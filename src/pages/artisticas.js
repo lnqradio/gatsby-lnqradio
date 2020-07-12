@@ -18,8 +18,8 @@ const ArtisticasPage = () => {
             <iframe
               width="100%"
               height="365"
-              title="En la Terraza: Tarantos Dúo"
-              src="https://www.youtube-nocookie.com/embed/CYtKeQsudeE"
+              title="Si la SEGUNDA GUERRA MUNDIAL hubiera ocurrido en un BAR"
+              src="https://www.youtube.com/embed/CYtKeQsudeE"
               frameborder="0"
               className="bg-gray-800 shadow-lg"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
