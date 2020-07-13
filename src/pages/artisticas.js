@@ -16,12 +16,10 @@ const ArtisticasPage = () => {
           </h1>
           <div className="video-container">
             <iframe
-              width="100%"
-              height="365"
-              title="Si la SEGUNDA GUERRA MUNDIAL hubiera ocurrido en un BAR"
+              width="560"
+              height="315"
               src="https://www.youtube.com/embed/CYtKeQsudeE"
               frameborder="0"
-              className="bg-gray-800 shadow-lg"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen=""
             ></iframe>
