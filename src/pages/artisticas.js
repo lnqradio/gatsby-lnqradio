@@ -11,15 +11,17 @@ const ArtisticasPage = () => {
       <BgSlider />
       <div className="flex justify-center pt-40 md:pt-0 md:items-center tarantos">
         <div className="w-full max-w-lg px-3 m-auto my-0">
-          <h1 className="hidden px-6 py-3 text-xl text-center text-gray-400 bg-gray-800 shadow-2xl tarantos-title">
+          <h1 className="inline-block px-6 py-3 text-xl text-center text-gray-400 bg-gray-800 shadow-2xl tarantos-title">
             En la Terraza: Tarantos Dúo
           </h1>
           <div className="video-container">
             <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/CYtKeQsudeE"
+              width="100%"
+              height="365"
+              title="En la Terraza: Tarantos Dúo"
+              src="https://www.youtube-nocookie.com/embed/videoseries?list=PL7X4WhEiBg4oiF4Mn5SUtRVr_vNTew-jg"
               frameborder="0"
+              className="bg-gray-800 shadow-lg"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen=""
             ></iframe>
