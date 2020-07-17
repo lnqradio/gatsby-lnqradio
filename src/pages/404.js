@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,15 +12,14 @@ const NotFoundPage = () => (
         <span className="block animated hinge delay-3s slower ">404</span>
       </h1>
       <div className="flex justify-center max-w-2xl m-auto mt-6">
-        <iframe
-          src="https://player.twitch.tv/?autoplay=false&video=v555746285"
-          frameborder="0"
-          allowFullScreen="true"
-          title="Video transmisión"
-          scrolling="no"
-          height="380"
-          width="100%"
-        ></iframe>
+        <div className="max-w-6xl py-3 pb-12 m-auto text-left">
+          <Link
+            to={`/`}
+            className="px-4 pb-1 my-3 font-mono text-lg text-white transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
+          >
+            Volver al inicio
+          </Link>
+        </div>
       </div>
     </div>
   </Layout>

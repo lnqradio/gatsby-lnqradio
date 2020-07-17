@@ -46,7 +46,7 @@ class EpisodiosTemplate extends React.Component {
         </section>
         <div className="max-w-6xl p-6 pt-6 m-auto">
           <h2 className="mt-3 text-xl text-center text-gray-700">
-            Columnas del Programa Nº{episodios.episode}
+            Podcast del Programa Nº{episodios.episode}
           </h2>
           {episodios.podcastRelacionados ? (
             <div className="flex flex-wrap justify-center py-8 ">

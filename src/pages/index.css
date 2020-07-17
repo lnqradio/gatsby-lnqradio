@@ -380,12 +380,13 @@ iframe {
 .swiper-slide:hover .title {
   transform: scale(1.1) translateX(5px);
 }
-
+/*
 .post-hero {
   background-image: url(../images/bg-pattern-1.svg);
   background-position: 40% 50%;
   background-size: cover;
 }
+*/
 
 .homeHero {
   /*
@@ -448,7 +449,7 @@ iframe {
 
 .home-hero-links {
   @apply flex flex-wrap mb-12 border-b border-red-600;
-  background: #220c2f;
+  background: transparent;
 }
 
 .home-hero-links a {

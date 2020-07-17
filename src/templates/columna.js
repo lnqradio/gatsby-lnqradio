@@ -14,6 +14,15 @@ import Img from "gatsby-image"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
+import {
+  GiSpellBook,
+  GiAstronautHelmet,
+  GiPestleMortar,
+  GiRomanToga,
+} from "react-icons/gi"
+import { MdPersonPin, MdLocalMovies } from "react-icons/md"
+import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
+
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 const Text = ({ children }) => <p className="my-3 text-lg">{children}</p>
 const website_url = "https://www.lnqradio.com"
@@ -87,7 +96,7 @@ class ColumnaTemplate extends React.Component {
 
         <div className="flex flex-col flex-wrap px-2 pt-0 m-auto posts soundcloud">
           <div className="flex flex-col w-full pt-0 m-auto mb-12 shadow post">
-            <div className="w-full bg-indigo-900 post-hero bg-pattern">
+            <div className="w-full bg-pattern ">
               <div className="w-full max-w-2xl m-auto mt-0 text-lg md:mt-6 columna-article animated fadeIn delay-1s slower ">
                 <iframe
                   width="100%"
@@ -213,6 +222,72 @@ class ColumnaTemplate extends React.Component {
               </div>
             ))}
           </div>
+        </div>
+        <div className="flex justify-center w-full max-w-6xl px-6 py-6 m-auto bg-gray-800 home-hero-links md:py-8">
+          <Link
+            to={`/podcasts/musicales`}
+            className="block font-mono text-base text-red-500 hover:text-white"
+          >
+            <IoMdMusicalNotes />
+
+            <span>musicales</span>
+          </Link>
+          <Link
+            to={`/podcasts/cine`}
+            className="block font-mono text-base text-red-500 hover:text-white"
+          >
+            <MdLocalMovies />
+
+            <span>cine</span>
+          </Link>
+
+          <Link
+            to={`/podcasts/entrevistas/`}
+            className="block font-mono text-base text-red-500 hover:text-white"
+          >
+            <IoMdMicrophone />
+            <span>entrevistas</span>
+          </Link>
+          <Link
+            to={`/podcasts/perfiles`}
+            className="block font-mono text-base text-red-500 hover:text-white"
+          >
+            <MdPersonPin />
+
+            <span>perfiles</span>
+          </Link>
+          <Link
+            to={`/podcasts/historias`}
+            className="block font-mono text-base text-red-500 hover:text-white"
+          >
+            <GiSpellBook />
+
+            <span>historias</span>
+          </Link>
+          <Link
+            to={`/podcasts/psiconautica`}
+            className="block font-mono text-base text-red-500 hover:text-white"
+          >
+            <GiAstronautHelmet />
+
+            <span>psiconáutica</span>
+          </Link>
+          <Link
+            to={`/podcasts/politica`}
+            className="block font-mono text-base text-red-500 hover:text-white"
+          >
+            <GiRomanToga />
+
+            <span>política</span>
+          </Link>
+          <Link
+            to={`/podcasts/intermezzo`}
+            className="block font-mono text-base text-red-500 hover:text-white"
+          >
+            <GiPestleMortar />
+
+            <span>intermezzo</span>
+          </Link>
         </div>
       </Layout>
     )

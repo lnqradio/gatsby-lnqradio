@@ -18,12 +18,14 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          <div className="absolute w-16 p-1 mt-1 logo">
+          <div className="absolute w-24 p-1 mt-3 lg:w-32 logo">
             <Image />
           </div>
-          <h1 className="max-w-lg p-0 m-0 text-white md:mr-12">{siteTitle}</h1>
+          <h1 className="hidden max-w-lg p-0 m-0 text-white md:mr-12">
+            {siteTitle}
+          </h1>
         </Link>
-        <nav className="justify-center hidden w-full pr-24 mt-0 text-base lg:flex">
+        <nav className="justify-center hidden w-full pr-0 mt-0 text-base lg:flex">
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"
@@ -99,7 +101,7 @@ const Header = ({ siteTitle }) => (
             className="flex items-center p-2 leading-normal text-red-100 lg:rounded-full lg:inline-flex "
             role="alert"
           >
-            <span className="flex hidden px-2 py-1 mr-3 text-base font-bold leading-relaxed uppercase bg-red-700 rounded">
+            <span className="hidden px-2 py-1 mr-3 text-base font-bold leading-relaxed uppercase bg-red-700 rounded ">
               <small className="">Episodio 240</small>
             </span>
             <span className="flex-col flex-auto mr-2 text-sm font-bold text-left ">

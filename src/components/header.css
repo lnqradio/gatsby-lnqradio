@@ -17,8 +17,7 @@
 }
 
 .__react_component_tooltip {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-    monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .__react_component_tooltip.type-dark {
@@ -26,11 +25,17 @@
 }
 
 header .inner-header {
-  @apply max-w-full m-auto py-4;
+  @apply max-w-full py-10 m-auto;
+}
+
+@screen lg {
+  header .inner-header {
+    @apply max-w-full py-8 m-auto;
+  }
 }
 
 header nav a {
-  @apply text-white pr-4 inline-block pt-1 font-mono;
+  @apply inline-block pt-1 pr-4 font-mono text-white;
   opacity: 0.7;
 }
 
@@ -49,7 +54,7 @@ header nav .live-link:hover {
   margin-left: 0;
   min-width: 190px;
   opacity: 1;
-  @apply pl-3 px-2 py-2 text-sm font-mono uppercase font-bold text-center;
+  @apply px-2 py-2 pl-3 font-mono text-sm font-bold text-center uppercase;
 }
 
 @screen lg {
@@ -58,7 +63,7 @@ header nav .live-link:hover {
     top: 0;
     left: initial;
     bottom: initial;
-    @apply pl-2 py-1 ml-2;
+    @apply py-1 pl-2 ml-2;
   }
 }
 
@@ -73,11 +78,17 @@ header nav a:hover {
 }
 
 header {
-  /*@apply bg-gray-800;*/
-  background: rgb(40, 17, 54);
-  border-bottom: 1px solid #0a050d;
+  background: rgba(40, 17, 54, 0.25);
+  border-bottom: 1px solid transparent;
 }
-
+/*
+@screen lg {
+  header {
+    background: rgb(40, 17, 54);
+    border-bottom: 1px solid #0a050d;
+  }
+}
+*/
 header nav {
   @apply mt-2;
 }
@@ -150,6 +161,13 @@ header nav {
 .headroom--pinned {
   position: fixed;
   transform: translateY(0%);
+}
+
+@screen lg {
+  .headroom--pinned header {
+    background: rgb(40, 17, 54);
+    border-bottom: 1px solid #0a050d;
+  }
 }
 
 .hero {

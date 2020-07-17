@@ -48,10 +48,9 @@ const Layout = ({ children }) => {
         </AnchorLink>
 
         <main className="pt-0 overflow-hidden">{children}</main>
-        <footer className="relative z-40">
-          <div className="w-24 max-w-xl py-6 m-auto text-center">
+        <footer className="relative z-40 pt-20">
+          <div className="hidden w-48 max-w-xl py-6 m-auto text-center">
             <Image />
-            <h4 className="my-2 text-white">LNQRadio</h4>
           </div>
 
           <ReactTooltip

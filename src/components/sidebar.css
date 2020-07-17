@@ -14,9 +14,11 @@
 .logo {
   left: -5px !important;
   top: -12px !important;
+  /*
   -webkit-animation: spin 11s linear infinite;
   -moz-animation: spin 11s linear infinite;
   animation: spin 11s linear infinite;
+  */
 }
 
 @-moz-keyframes spin {
