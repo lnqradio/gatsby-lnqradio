@@ -105,6 +105,7 @@ const FiberDemo = props => {
         <audio
           className="w-64 fiberAudio"
           controls
+          controlsList="nodownload"
           src="https://assets.ctfassets.net/mai25em38k9q/2qHoL9NrIDZWOJylxocaDX/cf74660368fceb495674db96b500267e/MFL-Flaming-Lynch.mp3"
         >
           Your browser does not support the
@@ -129,8 +130,8 @@ const FiberDemo = props => {
         </Canvas>
         <div className="fullscreen-bg">
           <video
-            loop=""
-            muted=""
+            loop
+            muted
             autoplay=""
             poster="img/videoframe.jpg"
             className="fullscreen-bg__video"

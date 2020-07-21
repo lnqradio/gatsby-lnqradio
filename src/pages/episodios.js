@@ -103,7 +103,7 @@ const EpisodiosPage = () => {
                 allow="autoplay"
                 src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
                   item.node.soundcloudTrackId
-                )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
+                )}&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false`}
               ></iframe>
               <div className="flex flex-col-reverse p-6 heading md:flex-row">
                 <div className="w-full content md:pl-0 md:flex-1">

@@ -21,6 +21,10 @@ body.domFiber .inner-header nav {
   opacity: 0 !important;
 }
 
+body.domFiber header {
+  background: transparent;
+}
+
 .fiberAudio {
   position: fixed;
   bottom: 0;
@@ -136,7 +140,7 @@ audio {
 @media screen and (max-width: 800px) {
   .misiles {
     width: auto;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     bottom: 30px;
     display: flex;
     flex-direction: row;
@@ -151,7 +155,7 @@ audio {
     bottom: -15px;
   }
   audio {
-    width: 100%;
+    width: 100% !important;
   }
   #container canvas {
     transform: translateY(-50px);

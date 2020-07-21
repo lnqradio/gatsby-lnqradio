@@ -204,7 +204,7 @@ const IndexPage = () => {
                   allow="autoplay"
                   src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
                     show.node.soundcloudTrackId
-                  )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
+                  )}&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false`}
                 ></iframe>
                 <Img
                   alt="{item.node.title}"
@@ -214,6 +214,7 @@ const IndexPage = () => {
                 />
               </div>
             </div>
+
             <div className="flex flex-wrap justify-center py-8 ">
               {show.node.podcastRelacionados.map((slider, i) => (
                 <div
