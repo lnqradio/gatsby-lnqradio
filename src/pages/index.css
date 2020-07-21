@@ -21,13 +21,13 @@ SVG Icons - svgicons.sparkk.fr
   top: 0;
   bottom: 0;
   height: 100%;
-  background: rgb(40, 17, 54);
+  background: rgba(40, 17, 54, 0.2);
   transition: all 0.42s;
   width: 76px;
 }
 
 .ficciones .awssld__controls button:hover {
-  background: rgba(40, 17, 54, 0.73);
+  background: rgba(40, 17, 54, 0.4);
   width: 90px;
 }
 

@@ -76,10 +76,6 @@ const FiberDemo = props => {
         <body className="domFiber" />
       </Helmet>
       <div class="misiles w-64">
-        <img
-          src="https://www.lnqradio.com/static/d48f304c1226a8516e36c27e44eef047/630fb/gatsby-icon.png"
-          alt=""
-        />
         <div class="title">
           <h2 className="text-white">Momento Flaming Lips</h2>
           <h3 className="text-white">Flaming Lynch</h3>
@@ -103,10 +99,6 @@ const FiberDemo = props => {
             <small>Se recomienda auriculares</small>
           </div>
         </div>
-      </div>
-      <div className="help ">
-        <p className="inline-block mr-3">Scroll para zoom</p>
-        <p className="inline-block ">Click para rotar</p>
       </div>
 
       <div className="w-full h-screen canvas" onMouseMove={onMouseMove}>
