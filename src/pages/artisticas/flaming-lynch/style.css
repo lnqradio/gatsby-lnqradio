@@ -1,0 +1,193 @@
+.canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+body.domFiber .inner-header nav {
+  opacity: 0 !important;
+}
+
+.fiberAudio {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.misiles {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem 1rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  right: 0;
+  color: #ddd;
+  text-align: center;
+  bottom: 50px;
+  font-family: monospace;
+  opacity: 0.8;
+}
+
+#container canvas {
+  opacity: 0.2;
+}
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #fff;
+}
+
+.svg-icon circle {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.misiles .headphones {
+  display: flex;
+  margin: 1rem 0;
+}
+.misiles .headphones .icon {
+  margin-right: 5px;
+}
+
+.headphones small {
+  font-size: 0.75rem;
+}
+
+.misiles h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.help {
+  position: fixed;
+  /* top: 0; */
+  z-index: 30000;
+  /* position: relative; */
+  /* background: red; */
+  bottom: 15px;
+  left: 15px;
+  font-family: monospace;
+  padding: 0.25rem 1rem;
+  color: #fff;
+  display: flex;
+  min-width: 250px;
+  justify-content: space-around;
+  width: auto;
+}
+
+.misiles h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.misiles img {
+  width: 150px;
+  height: auto;
+}
+
+audio {
+  position: fixed;
+  z-index: 3000;
+  opacity: 1;
+  background: #f9f9f9;
+  filter: invert(1);
+  width: 280px;
+  opacity: 0.8;
+  right: 0;
+  bottom: 0;
+  border: 0 none;
+  outline: 0 none;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 1);
+  animation-delay: calc(var(--animate-delay) * 1);
+}
+
+@media screen and (max-width: 800px) {
+  .misiles {
+    width: auto;
+    padding: 1rem 1rem 3rem 1rem;
+    bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    left: 0.25rem;
+    right: 0.25rem;
+  }
+  .misiles img {
+    width: 90px;
+  }
+  button {
+    bottom: -15px;
+  }
+  audio {
+    width: 100%;
+  }
+  #container canvas {
+    transform: translateY(-50px);
+  }
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  .fullscreen-bg__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  .fullscreen-bg__video {
+    width: auto;
+    height: 100%;
+  }
+}
