@@ -103,14 +103,11 @@ const Layout = ({ children }) => {
           </div>
           <Mailchimp />
           <p>© {new Date().getFullYear()}, Realizado con el apoyo de </p>
-          <Link
-            to={`/artisticas/flaming-lynch/`}
-            className="font-bold text-red-600 "
-          >
+          <Link to={`/garmendia/`} className="font-bold text-red-600 ">
             Laboratorios Garmendia
           </Link>
           <p className="pt-6 text-sm text-gray-500">
-            Última: actualización
+            Última actualización
             <span className="block pt-1 font-bold uppercase ">
               {data.site.buildTime}
             </span>

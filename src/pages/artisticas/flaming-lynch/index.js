@@ -1,9 +1,30 @@
 import * as THREE from "three"
 import React, { Suspense, useCallback, useRef, useMemo } from "react"
-import { Canvas, useFrame } from "react-three-fiber"
+import {
+  Canvas,
+  extend,
+  useThree,
+  useRender,
+  useFrame,
+} from "react-three-fiber"
 import Effects from "./Effects"
 import "./style.css"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+import { Link } from "gatsby"
+
 import { Helmet } from "react-helmet"
+import ReactPlayer from "react-player"
+
+extend({ OrbitControls })
+
+const Controls = () => {
+  const orbitRef = useRef()
+  const { camera, gl } = useThree()
+
+  return (
+    <orbitControls autoRotate args={[camera, gl.domElement]} ref={orbitRef} />
+  )
+}
 
 function Swarm({ count, mouse }) {
   const mesh = useRef()
@@ -75,10 +96,9 @@ const FiberDemo = props => {
       <Helmet>
         <body className="domFiber" />
       </Helmet>
+
       <div class="misiles w-64">
         <div class="title">
-          <h2 className="text-white">Momento Flaming Lips</h2>
-          <h3 className="text-white">Flaming Lynch</h3>
           <div class="headphones">
             <div class="icon">
               <svg
@@ -98,32 +118,55 @@ const FiberDemo = props => {
             </div>
             <small>Se recomienda auriculares</small>
           </div>
+          <h2 className="my-3 text-white">Momento Flaming Lips</h2>
+          <div className="player-wrapper">
+            <ReactPlayer
+              className=" react-player"
+              url="https://soundcloud.com/lnqescech/mfl-flaming-lynch&auto_play=true&show_artwork=false"
+              height="80px"
+              width="100%"
+              light="true"
+              controls="true"
+            />
+          </div>
+          <div className="mt-3">
+            <Link
+              to={`/artisticas/flaming-lynch/`}
+              className="block my-2 mr-3 font-bold text-white hover:text-white "
+            >
+              Flaming Lynch
+            </Link>
+            <Link
+              to={`/artisticas/jesus/`}
+              className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
+            >
+              Jesús
+            </Link>
+            <Link
+              to={`/artisticas/loloapps/`}
+              className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
+            >
+              Lolo App
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="w-full h-screen canvas" onMouseMove={onMouseMove}>
-        <audio
-          className="w-64 fiberAudio"
-          controls
-          controlsList="nodownload"
-          src="https://assets.ctfassets.net/mai25em38k9q/2qHoL9NrIDZWOJylxocaDX/cf74660368fceb495674db96b500267e/MFL-Flaming-Lynch.mp3"
-        >
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio>
-
         <Canvas
           gl={{ alpha: true, antialias: false, logarithmicDepthBuffer: true }}
           camera={{ fov: 75, position: [0, 0, 70] }}
+          className="cursor-move"
           onCreated={({ gl }) => {
             gl.toneMapping = THREE.ACESFilmicToneMapping
             gl.outputEncoding = THREE.sRGBEncoding
           }}
         >
-          <ambientLight intensity={1.1} />
+          <ambientLight intensity={0.1} />
           <pointLight position={[100, 100, 100]} intensity={2.2} />
           <pointLight position={[-100, -100, -100]} intensity={5} color="red" />
-          <Swarm mouse={mouse} count={15} />
+          <Controls />
+          <Swarm mouse={mouse} count={55} />
           <Suspense fallback={null}>
             <Effects />
           </Suspense>

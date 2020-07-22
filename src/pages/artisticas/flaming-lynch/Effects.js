@@ -35,7 +35,7 @@ export default function Post() {
       rangeThreshold: 0.05, // Larger value works better for this camera frustum.
       rangeFalloff: 0.01,
       luminanceInfluence: 0.6,
-      radius: 30,
+      radius: 530,
       scale: 0.55,
       bias: 0.5,
     })

@@ -1,36 +1,42 @@
 import React from "react"
 import Particles from "react-particles-js"
-
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import ReactPlayer from "react-player"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="Laboratorios Garmendia" />
-    <div className="relative z-50 max-w-6xl pt-6 m-auto text-left md:pt-12">
-      <article className="max-w-sm text-center changelog ">
-        <a
-          href="https://github.com/lnqradio/gatsby-lnqradio"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full py-6 text-xl italic text-red-500"
-        >
-          # Registro de cambios. v.0.2.1
-        </a>
-      </article>
-      <div className="flex flex-col justify-center max-w-2xl m-auto mt-6">
-        <iframe
-          border="0"
-          frameborder="NO"
-          width="100%"
-          title="En vivo"
-          height="100px"
-          className="m-auto min-w-64"
-          scrolling="NO"
-          allowtransparency="yes"
-          src="https://www.solumedia.com.ar/radios/8772"
-        ></iframe>
-      </div>
+    <div className="relative z-50 max-w-2xl p-6 m-auto text-left md:p-12">
+      <h2 className="w-full py-6 text-xl italic text-white">
+        Laboratorios Garmendia
+      </h2>
+      <h3 className="w-full py-6 text-base italic text-white">Flaming Lips</h3>
+      <Link
+        to={`/artisticas/flaming-lynch/`}
+        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
+      >
+        Flaming Lynch
+      </Link>
+      <Link
+        to={`/artisticas/jesus/`}
+        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
+      >
+        Jesús
+      </Link>
+      <Link
+        to={`/artisticas/loloapps/`}
+        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
+      >
+        Lolo App
+      </Link>
+
+      <ReactPlayer
+        url={[
+          "https://www.youtube.com/watch?v=CJgRT8dbv2o",
+          "https://www.youtube.com/watch?v=CYtKeQsudeE",
+        ]}
+      />
     </div>
     <Particles
       style={{ cursor: "crosshair" }}
