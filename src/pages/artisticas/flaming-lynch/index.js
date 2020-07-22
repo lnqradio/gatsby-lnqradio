@@ -1,12 +1,6 @@
 import * as THREE from "three"
 import React, { Suspense, useCallback, useRef, useMemo } from "react"
-import {
-  Canvas,
-  extend,
-  useThree,
-  useRender,
-  useFrame,
-} from "react-three-fiber"
+import { Canvas, extend, useThree, useFrame } from "react-three-fiber"
 import Effects from "./Effects"
 import "./style.css"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"

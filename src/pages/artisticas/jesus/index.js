@@ -1,70 +1,72 @@
+import React, { useState, useRef, useEffect } from "react"
 import * as THREE from "three"
-import React, { useCallback, useEffect, useRef, useMemo } from "react"
-import { Canvas, extend, useFrame, useThree } from "react-three-fiber"
-import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer"
-import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass"
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass"
-import { AfterimagePass } from "three/examples/jsm/postprocessing/AfterimagePass"
-import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader"
-import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass"
-import { Flock } from "./flock"
-import { Helmet } from "react-helmet"
-import ReactPlayer from "react-player"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import { Canvas, extend, useThree, useRender } from "react-three-fiber"
+import { useSpring, a } from "react-spring/three"
 import { Link } from "gatsby"
 
-// Makes these prototypes available as "native" jsx-string elements
-extend({
-  EffectComposer,
-  ShaderPass,
-  RenderPass,
-  AfterimagePass,
-  UnrealBloomPass,
-})
+import { Helmet } from "react-helmet"
+import ReactPlayer from "react-player"
 
-function Effect() {
-  const composer = useRef()
-  const { scene, gl, size, camera } = useThree()
-  const aspect = useMemo(() => new THREE.Vector2(size.width, size.height), [
-    size,
-  ])
-  useEffect(() => void composer.current.setSize(size.width, size.height), [
-    size,
-  ])
-  useFrame(() => composer.current.render(), 1)
+extend({ OrbitControls })
+
+const SpaceShip = () => {
+  const [model, setModel] = useState()
+
+  useEffect(() => {
+    new GLTFLoader().load("/scene.gltf", setModel)
+  })
+
+  return model ? <primitive object={model.scene} /> : null
+}
+
+const Controls = () => {
+  const orbitRef = useRef()
+  const { camera, gl } = useThree()
+
   return (
-    <effectComposer ref={composer} args={[gl]}>
-      <renderPass attachArray="passes" scene={scene} camera={camera} />
-      <unrealBloomPass attachArray="passes" args={[aspect, 1.3, 1, 0]} />
-      <shaderPass
-        attachArray="passes"
-        args={[FXAAShader]}
-        uniforms-resolution-value={[1 / size.width, 1 / size.height]}
-        renderToScreen
-      />
-    </effectComposer>
+    <orbitControls
+      autoRotate
+      maxPolarAngle={Math.PI / 3}
+      minPolarAngle={Math.PI / 3}
+      args={[camera, gl.domElement]}
+      ref={orbitRef}
+    />
   )
 }
 
-const RocaDemo = props => {
-  const mouse = useRef([0, 0, false])
+const Plane = () => (
+  <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]} receiveShadow>
+    <planeBufferGeometry attach="geometry" args={[100, 100]} />
+    <meshPhysicalMaterial attach="material" color="white" />
+  </mesh>
+)
 
-  const onMouseMove = useCallback(
-    ({ clientX: x, clientY: y }) =>
-      (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]),
-    []
+const Box = () => {
+  const [hovered, setHovered] = useState(false)
+  const [active, setActive] = useState(false)
+  const props = useSpring({
+    scale: active ? [2, 2, 2] : [1, 1, 1],
+    color: hovered ? "white" : "black",
+  })
+
+  return (
+    <a.mesh
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
+      onClick={() => setActive(!active)}
+      scale={props.scale}
+      castShadow
+    >
+      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+      <a.meshPhysicalMaterial attach="material" color={props.color} />
+    </a.mesh>
   )
+}
 
-  const handleMouseDown = event => {
-    if (event.button !== 2) {
-      mouse.current[2] = true
-    }
-  }
-
-  const handleMouseUp = event => {
-    if (event.button !== 2) {
-      mouse.current[2] = false
-    }
-  }
+export default () => {
+  const isBrowser = typeof window !== "undefined"
 
   return (
     <>
@@ -121,33 +123,22 @@ const RocaDemo = props => {
           </div>
         </div>
       </div>
-      <div
-        className="w-full h-screen canvas"
-        onMouseMove={onMouseMove}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-      >
-        <Canvas camera={{ fov: 75, position: [0, 0, 70] }}>
-          <spotLight
-            intensity={0.15}
-            position={[0, 0, 70]}
-            penumbra={1}
-            color="lightblue"
-          />
-          <mesh>
-            <planeBufferGeometry attach="geometry" args={[10000, 10000]} />
-            <meshPhongMaterial
-              attach="material"
-              color="#14061d"
-              depthTest={false}
-            />
-          </mesh>
-          <Flock mouse={mouse} count={600} />
-          <Effect />
+      {isBrowser && (
+        <Canvas
+          camera={{ position: [5, 5, 5] }}
+          onCreated={({ gl }) => {
+            gl.shadowMap.enabled = true
+            gl.shadowMap.type = THREE.PCFSoftShadowMap
+          }}
+        >
+          <ambientLight intensity={0.5} />
+          <spotLight position={[1, 1, 1]} penumbra={0.1} castShadow />
+          <fog attach="fog" args={["black", 10, 25]} />
+          <Controls />
+          <Box />
+          <Plane />
         </Canvas>
-      </div>
+      )}
     </>
   )
 }
-
-export default RocaDemo
