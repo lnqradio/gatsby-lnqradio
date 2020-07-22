@@ -11,6 +11,18 @@ const ArtisticasPage = () => {
       <BgSlider />
       <div className="flex justify-center pt-40 md:pt-0 md:items-center tarantos">
         <div className="w-full max-w-lg px-3 m-auto my-0">
+          <iframe
+            width="100%"
+            height="450"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/844743511&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+          ></iframe>
+        </div>
+      </div>
+      <div className="flex justify-center pt-40 md:pt-0 md:items-center tarantos">
+        <div className="w-full max-w-lg px-3 m-auto my-0">
           <h1 className="inline-block px-6 py-3 text-xl text-center text-gray-400 bg-gray-800 shadow-2xl tarantos-title">
             En la Terraza: Tarantos Dúo
           </h1>

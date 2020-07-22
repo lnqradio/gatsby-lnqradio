@@ -30,13 +30,19 @@ const NotFoundPage = () => (
       >
         Lolo App
       </Link>
+      <Link
+        to={`/artisticas/trinche/`}
+        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
+      >
+        Trinche
+      </Link>
 
-      <ReactPlayer
-        url={[
-          "https://www.youtube.com/watch?v=CJgRT8dbv2o",
-          "https://www.youtube.com/watch?v=CYtKeQsudeE",
-        ]}
-      />
+      <Link
+        to={`/artisticas/tarantos-duo/`}
+        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
+      >
+        Tarantos Dúo
+      </Link>
     </div>
     <Particles
       style={{ cursor: "crosshair" }}
