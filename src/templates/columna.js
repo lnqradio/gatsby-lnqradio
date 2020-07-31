@@ -1,27 +1,19 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
-import get from "lodash/get"
-import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
-
-import Layout from "../components/layout"
 import { FaSpotify, FaSoundcloud } from "react-icons/fa"
 import { GoLinkExternal } from "react-icons/go"
-import "./columna.css"
-import Img from "gatsby-image"
+import get from "lodash/get"
+import SEO from "../components/seo"
+import Card from "../components/SoundCard"
+import Layout from "../components/layout"
+import PodcastCategorias from "../components/PodcastCategoria"
 
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import {
-  GiSpellBook,
-  GiAstronautHelmet,
-  GiPestleMortar,
-  GiRomanToga,
-} from "react-icons/gi"
-import { MdPersonPin, MdLocalMovies } from "react-icons/md"
-import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
+import "./columna.css"
 
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 const Text = ({ children }) => <p className="my-3 text-lg">{children}</p>
@@ -145,7 +137,7 @@ class ColumnaTemplate extends React.Component {
                   to={`/podcasts/`}
                   class=" px-3 py-1 text-xs uppercase bg-red-500 rounded-full font-bold tracking-wide"
                 >
-                  podcast destacado
+                  Subido recientemente
                 </Link>
               </div>
             ) : (
@@ -170,124 +162,19 @@ class ColumnaTemplate extends React.Component {
               )}
             </div>
           </div>
-          <div className="flex flex-wrap justify-center w-full m-auto posts animation ">
-            <h1 className="block w-full mb-3 text-3xl text-center text-white">
-              Destacadas
-            </h1>
-            {columnas.edges.map((item, i) => (
-              <div
-                key={item.node.id}
-                className="relative flex-auto w-full max-w-md m-3 overflow-hidden bg-gray-800 post animated fadeIn slow"
-              >
-                <div className="relative z-50 h-full px-0 pt-4 mb-20 shadow">
-                  <Link
-                    to={`/columnas/${kebabCase(
-                      item.node.author.name
-                    )}/${kebabCase(item.node.slug)}/`}
-                    className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
-                  >
-                    {item.node.title}
-                  </Link>
-                  <Link
-                    to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                    className="block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
-                  >
-                    x {item.node.author.name}
-                  </Link>
-                  <p className="px-6">{item.node.description.description}</p>
-                  <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
-                    <iframe
-                      width="100%"
-                      height="20"
-                      scrolling="no"
-                      frameborder="no"
-                      title={item.node.title}
-                      className="w-full px-8 transform scale-125 sm:px-12"
-                      allow="autoplay"
-                      src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
-                        item.node.soundcloudTrackID
-                      )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
-                    ></iframe>
-                  </div>
-                </div>
-                <div
-                  className="absolute inset-0 bg-image-hover-opacity"
-                  style={{ opacity: ".05" }}
-                >
-                  <Img
-                    alt="{item.node.title}"
-                    fixed={item.node.heroImage.fixed}
-                  />
-                </div>
-              </div>
-            ))}
+          <div className="flex justify-center w-full max-w-6xl px-6 py-6 m-auto bg-gray-800 home-hero-links md:px-4 md:py-8">
+            <PodcastCategorias />
           </div>
-        </div>
-        <div className="flex justify-center w-full max-w-6xl px-6 py-6 m-auto bg-gray-800 home-hero-links md:py-8">
-          <Link
-            to={`/podcasts/musicales`}
-            className="block font-mono text-base text-red-500 hover:text-white"
-          >
-            <IoMdMusicalNotes />
-
-            <span>musicales</span>
-          </Link>
-          <Link
-            to={`/podcasts/cine`}
-            className="block font-mono text-base text-red-500 hover:text-white"
-          >
-            <MdLocalMovies />
-
-            <span>cine</span>
-          </Link>
-
-          <Link
-            to={`/podcasts/entrevistas/`}
-            className="block font-mono text-base text-red-500 hover:text-white"
-          >
-            <IoMdMicrophone />
-            <span>entrevistas</span>
-          </Link>
-          <Link
-            to={`/podcasts/perfiles`}
-            className="block font-mono text-base text-red-500 hover:text-white"
-          >
-            <MdPersonPin />
-
-            <span>perfiles</span>
-          </Link>
-          <Link
-            to={`/podcasts/historias`}
-            className="block font-mono text-base text-red-500 hover:text-white"
-          >
-            <GiSpellBook />
-
-            <span>historias</span>
-          </Link>
-          <Link
-            to={`/podcasts/psiconautica`}
-            className="block font-mono text-base text-red-500 hover:text-white"
-          >
-            <GiAstronautHelmet />
-
-            <span>psiconáutica</span>
-          </Link>
-          <Link
-            to={`/podcasts/politica`}
-            className="block font-mono text-base text-red-500 hover:text-white"
-          >
-            <GiRomanToga />
-
-            <span>política</span>
-          </Link>
-          <Link
-            to={`/podcasts/intermezzo`}
-            className="block font-mono text-base text-red-500 hover:text-white"
-          >
-            <GiPestleMortar />
-
-            <span>intermezzo</span>
-          </Link>
+          <div className="max-w-4xl mx-auto">
+            <h1 className="block w-full mb-3 text-3xl text-center text-white">
+              Últimas subidas
+            </h1>
+            <div className="grid grid-cols-1 gap-5 row-gap-5 pt-6 mb-12 sm:grid-cols-2 ">
+              {columnas.edges.map((item, i) => (
+                <Card key={item.node.id} card={item.node} />
+              ))}
+            </div>
+          </div>
         </div>
       </Layout>
     )
@@ -311,7 +198,6 @@ export const pageQuery = graphql`
         spotify
       }
       publishDate(locale: "es", fromNow: true)
-
       heroImage {
         fluid(maxWidth: 1600, maxHeight: 500) {
           ...GatsbyContentfulFluid

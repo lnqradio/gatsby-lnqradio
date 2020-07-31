@@ -84,7 +84,12 @@ module.exports = {
         showSpinner: true,
       },
     },
-
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

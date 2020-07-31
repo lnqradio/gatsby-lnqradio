@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useRef } from "react"
 import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import { Canvas, extend, useThree, useRender } from "react-three-fiber"
+//import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import { Canvas, extend, useThree } from "react-three-fiber"
 import { useSpring, a } from "react-spring/three"
 import { Link } from "gatsby"
 
@@ -10,16 +10,6 @@ import { Helmet } from "react-helmet"
 import ReactPlayer from "react-player"
 
 extend({ OrbitControls })
-
-const SpaceShip = () => {
-  const [model, setModel] = useState()
-
-  useEffect(() => {
-    new GLTFLoader().load("/scene.gltf", setModel)
-  })
-
-  return model ? <primitive object={model.scene} /> : null
-}
 
 const Controls = () => {
   const orbitRef = useRef()

@@ -15,6 +15,7 @@ const ArtisticasPage = () => {
             width="100%"
             height="450"
             scrolling="no"
+            title="Si la segunda guerra mundial hubiera ocurrido en un bar"
             frameborder="no"
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/844743511&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"

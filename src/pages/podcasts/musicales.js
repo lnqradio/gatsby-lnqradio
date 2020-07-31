@@ -1,11 +1,11 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { kebabCase } from "lodash"
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { IoMdMusicalNotes } from "react-icons/io"
-import Img from "gatsby-image"
+import PodcastHero from "../../components/PodcastHero"
 
+import Card from "../../components/SoundCard"
 const PodcastPage = () => {
   const data = useStaticQuery(graphql`
     query MusicalesQuery {
@@ -47,59 +47,13 @@ const PodcastPage = () => {
   return (
     <Layout>
       <SEO title="Musicales" />
-
-      <div className="z-10 flex items-center justify-center h-64 px-6 m-0 mb-2 bg-gray-900 md:sticky md:top-0 hero">
-        <h1 className="flex flex-col items-center justify-center text-xl text-center text-white ">
-          <IoMdMusicalNotes className="text-6xl" />
-          <span className="block pt-3 font-mono text-2xl">Musicales</span>
-        </h1>
-      </div>
-      <div className="flex flex-wrap justify-center w-full m-auto posts animation ">
+      <PodcastHero
+        heading="Musicales"
+        icon={<IoMdMusicalNotes className="text-6xl" />}
+      />
+      <div className="grid max-w-6xl grid-cols-1 gap-5 row-gap-5 px-3 pt-6 m-auto mb-12 sm:grid-cols-2 md:grid-cols-3">
         {data.collection.edges.map((item, i) => (
-          <div
-            key={item.node.id}
-            className="relative flex-auto w-full max-w-md m-3 overflow-hidden bg-gray-800 post animated fadeIn slow"
-          >
-            <div className="relative z-50 h-full px-0 pt-4 mb-20 shadow">
-              <Link
-                to={`/columnas/${kebabCase(item.node.author.name)}/${kebabCase(
-                  item.node.slug
-                )}/`}
-                className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
-              >
-                {item.node.title}
-              </Link>
-              <Link
-                to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                className="block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
-              >
-                x {item.node.author.name}
-              </Link>
-              <p className="px-6 text-sm description">
-                {item.node.description.description}
-              </p>
-              <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
-                <iframe
-                  width="100%"
-                  height="20"
-                  scrolling="no"
-                  frameborder="no"
-                  title={item.node.title}
-                  className="w-full px-8 transform scale-125 sm:px-12"
-                  allow="autoplay"
-                  src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
-                    item.node.soundcloudTrackID
-                  )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
-                ></iframe>
-              </div>
-            </div>
-            <div
-              className="absolute inset-0 bg-image-hover-opacity"
-              style={{ opacity: ".2" }}
-            >
-              <Img alt="{item.node.title}" fixed={item.node.heroImage.fixed} />
-            </div>
-          </div>
+          <Card key={item.node.id} card={item.node} />
         ))}
       </div>
     </Layout>

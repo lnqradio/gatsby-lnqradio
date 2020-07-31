@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 import { kebabCase } from "lodash"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Card from "../components/SoundCard"
 import { useStaticQuery, graphql } from "gatsby"
 import "react-awesome-slider/dist/styles.css"
 import Img from "gatsby-image"
-
 import BackgroundSlider from "gatsby-image-background-slider"
 
 import "./index.css"
@@ -136,7 +136,9 @@ const IndexPage = () => {
             background: "rgba(40, 17, 54, 0.6)",
           }}
         >
-          <span className="inline-block text-gray-200">Nuevos episodios</span>{" "}
+          <span className="inline-block text-gray-200">
+            Stream de Nuevos episodios
+          </span>{" "}
           los Viernes a las 20hs
         </h1>
         <iframe
@@ -183,7 +185,7 @@ const IndexPage = () => {
                 Temporada {show.node.temporada}
               </Link>
 
-              <h2 className="max-w-sm px-6 text-2xl leading-normal text-white hover:no-underline">
+              <h2 className="max-w-lg px-6 text-2xl leading-normal text-white hover:no-underline">
                 {show.node.title}{" "}
                 <span className="text-gray-500 opacity-50">
                   ({show.node.episode})
@@ -215,57 +217,9 @@ const IndexPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center py-8 ">
+            <div className="grid grid-cols-1 gap-5 row-gap-5 pt-6 mb-12 sm:grid-cols-2 ">
               {show.node.podcastRelacionados.map((slider, i) => (
-                <div
-                  key={slider.slug}
-                  className="w-full max-w-md m-2 bg-gray-800"
-                >
-                  <div className="relative flex h-56 p-0 m-0 overflow-hidden text-center p slider-item">
-                    <div className="relative z-40 w-full pt-2 mt-2 text-left ">
-                      <Link
-                        to={`/columnas/${kebabCase(
-                          slider.author.name
-                        )}/${kebabCase(slider.slug)}`}
-                        className="block px-5 mt-0 mb-2 font-mono text-2xl text-left text-red-500 lg:pr-12 hover:text-white"
-                      >
-                        {slider.title}
-                      </Link>
-                      <Link
-                        to={`/columnas/${kebabCase(slider.author.name)}/`}
-                        className="block px-6 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
-                      >
-                        x {slider.author.name}
-                      </Link>
-                      <p className="hidden px-5 pb-6 sm:block description">
-                        {slider.description.description}
-                      </p>
-                      <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-2 py-3 bg-gray-800 listen">
-                        <iframe
-                          width="80%"
-                          height="20"
-                          scrolling="no"
-                          title={slider.title}
-                          className="m-auto transform scale-125"
-                          frameborder="no"
-                          allow="autoplay"
-                          src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
-                            slider.soundcloudTrackID
-                          )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
-                        ></iframe>
-                      </div>
-                    </div>
-                    <div
-                      className="absolute inset-0 bg-image-hover-opacity"
-                      style={{ opacity: ".2" }}
-                    >
-                      <Img
-                        alt="{slider.title}"
-                        fixed={slider.heroImage.fixed}
-                      />
-                    </div>
-                  </div>
-                </div>
+                <Card card={slider} />
               ))}
             </div>
             <div className="text-center">
@@ -273,7 +227,7 @@ const IndexPage = () => {
                 to={`/podcasts/`}
                 className="px-4 py-2 my-6 font-mono text-lg text-white uppercase transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
               >
-                o escuchá los últimas.
+                escuchá los últimas
               </Link>
             </div>
           </div>

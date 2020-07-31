@@ -1,6 +1,6 @@
 .canvas {
   width: 100%;
-  height: 100%;
+  height: 100vh !important;
   margin: 0;
   padding: 0;
   -webkit-touch-callout: none;
@@ -28,10 +28,32 @@ canvas {
 
 body.domFiber .inner-header nav {
   opacity: 0 !important;
+  transform: translateY(-50px);
 }
 
 body.domFiber header {
   background: transparent;
+}
+body.domFiber {
+  background-image: none;
+}
+
+body.domFiber .headroom-wrapper {
+  position: absolute;
+  top: 0;
+}
+
+body.domFiber .nav-search {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.logo {
+  transition: all 1s;
+}
+
+body.domFiber .logo {
+  transform: scale(0.7);
 }
 
 .fiberAudio {
@@ -159,7 +181,7 @@ audio {
   .misiles img {
     width: 90px;
   }
-  button {
+  .misiles button {
     bottom: -15px;
   }
   audio {

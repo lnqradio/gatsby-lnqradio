@@ -3,46 +3,35 @@ import Particles from "react-particles-js"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ReactPlayer from "react-player"
+//import ReactPlayer from "react-player"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="Laboratorios Garmendia" />
     <div className="relative z-50 max-w-2xl p-6 m-auto text-left md:p-12">
-      <h2 className="w-full py-6 text-xl italic text-white">
-        Laboratorios Garmendia
-      </h2>
-      <h3 className="w-full py-6 text-base italic text-white">Flaming Lips</h3>
-      <Link
-        to={`/artisticas/flaming-lynch/`}
-        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
-      >
-        Flaming Lynch
-      </Link>
-      <Link
-        to={`/artisticas/jesus/`}
-        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
-      >
-        Jesús
-      </Link>
-      <Link
-        to={`/artisticas/loloapps/`}
-        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
-      >
-        Lolo App
-      </Link>
-      <Link
-        to={`/artisticas/trinche/`}
-        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
-      >
-        Trinche
-      </Link>
-
-      <Link
-        to={`/artisticas/tarantos-duo/`}
-        className="block my-2 mr-3 font-bold text-red-600 hover:text-white "
-      >
-        Tarantos Dúo
-      </Link>
+      <h3 className="w-full py-6 text-2xl text-center text-white uppercase">
+        Artisticas Flaming Lips
+      </h3>
+      <div className="grid grid-cols-3 gap-2">
+        <Link to={`/artisticas/positional-audio/`} className="artistica-card">
+          Audio posicional
+          <span className="pl-2 text-xs text-white">Nuevo!</span>
+        </Link>
+        <Link to={`/artisticas/flaming-lynch/`} className="artistica-card">
+          Flaming Lynch
+        </Link>
+        <Link to={`/artisticas/jesus/`} className="artistica-card">
+          Jesús
+        </Link>
+        <Link to={`/artisticas/loloapps/`} className="artistica-card">
+          Lolo App
+        </Link>
+        <Link to={`/artisticas/trinche/`} className="artistica-card">
+          Trinche
+        </Link>
+        <Link to={`/artisticas/fiber/`} className="artistica-card">
+          Fiber
+        </Link>
+      </div>
     </div>
     <Particles
       style={{ cursor: "crosshair" }}

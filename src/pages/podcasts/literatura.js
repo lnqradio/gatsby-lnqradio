@@ -1,17 +1,17 @@
-import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import React from "react"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { GiPestleMortar } from "react-icons/gi"
 import Card from "../../components/SoundCard"
 import PodcastHero from "../../components/PodcastHero"
+import { GiBookCover } from "react-icons/gi"
 
-const PodcastPage = () => {
+const LiteraturaPage = () => {
   const data = useStaticQuery(graphql`
-    query IntermezzoQuery {
+    query LiteraturaQuery {
       collection: allContentfulColumnas(
         sort: { fields: [destacar], order: ASC }
-        filter: { author: {}, tipoDePodcast: { eq: "Intermezzo" } }
+        filter: { author: {}, tipoDePodcast: { eq: "Literatura" } }
       ) {
         edges {
           node {
@@ -25,6 +25,7 @@ const PodcastPage = () => {
             soundcloud {
               soundcloud
             }
+            tipoDePodcast
             heroImage {
               fixed(width: 600, height: 300) {
                 ...GatsbyContentfulFixed
@@ -46,12 +47,12 @@ const PodcastPage = () => {
 
   return (
     <Layout>
-      <SEO title="Intermezzo" />
+      <SEO title="Literatura" />
       <PodcastHero
-        heading="Intermezzo"
-        icon={<GiPestleMortar className="text-6xl" />}
+        heading="Literatura"
+        icon={<GiBookCover className="text-6xl" />}
       />
-      <div className="flex flex-wrap justify-center w-full m-auto posts animation ">
+      <div className="grid max-w-6xl grid-cols-1 gap-5 row-gap-5 px-3 pt-6 m-auto mb-12 sm:grid-cols-2 md:grid-cols-3">
         {data.collection.edges.map((item, i) => (
           <Card key={item.node.id} card={item.node} />
         ))}
@@ -60,4 +61,4 @@ const PodcastPage = () => {
   )
 }
 
-export default PodcastPage
+export default LiteraturaPage

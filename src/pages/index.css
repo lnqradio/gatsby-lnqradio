@@ -130,6 +130,24 @@ h2.text-red-500:hover {
   height: 90vh;
 }
 
+.inline-soundcloud {
+  transform: scale(1.35) translateX(62px);
+  padding: 0;
+  max-width: 400px;
+}
+
+.artistica-card {
+  @apply flex flex-col-reverse items-center justify-center h-24 my-2 mr-3 font-bold text-center text-red-600 transition-all duration-200 bg-gray-800;
+}
+
+.post .outline-none {
+  outline: 0 none !important;
+}
+
+.artistica-card:hover {
+  @apply text-white opacity-75;
+}
+
 .posts.soundcloud .post .soundcloud-player {
   transition: all 2s;
 }
@@ -448,7 +466,7 @@ iframe {
 }
 
 .home-hero-links {
-  @apply flex flex-wrap mb-12 border-b border-red-600;
+  @apply flex flex-wrap mb-12;
   background: transparent;
 }
 
@@ -665,4 +683,16 @@ iframe {
 }
 
 .article blockquote {
+}
+
+main .controls {
+  text-align: center;
+  padding: 0.5em 0;
+  background: #333e5a;
+  color: #fff;
+}
+main canvas {
+  padding: 20px;
+  margin: 0 auto;
+  display: block;
 }

@@ -1,5 +1,7 @@
 import React from "react"
 import Layout from "../../components/layout"
+import { Helmet } from "react-helmet"
+
 import SEO from "../../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -9,7 +11,9 @@ const TrinchePage = () => {
   return (
     <Layout>
       <SEO title="Carlovich. No te voy a mentir " />
-
+      <Helmet>
+        <body className="domFiber" />
+      </Helmet>
       <div className="flex items-center justify-center pt-32 carlovich">
         <div className="w-full max-w-xl m-auto my-0 ">
           <h1 className="inline-block max-w-4xl px-6 py-3 text-xl text-center text-gray-400 bg-gray-800 shadow-2xl tarantos-title">
@@ -22,7 +26,7 @@ const TrinchePage = () => {
             scrolling="no"
             frameBorder="no"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/788682118&color=%23281136&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/788682118&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
           ></iframe>
           <p
             className="px-8 py-12 mb-6 text-base"

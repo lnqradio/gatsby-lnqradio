@@ -40,6 +40,8 @@ header nav a {
 }
 
 header .nav-search {
+  transition: all 1s;
+  will-change: transform;
 }
 
 header nav .live-link:hover {
@@ -91,6 +93,8 @@ header {
 */
 header nav {
   @apply mt-2;
+  transition: all 1s;
+  will-change: transform;
 }
 
 .live-show {

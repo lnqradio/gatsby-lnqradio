@@ -24,8 +24,12 @@ function SubscribeForm() {
         Suscribite para recibir las novedades
       </span>
       <div className="subscribe-form__content">
+        <label className="hidden" for="mail-chimp">
+          Mailchimp
+        </label>
         <input
           className="subscribe-form__input"
+          id="mail-chimp"
           type="email"
           onChange={handleChange}
           value={email}
