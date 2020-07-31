@@ -3,33 +3,43 @@ import Particles from "react-particles-js"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Helmet } from "react-helmet"
+import { GiAstronautHelmet } from "react-icons/gi"
+
 //import ReactPlayer from "react-player"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="Laboratorios Garmendia" />
+    <Helmet>
+      <body className="domFiber" />
+    </Helmet>
     <div className="relative z-50 max-w-2xl p-6 m-auto text-left md:p-12">
-      <h3 className="w-full py-6 text-2xl text-center text-white uppercase">
+      <h3 className="flex flex-col items-center w-full py-6 mt-24 text-2xl text-center text-white uppercase">
+        <GiAstronautHelmet className="my-3 text-6xl" />
         Artisticas Flaming Lips
       </h3>
       <div className="grid grid-cols-3 gap-2">
-        <Link to={`/artisticas/positional-audio/`} className="artistica-card">
-          Audio posicional
-          <span className="pl-2 text-xs text-white">Nuevo!</span>
-        </Link>
-        <Link to={`/artisticas/flaming-lynch/`} className="artistica-card">
+        <Link
+          to={`/artisticas/flaming-lynch/`}
+          className="font-mono uppercase artistica-card"
+        >
           Flaming Lynch
+          <span className="pl-2 text-xs text-white opacity-25">
+            Audio posicional
+          </span>
         </Link>
-        <Link to={`/artisticas/jesus/`} className="artistica-card">
-          Jesús
+        <Link
+          to={`/artisticas/human-beings/`}
+          className="font-mono uppercase artistica-card"
+        >
+          Human beings
         </Link>
-        <Link to={`/artisticas/loloapps/`} className="artistica-card">
+
+        <Link
+          to={`/artisticas/loloapps/`}
+          className="font-mono uppercase artistica-card"
+        >
           Lolo App
-        </Link>
-        <Link to={`/artisticas/trinche/`} className="artistica-card">
-          Trinche
-        </Link>
-        <Link to={`/artisticas/fiber/`} className="artistica-card">
-          Fiber
         </Link>
       </div>
     </div>

@@ -199,8 +199,8 @@ audio {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  z-index: -1;
-  opacity: 0.1;
+  z-index: 0;
+  opacity: 0.05;
 }
 
 .fullscreen-bg__video {
