@@ -131,7 +131,7 @@ h2.text-red-500:hover {
 }
 
 .inline-soundcloud {
-  transform: scale(1.35) translateX(62px);
+  transform: scale(1.35) translateX(55px);
   padding: 0;
   max-width: 400px;
 }

@@ -6,9 +6,8 @@ import "./style.css"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { Link } from "gatsby"
 import { IoIosArrowBack } from "react-icons/io"
-
+import { PositionalAudio, Stars } from "drei"
 import { Helmet } from "react-helmet"
-import ReactPlayer from "react-player"
 
 extend({ OrbitControls })
 
@@ -74,6 +73,9 @@ function Swarm({ count, mouse }) {
       <instancedMesh ref={mesh} args={[null, null, count]}>
         <sphereBufferGeometry attach="geometry" args={[1, 32, 32]} />
         <meshPhongMaterial attach="material" />
+        <Suspense fallback={null}>
+          <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/3GgN5fumOZ4b5UxRgcQxr4/c804b98a51bbb398c10f55222ac2dfa0/18_-_MFL_-_Human_beings.mp3" />
+        </Suspense>
       </instancedMesh>
     </>
   )
@@ -127,18 +129,6 @@ const FiberDemo = props => {
           <span className="px-2">Boton derecho mouse: mover cámara</span>
         </div>
       </div>
-      <div className="w-64 misiles">
-        <div className="player-wrapper">
-          <ReactPlayer
-            className=" react-player"
-            url="https://soundcloud.com/lnqescech/18-mfl-human-beings&auto_play=true&show_artwork=false"
-            height="80px"
-            width="100%"
-            light="true"
-            controls="true"
-          />
-        </div>
-      </div>
 
       <div className="w-full h-screen canvas" onMouseMove={onMouseMove}>
         <Canvas
@@ -158,25 +148,17 @@ const FiberDemo = props => {
             color="#1d1b38"
           />
           <Controls />
-          <Swarm mouse={mouse} count={55} />
-          <Suspense fallback={null}>
-            <Effects />
-          </Suspense>
+          <Swarm mouse={mouse} count={9} />
+
+          <Stars
+            radius={100} // Radius of the inner sphere (default=100)
+            depth={50} // Depth of area where stars should fit (default=50)
+            count={5000} // Amount of stars (default=5000)
+            factor={4} // Size factor (default=4)
+            saturation={1} // Saturation 0-1 (default=0)
+            fade // Faded dots (default=false)
+          />
         </Canvas>
-        <div className="fullscreen-bg">
-          <video
-            loop
-            muted
-            autoplay=""
-            poster="img/videoframe.jpg"
-            className="fullscreen-bg__video"
-          >
-            <source
-              src="https://videos.ctfassets.net/mai25em38k9q/b4zP4YL30d0ldA1sGljqu/d58238d856d714b2daf18a20995cf436/demo.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div>
       </div>
     </>
   )

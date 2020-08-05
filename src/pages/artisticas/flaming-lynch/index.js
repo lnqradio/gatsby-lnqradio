@@ -2,11 +2,18 @@ import React, { useRef, useState, Suspense } from "react"
 //R3F
 import { Canvas, useFrame } from "react-three-fiber"
 // Deai - R3F
-import { softShadows, MeshWobbleMaterial, OrbitControls } from "drei"
+import {
+  softShadows,
+  MeshWobbleMaterial,
+  OrbitControls,
+  PositionalAudio,
+  Text,
+  HTML,
+  Stars,
+} from "drei"
 //Components
 // React Spring
 import { useSpring, a } from "react-spring/three"
-import { PositionalAudio, Text, Stars } from "drei"
 import { Helmet } from "react-helmet"
 import { IoIosArrowBack } from "react-icons/io"
 
@@ -42,7 +49,13 @@ const SpinningMesh = ({ position, color, speed, args }) => {
         attach="material"
         factor={0.6}
       />
-      <Suspense fallback={null}>
+      <Suspense
+        fallback={
+          <HTML center>
+            <h1 className="w-32 text-white">Cargando audio</h1>
+          </HTML>
+        }
+      >
         <PositionalAudio url="https://assets.ctfassets.net/mai25em38k9q/2qHoL9NrIDZWOJylxocaDX/cf74660368fceb495674db96b500267e/MFL-Flaming-Lynch.mp3" />
       </Suspense>
     </a.mesh>
@@ -140,10 +153,10 @@ export default () => {
           </mesh>
 
           <SpinningMesh
-            position={[0, 1, 5]}
+            position={[0, 0, 3]}
             color="#7f0f32"
             args={[3, 2, 1]}
-            speed={1}
+            speed={0.05}
           />
         </group>
         <Text

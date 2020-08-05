@@ -8,7 +8,7 @@
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "drei": "0.0.64",
+    "drei": "0.0.70",
     "gatsby": "^2.22.6",
     "gatsby-background-image": "^1.1.1",
     "gatsby-image": "^2.2.30",
@@ -51,7 +51,8 @@
     "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "^1.2.0",
     "three": "^0.118.3",
-    "threejs-meshline": "2.0.10",
+    "nice-color-palettes": "3.0.0",
+    "three.meshline": "1.2.0",
     "twin.macro": "^1.7.0",
     "typography": "^0.16.19",
     "typography-theme-elk-glen": "^0.16.19"

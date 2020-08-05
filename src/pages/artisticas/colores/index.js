@@ -1,14 +1,13 @@
 import * as THREE from "three"
-import React, { useEffect, useRef, Suspense } from "react"
-import { useSprings, a } from "react-spring/three"
-import { Canvas, extend, useThree } from "react-three-fiber"
+import React, { useEffect, useRef, useState, useMemo, Suspense } from "react"
+import { Canvas, extend, useFrame, useThree } from "react-three-fiber"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
-//import "./styles.css"
 import { Helmet } from "react-helmet"
-import { IoIosArrowBack } from "react-icons/io"
-import { Link } from "gatsby"
-import ReactPlayer from "react-player"
+import Effects from "./Effects"
 import { PositionalAudio, Stars, HTML } from "drei"
+import { IoIosArrowBack } from "react-icons/io"
+import niceColors from "nice-color-palettes"
+import { Link } from "gatsby"
 
 extend({ OrbitControls })
 
@@ -16,70 +15,75 @@ const Controls = () => {
   const orbitRef = useRef()
   const { camera, gl } = useThree()
 
-  return (
-    <orbitControls autoRotate args={[camera, gl.domElement]} ref={orbitRef} />
-  )
+  return <orbitControls args={[camera, gl.domElement]} ref={orbitRef} />
 }
 
-const number = 9
-const colors = ["#e80e2e", "#e80e2e", "#e80e2e"]
-const random = i => {
-  const r = Math.random()
-  return {
-    position: [50 - Math.random() * 50, 50 - Math.random() * 50, i * 3.5],
-    color: colors[Math.round(Math.random() * (colors.length - 1))],
-    scale: [1 + r * 50, 1 + r * 50, 1 + r * 50],
-    rotation: [0, 0, THREE.Math.degToRad(Math.round(Math.random()) * 45)],
-  }
-}
+const tempObject = new THREE.Object3D()
+const tempColor = new THREE.Color()
+const colors = new Array(1000)
+  .fill()
+  .map(() => niceColors[15][Math.floor(Math.random() * 1)])
 
-const data = new Array(number).fill().map(() => {
-  return {
-    color: colors[Math.round(Math.random() * (colors.length - 1))],
-    args: [0.1 + Math.random() * 9, 0.1 + Math.random() * 9, 10],
-  }
-})
-
-function Content() {
-  const [springs, set] = useSprings(number, i => ({
-    from: random(i),
-    ...random(i),
-    config: { mass: 20, tension: 150, friction: 50 },
-  }))
-  useEffect(
+function Boxes() {
+  const [hovered, set] = useState()
+  const colorArray = useMemo(
     () =>
-      void setInterval(() => set(i => ({ ...random(i), delay: i * 40 })), 3000),
+      Float32Array.from(
+        new Array(1000)
+          .fill()
+          .flatMap((_, i) => tempColor.set(colors[i]).toArray())
+      ),
     []
   )
-  return data.map((d, index) => (
-    <a.mesh key={index} {...springs[index]} castShadow receiveShadow>
-      <boxBufferGeometry attach="geometry" args={d.args} />
-      <a.meshStandardMaterial
-        attach="material"
-        wireframe
-        color={springs[index].color}
-        roughness={0.75}
-        metalness={0.5}
-      />
-    </a.mesh>
-  ))
-}
 
-function Lights() {
+  const ref = useRef()
+  const previous = useRef()
+  useEffect(() => void (previous.current = hovered), [hovered])
+
+  useFrame(state => {
+    const time = state.clock.getElapsedTime()
+    ref.current.rotation.x = Math.sin(time / 15)
+    ref.current.rotation.y = Math.sin(time / 15)
+    let i = 0
+    for (let x = 0; x < 10; x++)
+      for (let y = 0; y < 10; y++)
+        for (let z = 0; z < 10; z++) {
+          const id = i++
+          tempObject.position.set(5 - x, 5 - y, 5 - z)
+          tempObject.rotation.y =
+            Math.sin(x / 15 + time) +
+            Math.sin(y / 15 + time) +
+            Math.sin(z / 15 + time)
+          tempObject.rotation.z = tempObject.rotation.y * 1
+          if (hovered !== previous.current) {
+            tempColor
+              .set(id === hovered ? "white" : colors[id])
+              .toArray(colorArray, id * 3)
+            ref.current.geometry.attributes.color.needsUpdate = true
+          }
+          const scale = id === hovered ? 1 : 1
+          tempObject.scale.set(scale, scale, scale)
+          tempObject.updateMatrix()
+          ref.current.setMatrixAt(id, tempObject.matrix)
+        }
+    ref.current.instanceMatrix.needsUpdate = true
+  })
+
   return (
-    <group>
-      <pointLight intensity={0.3} />
-      <ambientLight intensity={2} />
-      <spotLight
-        castShadow
-        intensity={0.2}
-        angle={Math.PI / 7}
-        position={[150, 150, 250]}
-        penumbra={1}
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
-      />
-    </group>
+    <instancedMesh
+      ref={ref}
+      args={[null, null, 1000]}
+      onPointerMove={e => set(e.instanceId)}
+      onPointerOut={e => set(undefined)}
+    >
+      <boxBufferGeometry attach="geometry" args={[0.15, 0.15, 0.15]}>
+        <instancedBufferAttribute
+          attachObject={["attributes", "color"]}
+          args={[colorArray, 3]}
+        />
+      </boxBufferGeometry>
+      <meshPhongMaterial attach="material" vertexColors={THREE.VertexColors} />
+    </instancedMesh>
   )
 }
 
@@ -120,7 +124,7 @@ export default () => {
       >
         <IoIosArrowBack className="w-6 h-6 text-2xl " />
       </Link>
-      <div className="fixed bottom-0 w-full">
+      <div className="fixed bottom-0 z-50 w-full">
         <div className="flex flex-col justify-center py-2 text-xs font-bold text-center text-red-600 md:flex-row title">
           <span className="px-2">Scroll hace zoom </span>
           <span className="px-2">Boton izquierdo mouse: Rotar cámara 360°</span>
@@ -131,13 +135,13 @@ export default () => {
       <div className="w-full h-screen canvas">
         {isBrowser && (
           <Canvas
-            className="fixed inset-0 cursor-move"
+            className="fixed inset-0 cursor-move "
             shadowMap
-            camera={{ position: [0, 0, 100], fov: 100 }}
+            gl={{ antialias: false, alpha: false }}
+            camera={{ position: [0, 0, 100], fov: 20 }}
+            onCreated={({ gl }) => gl.setClearColor("#000")}
           >
-            <Lights />
             <Controls />
-            <Content />
             <Suspense
               fallback={
                 <HTML center>
@@ -147,14 +151,11 @@ export default () => {
             >
               <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/4dxdWME11OG0flNUssdGqM/fbb55915e5ae4aa5a8449d98247bd5b0/16_-_MFL_-_Lolo_app.mp3" />
             </Suspense>
-            <Stars
-              radius={100} // Radius of the inner sphere (default=100)
-              depth={50} // Depth of area where stars should fit (default=50)
-              count={5000} // Amount of stars (default=5000)
-              factor={4} // Size factor (default=4)
-              saturation={1} // Saturation 0-1 (default=0)
-              fade // Faded dots (default=false)
-            />
+            <ambientLight intensity={0.1} />
+            {/* A light to help illumnate the spinning boxes */}
+            <pointLight position={[-10, 0, -20]} intensity={0.5} />
+            <pointLight position={[0, -10, 0]} intensity={0.5} />
+            <Boxes />
           </Canvas>
         )}
       </div>

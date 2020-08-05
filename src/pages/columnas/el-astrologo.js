@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Img from "gatsby-image"
+import Card from "../../components/SoundCard"
 
 const AstrologoPage = () => {
   const data = useStaticQuery(graphql`
@@ -85,7 +86,7 @@ const AstrologoPage = () => {
       <div className="flex flex-col md:flex-row">
         <div className="inset-x-0 top-0 z-50 hidden w-full p-6 mb-0 bg-gray-800 hero md:p-0 xl:sticky md:w-48 md:inline-block">
           <div className="flex flex-wrap justify-center max-w-4xl m-auto authors md:pt-6 md:justify-start md:px-0 md:sticky md:top-0 ">
-            <h4 className="hidden px-3 pt-3 text-white md:inline-block md:pb-3">
+            <h4 className="hidden px-3 pt-6 text-white md:inline-block md:pb-3">
               Autores
             </h4>
             {data.autores.edges.map((item, i) => (
@@ -101,7 +102,7 @@ const AstrologoPage = () => {
         </div>
 
         <section className="flex flex-col justify-center w-full">
-          <div className="flex flex-col items-center w-full p-8 m-auto jutify-center md:my-12">
+          <div className="flex flex-col items-center justify-center w-full p-8 m-auto md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
               <div className="flex items-center justify-center w-full ">
                 <Img
@@ -122,57 +123,12 @@ const AstrologoPage = () => {
               </AnchorLink>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center w-full px-6 m-auto posts soundcloud">
+          <div className="grid max-w-6xl grid-cols-1 gap-5 row-gap-5 px-6 pt-6 m-auto mb-12 md:grid-cols-1 lg:grid-cols-2">
             {data.contenful.edges.map((item, i) => (
-              <div
-                key={item.node.slug}
-                className="relative flex-auto w-full max-w-md m-3 overflow-hidden bg-gray-800 post animated fadeIn slow"
-              >
-                <div className="relative z-50 h-full px-0 pt-4 mb-20 shadow">
-                  <Link
-                    to={`/columnas/${kebabCase(
-                      item.node.author.name
-                    )}/${kebabCase(item.node.slug)}/`}
-                    className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
-                  >
-                    {item.node.title}
-                  </Link>
-                  <Link
-                    to={`/columnas/${kebabCase(item.node.author.name)}/`}
-                    className="hidden px-6 pb-1 mb-32 font-mono text-base text-gray-500 hover:text-white"
-                  >
-                    x {item.node.author.name}
-                  </Link>
-                  <p className="px-6 pb-6 text-sm description">
-                    {item.node.description.description}
-                  </p>
-                  <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-1 py-3 bg-gray-800 listen">
-                    <iframe
-                      width="100%"
-                      height="20"
-                      scrolling="no"
-                      frameborder="no"
-                      title={item.node.title}
-                      className="w-full px-12 transform scale-125 md:px-18"
-                      allow="autoplay"
-                      src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${kebabCase(
-                        item.node.soundcloudTrackID
-                      )}&color=%23281136&inverse=true&auto_play=false&show_user=false`}
-                    ></iframe>
-                  </div>
-                </div>
-                <div
-                  className="absolute inset-0 bg-image-hover-opacity"
-                  style={{ opacity: ".1" }}
-                >
-                  <Img
-                    alt="{item.node.title}"
-                    fixed={item.node.heroImage.fixed}
-                  />
-                </div>
-              </div>
+              <Card key={item.node.id} card={item.node} />
             ))}
           </div>
+
           <aside
             id="author-player"
             className="relative flex items-center justify-center w-full min-h-screen px-6 m-auto bg-gray-800"

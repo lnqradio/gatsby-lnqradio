@@ -131,15 +131,17 @@ const IndexPage = () => {
         </Link>
 
         <h1
-          className="inline-block px-4 py-6 mt-24 font-mono text-base text-center text-white shadow-sm sm:px-8 md:mt-4 sm:text-left md:text-xl md:px-8"
+          className="inline-block px-4 py-6 mt-24 font-mono text-base text-center text-white shadow-sm sm:px-8 md:mt-4 sm:text-left md:text-xl md:px-8 hover:underline"
           style={{
             background: "rgba(40, 17, 54, 0.6)",
           }}
         >
-          <span className="inline-block text-gray-200">
-            Stream de Nuevos episodios
-          </span>{" "}
-          los Viernes a las 20hs
+          <Link to={`/vivo/`} className="text-red-400">
+            <span className="inline-block text-gray-200">
+              Stream de Nuevos episodios
+            </span>{" "}
+            los Viernes a las 20hs
+          </Link>
         </h1>
         <iframe
           border="0"
@@ -217,12 +219,15 @@ const IndexPage = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-5 row-gap-5 pt-6 mb-12 sm:grid-cols-2 ">
-              {show.node.podcastRelacionados.map((slider, i) => (
-                <Card card={slider} />
-              ))}
-            </div>
-            <div className="text-center">
+            {show.node.podcastRelacionados && (
+              <div className="grid grid-cols-1 gap-5 row-gap-5 pt-6 mb-12 sm:grid-cols-2 ">
+                {show.node.podcastRelacionados.map((slider, i) => (
+                  <Card card={slider} />
+                ))}
+              </div>
+            )}
+
+            <div className="mt-16 text-center blocks">
               <Link
                 to={`/podcasts/`}
                 className="px-4 py-2 my-6 font-mono text-lg text-white uppercase transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"

@@ -12,19 +12,19 @@ const Toggle = props => {
   return (
     <div>
       <animated.div
-        className="absolute inset-0 z-40 p-6 pr-12 bg-gray-800"
+        className="absolute inset-0 z-40 px-4 pt-4 pb-2 bg-gray-800"
         style={fade}
       >
         <Link
           to={`/columnas/${kebabCase(props.author)}/${kebabCase(props.slug)}/`}
-          className="block pr-3 mb-3 font-mono text-lg text-red-500 md:text-xl lg:text-xl title hover:text-white"
+          className="block pr-12 mb-3 font-mono text-lg text-red-500 md:text-xl lg:text-xl title hover:text-white"
         >
           {props.title}
         </Link>
 
-        <p className="text-base">{props.text}</p>
+        <p className="text-base ">{props.text}</p>
         <button
-          className="absolute bottom-0 left-0 right-0 flex items-center justify-between w-full p-2 px-6 font-mono text-center bg-gray-800 outline-none listen hover:text-red-500"
+          className="absolute bottom-0 left-0 right-0 flex items-center justify-between w-full p-2 px-4 font-mono text-center bg-gray-800 outline-none listen hover:text-red-500"
           onClick={() => setToggle(!isToggled)}
         >
           <span className="text-white">By {props.author}</span>
@@ -32,7 +32,7 @@ const Toggle = props => {
         </button>
       </animated.div>
       <button
-        className="absolute top-0 right-0 z-50 px-4 py-6 text-white border-none outline-none hover:text-red-500"
+        className="absolute top-0 right-0 z-50 p-5 px-4 text-white border-none outline-none hover:text-red-500"
         onClick={() => setToggle(!isToggled)}
       >
         <IoMdEye className="text-2xl " />

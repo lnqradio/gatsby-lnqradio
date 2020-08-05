@@ -24,9 +24,6 @@ const NotFoundPage = () => (
           className="font-mono uppercase artistica-card"
         >
           Flaming Lynch
-          <span className="pl-2 text-xs text-white opacity-25">
-            Audio posicional
-          </span>
         </Link>
         <Link
           to={`/artisticas/human-beings/`}
@@ -40,6 +37,24 @@ const NotFoundPage = () => (
           className="font-mono uppercase artistica-card"
         >
           Lolo App
+        </Link>
+        <Link
+          to={`/artisticas/fiber/`}
+          className="font-mono uppercase artistica-card"
+        >
+          Fiber
+        </Link>
+        <Link
+          to={`/artisticas/colores/`}
+          className="font-mono uppercase artistica-card"
+        >
+          Colores
+        </Link>
+        <Link
+          to={`/artisticas/particles/`}
+          className="font-mono uppercase artistica-card"
+        >
+          Particulas
         </Link>
       </div>
     </div>

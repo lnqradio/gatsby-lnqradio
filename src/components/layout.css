@@ -77,3 +77,24 @@ footer a:hover {
     background: #1b0c25;
   }
 }
+
+.custom-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape svg {
+  position: relative;
+  display: block;
+  width: calc(140% + 1.3px);
+  height: 208px;
+}
+
+.custom-shape .shape-fill {
+  @apply text-gray-800 fill-current;
+}
