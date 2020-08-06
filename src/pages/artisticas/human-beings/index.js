@@ -1,7 +1,6 @@
 import * as THREE from "three"
 import React, { Suspense, useCallback, useRef, useMemo } from "react"
 import { Canvas, extend, useThree, useFrame } from "react-three-fiber"
-import Effects from "./Effects"
 import "./style.css"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { Link } from "gatsby"
@@ -118,7 +117,7 @@ const FiberDemo = props => {
       <Link
         className="fixed bottom-0 left-0 z-50 items-center justify-end hidden p-3 m-3 text-right text-white lg:flex hover:text-red-600 "
         activeClassName="active"
-        to="/garmendia/"
+        to="/artisticas/"
       >
         <IoIosArrowBack className="w-6 h-6 text-2xl " />
       </Link>
@@ -141,14 +140,14 @@ const FiberDemo = props => {
           }}
         >
           <ambientLight intensity={0.1} />
-          <pointLight position={[100, 100, 100]} intensity={2.2} />
+          <pointLight position={[100, 100, 100]} intensity={0.2} />
           <pointLight
             position={[-100, -100, -100]}
             intensity={1}
-            color="#1d1b38"
+            color="white"
           />
           <Controls />
-          <Swarm mouse={mouse} count={9} />
+          <Swarm mouse={mouse} count={17} />
 
           <Stars
             radius={100} // Radius of the inner sphere (default=100)

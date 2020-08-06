@@ -1,10 +1,10 @@
 import React from "react"
 import Particles from "react-particles-js"
 import { Link } from "gatsby"
+import { GiAstronautHelmet } from "react-icons/gi"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
-import { GiAstronautHelmet } from "react-icons/gi"
 
 //import ReactPlayer from "react-player"
 const NotFoundPage = () => (
@@ -39,22 +39,22 @@ const NotFoundPage = () => (
           Lolo App
         </Link>
         <Link
-          to={`/artisticas/fiber/`}
+          to={`/artisticas/elastrologo/`}
           className="font-mono uppercase artistica-card"
         >
-          Fiber
+          El Astrólogo
         </Link>
         <Link
-          to={`/artisticas/colores/`}
+          to={`/artisticas/movimiento/`}
           className="font-mono uppercase artistica-card"
         >
-          Colores
+          movimiento
         </Link>
         <Link
-          to={`/artisticas/particles/`}
+          to={`/artisticas/lamuerte/`}
           className="font-mono uppercase artistica-card"
         >
-          Particulas
+          La Muerte
         </Link>
       </div>
     </div>

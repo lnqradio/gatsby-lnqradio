@@ -1,18 +1,17 @@
 import * as THREE from "three"
-import React, { useCallback, useEffect, useRef, useMemo, Suspense } from "react"
+import React, { useRef, useMemo, Suspense } from "react"
 import { Canvas, extend, useFrame, useThree } from "react-three-fiber"
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer"
 import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass"
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass"
 import { AfterimagePass } from "three/examples/jsm/postprocessing/AfterimagePass"
-import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader"
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass"
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 //import "./styles.css"
 import { Helmet } from "react-helmet"
 
-import { PositionalAudio, Stars, HTML } from "drei"
+import { PositionalAudio, HTML } from "drei"
 import { IoIosArrowBack } from "react-icons/io"
 
 import { Link } from "gatsby"
@@ -131,24 +130,10 @@ function Lights() {
   )
 }
 
-function Dolly() {
-  // This one makes the camera move in and out
-  useFrame(({ clock, camera }) =>
-    camera.updateProjectionMatrix(
-      void (camera.position.z = 50 + Math.sin(clock.getElapsedTime()) * 30)
-    )
-  )
-  return null
-}
-
 export default () => {
   const isBrowser = typeof window !== "undefined"
   const mouse = useRef([0, 0])
-  const onMouseMove = useCallback(
-    ({ clientX: x, clientY: y }) =>
-      (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]),
-    []
-  )
+
   return (
     <>
       <Helmet>
@@ -174,12 +159,12 @@ export default () => {
           </div>
           <small className="block py-3 pl-3">Se recomienda auriculares</small>
         </div>
-        <h2 className="text-white">16 · Momento Flaming Lips: Lolo app</h2>
+        <h2 className="text-white">Momento Flaming Lips: La Muerte</h2>
       </div>
       <Link
         className="fixed bottom-0 left-0 z-50 items-center justify-end hidden p-3 m-3 text-right text-white lg:flex hover:text-red-600 "
         activeClassName="active"
-        to="/garmendia/"
+        to="/artisticas/"
       >
         <IoIosArrowBack className="w-6 h-6 text-2xl " />
       </Link>
@@ -197,7 +182,7 @@ export default () => {
             <Canvas
               className="fixed inset-0 cursor-move"
               shadowMap
-              camera={{ position: [0, 0, 100], fov: 100 }}
+              camera={{ position: [0, 0, 50], fov: 60 }}
             >
               <Lights />
 
@@ -221,7 +206,7 @@ export default () => {
                   </HTML>
                 }
               >
-                <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/4dxdWME11OG0flNUssdGqM/fbb55915e5ae4aa5a8449d98247bd5b0/16_-_MFL_-_Lolo_app.mp3" />
+                <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/49c8unScoxc8AtLirOjUd6/9fd30c772d5026d6ba5f691549d18f18/7_-_MFL_-_La_muerte.mp3" />
               </Suspense>
             </Canvas>
           </div>

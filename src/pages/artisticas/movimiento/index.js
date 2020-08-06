@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState, useMemo, Suspense } from "react"
 import { Canvas, extend, useFrame, useThree } from "react-three-fiber"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { Helmet } from "react-helmet"
-import Effects from "./Effects"
-import { PositionalAudio, Stars, HTML } from "drei"
+import { PositionalAudio, HTML } from "drei"
 import { IoIosArrowBack } from "react-icons/io"
 import niceColors from "nice-color-palettes"
 import { Link } from "gatsby"
+import { EffectComposer, Bloom } from "react-postprocessing"
 
 extend({ OrbitControls })
 
@@ -115,12 +115,12 @@ export default () => {
           </div>
           <small className="block py-3 pl-3">Se recomienda auriculares</small>
         </div>
-        <h2 className="text-white">16 · Momento Flaming Lips: Lolo app</h2>
+        <h2 className="text-white">Momento Flaming Lips: El Movimiento</h2>
       </div>
       <Link
         className="fixed bottom-0 left-0 z-50 items-center justify-end hidden p-3 m-3 text-right text-white lg:flex hover:text-red-600 "
         activeClassName="active"
-        to="/garmendia/"
+        to="/artisticas/"
       >
         <IoIosArrowBack className="w-6 h-6 text-2xl " />
       </Link>
@@ -138,7 +138,7 @@ export default () => {
             className="fixed inset-0 cursor-move "
             shadowMap
             gl={{ antialias: false, alpha: false }}
-            camera={{ position: [0, 0, 100], fov: 20 }}
+            camera={{ position: [0, 0, 50], fov: 20 }}
             onCreated={({ gl }) => gl.setClearColor("#000")}
           >
             <Controls />
@@ -149,8 +149,16 @@ export default () => {
                 </HTML>
               }
             >
-              <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/4dxdWME11OG0flNUssdGqM/fbb55915e5ae4aa5a8449d98247bd5b0/16_-_MFL_-_Lolo_app.mp3" />
+              <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/7GlUq4O58kl1z4w2fKB31z/b7c17f8687a0762080fc1f3a9b63b61e/Momento_flaming_lips_3.mp3" />
             </Suspense>
+            <EffectComposer>
+              <Bloom
+                luminanceThreshold={0}
+                luminanceSmoothing={0.1}
+                height={300}
+                opacity={1}
+              />
+            </EffectComposer>
             <ambientLight intensity={0.1} />
             {/* A light to help illumnate the spinning boxes */}
             <pointLight position={[-10, 0, -20]} intensity={0.5} />

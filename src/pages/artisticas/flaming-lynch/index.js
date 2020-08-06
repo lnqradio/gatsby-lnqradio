@@ -104,7 +104,7 @@ export default () => {
       <Link
         className="fixed bottom-0 left-0 z-50 items-center justify-end hidden p-3 m-3 text-right text-white lg:flex hover:text-red-600 "
         activeClassName="active"
-        to="/garmendia/"
+        to="/artisticas/"
       >
         <IoIosArrowBack className="w-6 h-6 text-2xl " />
       </Link>

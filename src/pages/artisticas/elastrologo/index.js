@@ -1,13 +1,13 @@
 import React, { useState, useRef, Suspense } from "react"
 import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
-import { Canvas, extend, useThree, useFrame } from "react-three-fiber"
-import { useSpring, a } from "react-spring/three"
+import { Canvas, extend, useThree } from "react-three-fiber"
+import { useSpring, animated } from "react-spring/three"
 
 import { IoIosArrowBack } from "react-icons/io"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
-import { PositionalAudio, Stars, HTML } from "drei"
+import { PositionalAudio, HTML, Stars } from "drei"
 extend({ OrbitControls })
 
 const Controls = () => {
@@ -21,39 +21,45 @@ const Controls = () => {
   return <orbitControls args={[camera, gl.domElement]} ref={orbitRef} />
 }
 
-const Plane = () => (
-  <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]} receiveShadow>
-    <planeBufferGeometry attach="geometry" args={[5, 5]} />
-    <meshPhysicalMaterial attach="material" color="#e80e2e" />
-  </mesh>
-)
-
-const Box = () => {
-  const [hovered, setHovered] = useState(false)
+function Octahedron() {
   const [active, setActive] = useState(false)
-  const props = useSpring({
-    scale: active ? [1.5, 1.5, 1.5] : [1, 1, 1],
-    color: hovered ? "#e80e2e" : "black",
+  const [hovered, setHover] = useState(false)
+  const vertices = [
+    [-1, 0, 0],
+    [0, 1, 0],
+    [1, 0, 0],
+    [0, -1, 0],
+    [-1, 0, 0],
+  ]
+  const { color, pos, ...props } = useSpring({
+    color: active ? "red" : "black",
+    pos: active ? [0, 0, 0] : [0, 0, 0],
+    "material-opacity": hovered ? 0.6 : 0.25,
+    scale: active ? [0.5, 0.5, 0.5] : [1, 1, 1],
+    rotation: active
+      ? [THREE.Math.degToRad(180), 0, THREE.Math.degToRad(45)]
+      : [0, 0, 0],
+    config: { mass: 10, tension: 1000, friction: 300, precision: 0.00001 },
   })
-
-  const mesh = useRef()
-  useFrame(state => {
-    mesh.current.rotation.x = mesh.current.rotation.y += 0.05
-    mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) * 0.5 + 0.5
-  })
-
   return (
-    <a.mesh
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-      ref={mesh}
-      onClick={() => setActive(!active)}
-      scale={props.scale}
-      castShadow
-    >
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-      <a.meshPhysicalMaterial attach="material" color={props.color} />
-    </a.mesh>
+    <group>
+      <animated.line position={pos}>
+        <geometry
+          attach="geometry"
+          vertices={vertices.map(v => new THREE.Vector3(...v))}
+        />
+        <animated.lineBasicMaterial attach="material" color={color} />
+      </animated.line>
+      <animated.mesh
+        onClick={e => setActive(!active)}
+        onPointerOver={e => setHover(true)}
+        onPointerOut={e => setHover(false)}
+        {...props}
+      >
+        <octahedronGeometry attach="geometry" />
+        <meshStandardMaterial attach="material" color="white" transparent />
+      </animated.mesh>
+    </group>
   )
 }
 
@@ -85,12 +91,12 @@ export default () => {
           </div>
           <small className="block py-3 pl-3">Se recomienda auriculares</small>
         </div>
-        <h2 className="text-white">16 · Momento Flaming Lips: Lolo app</h2>
+        <h2 className="text-white">16 · Momento Flaming Lips: El Astrologo</h2>
       </div>
       <Link
         className="fixed bottom-0 left-0 z-50 items-center justify-end hidden p-3 m-3 text-right text-white lg:flex hover:text-red-600 "
         activeClassName="active"
-        to="/garmendia/"
+        to="/artisticas/"
       >
         <IoIosArrowBack className="w-6 h-6 text-2xl " />
       </Link>
@@ -113,7 +119,7 @@ export default () => {
             <ambientLight intensity={0.5} />
             <spotLight position={[15, 20, 5]} penumbra={1} castShadow />
             <Controls />
-            <Box />
+
             <Suspense
               fallback={
                 <HTML center>
@@ -121,16 +127,10 @@ export default () => {
                 </HTML>
               }
             >
-              <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/4dxdWME11OG0flNUssdGqM/fbb55915e5ae4aa5a8449d98247bd5b0/16_-_MFL_-_Lolo_app.mp3" />
+              <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/5CQu0y8BDrTgsfLbWaIkQi/87ee211e486cd5e02b4836022113d333/8_-_MFL_-_El_astr__logo.mp3" />
             </Suspense>
-            <Stars
-              radius={100} // Radius of the inner sphere (default=100)
-              depth={50} // Depth of area where stars should fit (default=50)
-              count={5000} // Amount of stars (default=5000)
-              factor={4} // Size factor (default=4)
-              saturation={1} // Saturation 0-1 (default=0)
-              fade // Faded dots (default=false)
-            />
+            <Octahedron />
+            <Stars />
           </Canvas>
         )}
       </div>

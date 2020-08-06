@@ -4,10 +4,11 @@ import { useSprings, a } from "react-spring/three"
 import { Canvas, extend, useThree } from "react-three-fiber"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 //import "./styles.css"
+import { EffectComposer, Bloom } from "react-postprocessing"
+
 import { Helmet } from "react-helmet"
 import { IoIosArrowBack } from "react-icons/io"
 import { Link } from "gatsby"
-import ReactPlayer from "react-player"
 import { PositionalAudio, Stars, HTML } from "drei"
 
 extend({ OrbitControls })
@@ -26,9 +27,9 @@ const colors = ["#e80e2e", "#e80e2e", "#e80e2e"]
 const random = i => {
   const r = Math.random()
   return {
-    position: [50 - Math.random() * 50, 50 - Math.random() * 50, i * 3.5],
+    position: [5 - Math.random() * 5, 5 - Math.random() * 5, i * 3.5],
     color: colors[Math.round(Math.random() * (colors.length - 1))],
-    scale: [1 + r * 50, 1 + r * 50, 1 + r * 50],
+    scale: [1 + r * 2, 1 + r * 5, 1 + r * 2],
     rotation: [0, 0, THREE.Math.degToRad(Math.round(Math.random()) * 45)],
   }
 }
@@ -44,11 +45,11 @@ function Content() {
   const [springs, set] = useSprings(number, i => ({
     from: random(i),
     ...random(i),
-    config: { mass: 20, tension: 150, friction: 50 },
+    config: { mass: 20, tension: 15, friction: 50 },
   }))
   useEffect(
     () =>
-      void setInterval(() => set(i => ({ ...random(i), delay: i * 40 })), 3000),
+      void setInterval(() => set(i => ({ ...random(i), delay: i * 40 })), 300),
     []
   )
   return data.map((d, index) => (
@@ -111,12 +112,12 @@ export default () => {
           </div>
           <small className="block py-3 pl-3">Se recomienda auriculares</small>
         </div>
-        <h2 className="text-white">16 · Momento Flaming Lips: Lolo app</h2>
+        <h2 className="text-white">Momento Flaming Lips: Lolo Apps</h2>
       </div>
       <Link
         className="fixed bottom-0 left-0 z-50 items-center justify-end hidden p-3 m-3 text-right text-white lg:flex hover:text-red-600 "
         activeClassName="active"
-        to="/garmendia/"
+        to="/artisticas/"
       >
         <IoIosArrowBack className="w-6 h-6 text-2xl " />
       </Link>
@@ -133,7 +134,7 @@ export default () => {
           <Canvas
             className="fixed inset-0 cursor-move"
             shadowMap
-            camera={{ position: [0, 0, 100], fov: 100 }}
+            camera={{ position: [0, 0, 50], fov: 50 }}
           >
             <Lights />
             <Controls />
@@ -147,14 +148,23 @@ export default () => {
             >
               <PositionalAudio url="https://downloads.ctfassets.net/mai25em38k9q/4dxdWME11OG0flNUssdGqM/fbb55915e5ae4aa5a8449d98247bd5b0/16_-_MFL_-_Lolo_app.mp3" />
             </Suspense>
+
             <Stars
               radius={100} // Radius of the inner sphere (default=100)
               depth={50} // Depth of area where stars should fit (default=50)
-              count={5000} // Amount of stars (default=5000)
+              count={500} // Amount of stars (default=5000)
               factor={4} // Size factor (default=4)
               saturation={1} // Saturation 0-1 (default=0)
               fade // Faded dots (default=false)
             />
+            <EffectComposer>
+              <Bloom
+                luminanceThreshold={0}
+                luminanceSmoothing={0.1}
+                height={100}
+                opacity={2}
+              />
+            </EffectComposer>
           </Canvas>
         )}
       </div>

@@ -48,7 +48,7 @@ class EpisodiosTemplate extends React.Component {
           <h2 className="mt-3 text-xl text-center text-gray-700">
             Podcast del Programa Nº{episodios.episode}
           </h2>
-          {episodios.podcastRelacionados ? (
+          {episodios.podcastRelacionados  && (
             <div className="flex flex-wrap justify-center py-8 ">
               {episodios.podcastRelacionados.map((slider, i) => (
                 <div
@@ -98,8 +98,7 @@ class EpisodiosTemplate extends React.Component {
                 </div>
               ))}
             </div>
-          ) : (
-            <div></div>
+         
           )}
         </div>
       </Layout>

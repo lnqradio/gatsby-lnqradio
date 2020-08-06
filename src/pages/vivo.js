@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import SEO from "../components/seo"
 import "./vivo.css"
 import { Helmet } from "react-helmet"
-import { IoIosArrowBack } from "react-icons/io"
 import BgSlider from "../components/BgSlider"
 
 const VivoPage = () => (
