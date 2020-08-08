@@ -22,7 +22,7 @@ const Toggle = props => {
           {props.title}
         </Link>
 
-        <p className="text-base ">{props.text}</p>
+        <p className="text-sm ">{props.text}</p>
         <button
           className="absolute bottom-0 left-0 right-0 flex items-center justify-between w-full p-2 px-4 font-mono text-center bg-gray-800 outline-none listen hover:text-red-500"
           onClick={() => setToggle(!isToggled)}
