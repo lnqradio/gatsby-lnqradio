@@ -113,7 +113,7 @@ const AstrologoPage = () => {
               </div>
             ))}
             <div className="w-full px-3 mt-6 text-3xl text-center text-white">
-              <h1 className="font-mono text-white ">Astrólogo</h1>
+              <h1 className="font-mono text-white ">El Astrólogo</h1>
               <AnchorLink
                 href={`#author-player`}
                 className="block my-1 font-mono text-base text-red-500 hover:text-white"
@@ -136,7 +136,7 @@ const AstrologoPage = () => {
             {data.allContentfulAutores.edges.map((item, i) => (
               <div className="w-full max-w-xl m-auto post">
                 <h2 className="font-mono text-2xl text-center text-white">
-                  Playlist de Astrólogo
+                  Playlist de el Astrólogo
                 </h2>
                 <div
                   className="mt-2 soundcloud-player"

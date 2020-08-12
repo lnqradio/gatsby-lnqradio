@@ -1,12 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 
-import {
-  GiSpellBook,
-  GiAstronautHelmet,
-  GiBookCover,
-  GiRomanToga,
-} from "react-icons/gi"
+import { GiSpellBook, GiFlame, GiBookCover, GiRomanToga } from "react-icons/gi"
+
 import { MdPersonPin, MdLocalMovies } from "react-icons/md"
 import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
 
@@ -53,12 +49,12 @@ const PodcastCategorias = () => (
       <span>historias</span>
     </Link>
     <Link
-      to={`/podcasts/psiconautica`}
+      to={`/podcasts/previas`}
       className="block font-mono text-base text-red-500 hover:text-white"
     >
-      <GiAstronautHelmet />
+      <GiFlame />
 
-      <span>psiconáutica</span>
+      <span>previas</span>
     </Link>
     <Link
       to={`/podcasts/politica`}
