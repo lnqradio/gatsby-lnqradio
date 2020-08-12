@@ -12,11 +12,11 @@ const ArtisticasPage = () => {
 
       <div>
         <div className="relative z-50 max-w-2xl p-6 m-auto text-left md:p-12 md:pt-0">
-          <h3 className="flex flex-col items-center w-full py-6 mt-2 text-2xl text-center text-white uppercase">
+          <h3 className="flex flex-col items-center w-full py-6 mt-2 text-4xl text-center text-white uppercase">
             <GiAstronautHelmet className="my-3 text-6xl" />
-            Momento Flaming Lips
-            <small className="mt-2 text-sm italic text-red-200 sm:hidden">
-              Se advierte que pueden fallar
+            Psiconáutica
+            <small className="px-4 py-2 mt-2 text-xs leading-5 text-red-100 bg-gray-800">
+              Solo para PCs <br /> (¡puede fallar!)
             </small>
           </h3>
 
@@ -50,7 +50,7 @@ const ArtisticasPage = () => {
               to={`/artisticas/movimiento/`}
               className="font-mono uppercase artistica-card"
             >
-              movimiento
+              El movimiento
             </Link>
             <Link
               to={`/artisticas/lamuerte/`}
