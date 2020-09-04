@@ -138,9 +138,9 @@ const IndexPage = () => {
         >
           <Link to={`/vivo/`} className="text-red-400">
             <span className="inline-block text-gray-200">
-              Stream de Nuevos episodios
+              Stream de Nuevos episodios.
             </span>{" "}
-            los Viernes a las 20hs
+           Domingo a las 20hs
           </Link>
         </h1>
         <iframe

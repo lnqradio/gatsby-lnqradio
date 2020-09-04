@@ -13,7 +13,7 @@ const NotFoundPage = () => (
     <div className="max-w-4xl pt-6 m-auto text-left live-stream md:pt-6">
       <div className="relative flex flex-col items-center pt-6 pb-3 text-xl animated fadeIn slower">
         <h1 className="w-full px-0 pt-0 text-3xl text-center text-white animated fadeIn slow">
-          Un nuevo episodio cada viernes
+          Un nuevo episodio cada Domingo
         </h1>
         <Link
           to={`/episodios/`}
