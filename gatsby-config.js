@@ -25,6 +25,58 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-realfavicongenerator`,
+      options: {
+        apiKey: "a32ba751d30e1d4329fbc7d7aa9ee6794c46701a",
+        masterPicture: "src/images/gatsby-icon.png",
+        appName: "LNQRadio",
+        startUrl: "/",
+        themeColor: "#281136",
+        display: "standalone",
+        defaultBackgroundColor: "#281136",
+        defaultMargin: "10%",
+        compression: 3,
+        scalingAlgorithm: "Lanczos",
+        ios: {
+          enabled: true,
+          onlyDefaultIcons: false,
+          legacyIcons: true,
+          precomposedIcons: true,
+        },
+        windows: {
+          enabled: true,
+          silhouette: true,
+        },
+        android: {
+          enabled: true,
+          legacyIcons: true,
+          lowResIcons: true,
+        },
+        safariPinnedTab: {
+          enabled: true,
+          threshold: 60,
+          silhouette: true,
+        },
+        openGraph: {
+          enabled: true,
+          ratio: "square",
+        },
+        transformGeneratedManifest: manifest => {
+          manifest.scope = "/"
+          if (manifest.icons) {
+            manifest.icons = manifest.icons.map(icon => {
+              return {
+                ...icon,
+                purpose: "maskable",
+              }
+            })
+          }
+
+          return manifest
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-139605681-1",
