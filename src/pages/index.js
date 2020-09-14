@@ -137,7 +137,7 @@ const IndexPage = () => {
           }}
         >
           <div className="text-red-400">
-            <h2 className="max-w-lg mt-2 text-2xl leading-normal text-white hover:no-underline">
+            <h2 className="max-w-lg mt-2 text-2xl leading-normal text-left text-white hover:no-underline">
               La Tradición
               <span className="ml-1 text-gray-200">(455)</span>
             </h2>{" "}
@@ -156,7 +156,7 @@ const IndexPage = () => {
             className=""
             frameBorder="no"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/892627855&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/892627855&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
           ></iframe>
         </div>
 
