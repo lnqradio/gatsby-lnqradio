@@ -13,7 +13,7 @@ SVG Icons - svgicons.sparkk.fr
   @apply bg-transparent;
 }
 .ficciones .awssld__wrapper {
-  max-height: calc(100vh - 169px);
+  max-height: calc(100vh - 100px);
   height: 100vh;
 }
 

@@ -86,7 +86,7 @@ class ColumnaTemplate extends React.Component {
           ]}
         />
 
-        <div className="flex flex-col flex-wrap px-2 pt-0 m-auto posts soundcloud">
+        <div className="flex flex-col flex-wrap px-2 pt-20 m-auto posts soundcloud">
           <div className="flex flex-col w-full pt-0 m-auto mb-12 shadow post">
             <div className="w-full bg-pattern ">
               <div className="w-full max-w-2xl m-auto mt-0 text-lg md:mt-6 columna-article animated fadeIn delay-1s slower ">

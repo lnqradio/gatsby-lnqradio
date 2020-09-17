@@ -102,72 +102,72 @@ const ArtisticasPage = () => {
           >
             A dos Charlas
           </Link>
-          <div className="grid grid-cols-3 gap-6 px-6">
+          <div className="grid gap-3 px-6 text-center md:grid-cols-3">
             <iframe
               width="100%"
-              height="250"
+              height="166"
               scrolling="no"
               title="Si la segunda guerra mundial hubiera ocurrido en un bar"
-              className="max-w-lg search-item"
+              className="w-full mx-auto search-item"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/844743511&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
             <iframe
               width="100%"
-              height="250"
+              height="166"
               scrolling="no"
               title="La Pereza"
-              className="max-w-lg search-item"
+              className="w-full mx-auto search-item"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610354974&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
             <iframe
               width="100%"
-              height="250"
+              height="166"
               scrolling="no"
               title="La Pereza"
-              className="max-w-lg search-item"
+              className="w-full mx-auto search-item"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/575372265&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
             <iframe
               width="100%"
-              height="450"
+              height="166"
               scrolling="no"
               frameborder="no"
               title="Poemas"
-              className="max-w-lg search-item"
+              className="w-full mx-auto search-item"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1104169705&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
 
             <iframe
               width="100%"
-              height="450"
+              height="166"
               scrolling="no"
               title="La Pereza"
-              className="max-w-lg search-item"
+              className="w-full mx-auto search-item"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/762926454&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
             <iframe
               width="100%"
-              height="450"
+              height="166"
               scrolling="no"
               title="aRadio - a dos charlas"
-              className="max-w-lg search-item"
+              className="w-full mx-auto search-item"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/772452537&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
             <iframe
               width="100%"
-              height="450"
-              className="max-w-lg search-item"
+              height="166"
+              className="w-full mx-auto search-item"
               scrolling="no"
               title="Claudicacion de un no-prólogo"
               frameborder="no"
@@ -176,8 +176,8 @@ const ArtisticasPage = () => {
             ></iframe>
             <iframe
               width="100%"
-              height="450"
-              className="max-w-lg search-item"
+              height="166"
+              className="w-full mx-auto search-item"
               scrolling="no"
               title="Momento Flaming Lips"
               frameborder="no"
@@ -186,10 +186,10 @@ const ArtisticasPage = () => {
             ></iframe>
             <iframe
               width="100%"
-              height="450"
+              height="166"
               scrolling="no"
               title="Prologo"
-              className="max-w-lg search-item"
+              className="w-full mx-auto search-item"
               frameborder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/761934822&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"

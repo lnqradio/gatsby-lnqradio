@@ -10,7 +10,7 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="Notan En VIVO" />
 
-    <div className="max-w-4xl pt-6 m-auto text-left live-stream md:pt-6">
+    <div className="max-w-4xl pt-20 m-auto text-left live-stream">
       <div className="relative flex flex-col items-center pt-6 pb-3 text-xl animated fadeIn slower">
         <h1 className="w-full px-0 pt-0 text-3xl text-center text-white animated fadeIn slow">
           Un nuevo episodio cada Domingo
@@ -33,7 +33,7 @@ const NotFoundPage = () => (
               Muchas horas, minutos y segundos.
             </span>
           </h2>
-          <div className="absolute top-0 right-0 hidden w-32 m-6 mt-1 mt-8 md:block logo">
+          <div className="absolute top-0 right-0 hidden w-32 m-6 mt-8 md:block logo">
             <Image />
           </div>
           <h2 className="w-full px-6 pt-3 pb-0 mb-0 font-mono text-xl text-center text-white md:text-right animated fadeIn slow">

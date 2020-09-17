@@ -115,61 +115,63 @@ const IndexPage = () => {
       <Helmet>
         <body className="home headroom-top-transparent" />
       </Helmet>
-      <div className="relative max-w-5xl ml-auto mr-auto overflow-hidden md:mt-8 solumedia">
-        <Link
-          to={`/artisticas/trinche`}
-          className="hidden w-full max-w-lg px-4 py-4 my-48 mb-24 ml-auto mr-auto font-mono text-base text-center text-red-500 underline shadow-sm sm:px-8 sm:w-auto md:mt-64 md:text-3xl md:px-8 hover:text-gray-100"
-          style={{
-            background: "rgba(40, 17, 54, 0.9)",
-          }}
-        >
-          <span className="hidden text-base text-gray-200 uppercase">
-            artística
-          </span>
-          <br />
-          Carlovich. No te voy a mentir
-        </Link>
-
+      <div
+        className="relative flex items-center justify-center w-full ml-auto mr-auto overflow-hidden solumedia"
+        style={{
+          minHeight: "100vh",
+        }}
+      >
         <div
-          className="inline-block px-4 py-6 mt-24 font-mono text-base text-center text-white shadow-sm sm:px-8 md:mt-4 sm:text-left md:text-xl md:px-8 hover:underline"
+          className="block w-full max-w-lg mx-auto my-6 font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.8)",
           }}
         >
-          <div className="text-red-400">
-            <h2 className="max-w-lg mt-2 text-2xl leading-normal text-left text-white hover:no-underline">
+          <div className="relative flex flex-col items-center justify-center px-4 pb-3">
+            <div className="p-2 py-1 -mt-5 text-base text-center uppercase bg-red-600 shadow-xl ">
+              último episodio
+              <span className="ml-1 opacity-75">(455)</span>
+            </div>
+            <h2 className="flex flex-col w-full pt-2 text-2xl leading-normal text-center text-white uppercase">
               La Tradición
-              <span className="ml-1 text-gray-200">(455)</span>
-            </h2>{" "}
-            <span className="inline-block mr-2 text-gray-200">
-              Domingo 13 de septiembre a las 20hs.
-            </span>
+              <small className="ml-3 opacity-50">
+                Domingo 13 de septiembre
+              </small>
+            </h2>
           </div>
-        </div>
-
-        <div className="relative bottom-0 left-0 right-0 flex items-center justify-between listen">
-          <iframe
-            width="100%"
-            height="166"
-            scrolling="no"
-            title="La Tradición"
-            className=""
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/892627855&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
-          ></iframe>
+          <div
+            className="flex items-center justify-between listen"
+            style={{
+              opacity: 0.9,
+            }}
+          >
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              title="La Tradición"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/892627855&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+            ></iframe>
+          </div>
         </div>
 
         <BackgroundSlider
           className="bg-gray-800 "
           style={{
             top: "0",
-            maxHeight: "80vh",
+            maxHeight: "100vh",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
           initDelay={1}
-          images={["rotring10.jpg", "rotring13.jpg"]}
+          images={[
+            "rotring2.jpg",
+            "rotring10.jpg",
+            "rotring12.jpg",
+            "rotring13.jpg",
+          ]}
           transition={2}
           duration={5}
           query={data}

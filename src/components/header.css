@@ -1,5 +1,6 @@
 .headroom-wrapper {
   max-height: 113px !important;
+  position: absolute;
 }
 
 #nprogress .bar {

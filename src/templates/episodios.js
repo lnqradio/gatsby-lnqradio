@@ -15,7 +15,7 @@ class EpisodiosTemplate extends React.Component {
       <Layout>
         <SEO title={`${episodios.title} - Episodio ${episodios.episode}`} />
 
-        <section className="flex flex-col md:flex-row">
+        <section className="flex flex-col pt-20 md:flex-row">
           <div className="flex flex-wrap w-full max-w-6xl px-6 m-auto posts soundcloud">
             <div className="w-full max-w-4xl p-0 px-0 m-auto mt-6 mb-2 bg-gray-800 shadow post">
               <div className="relative flex items-center justify-between listen">
@@ -48,7 +48,7 @@ class EpisodiosTemplate extends React.Component {
           <h2 className="mt-3 text-xl text-center text-gray-700">
             Podcast del Programa Nº{episodios.episode}
           </h2>
-          {episodios.podcastRelacionados  && (
+          {episodios.podcastRelacionados && (
             <div className="flex flex-wrap justify-center py-8 ">
               {episodios.podcastRelacionados.map((slider, i) => (
                 <div
@@ -98,7 +98,6 @@ class EpisodiosTemplate extends React.Component {
                 </div>
               ))}
             </div>
-         
           )}
         </div>
       </Layout>

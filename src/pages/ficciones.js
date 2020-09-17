@@ -40,7 +40,7 @@ const FiccionesPage = () => {
         `)}
       />
       <AwesomeSlider className="ficciones">
-        <div>
+        <div className="pt-16">
           <h2
             className="relative inline-block p-3 text-lg text-center text-white bg-gray-800 shadow-xl"
             style={{ top: "25px" }}
@@ -58,7 +58,7 @@ const FiccionesPage = () => {
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/753485889&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
           ></iframe>
         </div>
-        <div>
+        <div className="pt-16">
           <h2
             className="relative inline-block p-3 text-lg text-center text-white bg-gray-800 shadow-xl"
             style={{ top: "25px" }}
@@ -77,7 +77,7 @@ const FiccionesPage = () => {
           ></iframe>
         </div>
       </AwesomeSlider>
-      <div className="flex flex-wrap hidden max-w-full pt-12 m-auto my-8 md:pt-2 posts animated fadeIn delay-1s">
+      <div className="flex flex-wrap max-w-full pt-12 m-auto my-8 md:pt-2 posts animated fadeIn delay-1s">
         <div
           className="max-w-6xl m-auto mt-12 text-center md:p-8 "
           style={{
