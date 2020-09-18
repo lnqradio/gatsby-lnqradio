@@ -11,7 +11,7 @@ const ArtisticasPage = () => {
       <BgSlider />
 
       <div>
-        <div className="relative z-50 max-w-2xl p-6 m-auto text-left md:p-12 md:pt-0">
+        <div className="relative z-50 max-w-2xl p-6 m-auto text-left md:p-12 md:pt-12">
           <h3 className="flex flex-col items-center w-full py-6 mt-2 text-4xl text-center text-white uppercase">
             <GiAstronautHelmet className="my-3 text-6xl" />
             Psiconáutica

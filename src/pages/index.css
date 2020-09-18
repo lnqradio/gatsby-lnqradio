@@ -471,9 +471,12 @@ iframe {
 }
 
 .home-hero-links a {
-  @apply flex flex-col items-center justify-center py-8 m-1 transition-all duration-200;
-  width: 46%;
-  background: #281136;
+  @apply flex flex-col items-center justify-center py-6 transition-all duration-200;
+  @apply font-mono text-base text-red-500;
+}
+
+.home-hero-links a:hover {
+  @apply bg-red-500;
 }
 
 .home-hero-links a:hover {
@@ -487,12 +490,6 @@ iframe {
 @screen sm {
   .home-hero-links span {
     @apply block;
-  }
-}
-
-@screen md {
-  .home-hero-links a {
-    width: 20%;
   }
 }
 

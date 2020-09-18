@@ -70,10 +70,10 @@ const ColumnasPage = () => {
     <Layout>
       <SEO title="Podcasts" />
       <div className="flex flex-col">
-        <div className="flex flex-wrap justify-center w-full p-0 m-auto posts animation columnas soundcloud ">
-          <div className="flex justify-center w-full py-6 bg-gray-800 border-b border-red-600 home-hero-links md:pt-8">
+        <div className="flex flex-wrap justify-center w-full pt-16 m-auto md:pt-0 posts animation columnas soundcloud ">
+          <HomeHeroLinks className="home-hero-links">
             <PodcastCategorias />
-          </div>
+          </HomeHeroLinks>
           <h2
             className="block w-full pb-4 mt-0 font-mono text-3xl text-center text-white"
             id="destacadas"
@@ -95,4 +95,8 @@ export default ColumnasPage
 
 const PodcastGrid = styled.div`
   ${tw`grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3`}
+`
+
+const HomeHeroLinks = styled.div`
+  ${tw`grid w-full grid-cols-2 gap-1 py-6 md:grid-cols-4 md:pt-24`}
 `

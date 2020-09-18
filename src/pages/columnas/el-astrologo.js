@@ -6,6 +6,7 @@ import SEO from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Img from "gatsby-image"
 import Card from "../../components/SoundCard"
+import Authors from "../../components/queries/authors"
 
 const AstrologoPage = () => {
   const data = useStaticQuery(graphql`
@@ -56,27 +57,6 @@ const AstrologoPage = () => {
           }
         }
       }
-      autores: allContentfulAutores(
-        sort: { fields: [name], order: DESC }
-        skip: 1
-      ) {
-        edges {
-          node {
-            id
-            name
-            columnas {
-              id
-              title
-              description {
-                description
-              }
-              soundcloud {
-                soundcloud
-              }
-            }
-          }
-        }
-      }
     }
   `)
 
@@ -85,19 +65,11 @@ const AstrologoPage = () => {
       <SEO title="Astrologo" />
       <div className="flex flex-col md:flex-row">
         <div className="inset-x-0 top-0 z-50 hidden w-full p-6 mb-0 bg-gray-800 hero md:p-0 xl:sticky md:w-48 md:inline-block">
-          <div className="flex flex-wrap justify-center max-w-4xl m-auto authors md:pt-6 md:justify-start md:px-0 md:sticky md:top-0 ">
+          <div className="flex flex-wrap justify-center max-w-4xl m-auto authors md:pt-40 md:justify-center md:px-0 md:sticky md:top-0 ">
             <h4 className="hidden px-3 pt-6 text-white md:inline-block md:pb-3">
               Autores
             </h4>
-            {data.autores.edges.map((item, i) => (
-              <Link
-                to={`/columnas/${kebabCase(item.node.name)}/`}
-                activeClassName="active"
-                className="px-4 py-3 font-mono text-sm text-red-500 hover:text-white md:py-2 md:px-3 md:w-full min-w-xm"
-              >
-                {item.node.name}
-              </Link>
-            ))}
+            <Authors />
           </div>
         </div>
 

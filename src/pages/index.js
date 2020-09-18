@@ -122,16 +122,16 @@ const IndexPage = () => {
         }}
       >
         <div
-          className="block w-full max-w-lg mx-auto my-6 font-mono shadow-sm"
+          className="relative block w-full max-w-lg mx-auto my-6 font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.8)",
           }}
         >
+          <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-base text-center uppercase bg-red-600 shadow-xl">
+            último episodio
+            <span className="ml-1 opacity-75">(455)</span>
+          </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
-            <div className="p-2 py-1 -mt-5 text-base text-center uppercase bg-red-600 shadow-xl ">
-              último episodio
-              <span className="ml-1 opacity-75">(455)</span>
-            </div>
             <h2 className="flex flex-col w-full pt-2 text-2xl leading-normal text-center text-white uppercase">
               La Tradición
               <small className="ml-3 opacity-50">
