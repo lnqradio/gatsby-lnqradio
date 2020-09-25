@@ -1,3 +1,5 @@
+/* purgecss start ignore */
+
 .subscribe-form {
   align-items: center;
 
@@ -14,7 +16,7 @@
 }
 
 .subscribe-form__button {
-  @apply block px-6 py-2 mt-2 text-white bg-red-800 font-mono text-center font-bold;
+  @apply block px-6 py-2 mt-2 font-mono font-bold text-center text-white bg-red-800;
 }
 
 .subscribe-form__button:hover {
@@ -85,3 +87,5 @@
 .subscribe-form__message_failure {
   color: #ff474c;
 }
+
+/* purgecss end ignore */

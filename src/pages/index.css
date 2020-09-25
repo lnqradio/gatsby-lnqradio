@@ -2,6 +2,8 @@
 SVG Icons - svgicons.sparkk.fr
 ----- */
 
+/* purgecss start ignore */
+
 .page-ficciones main {
   min-height: auto;
 }
@@ -693,3 +695,5 @@ main canvas {
   margin: 0 auto;
   display: block;
 }
+
+/* purgecss end ignore */

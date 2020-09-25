@@ -1,12 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
-
 import { GiSpellBook, GiFlame, GiBookCover, GiRomanToga } from "react-icons/gi"
-
 import { MdPersonPin, MdLocalMovies } from "react-icons/md"
 import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
-import tw from "twin.macro"
-import styled from "@emotion/styled"
 
 const PodcastCategorias = () => (
   <>
@@ -56,8 +52,3 @@ const PodcastCategorias = () => (
 )
 
 export default PodcastCategorias
-
-const HomeHeroLinks = styled.div`
-  ${tw`grid justify-center w-full grid-cols-4 py-6 md:pt-24`}
-  min-height: 60vh
-`

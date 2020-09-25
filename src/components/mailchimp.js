@@ -7,7 +7,7 @@ function SubscribeForm() {
   const [status, setStatus] = useState("")
   const [message, setMessage] = useState("")
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const { result, msg } = await addToMailchimp(email)
     result === "success" && setEmail("")
@@ -16,7 +16,7 @@ function SubscribeForm() {
     setStatus(result)
   }
 
-  const handleChange = event => setEmail(event.target.value)
+  const handleChange = (event) => setEmail(event.target.value)
 
   return (
     <form className="subscribe-form">
@@ -24,7 +24,7 @@ function SubscribeForm() {
         Suscribite para recibir las novedades
       </span>
       <div className="subscribe-form__content">
-        <label className="hidden" for="mail-chimp">
+        <label className="hidden" htmlFor="mail-chimp">
           Mailchimp
         </label>
         <input

@@ -1,6 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { kebabCase } from "lodash"
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
@@ -78,7 +77,10 @@ const RasputinPage = () => {
         <section className="flex flex-col justify-center w-full">
           <div className="flex flex-col items-center w-full p-8 m-auto jutify-center md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
-              <div className="flex items-center justify-center w-full ">
+              <div
+                className="flex items-center justify-center w-full "
+                key={image.node.id}
+              >
                 <Img
                   alt={image.node.name}
                   fluid={image.node.imagen.fluid}
@@ -107,7 +109,7 @@ const RasputinPage = () => {
             className="relative flex items-center justify-center w-full min-h-screen px-6 m-auto bg-gray-800"
           >
             {data.allContentfulAutores.edges.map((item, i) => (
-              <div className="w-full max-w-xl m-auto post">
+              <div className="w-full max-w-xl m-auto post" key={item.node.id}>
                 <h2 className="font-mono text-2xl text-center text-white">
                   Playlist de Rasputín
                 </h2>

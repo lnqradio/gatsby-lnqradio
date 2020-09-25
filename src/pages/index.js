@@ -150,7 +150,7 @@ const IndexPage = () => {
               height="166"
               scrolling="no"
               title="Fuegos Artificiales"
-              frameborder="no"
+              frameBorder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/896490154&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
@@ -229,7 +229,7 @@ const IndexPage = () => {
             {show.node.podcastRelacionados && (
               <div className="grid grid-cols-1 gap-5 row-gap-5 pt-6 mb-12 sm:grid-cols-2 ">
                 {show.node.podcastRelacionados.map((slider, i) => (
-                  <Card card={slider} />
+                  <Card card={slider} key={slider.slug} />
                 ))}
               </div>
             )}

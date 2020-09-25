@@ -79,7 +79,7 @@ class EpisodiosTemplate extends React.Component {
                         width="100%"
                         height="20"
                         scrolling="no"
-                        frameborder="no"
+                        frameBorder="no"
                         title={slider.title}
                         className="w-full px-12 transform scale-125 md:px-18"
                         allow="autoplay"

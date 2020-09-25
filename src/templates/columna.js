@@ -20,13 +20,13 @@ const Text = ({ children }) => <p className="my-3 text-lg">{children}</p>
 const website_url = "https://www.lnqradio.com"
 const options = {
   renderMark: {
-    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
-    [MARKS.CODE]: embedded => (
+    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+    [MARKS.CODE]: (embedded) => (
       <div dangerouslySetInnerHTML={{ __html: embedded }} />
     ),
   },
   renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: node => {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
       if (!node.data || !node.data.target.fields) {
         return <span className="hidden">Embedded asset is broken</span>
       }
@@ -38,7 +38,7 @@ const options = {
         />
       )
     },
-    [INLINES.HYPERLINK]: node => {
+    [INLINES.HYPERLINK]: (node) => {
       return (
         <a
           href={node.data.uri}
@@ -94,7 +94,7 @@ class ColumnaTemplate extends React.Component {
                   width="100%"
                   height="160"
                   scrolling="no"
-                  frameborder="no"
+                  frameBorder="no"
                   title={columna.title}
                   className=""
                   allow="autoplay"
@@ -135,7 +135,7 @@ class ColumnaTemplate extends React.Component {
               <div className="w-full max-w-2xl m-auto mt-6 text-left">
                 <Link
                   to={`/podcasts/`}
-                  class=" px-3 py-1 text-xs uppercase bg-red-500 rounded-full font-bold tracking-wide"
+                  className="px-3 py-1 text-xs font-bold tracking-wide uppercase bg-red-500 rounded-full "
                 >
                   Subido recientemente
                 </Link>

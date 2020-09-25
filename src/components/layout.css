@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* purgecss start ignore */
+
 body {
   @apply text-white;
   background-color: #14061d;
@@ -98,3 +100,5 @@ footer a:hover {
 .custom-shape .shape-fill {
   @apply text-gray-800 fill-current;
 }
+
+/* purgecss end ignore */

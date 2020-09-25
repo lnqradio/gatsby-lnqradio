@@ -1,3 +1,6 @@
+/* purgecss start ignore */
+
+
 @charset "UTF-8";
 
 /*!
@@ -3623,3 +3626,5 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+/* purgecss end ignore */

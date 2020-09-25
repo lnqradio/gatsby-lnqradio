@@ -37,7 +37,7 @@ function Swarm({ count, mouse }) {
     return temp
   }, [count])
 
-  useFrame(state => {
+  useFrame((state) => {
     particles.forEach((particle, i) => {
       let { t, factor, speed, xFactor, yFactor, zFactor } = particle
       t = particle.t += speed / 2
@@ -80,7 +80,7 @@ function Swarm({ count, mouse }) {
   )
 }
 
-const FiberDemo = props => {
+const FiberDemo = (props) => {
   const mouse = useRef([0, 0])
   const onMouseMove = useCallback(
     ({ clientX: x, clientY: y }) =>

@@ -61,10 +61,10 @@ module.exports = {
           enabled: true,
           ratio: "square",
         },
-        transformGeneratedManifest: manifest => {
+        transformGeneratedManifest: (manifest) => {
           manifest.scope = "/"
           if (manifest.icons) {
-            manifest.icons = manifest.icons.map(icon => {
+            manifest.icons = manifest.icons.map((icon) => {
               return {
                 ...icon,
                 purpose: "maskable",
@@ -162,6 +162,17 @@ module.exports = {
           "/*.css": ["cache-control: public, max-age=31536000, immutable"],
           "/sw.js": ["cache-control: public, max-age=0, must-revalidate"],
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+        //develop: true, // Enable while using `gatsby develop`
+        tailwind: true, // Enable tailwindcss support
+        // whitelist: ['whitelist'], // Don't remove this selector
+        ignore: ["react-awesome-slider/"],
+        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
     },
     `gatsby-plugin-react-helmet`,

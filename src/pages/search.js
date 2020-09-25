@@ -5,7 +5,7 @@ import { FaSpotify, FaSoundcloud } from "react-icons/fa"
 import ReactTooltip from "react-tooltip"
 import SEO from "../components/seo"
 
-const SearchIndex = props => {
+const SearchIndex = (props) => {
   const { data } = props
   const allPosts = data.allContentfulColumnas.edges
   const totales = data.allContentfulColumnas.totalCount
@@ -17,14 +17,14 @@ const SearchIndex = props => {
     query: emptyQuery,
   })
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     console.log(event.target.value)
     const query = event.target.value
     const { data } = props
 
     const posts = data.allContentfulColumnas.edges || []
 
-    const filteredData = posts.filter(post => {
+    const filteredData = posts.filter((post) => {
       const { title } = post.node
       const { description } = post.node.description
       const { name } = post.node.author
@@ -60,7 +60,7 @@ const SearchIndex = props => {
 
   return (
     <>
-      <div className="w-full max-w-2xl p-2 pt-6 m-auto mb-0 text-center searchBox md:pt-6 md:p-0 md:pb-6 animated fadeIn slower">
+      <div className="w-full max-w-2xl p-2 pt-6 m-auto mt-24 mb-0 text-center searchBox md:pt-6 md:p-0 md:pb-6 animated fadeIn slower">
         <h2 className="flex flex-col items-baseline py-3 pb-6 font-mono text-2xl text-left text-white md:flex-row">
           <span className="flex-1">Todos podcasts</span>
           <SEO title={totales} />
