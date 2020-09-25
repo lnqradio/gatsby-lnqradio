@@ -73,6 +73,8 @@ const SpinningMesh = ({ position, color, speed, args }) => {
 }
 
 export default () => {
+  const isBrowser = typeof window !== "undefined"
+
   return (
     <>
       {/* Our Scene & Camera is already built into our canvas */}

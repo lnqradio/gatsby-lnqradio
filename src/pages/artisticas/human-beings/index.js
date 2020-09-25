@@ -82,6 +82,8 @@ function Swarm({ count, mouse }) {
 
 const FiberDemo = (props) => {
   const mouse = useRef([0, 0])
+  const isBrowser = typeof window !== "undefined"
+
   const onMouseMove = useCallback(
     ({ clientX: x, clientY: y }) =>
       (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]),

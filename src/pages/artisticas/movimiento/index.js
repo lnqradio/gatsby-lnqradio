@@ -40,7 +40,7 @@ function Boxes() {
   const previous = useRef()
   useEffect(() => void (previous.current = hovered), [hovered])
 
-  useFrame(state => {
+  useFrame((state) => {
     const time = state.clock.getElapsedTime()
     ref.current.rotation.x = Math.sin(time / 15)
     ref.current.rotation.y = Math.sin(time / 15)
@@ -73,8 +73,8 @@ function Boxes() {
     <instancedMesh
       ref={ref}
       args={[null, null, 1000]}
-      onPointerMove={e => set(e.instanceId)}
-      onPointerOut={e => set(undefined)}
+      onPointerMove={(e) => set(e.instanceId)}
+      onPointerOut={(e) => set(undefined)}
     >
       <boxBufferGeometry attach="geometry" args={[0.15, 0.15, 0.15]}>
         <instancedBufferAttribute
