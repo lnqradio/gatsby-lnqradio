@@ -82,13 +82,14 @@ function Swarm({ count, mouse }) {
 
 const FiberDemo = (props) => {
   const mouse = useRef([0, 0])
-  const isBrowser = typeof window !== "undefined"
 
   const onMouseMove = useCallback(
     ({ clientX: x, clientY: y }) =>
       (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]),
     []
   )
+  const isBrowser = typeof window !== "undefined"
+
   return (
     <>
       <Helmet>
@@ -132,34 +133,36 @@ const FiberDemo = (props) => {
       </div>
 
       <div className="w-full h-screen canvas" onMouseMove={onMouseMove}>
-        <Canvas
-          gl={{ alpha: true, antialias: false, logarithmicDepthBuffer: true }}
-          camera={{ fov: 75, position: [0, 0, 70] }}
-          className="cursor-move"
-          onCreated={({ gl }) => {
-            gl.toneMapping = THREE.ACESFilmicToneMapping
-            gl.outputEncoding = THREE.sRGBEncoding
-          }}
-        >
-          <ambientLight intensity={0.1} />
-          <pointLight position={[100, 100, 100]} intensity={0.2} />
-          <pointLight
-            position={[-100, -100, -100]}
-            intensity={1}
-            color="white"
-          />
-          <Controls />
-          <Swarm mouse={mouse} count={17} />
+        {isBrowser && (
+          <Canvas
+            gl={{ alpha: true, antialias: false, logarithmicDepthBuffer: true }}
+            camera={{ fov: 75, position: [0, 0, 70] }}
+            className="cursor-move"
+            onCreated={({ gl }) => {
+              gl.toneMapping = THREE.ACESFilmicToneMapping
+              gl.outputEncoding = THREE.sRGBEncoding
+            }}
+          >
+            <ambientLight intensity={0.1} />
+            <pointLight position={[100, 100, 100]} intensity={0.2} />
+            <pointLight
+              position={[-100, -100, -100]}
+              intensity={1}
+              color="white"
+            />
+            <Controls />
+            <Swarm mouse={mouse} count={17} />
 
-          <Stars
-            radius={100} // Radius of the inner sphere (default=100)
-            depth={50} // Depth of area where stars should fit (default=50)
-            count={5000} // Amount of stars (default=5000)
-            factor={4} // Size factor (default=4)
-            saturation={1} // Saturation 0-1 (default=0)
-            fade // Faded dots (default=false)
-          />
-        </Canvas>
+            <Stars
+              radius={100} // Radius of the inner sphere (default=100)
+              depth={50} // Depth of area where stars should fit (default=50)
+              count={5000} // Amount of stars (default=5000)
+              factor={4} // Size factor (default=4)
+              saturation={1} // Saturation 0-1 (default=0)
+              fade // Faded dots (default=false)
+            />
+          </Canvas>
+        )}
       </div>
     </>
   )

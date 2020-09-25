@@ -119,75 +119,78 @@ export default () => {
           </span>
         </div>
       </div>
-      <Canvas
-        colorManagement
-        shadowMap
-        className="cursor-move canvas"
-        camera={{ position: [0, 10, 45], fov: 12 }}
-      >
-        {/* This light makes things look pretty */}
-        <ambientLight intensity={0.3} />
-        {/* Our main source of light, also casting our shadow */}
-        <directionalLight
-          castShadow
-          position={[0, 10, 0]}
-          intensity={0.5}
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
-          shadow-camera-far={50}
-          shadow-camera-left={-10}
-          shadow-camera-right={10}
-          shadow-camera-top={10}
-          shadow-camera-bottom={-10}
-        />
-        {/* A light to help illumnate the spinning boxes */}
-        <pointLight position={[-10, 0, -20]} intensity={0.5} />
-        <pointLight position={[0, -10, 0]} intensity={1.5} />
-        <group>
-          {/* This mesh is the plane (The floor) */}
-          <mesh
-            rotation={[-Math.PI / 2, 0, 0]}
-            position={[0, -3, 0]}
-            receiveShadow
-          >
-            <planeBufferGeometry attach="geometry" args={[-50, 100]} />
-            <shadowMaterial attach="material" opacity={0.2} />
-          </mesh>
-
-          <SpinningMesh
-            position={[0, 0, 3]}
-            color="#7f0f32"
-            args={[3, 2, 1]}
-            speed={0.05}
-          />
-        </group>
-        <Text
-          color="#333"
-          fontSize={0.3}
-          maxWidth={10}
-          lineHeight={2}
-          letterSpacing={1}
-          textAlign={"center"}
-          font="https://fonts.gstatic.com/s/orbitron/v9/yMJRMIlzdpvBhQQL_Qq7dys.woff"
-          anchorX="center"
-          anchorY="middle"
+      {isBrowser && (
+        <Canvas
+          colorManagement
+          shadowMap
+          className="cursor-move canvas"
+          camera={{ position: [0, 10, 45], fov: 12 }}
         >
-          No hay banda! There is no band. Il n'est pas de orquestra! This is all
-          a tape-recording. No hay banda! And yet, we hear a band. If we want to
-          hear a clarinette, listen. It's all a tape. It is an illusion.
-        </Text>
+          {/* This light makes things look pretty */}
+          <ambientLight intensity={0.3} />
+          {/* Our main source of light, also casting our shadow */}
+          <directionalLight
+            castShadow
+            position={[0, 10, 0]}
+            intensity={0.5}
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+            shadow-camera-far={50}
+            shadow-camera-left={-10}
+            shadow-camera-right={10}
+            shadow-camera-top={10}
+            shadow-camera-bottom={-10}
+          />
+          {/* A light to help illumnate the spinning boxes */}
+          <pointLight position={[-10, 0, -20]} intensity={0.5} />
+          <pointLight position={[0, -10, 0]} intensity={1.5} />
+          <group>
+            {/* This mesh is the plane (The floor) */}
+            <mesh
+              rotation={[-Math.PI / 2, 0, 0]}
+              position={[0, -3, 0]}
+              receiveShadow
+            >
+              <planeBufferGeometry attach="geometry" args={[-50, 100]} />
+              <shadowMaterial attach="material" opacity={0.2} />
+            </mesh>
 
-        {/* Allows us to move the canvas around for different prespectives */}
-        <OrbitControls maxPolarAngle={Math.PI / 1} />
-        <Stars
-          radius={100} // Radius of the inner sphere (default=100)
-          depth={50} // Depth of area where stars should fit (default=50)
-          count={5000} // Amount of stars (default=5000)
-          factor={4} // Size factor (default=4)
-          saturation={1} // Saturation 0-1 (default=0)
-          fade // Faded dots (default=false)
-        />
-      </Canvas>
+            <SpinningMesh
+              position={[0, 0, 3]}
+              color="#7f0f32"
+              args={[3, 2, 1]}
+              speed={0.05}
+            />
+          </group>
+          <Text
+            color="#333"
+            fontSize={0.3}
+            maxWidth={10}
+            lineHeight={2}
+            letterSpacing={1}
+            textAlign={"center"}
+            font="https://fonts.gstatic.com/s/orbitron/v9/yMJRMIlzdpvBhQQL_Qq7dys.woff"
+            anchorX="center"
+            anchorY="middle"
+          >
+            No hay banda! There is no band. Il n'est pas de orquestra! This is
+            all a tape-recording. No hay banda! And yet, we hear a band. If we
+            want to hear a clarinette, listen. It's all a tape. It is an
+            illusion.
+          </Text>
+
+          {/* Allows us to move the canvas around for different prespectives */}
+          <OrbitControls maxPolarAngle={Math.PI / 1} />
+          <Stars
+            radius={100} // Radius of the inner sphere (default=100)
+            depth={50} // Depth of area where stars should fit (default=50)
+            count={5000} // Amount of stars (default=5000)
+            factor={4} // Size factor (default=4)
+            saturation={1} // Saturation 0-1 (default=0)
+            fade // Faded dots (default=false)
+          />
+        </Canvas>
+      )}
     </>
   )
 }
