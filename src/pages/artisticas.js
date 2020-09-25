@@ -11,7 +11,7 @@ const ArtisticasPage = () => {
       <BgSlider />
 
       <div>
-        <div className="relative z-50 max-w-2xl p-6 m-auto text-left md:p-12 md:pt-12">
+        <div className="relative z-50 hidden max-w-2xl p-6 m-auto text-left md:p-12 md:pt-12">
           <h3 className="flex flex-col items-center w-full py-6 mt-2 text-4xl text-center text-white uppercase">
             <GiAstronautHelmet className="my-3 text-6xl" />
             Psiconáutica
@@ -62,7 +62,7 @@ const ArtisticasPage = () => {
         </div>
       </div>
 
-      <div className="flex justify-center py-12 md:pt-0 md:items-center ">
+      <div className="flex justify-center pt-24 pb-12 md:pt-40 md:items-center ">
         <div className="w-full max-w-lg px-3 m-auto my-0">
           <h1 className="inline-block px-6 py-3 text-xl text-center text-gray-400 bg-gray-800 shadow-2xl tarantos-title">
             En la Terraza: Tarantos Dúo
