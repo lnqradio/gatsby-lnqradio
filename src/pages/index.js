@@ -129,13 +129,13 @@ const IndexPage = () => {
         >
           <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-base text-center uppercase bg-red-600 shadow-xl">
             último episodio
-            <span className="ml-1 opacity-75">(456)</span>
+            <span className="ml-1 opacity-75">(457)</span>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
             <h2 className="flex flex-col w-full pt-2 text-2xl leading-normal text-center text-white uppercase">
-              Fuegos Artificiales
+              Fuegos Artificiales II
               <small className="ml-3 opacity-50">
-                Domingo 20 de septiembre
+                Domingo 27 de septiembre
               </small>
             </h2>
           </div>
@@ -149,10 +149,10 @@ const IndexPage = () => {
               width="100%"
               height="166"
               scrolling="no"
-              title="Fuegos Artificiales"
+              title="Fuegos Artificiales II"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/896490154&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/900596677&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
         </div>
