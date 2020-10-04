@@ -118,11 +118,11 @@ const IndexPage = () => {
       <div
         className="relative flex items-center justify-center w-full ml-auto mr-auto overflow-hidden solumedia"
         style={{
-          minHeight: "100vh",
+          minHeight: "70vh",
         }}
       >
         <div
-          className="relative block w-full max-w-lg mx-auto my-6 font-mono shadow-sm"
+          className="relative block w-full max-w-lg mx-auto my-6 mt-20 font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.8)",
           }}
@@ -167,10 +167,10 @@ const IndexPage = () => {
           }}
           initDelay={1}
           images={[
-            "rotring2.jpg",
-            "rotring10.jpg",
-            "rotring12.jpg",
-            "rotring13.jpg",
+            "suenio-numero-cuatro.jpg",
+            "No-prologo-confuso-de-procedimiento-lyncheano-para-el-lector-de-frases.jpg",
+            "No-prologo-que-admira.jpg",
+            "principe-de-persia.jpg",
           ]}
           transition={2}
           duration={5}

@@ -174,7 +174,7 @@ const TrinchePage = () => {
           <BackgroundSlider
             className=" bgslider"
             initDelay={3}
-            images={["trinche.jpg", "trinche-fc.jpg"]}
+            images={["img233.jpg", "4511.jpg"]}
             transition={2}
             duration={8}
             query={useStaticQuery(graphql`

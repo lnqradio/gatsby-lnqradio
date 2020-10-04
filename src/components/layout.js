@@ -11,7 +11,8 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Image from "../components/image"
 import Mailchimp from "../components/mailchimp"
-
+import SimpleReactLightbox from "simple-react-lightbox"
+import ReactTooltip from "react-tooltip"
 import "./layout.css"
 import "./animate.css"
 import {
@@ -21,7 +22,6 @@ import {
   FaFacebookSquare,
   FaTwitter,
 } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -46,8 +46,9 @@ const Layout = ({ children }) => {
             Arriba!
           </span>
         </AnchorLink>
-
-        <main className="pt-0 overflow-hidden">{children}</main>
+        <SimpleReactLightbox>
+          <main className="pt-0 overflow-hidden">{children}</main>
+        </SimpleReactLightbox>
         <footer className="relative z-40 pt-20">
           <div className="hidden w-48 max-w-xl py-6 m-auto text-center">
             <Image />
