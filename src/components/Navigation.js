@@ -27,6 +27,10 @@ const routes = [
     slug: "/artisticas/",
   },
   {
+    title: "Galería",
+    slug: "/artisticas/galeria",
+  },
+  {
     title: "Buscar",
     slug: "/search/",
   },
@@ -41,7 +45,7 @@ const Navigation = ({ closeMenu }) => (
           onClick={closeMenu}
           activeClassName="text-red-600"
           to={route.slug}
-          className="my-2 font-mono text-gray-100 cursor-pointer hover:text-red-700"
+          className="my-2 text-2xl text-gray-100 cursor-pointer font- hover:text-red-700"
         >
           {route.title}
         </Link>

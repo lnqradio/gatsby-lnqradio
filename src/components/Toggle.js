@@ -3,7 +3,7 @@ import { useSpring, animated } from "react-spring"
 import { IoMdEye } from "react-icons/io"
 import { kebabCase } from "lodash"
 import { Link } from "gatsby"
-const Toggle = props => {
+const Toggle = (props) => {
   const [isToggled, setToggle] = useState(false)
   const fade = useSpring({
     transform: isToggled ? "translateY(0px)" : "translateY(300px)",
@@ -17,14 +17,14 @@ const Toggle = props => {
       >
         <Link
           to={`/columnas/${kebabCase(props.author)}/${kebabCase(props.slug)}/`}
-          className="block pr-12 mb-3 font-mono text-lg text-red-500 md:text-xl lg:text-xl title hover:text-white"
+          className="block pr-12 mb-1 font-sans text-2xl text-red-500 hover:text-white"
         >
           {props.title}
         </Link>
 
-        <p className="text-sm ">{props.text}</p>
+        <p className="text-sm">{props.text}</p>
         <button
-          className="absolute bottom-0 left-0 right-0 flex items-center justify-between w-full p-2 px-4 font-mono text-center bg-gray-800 outline-none listen hover:text-red-500"
+          className="absolute bottom-0 left-0 right-0 flex items-center justify-between w-full p-2 px-4 font-sans text-center bg-gray-800 outline-none listen hover:text-red-500"
           onClick={() => setToggle(!isToggled)}
         >
           <span className="text-white">By {props.author}</span>

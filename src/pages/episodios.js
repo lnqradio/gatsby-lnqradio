@@ -58,7 +58,7 @@ const EpisodiosPage = () => {
     <Layout>
       <SEO title="Episodios" />
       <div className="relative z-10 flex flex-col items-center justify-center px-6 py-40 m-0 mb-6 bg-gray-900 md:sticky md:top-0 hero">
-        <h1 className="text-3xl font-thin text-center text-white uppercase">
+        <h1 className="font-mono text-6xl text-center text-white ">
           Sexta temporada
         </h1>
 
@@ -81,7 +81,7 @@ const EpisodiosPage = () => {
       <div className="max-w-6xl py-3 pb-12 m-auto text-center">
         <Link
           to={`/notanenvivo/`}
-          className="px-4 pb-1 my-3 font-mono text-lg text-white transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
+          className="px-4 py-3 my-3 font-sans text-lg text-white transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
         >
           Escuchar temporadas anteriores
         </Link>
@@ -113,7 +113,7 @@ const EpisodiosPage = () => {
                   >
                     <h2 className="px-0 mb-3 text-xl text-red-500 hover:text-white">
                       {item.node.title}{" "}
-                      <b className="inline-block pt-2 mb-2 font-mono text-sm text-left text-gray-500 capitalize">
+                      <b className="inline-block pt-2 mb-2 font-sans text-sm text-left text-gray-500 capitalize">
                         / {item.node.publishDate}
                       </b>
                     </h2>

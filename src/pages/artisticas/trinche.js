@@ -16,7 +16,7 @@ const TrinchePage = () => {
       </Helmet>
       <div className="flex items-center justify-center pt-32 carlovich">
         <div className="w-full max-w-xl m-auto my-0 ">
-          <h1 className="inline-block max-w-4xl px-6 py-3 text-xl text-center text-gray-400 bg-gray-800 shadow-2xl tarantos-title">
+          <h1 className="inline-block max-w-4xl px-6 py-2 font-mono text-3xl font-bold text-center text-gray-400 uppercase bg-gray-800 shadow-2xl tarantos-title">
             Carlovich. No te voy a mentir
           </h1>
           <iframe
@@ -29,7 +29,7 @@ const TrinchePage = () => {
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/788682118&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
           ></iframe>
           <p
-            className="px-8 py-12 mb-6 text-base"
+            className="px-8 py-12 mb-6 font-serif text-base"
             style={{
               background: "rgba(40, 17, 54, 0.9)",
             }}
@@ -61,12 +61,20 @@ const TrinchePage = () => {
             Ante la consulta de un periodista por su falta de cualidades para
             recuperar la pelota, Carlovich respondió que no se tiraba al piso
             porque era muy amigo del canchero y que se lo había prohibido.
-            <cite className="block py-6 font-mono text-xl">
+            <cite
+              className="block p-6 my-12 -mx-5 font-sans text-2xl text-center md:-mx-24"
+              style={{
+                background: "rgba(134, 17, 49, 0.8)",
+              }}
+            >
               Carlovich era un tipo solitario, y esto lo perjudicó en su carrera
               deportiva, muchas veces faltó a entrenar porque prefería quedarse
-              sólo: “sí, sí, a veces soy de juntarme con alguien, pero no mucho
-              ¿viste? Me gusta más la tranquilidad. Para mí ir a entrenar es una
-              reunión”.
+              sólo:{" "}
+              <b>
+                "sí, sí, a veces soy de juntarme con alguien, pero no mucho
+                ¿viste? Me gusta más la tranquilidad. Para mí ir a entrenar es
+                una reunión”.
+              </b>
             </cite>
             Otra historia cuenta que Carlovich la pisaba con las dos piernas y
             que caminaba todo el partido. La constante es que siempre se puede
@@ -98,7 +106,12 @@ const TrinchePage = () => {
             porque se sabe cuál es el resultado pero se desconocen sus
             características, las cuales debe proveer la imaginación y el de
             Carlovich es un juego de la fantasía.
-            <cite className="block py-6 font-mono text-xl">
+            <cite
+              className="block p-6 my-12 -mx-5 font-sans text-2xl text-center md:-mx-24"
+              style={{
+                background: "rgba(134, 17, 49, 0.8)",
+              }}
+            >
               El día que Maradona llegó a Rosario para jugar en Newell´s le
               gritaron que era un orgullo tener al mejor del mundo en la ciudad,
               él contestó: “el mejor siempre estuvo acá, y es el Trinche
@@ -162,7 +175,12 @@ const TrinchePage = () => {
             parecidos, y si el cuerpo es el que delimita la percepción del
             mundo, Macedonio y Carlovich habitan mundos similares.
             <br />
-            <cite className="block py-6 font-mono text-lg text-center">
+            <cite
+              className="block p-6 my-12 -mx-5 font-sans text-2xl text-center md:-mx-24"
+              style={{
+                background: "rgba(134, 17, 49, 0.8)",
+              }}
+            >
               Macedonio decía: <br /> “lo que se puede imaginar sucede <br /> y
               pasa a formar parte de lo que es”.
               <br />

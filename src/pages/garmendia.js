@@ -21,38 +21,38 @@ const NotFoundPage = () => (
       <div className="grid grid-cols-3 gap-2">
         <Link
           to={`/artisticas/flaming-lynch/`}
-          className="font-mono uppercase artistica-card"
+          className="font-sans uppercase artistica-card"
         >
           Flaming Lynch
         </Link>
         <Link
           to={`/artisticas/human-beings/`}
-          className="font-mono uppercase artistica-card"
+          className="font-sans uppercase artistica-card"
         >
           Human beings
         </Link>
 
         <Link
           to={`/artisticas/loloapps/`}
-          className="font-mono uppercase artistica-card"
+          className="font-sans uppercase artistica-card"
         >
           Lolo App
         </Link>
         <Link
           to={`/artisticas/elastrologo/`}
-          className="font-mono uppercase artistica-card"
+          className="font-sans uppercase artistica-card"
         >
           El Astrólogo
         </Link>
         <Link
           to={`/artisticas/movimiento/`}
-          className="font-mono uppercase artistica-card"
+          className="font-sans uppercase artistica-card"
         >
           movimiento
         </Link>
         <Link
           to={`/artisticas/lamuerte/`}
-          className="font-mono uppercase artistica-card"
+          className="font-sans uppercase artistica-card"
         >
           La Muerte
         </Link>

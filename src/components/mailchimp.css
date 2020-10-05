@@ -16,7 +16,7 @@
 }
 
 .subscribe-form__button {
-  @apply block px-6 py-2 mt-2 font-mono font-bold text-center text-white bg-red-800;
+  @apply block px-6 py-2 mt-2 font-sans font-bold text-center text-white bg-red-800;
 }
 
 .subscribe-form__button:hover {

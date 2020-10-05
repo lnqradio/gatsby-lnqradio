@@ -110,7 +110,7 @@ class ColumnaTemplate extends React.Component {
                   rel="noopener noreferrer"
                   className="block w-full p-5 m-0 text-lg bg-gray-800 rounded-sm md:mt-3 md:mr-2 hover:text-white hover:bg-green-800"
                 >
-                  <h2 className="flex items-center font-mono text-base font-bold text-white ">
+                  <h2 className="flex items-center font-sans text-base font-bold text-white ">
                     <FaSpotify className="w-6 h-6 mr-3 text-white" />
                     <span className="w-full">Reproducir en Spotify</span>
                     <GoLinkExternal className="ml-3 text-base text-white" />
@@ -122,7 +122,7 @@ class ColumnaTemplate extends React.Component {
                   rel="noopener noreferrer"
                   className="block w-full p-5 text-lg bg-gray-800 rounded-sm md:mt-3 md:ml-2 hover:text-white hover:bg-orange-800"
                 >
-                  <h2 className="flex items-center font-mono text-base font-bold text-white ">
+                  <h2 className="flex items-center font-sans text-base font-bold text-white ">
                     <FaSoundcloud className="w-6 h-6 mr-3 text-orange-100" />
                     <span className="w-full">Reproducir en Soundcloud</span>
                     <GoLinkExternal className="ml-3 text-base text-orange-100" />
@@ -144,12 +144,12 @@ class ColumnaTemplate extends React.Component {
               <span className="hidden"></span>
             )}
 
-            <h1 className="w-full max-w-2xl m-auto mt-6 font-mono text-3xl text-left text-white ">
+            <h1 className="w-full max-w-2xl m-auto mt-6 font-sans text-3xl text-left text-white ">
               {columna.title}
 
               <Link
                 to={`/columnas/${kebabCase(columna.author.slug)}/`}
-                className="pl-3 mt-1 font-mono text-sm text-left text-gray-500 "
+                className="pl-3 mt-1 font-sans text-sm text-left text-gray-500 "
               >
                 x {columna.author.name}
               </Link>

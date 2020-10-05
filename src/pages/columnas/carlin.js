@@ -86,10 +86,10 @@ const CarlinPage = () => {
               </div>
             ))}
             <div className="w-full px-3 mt-6 text-3xl text-center text-white">
-              <h1 className="font-mono text-white ">Carlín</h1>
+              <h1 className="font-sans text-white ">Carlín</h1>
               <AnchorLink
                 href={`#author-player`}
-                className="block my-1 font-mono text-base text-red-500 hover:text-white"
+                className="block my-1 font-sans text-base text-red-500 hover:text-white"
               >
                 <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
                 <span className="pt-0">Escuchar Playlist</span>
@@ -107,7 +107,7 @@ const CarlinPage = () => {
           >
             {data.allContentfulAutores.edges.map((item, i) => (
               <div className="w-full max-w-xl m-auto post" key={item.node.id}>
-                <h2 className="font-mono text-2xl text-center text-white">
+                <h2 className="font-sans text-2xl text-center text-white">
                   Playlist de Carlín
                 </h2>
                 <div

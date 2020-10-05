@@ -55,6 +55,7 @@ const Header = ({ siteTitle }) => (
           >
             Artisticas
           </Link>
+
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"

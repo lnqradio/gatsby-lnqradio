@@ -127,14 +127,14 @@ const IndexPage = () => {
             background: "rgba(40, 17, 54, 0.8)",
           }}
         >
-          <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-base text-center uppercase bg-red-600 shadow-xl">
+          <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-2xl text-center uppercase bg-red-600 shadow-xl">
             último episodio
             <span className="ml-1 opacity-75">(458)</span>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
-            <h2 className="flex flex-col w-full pt-2 text-2xl leading-normal text-center text-white uppercase">
-              Fuegos De Artificio
-              <small className="ml-3 opacity-50">Domingo 4 de octubre</small>
+            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+              <span className="flex-1">Fuegos De Artificio</span>
+              <small className="text-red-500">4 de octubre</small>
             </h2>
           </div>
           <div
@@ -180,14 +180,14 @@ const IndexPage = () => {
         {data.lastShow.edges.map((show, i) => (
           <div key={show.node.slug} className="">
             <h1 className="flex justify-start p-6 pb-1 font-mono text-sm text-left text-white bg-gray-800">
-              <b className="mb-2 ml-0 font-mono text-sm text-left text-gray-500 capitalize">
+              <b className="mb-2 ml-0 font-sans text-xl text-left text-gray-500 capitalize">
                 {show.node.publishDate}
               </b>
             </h1>
             <div className="relative w-auto px-0 pt-0 pb-0 text-left bg-gray-800">
               <Link
                 to={`/episodios/`}
-                className="relative right-0 block px-6 pt-2 pb-3 font-mono text-gray-400 transition-all duration-200 ease-in-out md:absolute md:pt-0 hover:text-white hover:underline"
+                className="relative right-0 block px-6 pt-2 pb-3 font-sans text-gray-400 transition-all duration-200 ease-in-out md:absolute md:pt-0 hover:text-white hover:underline"
               >
                 Temporada {show.node.temporada}
               </Link>
@@ -235,7 +235,7 @@ const IndexPage = () => {
             <div className="mt-16 text-center blocks">
               <Link
                 to={`/podcasts/`}
-                className="px-4 py-2 my-6 font-mono text-lg text-white uppercase transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
+                className="px-4 py-2 my-6 font-sans text-lg text-white uppercase transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
               >
                 escuchá los últimas
               </Link>

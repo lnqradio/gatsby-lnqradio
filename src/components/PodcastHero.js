@@ -2,8 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundSlider from "gatsby-image-background-slider"
 
-const PodcastHero = props => (
-  <div className="relative z-10 flex items-center justify-center h-64 px-6 m-0 mb-2 bg-transparent md:bg-gray-900 md:sticky md:top-0">
+const PodcastHero = (props) => (
+  <div className="relative z-10 flex items-center justify-center px-6 py-24 pt-32 m-0 mb-2 bg-transparent md:bg-gray-900">
     <h1 className="flex flex-col items-center justify-center text-xl text-center text-white ">
       {props.icon}
       {props.heading}

@@ -4,10 +4,9 @@ import { Helmet } from "react-helmet"
 
 import SEO from "../../../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-
 import BackgroundSlider from "gatsby-image-background-slider"
 
-const TrinchePage = () => {
+const ParaexistirPage = () => {
   return (
     <Layout>
       <SEO title="Prólogo-para existir- de un sueño, el #7. " />
@@ -29,7 +28,7 @@ const TrinchePage = () => {
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/603286659&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
           ></iframe>
           <p
-            className="px-8 py-12 mb-6 font-sans text-base"
+            className="px-8 py-12 mb-6 font-serif text-base"
             style={{
               background: "rgba(40, 17, 54, 0.9)",
             }}
@@ -124,6 +123,7 @@ const TrinchePage = () => {
                       fluid(
                         maxWidth: 2000
                         quality: 100
+                        duotone: { highlight: "#f00e2e", shadow: "#281136" }
                         traceSVG: { color: "#281136" }
                       ) {
                         ...GatsbyImageSharpFluid
@@ -140,4 +140,4 @@ const TrinchePage = () => {
   )
 }
 
-export default TrinchePage
+export default ParaexistirPage

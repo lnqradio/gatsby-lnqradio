@@ -9,10 +9,6 @@ body {
   background-color: #14061d;
 }
 
-a {
-  text-shadow: none !important;
-  background-image: none !important;
-}
 .post .bg-image-hover-opacity,
 .slider-item .bg-image-hover-opacity {
   @apply transition-all duration-500;

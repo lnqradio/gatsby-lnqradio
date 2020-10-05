@@ -61,7 +61,7 @@ const SearchIndex = (props) => {
   return (
     <>
       <div className="w-full max-w-2xl p-2 pt-6 m-auto mt-24 mb-0 text-center searchBox md:pt-6 md:p-0 md:pb-6 animated fadeIn slower">
-        <h2 className="flex flex-col items-baseline py-3 pb-6 font-mono text-2xl text-left text-white md:flex-row">
+        <h2 className="flex flex-col items-baseline py-3 pb-6 font-sans text-2xl text-left text-white md:flex-row">
           <span className="flex-1">Todos podcasts</span>
           <SEO title={totales} />
 
@@ -93,7 +93,7 @@ const SearchIndex = (props) => {
             className="relative max-w-2xl p-2 pb-2 m-auto mb-2 text-white bg-gray-800 border-b border-gray-800 search-item md:p-2 sm:pr-32 animated fadeIn "
           >
             <Link
-              className="block pr-8 mb-2 font-mono text-lg font-bold text-red-500 truncate md:break-normal md:pr-0 sm:overflow-visible md:mb-0 md:break-all hover:text-white sm:pr-0 sm:inline-block"
+              className="block pr-8 mb-2 font-sans text-lg font-bold text-red-500 truncate md:break-normal md:pr-0 sm:overflow-visible md:mb-0 md:break-all hover:text-white sm:pr-0 sm:inline-block"
               to={`/columnas/${kebabCase(name)}/${kebabCase(slug)}/`}
             >
               {title}{" "}

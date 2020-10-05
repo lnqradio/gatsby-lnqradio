@@ -12,14 +12,14 @@ export default ({ card }) => (
     <div className="relative z-50 h-full px-0 pt-4 mb-20 shadow">
       <Link
         to={`/columnas/${kebabCase(card.author.name)}/${kebabCase(card.slug)}/`}
-        className="inline-block px-4 pt-1 pr-16 mb-1 font-mono text-lg text-red-500 md:text-xl lg:text-2xl title hover:text-white min-h-20"
+        className="inline-block px-4 pt-1 pr-16 mb-1 font-sans text-xl text-red-500 lg:text-2xl title hover:text-white min-h-20"
       >
         {card.title}
       </Link>
       <div>
         <Link
           to={`/columnas/${kebabCase(card.author.name)}/`}
-          className="inline-block px-4 pb-1 mb-2 font-mono text-base text-gray-500 hover:text-white"
+          className="inline-block px-4 pb-1 mb-2 font-sans text-xl text-gray-500 hover:text-white"
         >
           by {card.author.name}
         </Link>

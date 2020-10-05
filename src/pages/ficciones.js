@@ -77,37 +77,6 @@ const FiccionesPage = () => {
           ></iframe>
         </div>
       </AwesomeSlider>
-      <div className="flex flex-wrap max-w-full pt-12 m-auto my-8 md:pt-2 posts animated fadeIn delay-1s">
-        <div
-          className="max-w-6xl m-auto mt-12 text-center md:p-8 "
-          style={{
-            background: "rgba(40, 17, 54, 0.9)",
-          }}
-        >
-          <div className="flex flex-col flex-wrap justify-center lg:flex-row">
-            <iframe
-              width="100%"
-              height="450"
-              scrolling="no"
-              className="p-4"
-              title="Radioteatro - Distopia Feminista"
-              frameborder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/753485889&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
-            ></iframe>
-            <iframe
-              width="100%"
-              height="450"
-              className="p-4"
-              title="Sketch - Informe academia Paraguaya"
-              scrolling="no"
-              frameborder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/758502684&color=%23281136&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
-            ></iframe>
-          </div>
-        </div>
-      </div>
     </Layout>
   )
 }

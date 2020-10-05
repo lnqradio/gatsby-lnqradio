@@ -39,8 +39,8 @@ header .inner-header {
 }
 
 header nav a {
-  @apply inline-block pt-1 pr-4 font-mono text-white;
-  opacity: 0.7;
+  @apply inline-block pt-1 pr-4 font-sans text-xl font-bold text-white;
+  opacity: 0.8;
 }
 
 header .nav-search {
@@ -60,7 +60,7 @@ header nav .live-link:hover {
   margin-left: 0;
   min-width: 190px;
   opacity: 1;
-  @apply px-2 py-2 pl-3 font-mono text-sm font-bold text-center uppercase;
+  @apply px-2 py-2 pl-3 text-sm font-bold text-center uppercase;
 }
 
 @screen lg {
@@ -84,7 +84,7 @@ header nav a:hover {
 }
 
 header {
-  background: rgba(40, 17, 54, 0.25);
+  background: rgba(40, 17, 54, 0.6);
   border-bottom: 1px solid transparent;
 }
 /*

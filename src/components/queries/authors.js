@@ -37,7 +37,7 @@ const QueryCategoriesComponent = () => {
             key={node.id}
             to={`/columnas/${kebabCase(node.name)}/`}
             activeClassName="active"
-            className="px-4 py-3 font-mono text-sm text-center text-red-500 hover:text-white md:py-2 md:px-3 md:w-full min-w-xm"
+            className="px-4 py-3 font-sans text-base text-center text-red-500 hover:text-white md:py-2 md:px-3 md:w-full min-w-xm"
           >
             {node.name}
           </Link>

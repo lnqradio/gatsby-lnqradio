@@ -87,10 +87,10 @@ const ChucaPage = () => {
               </div>
             ))}
             <div className="w-full px-3 mt-6 text-3xl text-center text-white">
-              <h1 className="font-mono text-white ">Chuca</h1>
+              <h1 className="font-sans text-white ">Chuca</h1>
               <AnchorLink
                 href={`#author-player`}
-                className="block my-1 font-mono text-base text-red-500 hover:text-white"
+                className="block my-1 font-sans text-base text-red-500 hover:text-white"
               >
                 <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
                 <span className="pt-0">Escuchar Playlist</span>
@@ -108,7 +108,7 @@ const ChucaPage = () => {
           >
             {data.allContentfulAutores.edges.map((item, i) => (
               <div className="w-full max-w-xl m-auto post" key={item.node.id}>
-                <h2 className="font-mono text-2xl text-center text-white">
+                <h2 className="font-sans text-2xl text-center text-white">
                   Playlist de Chuca
                 </h2>
                 <div

@@ -70,15 +70,15 @@ const ColumnasPage = () => {
     <Layout>
       <SEO title="Podcasts" />
       <div className="flex flex-col">
-        <div className="flex flex-wrap justify-center w-full pt-16 m-auto md:pt-0 posts animation columnas soundcloud ">
+        <div className="flex flex-wrap justify-center w-full pt-20 m-auto md:pt-0 posts animation columnas soundcloud ">
           <HomeHeroLinks className="home-hero-links">
             <PodcastCategorias />
           </HomeHeroLinks>
           <h2
-            className="block w-full pb-4 mt-0 font-mono text-3xl text-center text-white"
+            className="block w-full pb-4 mt-0 font-sans text-3xl text-center text-white opacity-25"
             id="destacadas"
           >
-            Últimas Subidas
+            Grandes exitos
           </h2>
           <PodcastGrid>
             {data.contenful.edges.map((item, i) => (

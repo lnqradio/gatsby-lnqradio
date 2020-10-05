@@ -29,7 +29,7 @@ const TrinchePage = () => {
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/603306345&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
           ></iframe>
           <p
-            className="px-8 py-12 mb-6 font-sans text-base"
+            className="px-8 py-12 mb-6 font-serif text-base"
             style={{
               background: "rgba(40, 17, 54, 0.9)",
             }}
@@ -38,24 +38,34 @@ const TrinchePage = () => {
             profundidad, coherencia y lo demás. Escapo de esa parálisis que
             sufre el texto cuando le piden que resuelva el mundo con todas las
             herramientas, las formas, los colores y las ideas al servicio de su
-            imaginación. Aunque no escapo del todo y es por eso que ni siquiera
-            soy Prólogo y al momento soy No-Prólogo, porque no he hallado texto
-            que resuelva el mundo, ni siquiera uno que lo intente. Di con tres
-            No-Textos pero todos padecían La Manta Corta y ninguno llegaba a
-            Texto. Más por aburrido que por interesado propongo Medidas de un
-            No-Prólogo a un No-Texto para Resolver el mundo. La primera es de
-            whisky, la segunda abolir los círculos. Debemos liberarnos de la
-            lógica y de la comida sin sal. También es de cabal importancia
-            declararnos enemigos de toda abstracción y desconocer esa enemistad
-            ya que es una abstracción y por lo tanto enemigos de nuestra
-            declaración. Frente a los problemas, dos soluciones: que no se
-            puedan resolver, para así esquivar la espantosa situación de que
-            alguien tenga razón; la otra, producir una alfombra gigante donde
-            esconder todos los problemas. Sugiero, además, obligar a la ¿gente?
-            a caminar constantemente para comprender los cambios. Para aquellos
-            No-Textos que prefieran el azar, les inspiro: eliminar los números,
-            6, 4, y 1 y ver qué sucede; el mismo procedimiento se puede
-            aventurar con algunas letras del abecedario. <br />
+            imaginación. <br />
+            <br />
+            Aunque no escapo del todo y es por eso que ni siquiera soy Prólogo y
+            al momento soy No-Prólogo, porque no he hallado texto que resuelva
+            el mundo, ni siquiera uno que lo intente.
+            <br />
+            <br /> Di con tres No-Textos pero todos padecían La Manta Corta y
+            ninguno llegaba a Texto. Más por aburrido que por interesado
+            propongo Medidas de un No-Prólogo a un No-Texto para Resolver el
+            mundo.
+            <br />
+            <br /> La primera es de whisky, la segunda abolir los círculos.
+            Debemos liberarnos de la lógica y de la comida sin sal. También es
+            de cabal importancia declararnos enemigos de toda abstracción y
+            desconocer esa enemistad ya que es una abstracción y por lo tanto
+            enemigos de nuestra declaración.
+            <br />
+            <br />
+            Frente a los problemas, dos soluciones: que no se puedan resolver,
+            para así esquivar la espantosa situación de que alguien tenga razón;
+            la otra, producir una alfombra gigante donde esconder todos los
+            problemas. <br />
+            <br />
+            Sugiero, además, obligar a la ¿gente? a caminar constantemente para
+            comprender los cambios. Para aquellos No-Textos que prefieran el
+            azar, les inspiro: eliminar los números, 6, 4, y 1 y ver qué sucede;
+            el mismo procedimiento se puede aventurar con algunas letras del
+            abecedario. <br />
             <br /> Hay una medida que busca traer a Futuro al presente: consiste
             en simular muertes y constatar así el afecto de las posteridades.
             <br />
@@ -91,21 +101,27 @@ const TrinchePage = () => {
             tuvo que soltar las cadenas para erguirse. Y esto lo consigue
             desvelando que se sabe prisionero, y a la vez condena como su propio
             carcelero.
-            <br />
-            <br />
-            - ¡El mundo nació hastiado, cabizbajo y mas viejo que el tiempo
-            mismo! - Me dijo un anciano de cabeza, un antiguo. (Temo confundirlo
-            con el miedo)
-            <br />
-            <br />
-            ¡Con que fuerza impera su divague! La redundancia a la que es
-            expuesto puede dejarlo desnudo y justo hoy llueve... A todo esto se
-            me cruzó otro divague de este incomprendido tambien!
+            <cite
+              className="block p-6 my-12 -mx-5 font-sans text-2xl text-center md:-mx-24"
+              style={{
+                background: "rgba(134, 17, 49, 0.8)",
+              }}
+            >
+              - ¡El mundo nació hastiado, cabizbajo y mas viejo que el tiempo
+              mismo! - Me dijo un anciano de cabeza, un antiguo. (Temo
+              confundirlo con el miedo) ¡Con que fuerza impera su divague! La
+              redundancia a la que es expuesto puede dejarlo desnudo y justo hoy
+              llueve... A todo esto se me cruzó otro divague de este
+              incomprendido tambien!
+            </cite>
           </p>
           <BackgroundSlider
             className=" bgslider"
             initDelay={3}
-            images={["Sueño7.jpg"]}
+            images={[
+              "suenio-7.jpg",
+              "prologo-para-existir-de-un-sueno-el-7.jpg",
+            ]}
             transition={2}
             duration={8}
             query={useStaticQuery(graphql`
@@ -119,7 +135,7 @@ const TrinchePage = () => {
                       fluid(
                         maxWidth: 2000
                         quality: 100
-
+                        duotone: { highlight: "#f00e2e", shadow: "#281136" }
                         traceSVG: { color: "#281136" }
                       ) {
                         ...GatsbyImageSharpFluid

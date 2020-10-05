@@ -26,5 +26,5 @@ const Button = styled.button`
 `
 
 const ButtonContainter = styled.div`
-  ${tw`max-w-6xl m-auto text-left `}
+  ${tw`w-full m-auto text-left md:px-12 `}
 `

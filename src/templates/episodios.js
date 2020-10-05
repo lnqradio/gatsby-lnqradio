@@ -34,7 +34,7 @@ class EpisodiosTemplate extends React.Component {
               </div>
               <h2 className="px-6 pt-6 mb-3 text-2xl text-white title">
                 {episodios.title}
-                <b className="inline-block pt-2 pl-2 mb-2 font-mono text-sm text-left text-gray-500 capitalize">
+                <b className="inline-block pt-2 pl-2 mb-2 font-sans text-sm text-left text-gray-500 capitalize">
                   / {episodios.publishDate}
                 </b>
               </h2>
@@ -60,13 +60,13 @@ class EpisodiosTemplate extends React.Component {
                       to={`/columnas/${kebabCase(
                         slider.author.name
                       )}/${kebabCase(slider.slug)}/`}
-                      className="block px-6 pt-2 mb-1 font-mono text-2xl text-red-500 title hover:text-white min-h-20"
+                      className="block px-6 pt-2 mb-1 font-sans text-2xl text-red-500 title hover:text-white min-h-20"
                     >
                       {slider.title}
                     </Link>
                     <Link
                       to={`/columnas/${kebabCase(slider.author.name)}/`}
-                      className="block px-6 pb-12 mb-2 font-mono text-base text-gray-500 hover:text-white"
+                      className="block px-6 pb-12 mb-2 font-sans text-base text-gray-500 hover:text-white"
                     >
                       x {slider.author.name}
                     </Link>

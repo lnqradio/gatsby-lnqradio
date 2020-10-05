@@ -23,38 +23,38 @@ const ArtisticasPage = () => {
           <div className="grid gap-2 sm:grid-cols-3">
             <Link
               to={`/artisticas/flaming-lynch/`}
-              className="font-mono uppercase artistica-card"
+              className="font-sans uppercase artistica-card"
             >
               Flaming Lynch
             </Link>
             <Link
               to={`/artisticas/human-beings/`}
-              className="font-mono uppercase artistica-card"
+              className="font-sans uppercase artistica-card"
             >
               Human beings
             </Link>
 
             <Link
               to={`/artisticas/loloapps/`}
-              className="font-mono uppercase artistica-card"
+              className="font-sans uppercase artistica-card"
             >
               Lolo App
             </Link>
             <Link
               to={`/artisticas/elastrologo/`}
-              className="font-mono uppercase artistica-card"
+              className="font-sans uppercase artistica-card"
             >
               El Astrólogo
             </Link>
             <Link
               to={`/artisticas/movimiento/`}
-              className="font-mono uppercase artistica-card"
+              className="font-sans uppercase artistica-card"
             >
               El movimiento
             </Link>
             <Link
               to={`/artisticas/lamuerte/`}
-              className="font-mono uppercase artistica-card"
+              className="font-sans uppercase artistica-card"
             >
               La Muerte
             </Link>
@@ -81,6 +81,15 @@ const ArtisticasPage = () => {
           </div>
         </div>
       </div>
+
+      <div className="max-w-6xl py-3 pb-12 m-auto text-center">
+        <Link
+          to="/artisticas/galeria"
+          className="px-6 py-3 my-3 font-mono text-4xl text-white uppercase transition duration-150 ease-in-out bg-gray-800 hover:text-red-100 hover:bg-red-700"
+        >
+          Ver Galería de imágenes
+        </Link>
+      </div>
       <div className="flex flex-wrap max-w-full m-auto mb-12 posts">
         <div
           className="w-full px-0 py-8 m-auto text-center "
@@ -90,14 +99,14 @@ const ArtisticasPage = () => {
         >
           <Link
             activeClassName="active"
-            className="hidden px-6 py-2 mt-2 font-mono font-bold text-center text-white bg-red-800 sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
+            className="hidden px-6 py-2 mt-2 font-sans font-bold text-center text-white bg-red-800 sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
             to="/artisticas/tarantos-duo"
           >
             La pereza
           </Link>
           <Link
             activeClassName="active"
-            className="hidden px-6 py-2 mt-2 font-mono font-bold text-center text-white bg-red-800 sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
+            className="hidden px-6 py-2 mt-2 font-sans font-bold text-center text-white bg-red-800 sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
             to="/artisticas/aradio-a-dos-charlas"
           >
             A dos Charlas

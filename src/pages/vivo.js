@@ -15,10 +15,10 @@ const VivoPage = () => (
 
     <div className="max-w-lg pt-6 m-auto text-center live-stream md:pt-24">
       <div className="relative z-50 pt-6 pb-3 text-xl">
-        <h1 className="inline-block p-6 py-4 mt-2 mb-2 font-mono text-2xl text-left text-white bg-gray-800 ">
+        <h1 className="inline-block p-6 py-4 mt-2 mb-2 font-sans text-2xl text-left text-white bg-gray-800 ">
           Todos los Viernes a las 20hs un nuevo episodio
         </h1>
-        <h1 className="inline-block p-6 py-2 my-0 font-mono text-2xl leading-10 text-left text-red-500 bg-gray-800 md:text-left">
+        <h1 className="inline-block p-6 py-2 my-0 font-sans text-2xl leading-10 text-left text-red-500 bg-gray-800 md:text-left">
           La Noche Que ella soño con el Centro Half
         </h1>
         <div className="text-center solumedia">
@@ -37,7 +37,7 @@ const VivoPage = () => (
 
         <Link
           activeClassName="active"
-          className="px-6 py-2 mx-2 mt-0 mb-12 font-mono text-white uppercase transition-all duration-500 bg-gray-800 shadow-xl hover:bg-transparent hover:text-white"
+          className="px-6 py-2 mx-2 mt-0 mb-12 font-sans text-white uppercase transition-all duration-500 bg-gray-800 shadow-xl hover:bg-transparent hover:text-white"
           to="/"
         >
           Volver al inicios
