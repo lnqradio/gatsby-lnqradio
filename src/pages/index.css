@@ -9,8 +9,14 @@ body.gallery {
 }
 
 body.gallery header.header {
-  @apply bg-transparent;
+  @apply bg-black;
   filter: invert(1);
+}
+
+@screen lg {
+  body.gallery .logo {
+    @apply scale-75 -translate-y-4;
+  }
 }
 
 body.gallery .bm-burger-bars {

@@ -121,7 +121,7 @@ const GaleriaPage = () => {
             </div>
             <OpenLight />
 
-            <div className="grid grid-cols-1 gap-5 mx-auto md:px-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            <div className="grid grid-cols-1 gap-5 mx-auto mb-12 md:mb-0 md:px-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {data.backgrounds.edges.map(({ node }) => {
                 return (
                   <div

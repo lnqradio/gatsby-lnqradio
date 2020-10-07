@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          <div className="absolute w-24 p-1 mt-3 lg:w-32 logo">
+          <div className="absolute w-24 p-1 mt-3 transition-all duration-500 ease-in-out transform lg:w-32 logo">
             <Image />
           </div>
           <h1 className="hidden max-w-lg p-0 m-0 text-white md:mr-12">
