@@ -11,7 +11,7 @@ const OpenLightbox = (props) => {
     <>
       <ButtonContainter>
         <Button onClick={() => openLightbox()}>
-          Ponele play y abrid la galería
+          Ponele play & abrid la galería
         </Button>
         <a
           href="https://www.instagram.com/protojulieta/"
@@ -29,7 +29,7 @@ const OpenLightbox = (props) => {
 export default OpenLightbox
 
 const Button = styled.button`
-  ${tw`py-2 pr-12 text-base font-bold text-center text-gray-800 uppercase border-b-2 border-gray-900 md:pr-0`}
+  ${tw`hidden py-2 pr-12 text-base font-bold text-center text-gray-800 uppercase border-b-2 border-gray-900 md:block md:pr-0 hover:text-red-500`}
   body.dark & {
     ${tw`text-gray-800 border-gray-100`}
   }
