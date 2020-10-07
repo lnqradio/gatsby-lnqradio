@@ -4,6 +4,19 @@ SVG Icons - svgicons.sparkk.fr
 
 /* purgecss start ignore */
 
+body.gallery {
+  @apply bg-white;
+}
+
+body.gallery header.header {
+  @apply bg-transparent;
+  filter: invert(1);
+}
+
+body.gallery .bm-burger-bars {
+  background: #000;
+}
+
 .page-ficciones main {
   min-height: auto;
 }

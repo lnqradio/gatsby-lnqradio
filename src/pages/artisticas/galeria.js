@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 //import {Link } from "gatsby"
 //import { kebabCase } from "lodash"
+import { Helmet } from "react-helmet"
+
 import Img from "gatsby-image"
 import { SRLWrapper } from "simple-react-lightbox"
 import OpenLight from "../../components/OpenLightbox"
@@ -11,8 +13,8 @@ const options = {
   buttons: {
     iconPadding: "5px",
     showDownloadButton: false,
-    backgroundColor: "rgba(0, 0, 0, 1)",
-    iconColor: "rgb(255, 255, 255)",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    iconColor: "rgb(0, 0, 0)",
   },
   caption: {
     captionFontFamily: "Josefin Sans,sans",
@@ -22,7 +24,7 @@ const options = {
     showCaption: true,
   },
   settings: {
-    overlayColor: "rgba(0, 0, 0, 1)",
+    overlayColor: "rgba(255, 255, 255, 1)",
     transitionTimingFunction: "ease-in-out",
     slideTransitionSpeed: 3.6,
     slideTransitionTimingFunction: [0.25, 0.75, 0.5, 1],
@@ -45,8 +47,8 @@ const options = {
   },
   progressBar: {
     height: "4px",
-    fillColor: "rgb(255, 255, 255)",
-    backgroundColor: "rgba(0, 0, 0, 1)",
+    fillColor: "rgb(0, 0, 0)",
+    backgroundColor: "rgba(255, 255, 255, 1)",
   },
   thumbnails: {
     showThumbnails: true,
@@ -100,32 +102,35 @@ const GaleriaPage = () => {
 
   return (
     <>
+      <Helmet>
+        <body className="gallery" />
+      </Helmet>
       <div className="pt-24">
         <SimpleReactLightbox>
           <SRLWrapper options={options}>
             <div className="flex justify-between w-full py-12 mx-auto text-white md:px-12">
               <iframe
                 width="100%"
-                height="80"
-                title="Prólogo-para existir- de un sueño, el #7."
+                height="220"
+                title="aRadio - Personajes Prosódios"
                 scrolling="no"
                 frameBorder="no"
                 allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/619154232&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/619154232&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
               ></iframe>
             </div>
             <OpenLight />
-            <div className="grid grid-cols-1 gap-10 mx-auto md:px-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+            <div className="grid grid-cols-1 gap-5 mx-auto md:px-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {data.backgrounds.edges.map(({ node }) => {
                 return (
                   <div
-                    className="relative w-full h-64 overflow-hidden bg-gray-800 cursor-pointer link"
+                    className="relative w-full overflow-hidden cursor-pointer link"
                     key={node.id}
                   >
                     <Img
                       fluid={node.childImageSharp.fluid}
-                      className="h-64"
-                      alt="@protojulieta"
+                      className="object-cover w-auto h-full"
                     />
                   </div>
                 )

@@ -176,11 +176,20 @@ const IndexPage = () => {
         />
       </div>
 
+      <div className="max-w-6xl py-12 m-auto text-center">
+        <Link
+          to="/artisticas/galeria"
+          className="relative px-6 py-3 my-3 font-mono text-4xl text-white uppercase transition duration-150 ease-in-out transform translate-y-0 bg-red-800 hover:translate-y-2 hover:text-red-100 hover:bg-red-700"
+        >
+          Ver Galería de imágenes
+        </Link>
+      </div>
+
       <div className="max-w-5xl m-auto mb-24 md:mt-6 lg:mt-12 last-show ">
         {data.lastShow.edges.map((show, i) => (
           <div key={show.node.slug} className="">
             <h1 className="flex justify-start p-6 pb-1 font-mono text-sm text-left text-white bg-gray-800">
-              <b className="mb-2 ml-0 font-sans text-xl text-left text-gray-500 capitalize">
+              <b className="hidden mb-2 ml-0 font-sans text-xl text-left text-gray-500 capitalize">
                 {show.node.publishDate}
               </b>
             </h1>

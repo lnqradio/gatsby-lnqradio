@@ -62,7 +62,7 @@ const ArtisticasPage = () => {
         </div>
       </div>
 
-      <div className="flex justify-center pt-24 pb-12 md:pt-40 md:items-center ">
+      <div className="justify-center hidden pt-24 pb-12 md:pt-40 md:items-center">
         <div className="w-full max-w-lg px-3 m-auto my-0">
           <h1 className="inline-block px-6 py-3 text-xl text-center text-gray-400 bg-gray-800 shadow-2xl tarantos-title">
             En la Terraza: Tarantos Dúo
@@ -82,36 +82,17 @@ const ArtisticasPage = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl py-3 pb-12 m-auto text-center">
-        <Link
-          to="/artisticas/galeria"
-          className="px-6 py-3 my-3 font-mono text-4xl text-white uppercase transition duration-150 ease-in-out bg-gray-800 hover:text-red-100 hover:bg-red-700"
-        >
-          Ver Galería de imágenes
-        </Link>
-      </div>
-      <div className="flex flex-wrap max-w-full m-auto mb-12 posts">
+      <div className="flex flex-col flex-wrap max-w-full pt-24 m-auto mb-12 md:pt-40 posts">
+        <h1 className="font-mono text-6xl text-center text-white ">
+          aaaartisticas
+        </h1>
         <div
-          className="w-full px-0 py-8 m-auto text-center "
+          className="w-full max-w-lg px-0 py-8 m-auto mx-auto text-center"
           style={{
             background: "rgba(40, 17, 54, 0.9)",
           }}
         >
-          <Link
-            activeClassName="active"
-            className="hidden px-6 py-2 mt-2 font-sans font-bold text-center text-white bg-red-800 sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
-            to="/artisticas/tarantos-duo"
-          >
-            La pereza
-          </Link>
-          <Link
-            activeClassName="active"
-            className="hidden px-6 py-2 mt-2 font-sans font-bold text-center text-white bg-red-800 sm:mr-2 hover:bg-red-700 hover:text-white md:w-64"
-            to="/artisticas/aradio-a-dos-charlas"
-          >
-            A dos Charlas
-          </Link>
-          <div className="grid gap-3 px-6 text-center md:grid-cols-3">
+          <div className="grid gap-3 px-6 text-center md:grid-cols-1">
             <iframe
               width="100%"
               height="166"

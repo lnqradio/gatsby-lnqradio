@@ -59,6 +59,14 @@ const Header = ({ siteTitle }) => (
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"
+            to="/artisticas/galeria"
+          >
+            Galería
+          </Link>
+
+          <Link
+            className="cursor-pointer"
+            activeClassName="font-bold active"
             to="/ficciones/"
           >
             Ficciones
