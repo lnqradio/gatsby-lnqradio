@@ -78,7 +78,7 @@ const ColumnasPage = () => {
             className="block w-full pb-4 mt-0 font-sans text-3xl text-center text-white opacity-25"
             id="destacadas"
           >
-            Grandes exitos
+            Destacadas
           </h2>
           <PodcastGrid>
             {data.contenful.edges.map((item, i) => (
