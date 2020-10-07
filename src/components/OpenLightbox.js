@@ -10,14 +10,16 @@ const OpenLightbox = (props) => {
   return (
     <>
       <ButtonContainter>
-        <Button onClick={() => openLightbox()}>Abrir galería</Button>
+        <Button onClick={() => openLightbox()}>
+          Ponele play y abrid la galería
+        </Button>
         <a
           href="https://www.instagram.com/protojulieta/"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 text-xl text-center text-red-500"
+          className="my-12 text-xl text-center text-gray-700 hover:text-red-600"
         >
-          @protojulieta
+          by @protojulieta
         </a>
       </ButtonContainter>
     </>

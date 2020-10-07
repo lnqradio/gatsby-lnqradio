@@ -181,7 +181,7 @@ const IndexPage = () => {
           to="/artisticas/galeria"
           className="relative px-6 py-3 my-3 font-mono text-4xl text-white uppercase transition duration-150 ease-in-out transform translate-y-0 bg-red-800 hover:translate-y-2 hover:text-red-100 hover:bg-red-700"
         >
-          Ver Galería de imágenes
+          galería de personajes prosódios
         </Link>
       </div>
 
