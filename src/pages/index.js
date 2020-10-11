@@ -147,10 +147,10 @@ const IndexPage = () => {
               width="100%"
               height="250"
               scrolling="no"
-              title="Fuegos De Artificio"
+              title="Artificios Fugares"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/908929057&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/908929057&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
         </div>
