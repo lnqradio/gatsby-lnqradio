@@ -129,12 +129,12 @@ const IndexPage = () => {
         >
           <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-2xl text-center uppercase bg-red-600 shadow-xl">
             último episodio
-            <span className="ml-1 opacity-75">(458)</span>
+            <span className="ml-1 opacity-75">(459)</span>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Fuegos De Artificio</span>
-              <small className="text-red-500">4 de octubre</small>
+              <span className="flex-1">Artificios Fugares</span>
+              <small className="text-red-500">10 de octubre</small>
             </h2>
           </div>
           <div
@@ -150,7 +150,7 @@ const IndexPage = () => {
               title="Fuegos De Artificio"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/904279798%3Fsecret_token%3Ds-aUaABkJkkRi&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/908929057&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
             ></iframe>
           </div>
         </div>
