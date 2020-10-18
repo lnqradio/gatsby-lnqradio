@@ -129,12 +129,12 @@ const IndexPage = () => {
         >
           <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-2xl text-center uppercase bg-red-600 shadow-xl">
             último episodio
-            <span className="ml-1 opacity-75">(459)</span>
+            <span className="ml-1 opacity-75">(460)</span>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Artificios Fugares</span>
-              <small className="text-red-500">10 de octubre</small>
+              <span className="flex-1">La Fiesta (clandestina)</span>
+              <small className="text-red-500">18 de octubre</small>
             </h2>
           </div>
           <div
@@ -147,10 +147,10 @@ const IndexPage = () => {
               width="100%"
               height="250"
               scrolling="no"
-              title="Artificios Fugares"
+              title="La Fiesta (clandestina)"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/908929057&color=%23f56565&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/912750841&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
             ></iframe>
           </div>
         </div>
