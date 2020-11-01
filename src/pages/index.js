@@ -118,23 +118,23 @@ const IndexPage = () => {
       <div
         className="relative flex items-center justify-center w-full ml-auto mr-auto overflow-hidden solumedia"
         style={{
-          minHeight: "70vh",
+          minHeight: "80vh",
         }}
       >
         <div
-          className="relative block w-full max-w-lg mx-auto my-6 mt-20 font-mono shadow-sm"
+          className="relative block w-full max-w-2xl mx-auto my-12 mt-24 font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.8)",
           }}
         >
           <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-2xl text-center uppercase bg-red-600 shadow-xl">
             último episodio
-            <span className="ml-1 opacity-75">(461)</span>
+            <span className="ml-1 opacity-75">(462)</span>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Buenos Aires</span>
-              <small className="text-red-500">25 de octubre</small>
+              <span className="flex-1">Estados Unidos De Norteamerica</span>
+              <small className="text-red-500">1 de Noviembre</small>
             </h2>
           </div>
           <div
@@ -150,7 +150,7 @@ const IndexPage = () => {
               title="Buenos Aires"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/917521978&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/921655108&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
             ></iframe>
           </div>
         </div>
