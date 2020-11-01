@@ -133,7 +133,12 @@ const IndexPage = () => {
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Estados Unidos De Norteamerica</span>
+              <span className="flex-1">
+                Estados Unidos De Norteamerica{" "}
+                <small className="text-base text-red-200">
+                  (aproximaciones)
+                </small>
+              </span>
               <small className="text-red-500">1 de Noviembre</small>
             </h2>
           </div>
