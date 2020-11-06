@@ -6,8 +6,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundSlider from "gatsby-image-background-slider"
 
 const EspaceMetafisicoPage = () => {
-
-
   return (
     <Layout>
       <SEO title="ESCAPE METAFÍSICO (CUIDADO PALIATIVO)" />
@@ -15,7 +13,6 @@ const EspaceMetafisicoPage = () => {
         <body className="dobFiber" />
       </Helmet>
       <div className="flex items-center justify-center pt-32 carlovich">
-
         <div className="w-full max-w-xl mx-auto my-0 ">
           <h1 className="block max-w-4xl px-6 py-2 font-mono text-3xl font-bold text-center text-gray-400 uppercase bg-gray-800 shadow-2xl tarantos-title">
             ESCAPE METAFÍSICO (CUIDADO PALIATIVO)
@@ -57,14 +54,6 @@ const EspaceMetafisicoPage = () => {
             GLÁNDULAS SENSORIALES Y PERMITIRÁ A LOS SONIDOS INMISCUIRSE.
             <br />
             <br />
-            <cite
-              className="block p-6 my-12 -mx-5 font-sans text-2xl text-center undeliner md:-mx-24"
-              style={{
-                background: "rgba(134, 17, 49, 0.8)",
-              }}
-            >
-              GUIÓN
-            </cite>
           </p>
           <BackgroundSlider
             className=" bgslider"
