@@ -59,7 +59,10 @@ const GaleriaPage = () => {
   const data = useStaticQuery(graphql`
     query QueryGaleriaQuery {
       backgrounds: allFile(
-        filter: { sourceInstanceName: { eq: "backgrounds" } }
+        filter: {
+          sourceInstanceName: { eq: "backgrounds" }
+          name: { ne: "escape-metafisico" }
+        }
       ) {
         edges {
           node {
