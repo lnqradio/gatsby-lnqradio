@@ -33,26 +33,26 @@ const EspaceMetafisicoPage = () => {
               background: "rgba(40, 17, 54, 0.9)",
             }}
           >
-            Numerosos días van desde que me encuentro encerrada en esta forzosa
-            realidad de la que obligadamente debo ser parte. En un círculo tan
-            nauseoso como la calesita me descompongo y mi cuerpo se desvanece en
-            esa forma perfecta sin poder ver en el abismo otra realidad posible.
-            Intento escaparme de esta fisicalidad abrumadora de todas las
-            maneras existentes pero mi cuerpo solo encuentra en lo sensorial la
-            unica posibilidad de calma. Los pasos y los pedaleos me llevan a
-            embaucarme en expediciones sin destino, en recorridos que me
-            asombren y me distraigan. El movimiento me traslada y me embiste con
-            personajes que disponen de mis pensamientos para discurrir sus
-            delirios, y en ese fluir dejo que mi cuerpo naufrague por unos
-            minutos que se saben eternos.
+            NUMEROSOS DÍAS VAN DESDE QUE ME ENCUENTRO ENCERRADA EN ESTA FORZOSA
+            REALIDAD DE LA QUE OBLIGADAMENTE DEBO SER PARTE. EN UN CÍRCULO TAN
+            NAUSEOSO COMO LA CALESITA ME DESCOMPONGO Y MI CUERPO SE DESVANECE EN
+            ESA FORMA PERFECTA SIN PODER VER EN EL ABISMO OTRA REALIDAD POSIBLE.
+            INTENTO ESCAPARME DE ESTA FISICALIDAD ABRUMADORA DE TODAS LAS
+            MANERAS EXISTENTES PERO MI CUERPO SOLO ENCUENTRA EN LO SENSORIAL LA
+            UNICA POSIBILIDAD DE CALMA. LOS PASOS Y LOS PEDALEOS ME LLEVAN A
+            EMBAUCARME EN EXPEDICIONES SIN DESTINO, EN RECORRIDOS QUE ME
+            ASOMBREN Y ME DISTRAIGAN. EL MOVIMIENTO ME TRASLADA Y ME EMBISTE CON
+            PERSONAJES QUE DISPONEN DE MIS PENSAMIENTOS PARA DISCURRIR SUS
+            DELIRIOS, Y EN ESE FLUIR DEJO QUE MI CUERPO NAUFRAGUE POR UNOS
+            MINUTOS QUE SE SABEN ETERNOS.
             <br />
             <br />
-            Esta guía auditiva puede ser utilizada como herramienta de escape y
-            de liberación de tensión y ansiedad. La narrativa pseudoreal
-            encenderá tus sentidos y te conectará con otros desasosiegos. Esta
-            píldora descompresiva no viene con manual de instrucciones, aunque
-            unos auriculares y disponer de tu cuerpo en movimiento activará tus
-            glándulas sensoriales y permitirá a los sonidos inmiscuirse.
+            ESTA GUÍA AUDITIVA PUEDE SER UTILIZADA COMO HERRAMIENTA DE ESCAPE Y
+            DE LIBERACIÓN DE TENSIÓN Y ANSIEDAD. LA NARRATIVA PSEUDOREAL
+            ENCENDERÁ TUS SENTIDOS Y TE CONECTARÁ CON OTROS DESASOSIEGOS. ESTA
+            PÍLDORA DESCOMPRESIVA NO VIENE CON MANUAL DE INSTRUCCIONES, AUNQUE
+            UNOS AURICULARES Y DISPONER DE TU CUERPO EN MOVIMIENTO ACTIVARÁ TUS
+            GLÁNDULAS SENSORIALES Y PERMITIRÁ A LOS SONIDOS INMISCUIRSE.
             <br />
             <br />
           </p>
