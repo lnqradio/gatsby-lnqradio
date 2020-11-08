@@ -129,17 +129,12 @@ const IndexPage = () => {
         >
           <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-2xl text-center uppercase bg-red-600 shadow-xl">
             último episodio
-            <span className="ml-1 opacity-75">(462)</span>
+            <span className="ml-1 opacity-75">(463)</span>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">
-                Estados Unidos De Norteamerica{" "}
-                <small className="text-base text-red-200">
-                  (aproximaciones)
-                </small>
-              </span>
-              <small className="text-red-500">1 de Noviembre</small>
+              <span className="flex-1">Los Batidos</span>
+              <small className="text-red-500">8 de Noviembre</small>
             </h2>
           </div>
           <div
@@ -152,10 +147,10 @@ const IndexPage = () => {
               width="100%"
               height="250"
               scrolling="no"
-              title="Buenos Aires"
+              title="Los batidos"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/921655108&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/925575322&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
         </div>
