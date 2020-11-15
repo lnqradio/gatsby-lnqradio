@@ -127,14 +127,19 @@ const IndexPage = () => {
             background: "rgba(40, 17, 54, 0.8)",
           }}
         >
-          <div className="absolute bottom-0 left-0 right-0 z-50 w-48 p-2 py-1 mx-auto -mb-5 text-2xl text-center uppercase bg-red-600 shadow-xl">
+          <div
+            className="absolute bottom-0 left-0 right-0 z-50 max-w-md p-2 py-1 mx-auto -mb-6 font-sans text-xl text-center uppercase shadow-xl"
+            style={{
+              background: "rgba(191, 48, 48, 0.85)",
+            }}
+          >
             último episodio
-            <span className="ml-1 opacity-75">(463)</span>
+            <span className="ml-1 font-bold opacity-75 ">(464)</span>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Los Batidos</span>
-              <small className="text-red-500">8 de Noviembre</small>
+              <span className="flex-1">El Callejón de los Milagros</span>
+              <small className="text-red-300">15 de Noviembre</small>
             </h2>
           </div>
           <div
@@ -150,7 +155,7 @@ const IndexPage = () => {
               title="Los batidos"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/925575322&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/929806024&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
         </div>
@@ -177,12 +182,24 @@ const IndexPage = () => {
       </div>
 
       <div className="max-w-6xl py-12 m-auto text-center">
-        <Link
-          to="/artisticas/galeria"
-          className="relative px-6 py-3 my-3 font-mono text-4xl text-white uppercase transition duration-150 ease-in-out transform translate-y-0 bg-red-800 hover:translate-y-2 hover:text-red-100 hover:bg-red-700"
+        <h1 className="font-mono text-6xl text-center text-white hover:underline ">
+          <Link to="/artisticas" className="">
+            aaaartisticas
+          </Link>
+        </h1>
+        <div
+          className="w-full max-w-lg px-0 py-8 m-auto mx-auto text-center"
+          style={{
+            background: "rgba(40, 17, 54, 0.9)",
+          }}
         >
-          galería de personajes prosódios
-        </Link>
+          <Link
+            to="/artisticas/escape-metafisico"
+            className="relative px-6 py-3 my-3 font-sans text-2xl text-white transition duration-150 ease-in-out transform translate-y-0 bg-red-700 rounded-md hover:translate-y-2 hover:text-red-100 hover:bg-gray-800"
+          >
+            Escape metafísico
+          </Link>
+        </div>
       </div>
 
       <div className="max-w-5xl m-auto mb-24 md:mt-6 lg:mt-12 last-show ">
