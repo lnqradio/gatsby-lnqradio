@@ -134,12 +134,12 @@ const IndexPage = () => {
             }}
           >
             último episodio
-            <span className="ml-1 font-bold opacity-75 ">(464)</span>
+            <span className="ml-1 font-bold opacity-75 ">(465)</span>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-3">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">El Callejón de los Milagros</span>
-              <small className="text-red-300">15 de Noviembre</small>
+              <span className="flex-1">El Dia De Los Paneles</span>
+              <small className="text-red-300">22 de Noviembre</small>
             </h2>
           </div>
           <div
@@ -152,10 +152,10 @@ const IndexPage = () => {
               width="100%"
               height="250"
               scrolling="no"
-              title="Los batidos"
+              title="El Dia De Los Paneles"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/929806024&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/934722001&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
         </div>
