@@ -128,21 +128,6 @@ const IndexPage = () => {
           }}
         >
           <div
-            className="absolute bottom-0 left-0 right-0 z-50 max-w-md p-2 py-1 mx-auto -mb-6 font-sans text-xl text-center uppercase shadow-xl"
-            style={{
-              background: "rgba(191, 48, 48, 0.85)",
-            }}
-          >
-            último episodio
-            <span className="ml-1 font-bold opacity-75 ">(469)</span>
-          </div>
-          <div className="relative flex flex-col items-center justify-center px-4 pb-3">
-            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Especial De Navidad</span>
-              <small className="text-red-500">20 de Diciembre</small>
-            </h2>
-          </div>
-          <div
             className="flex items-center justify-between listen"
             style={{
               opacity: 0.9,
@@ -155,8 +140,21 @@ const IndexPage = () => {
               title="El Dia De Los Paneles"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/951215968&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/990778540&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
+          </div>
+
+          <div className="relative flex flex-col items-center justify-center px-4 pb-3">
+            <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
+              <span className="flex-1">Los Dorados 90´ By CSM</span>
+              <small className="text-red-500">2021</small>
+            </h2>
+          </div>
+          <div className="bottom-0 left-0 right-0 z-50 p-4 py-1 mx-auto font-sans text-xl text-left shadow-xl ">
+            Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit de
+            su presidencia, la estética de una época con sus yeites y musicás,
+            un camino palindrómico sobre la superficie de un personaje que supo
+            ponerle su nombre a una década.
           </div>
         </div>
 
@@ -181,28 +179,56 @@ const IndexPage = () => {
         />
       </div>
 
-      <div className="max-w-6xl py-12 m-auto text-center">
-        <h1 className="font-mono text-6xl text-center text-white hover:underline ">
+      <div className="w-full py-6 m-auto text-center md:py-24">
+        <h1 className="mb-12 font-mono text-6xl text-center text-gray-500 hover:underline">
           <Link to="/artisticas" className="">
-            aaaartisticas
+            Escuchando artisticas
           </Link>
         </h1>
-        <div
-          className="w-full max-w-lg px-0 py-8 m-auto mx-auto text-center"
-          style={{
-            background: "rgba(40, 17, 54, 0.9)",
-          }}
-        >
-          <Link
-            to="/artisticas/escape-metafisico"
-            className="relative px-6 py-3 my-3 font-sans text-2xl text-white transition duration-150 ease-in-out transform translate-y-0 bg-red-700 rounded-md hover:translate-y-2 hover:text-red-100 hover:bg-gray-800"
-          >
-            Escape metafísico
-          </Link>
+        <div className="grid content-start gap-6 px-3 mx-auto md:grid-cols-3 md:px-12">
+          <div className="flex flex-col justify-start w-full px-6 py-8 m-auto mx-auto text-left bg-gray-800 md:px-12">
+            <p className="my-5 font-serif text-xl">
+              NUMEROSOS DÍAS VAN DESDE QUE ME ENCUENTRO ENCERRADA EN ESTA
+              FORZOSA REALIDAD DE LA QUE OBLIGADAMENTE...
+            </p>
+            <b className="inline-block mb-3 font-sans text-lg">25min.</b>
+            <Link
+              to="/artisticas/escape-metafisico"
+              className="relative px-6 py-3 my-3 font-sans text-lg text-white transition duration-150 ease-in-out transform bg-red-700 rounded-md hover:text-red-100 hover:bg-gray-800"
+            >
+              Escape metafísico
+            </Link>
+          </div>
+          <div className="flex flex-col justify-start w-full px-6 py-8 m-auto mx-auto text-left bg-gray-800 md:px-12">
+            <p className="my-5 font-serif text-xl">
+              En La Ciudad Ausente, texto que publica Ricardo Piglia en el 92,
+              la máquina de Macedonio produce y engloba la totalidad...
+            </p>
+            <b className="inline-block mb-3 font-sans text-lg">5min.</b>
+            <Link
+              to="/artisticas/trinche"
+              className="relative px-6 py-3 my-3 font-sans text-lg text-white transition duration-150 ease-in-out transform bg-red-700 rounded-md hover:text-red-100 hover:bg-gray-800"
+            >
+              Trinche
+            </Link>
+          </div>
+          <div className="flex flex-col justify-start w-full px-6 py-8 m-auto mx-auto text-left bg-gray-800 md:px-12">
+            <p className="my-5 font-serif text-xl">
+              ¿Por qué? ¿Cómo? ¿Para qué? Sin espacio. aunque parecia ser un
+              cuarto en buenos aires, aunque ni una palabra se decia...
+            </p>
+            <b className="inline-block mb-3 font-sans text-lg">6min.</b>
+            <Link
+              to="/artisticas/galeria"
+              className="relative px-6 py-3 my-3 font-sans text-lg text-white transition duration-150 ease-in-out transform bg-red-700 rounded-md hover:text-red-100 hover:bg-gray-800"
+            >
+              Galeria de Personajes Prosódios
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className="max-w-5xl m-auto mb-24 md:mt-6 lg:mt-12 last-show ">
+      <div className="hidden max-w-5xl m-auto mb-24 md:mt-6 lg:mt-12 last-show ">
         {data.lastShow.edges.map((show, i) => (
           <div key={show.node.slug} className="">
             <h1 className="flex justify-start p-6 pb-1 font-mono text-sm text-left text-white bg-gray-800">
