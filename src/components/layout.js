@@ -49,47 +49,13 @@ const Layout = ({ children }) => {
         <SimpleReactLightbox>
           <main className="pt-0 overflow-hidden">{children}</main>
         </SimpleReactLightbox>
-        <footer className="relative z-40 pt-20">
-          <div className="hidden w-48 max-w-xl py-6 m-auto text-center">
-            <Image />
-          </div>
-
-          <ReactTooltip
-            place="bottom"
-            type="dark"
-            effect="solid"
-            className="bg-red-500 shadow"
-          />
-          <div className="flex justify-center my-3 mb-12 text-3xl social">
-            <a
-              href="https://www.facebook.com/lnqradio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2"
-            >
-              <FaFacebookSquare />
-            </a>
-            <a
-              href="https://twitter.com/lnqradio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://www.instagram.com/lnqradio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2"
-            >
-              <FaInstagram />
-            </a>
+        <footer className="relative z-40 pt-12">
+          <div className="flex justify-center my-3 mb-3 text-5xl social">
             <a
               href="https://open.spotify.com/show/4ckNz9pdLNTunf82vBEfGm?si=kp7apoksQnmpTJ5ciITONA"
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-2"
+              className="mx-6"
             >
               <FaSpotify />
             </a>
@@ -97,16 +63,47 @@ const Layout = ({ children }) => {
               href="https://soundcloud.com/lnqescech"
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-2"
+              className="mx-6"
             >
               <FaSoundcloud />
             </a>
+            <a
+              href="https://www.instagram.com/lnqradio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-6"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://twitter.com/lnqradio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-6"
+            >
+              <FaTwitter />
+            </a>
+
+            <a
+              href="https://www.facebook.com/lnqradio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-6"
+            >
+              <FaFacebookSquare />
+            </a>
+          </div>
+          <div className="text-gray-500 ">
+            <Link to="/artisticas" className="font-mono text-6xl text-center border-b border-transparent hover:border-red-500">
+              escuchad donde y cuando gusteis
+            </Link>
           </div>
           <Mailchimp />
           <p>© {new Date().getFullYear()}, Realizado con el apoyo de </p>
-          <Link to={`/garmendia/`} className="font-bold text-red-600 ">
-            Laboratorios Garmendia
-          </Link>
+          <p className="font-bold text-red-600 ">Laboratorios Garmendia</p>
+          <div className="w-48 max-w-xl py-6 m-auto text-center ">
+            <Image />
+          </div>
           <p className="pt-6 text-sm text-gray-500">
             Última actualización
             <span className="block pt-1 font-bold uppercase ">

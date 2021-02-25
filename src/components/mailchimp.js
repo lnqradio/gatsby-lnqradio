@@ -21,19 +21,20 @@ function SubscribeForm() {
   return (
     <form className="subscribe-form">
       <span className="subscribe-form__title">
-        Suscribite para recibir las novedades
+        <span className="block font-mono text-3xl">TENEMOS NEWSLETTER!</span>
+        Queres recibir nuestros mails?
       </span>
       <div className="subscribe-form__content">
         <label className="hidden" htmlFor="mail-chimp">
           Mailchimp
         </label>
         <input
-          className="subscribe-form__input"
+          className="text-xl text-center subscribe-form__input"
           id="mail-chimp"
           type="email"
           onChange={handleChange}
           value={email}
-          placeholder="ejemplo@dominio.com"
+          placeholder="tumail@inventado.com"
           required
         />
         <span
@@ -52,7 +53,7 @@ function SubscribeForm() {
         type="submit"
         onClick={handleSubmit}
       >
-        Suscribirse
+        Obvio que me susbribo!
       </button>
     </form>
   )

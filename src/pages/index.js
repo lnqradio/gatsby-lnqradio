@@ -118,13 +118,13 @@ const IndexPage = () => {
       <div
         className="relative flex items-center justify-center w-full ml-auto mr-auto overflow-hidden solumedia"
         style={{
-          minHeight: "80vh",
+          minHeight: "100vh",
         }}
       >
         <div
           className="relative block w-full max-w-2xl mx-auto my-12 mt-24 font-mono shadow-sm"
           style={{
-            background: "rgba(40, 17, 54, 0.8)",
+            background: "rgba(40, 17, 54, 0.91)",
           }}
         >
           <div
@@ -150,7 +150,7 @@ const IndexPage = () => {
               <small className="text-red-500">2021</small>
             </h2>
           </div>
-          <div className="bottom-0 left-0 right-0 z-50 p-4 py-1 mx-auto font-sans text-xl text-left shadow-xl ">
+          <div className="bottom-0 left-0 right-0 z-50 p-4 mx-auto font-sans text-xl text-left shadow-xl ">
             Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit de
             su presidencia, la estética de una época con sus yeites y musicás,
             un camino palindrómico sobre la superficie de un personaje que supo
@@ -177,55 +177,6 @@ const IndexPage = () => {
           duration={5}
           query={data}
         />
-      </div>
-
-      <div className="w-full py-6 m-auto text-center md:py-24">
-        <h1 className="mb-12 font-mono text-6xl text-center text-gray-500 hover:underline">
-          <Link to="/artisticas" className="">
-            Escuchando artisticas
-          </Link>
-        </h1>
-        <div className="grid content-start gap-6 px-3 mx-auto md:grid-cols-3 md:px-12">
-          <div className="flex flex-col justify-start w-full px-6 py-8 m-auto mx-auto text-left bg-gray-800 md:px-12">
-            <p className="my-5 font-serif text-xl">
-              NUMEROSOS DÍAS VAN DESDE QUE ME ENCUENTRO ENCERRADA EN ESTA
-              FORZOSA REALIDAD DE LA QUE OBLIGADAMENTE...
-            </p>
-            <b className="inline-block mb-3 font-sans text-lg">25min.</b>
-            <Link
-              to="/artisticas/escape-metafisico"
-              className="relative px-6 py-3 my-3 font-sans text-lg text-white transition duration-150 ease-in-out transform bg-red-700 rounded-md hover:text-red-100 hover:bg-gray-800"
-            >
-              Escape metafísico
-            </Link>
-          </div>
-          <div className="flex flex-col justify-start w-full px-6 py-8 m-auto mx-auto text-left bg-gray-800 md:px-12">
-            <p className="my-5 font-serif text-xl">
-              En La Ciudad Ausente, texto que publica Ricardo Piglia en el 92,
-              la máquina de Macedonio produce y engloba la totalidad...
-            </p>
-            <b className="inline-block mb-3 font-sans text-lg">5min.</b>
-            <Link
-              to="/artisticas/trinche"
-              className="relative px-6 py-3 my-3 font-sans text-lg text-white transition duration-150 ease-in-out transform bg-red-700 rounded-md hover:text-red-100 hover:bg-gray-800"
-            >
-              Trinche
-            </Link>
-          </div>
-          <div className="flex flex-col justify-start w-full px-6 py-8 m-auto mx-auto text-left bg-gray-800 md:px-12">
-            <p className="my-5 font-serif text-xl">
-              ¿Por qué? ¿Cómo? ¿Para qué? Sin espacio. aunque parecia ser un
-              cuarto en buenos aires, aunque ni una palabra se decia...
-            </p>
-            <b className="inline-block mb-3 font-sans text-lg">6min.</b>
-            <Link
-              to="/artisticas/galeria"
-              className="relative px-6 py-3 my-3 font-sans text-lg text-white transition duration-150 ease-in-out transform bg-red-700 rounded-md hover:text-red-100 hover:bg-gray-800"
-            >
-              Galeria de Personajes Prosódios
-            </Link>
-          </div>
-        </div>
       </div>
 
       <div className="hidden max-w-5xl m-auto mb-24 md:mt-6 lg:mt-12 last-show ">

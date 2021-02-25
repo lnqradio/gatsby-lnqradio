@@ -60,10 +60,10 @@ const SearchIndex = (props) => {
 
   return (
     <>
+      <SEO title={totales} />
       <div className="w-full max-w-2xl p-2 pt-6 m-auto mt-24 mb-0 text-center searchBox md:pt-6 md:p-0 md:pb-6 animated fadeIn slower">
         <h2 className="flex flex-col items-baseline py-3 pb-6 font-sans text-2xl text-left text-white md:flex-row">
-          <span className="flex-1">Todos podcasts</span>
-          <SEO title={totales} />
+          <span className="flex-1 text-3xl">Soy un buscador, pero <br/> ¿Que estás buscando&hellip; ?</span>
 
           <small className="text-gray-600">
             <span className="text-gray-400">{totales}</span> subidos
@@ -71,11 +71,11 @@ const SearchIndex = (props) => {
         </h2>
 
         <input
-          className="w-full p-3 text-gray-100 placeholder-gray-100 bg-gray-800 border-b-2 searchInput "
+          className="w-full p-3 text-left text-gray-900 placeholder-gray-500 bg-gray-300 border-2 searchInput "
           type="text"
           tabindex="0"
           aria-label="Search"
-          placeholder="Flasheala buscando&hellip;"
+          placeholder="¿ belleza, Lou Reed, arte, economía?  &hellip;"
           onChange={handleInputChange}
         />
       </div>
@@ -99,7 +99,7 @@ const SearchIndex = (props) => {
               {title}{" "}
             </Link>
             <Link
-              className="block pl-0 pr-2 font-sans text-sm font-bold text-gray-400 title hover:text-gray-200 hover:underline md:text-base sm:inline-block sm:pl-2 "
+              className="hidden pl-0 pr-2 font-sans text-sm font-bold text-gray-400 title hover:text-gray-200 hover:underline md:text-base sm:pl-2 "
               to={`/columnas/${kebabCase(name)}/`}
             >
               x {name}
