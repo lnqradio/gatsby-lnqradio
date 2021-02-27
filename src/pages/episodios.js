@@ -59,7 +59,7 @@ const EpisodiosPage = () => {
       <SEO title="Episodios" />
       <div className="relative z-10 flex flex-col items-center justify-center px-6 py-40 m-0 mb-6 bg-gray-900 md:sticky md:top-0 hero">
         <h1 className="font-mono text-6xl text-center text-white ">
-          Sexta temporada
+          Septima temporada
         </h1>
 
         <BackgroundSlider
@@ -78,6 +78,44 @@ const EpisodiosPage = () => {
           query={data}
         />
       </div>
+      <div>
+      <div
+          className="relative block w-full max-w-2xl mx-auto my-12 mt-24 font-mono shadow-sm"
+          style={{
+            background: "rgba(40, 17, 54, 0.91)",
+          }}
+        >
+          <div
+            className="flex items-center justify-between listen"
+            style={{
+              opacity: 0.9,
+            }}
+          >
+            <iframe
+              width="100%"
+              height="250"
+              scrolling="no"
+              title="El Dia De Los Paneles"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/990778540&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+            ></iframe>
+          </div>
+
+          <div className="relative flex flex-col items-center justify-center px-4 pb-3">
+            <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
+              <span className="flex-1">Los Dorados 90´ By CSM</span>
+              <small className="text-red-500">2021</small>
+            </h2>
+          </div>
+          <div className="bottom-0 left-0 right-0 z-50 p-4 mx-auto font-sans text-xl text-left shadow-xl ">
+            Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit de
+            su presidencia, la estética de una época con sus yeites y musicás,
+            un camino palindrómico sobre la superficie de un personaje que supo
+            ponerle su nombre a una década.
+          </div>
+        </div>
+      </div>
       <div className="max-w-6xl py-3 pb-12 m-auto text-center">
         <Link
           to={`/notanenvivo/`}
@@ -86,7 +124,7 @@ const EpisodiosPage = () => {
           Escuchar temporadas anteriores
         </Link>
       </div>
-      <div className="flex flex-wrap justify-center m-auto mb-12 posts">
+      <div className="flex-wrap justify-center hidden m-auto mb-12 posts">
         {data.contenful.edges.map((item, i) => (
           <div
             key={item.node.id}
