@@ -57,9 +57,9 @@ const EpisodiosPage = () => {
   return (
     <Layout>
       <SEO title="Episodios" />
-      <div className="relative z-10 flex flex-col items-center justify-center px-6 py-40 m-0 mb-6 bg-gray-900 md:sticky md:top-0 hero">
+      <div className="relative z-10 flex flex-col items-center justify-center px-6 py-32 pt-48 m-0 mb-6 bg-gray-900 md:sticky md:top-0 hero">
         <h1 className="font-mono text-6xl text-center text-white ">
-          Septima temporada
+          séptima temporada
         </h1>
 
         <BackgroundSlider
@@ -102,13 +102,13 @@ const EpisodiosPage = () => {
             ></iframe>
           </div>
 
-          <div className="relative flex flex-col items-center justify-center px-4 pb-3">
+          <div className="relative flex flex-col items-center justify-center px-4 pb-1">
             <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
               <span className="flex-1">Los Dorados 90´ By CSM</span>
               <small className="text-red-500">2021</small>
             </h2>
           </div>
-          <div className="bottom-0 left-0 right-0 z-50 p-4 mx-auto font-sans text-xl text-left shadow-xl ">
+          <div className="bottom-0 left-0 right-0 z-50 px-4 pb-4 mx-auto font-sans text-xl text-left shadow-xl ">
             Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit de
             su presidencia, la estética de una época con sus yeites y musicás,
             un camino palindrómico sobre la superficie de un personaje que supo

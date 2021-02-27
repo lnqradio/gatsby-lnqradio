@@ -144,13 +144,13 @@ const IndexPage = () => {
             ></iframe>
           </div>
 
-          <div className="relative flex flex-col items-center justify-center px-4 pb-3">
+          <div className="relative flex flex-col items-center justify-center px-4 pb-1">
             <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
               <span className="flex-1">Los Dorados 90´ By CSM</span>
               <small className="text-red-500">2021</small>
             </h2>
           </div>
-          <div className="bottom-0 left-0 right-0 z-50 p-4 mx-auto font-sans text-xl text-left shadow-xl ">
+          <div className="bottom-0 left-0 right-0 z-50 px-4 pb-4 mx-auto font-sans text-xl text-left shadow-xl ">
             Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit de
             su presidencia, la estética de una época con sus yeites y musicás,
             un camino palindrómico sobre la superficie de un personaje que supo

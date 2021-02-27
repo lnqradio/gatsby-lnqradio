@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import { FaSpotify, FaSoundcloud } from "react-icons/fa"
-import ReactTooltip from "react-tooltip"
 import SEO from "../components/seo"
 
 const SearchIndex = (props) => {
@@ -87,7 +86,7 @@ const SearchIndex = (props) => {
 
       <div className="grid max-w-6xl gap-6 pt-12 mx-auto sm:grid-cols-2 md:grid-cols-4">
         {posts.map(({ node }) => {
-          const { id, slug, title, destacar } = node
+          const { id, slug, title } = node
           const { description } = node.description
           const { name } = node.author
           const { spotify } = node.spotify

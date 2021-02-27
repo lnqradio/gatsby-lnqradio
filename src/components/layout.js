@@ -12,7 +12,6 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import Image from "../components/image"
 import Mailchimp from "../components/mailchimp"
 import SimpleReactLightbox from "simple-react-lightbox"
-import ReactTooltip from "react-tooltip"
 import "./layout.css"
 import "./animate.css"
 import {
@@ -50,12 +49,12 @@ const Layout = ({ children }) => {
           <main className="pt-0 overflow-hidden">{children}</main>
         </SimpleReactLightbox>
         <footer className="relative z-40 pt-12">
-          <div className="flex justify-center my-3 mb-3 text-5xl social">
+          <div className="flex justify-center my-3 mb-3 text-4xl social">
             <a
               href="https://open.spotify.com/show/4ckNz9pdLNTunf82vBEfGm?si=kp7apoksQnmpTJ5ciITONA"
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-6"
+              className="mx-4"
             >
               <FaSpotify />
             </a>
@@ -63,7 +62,7 @@ const Layout = ({ children }) => {
               href="https://soundcloud.com/lnqescech"
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-6"
+              className="mx-4"
             >
               <FaSoundcloud />
             </a>
@@ -71,7 +70,7 @@ const Layout = ({ children }) => {
               href="https://www.instagram.com/lnqradio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-6"
+              className="mx-4"
             >
               <FaInstagram />
             </a>
@@ -79,7 +78,7 @@ const Layout = ({ children }) => {
               href="https://twitter.com/lnqradio"
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-6"
+              className="mx-4"
             >
               <FaTwitter />
             </a>
@@ -88,13 +87,13 @@ const Layout = ({ children }) => {
               href="https://www.facebook.com/lnqradio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-6"
+              className="mx-4"
             >
               <FaFacebookSquare />
             </a>
           </div>
           <div className="text-gray-500 ">
-            <Link to="/artisticas" className="font-mono text-6xl text-center border-b border-transparent hover:border-red-500">
+            <Link to="/podcasts" className="font-mono text-6xl text-center border-b border-transparent hover:border-red-500">
               escuchad donde y cuando gusteis
             </Link>
           </div>
