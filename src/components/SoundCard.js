@@ -48,7 +48,7 @@ export default ({ card }) => (
     </div>
     <div
       className="absolute inset-0 bg-image-hover-opacity"
-      style={{ opacity: ".2" }}
+      style={{ opacity: ".1" }}
     >
       <Img alt="{card.title}" fixed={card.heroImage.fixed} />
     </div>

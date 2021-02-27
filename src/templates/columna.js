@@ -14,9 +14,10 @@ import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import "./columna.css"
-
+import tw from "twin.macro"
+import styled from "@emotion/styled"
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
-const Text = ({ children }) => <p className="my-3 text-lg">{children}</p>
+const Text = ({ children }) => <p className="my-3 text-2xl">{children}</p>
 const website_url = "https://www.lnqradio.com"
 const options = {
   renderMark: {
@@ -92,7 +93,7 @@ class ColumnaTemplate extends React.Component {
               <div className="w-full max-w-2xl m-auto mt-0 text-lg md:mt-6 columna-article animated fadeIn delay-1s slower ">
                 <iframe
                   width="100%"
-                  height="160"
+                  height="420"
                   scrolling="no"
                   frameBorder="no"
                   title={columna.title}
@@ -130,7 +131,7 @@ class ColumnaTemplate extends React.Component {
                 </a>
               </div>
             </div>
-
+            {/*
             {columna.destacar ? (
               <div className="w-full max-w-2xl m-auto mt-6 text-left">
                 <Link
@@ -143,8 +144,9 @@ class ColumnaTemplate extends React.Component {
             ) : (
               <span className="hidden"></span>
             )}
+            */}
 
-            <h1 className="w-full max-w-2xl m-auto mt-6 font-sans text-3xl text-left text-white ">
+            <h1 className="w-full max-w-2xl m-auto mt-6 font-sans text-6xl font-bold text-left text-white ">
               {columna.title}
 
               <Link
@@ -155,24 +157,23 @@ class ColumnaTemplate extends React.Component {
               </Link>
             </h1>
 
-            <div className="w-full max-w-2xl m-auto mt-2 text-white article">
+            <div className="w-full max-w-2xl m-auto mt-2 text-2xl text-white ">
               {documentToReactComponents(
                 columna.childContentfulColumnasContenidoRichTextNode.json,
                 options
               )}
             </div>
           </div>
-          <div className="flex justify-center w-full max-w-6xl px-6 py-6 m-auto bg-gray-800 home-hero-links md:px-4 md:py-8">
+          <HomeHeroLinks className="home-hero-links">
             <PodcastCategorias />
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <h1 className="block w-full mb-3 text-3xl text-center text-white">
-              Últimas subidas
-            </h1>
-            <div className="grid grid-cols-1 gap-5 row-gap-5 pt-6 mb-12 sm:grid-cols-2 ">
-              {columnas.edges.map((item, i) => (
-                <Card key={item.node.id} card={item.node} />
-              ))}
+          </HomeHeroLinks>
+          <div className="bg-gray-800 border-t-2 border-red-600 md:px-12">
+            <div className="pt-12 mx-auto ">
+              <div className="grid gap-5 row-gap-5 pt-6 mb-12 sm:grid-cols-2 md:grid-cols-4 ">
+                {columnas.edges.map((item, i) => (
+                  <Card key={item.node.id} card={item.node} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -180,6 +181,10 @@ class ColumnaTemplate extends React.Component {
     )
   }
 }
+
+const HomeHeroLinks = styled.div`
+  ${tw`grid w-full grid-cols-2 gap-1 pt-6 mb-0 sm:grid-cols-4 md:grid-cols-8 md:pt-24`}
+`
 
 export default ColumnaTemplate
 
