@@ -135,27 +135,21 @@ const IndexPage = () => {
           >
             <iframe
               width="100%"
-              height="250"
+              height="350"
               scrolling="no"
-              title="El Dia De Los Paneles"
+              title="La deuda"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/990778540&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1002130750&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
 
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
             <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Los Dorados 90´ By CSM</span>
-              <small className="text-red-500">2021</small>
+              <span className="flex-1">Tomar</span>
             </h2>
           </div>
-          <div className="bottom-0 left-0 right-0 z-50 px-4 pb-4 mx-auto font-sans text-xl text-left shadow-xl ">
-            Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit de
-            su presidencia, la estética de una época con sus yeites y musicás,
-            un camino palindrómico sobre la superficie de un personaje que supo
-            ponerle su nombre a una década.
-          </div>
+
         </div>
 
         <BackgroundSlider
