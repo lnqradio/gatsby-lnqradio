@@ -140,13 +140,13 @@ const IndexPage = () => {
               title="La deuda"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1002130750&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1010060833&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
 
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
             <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Tomar</span>
+              <span className="flex-1">La nueva normalidad</span>
             </h2>
           </div>
 
