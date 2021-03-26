@@ -19,7 +19,7 @@ const NotFoundPage = () => (
           to={`/episodios/`}
           className="px-4 my-3 font-sans text-lg text-white uppercase transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
         >
-          Escuchá la temporada 6
+          Escuchá la temporada 7
         </Link>
       </div>
 
