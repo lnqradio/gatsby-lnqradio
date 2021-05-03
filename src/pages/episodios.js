@@ -78,8 +78,39 @@ const EpisodiosPage = () => {
           query={data}
         />
       </div>
-      <div
-          className="relative block w-full max-w-2xl mx-auto my-12 mt-24 font-mono shadow-sm"
+      <div className="grid max-w-6xl grid-cols-1 gap-6 mx-auto md:grid-cols-2">
+        <div
+          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
+          style={{
+            background: "rgba(40, 17, 54, 0.91)",
+          }}
+        >
+          <div
+            className="flex items-center justify-between listen"
+            style={{
+              opacity: 0.9,
+            }}
+          >
+            <iframe
+              width="100%"
+              height="350"
+              scrolling="no"
+              title="La deuda"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1039523236&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+            ></iframe>
+          </div>
+          <div className="relative flex flex-col items-center justify-center px-4 pb-1">
+            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+              <span className="flex-1">
+                El Imprevisto Del Mameluco Y La Conchita De Arena
+              </span>
+            </h2>
+          </div>
+        </div>
+        <div
+          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.91)",
           }}
@@ -101,13 +132,13 @@ const EpisodiosPage = () => {
             ></iframe>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
+            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
               <span className="flex-1">Las Aventuras Del Aragonés Errante</span>
             </h2>
           </div>
         </div>
-      <div
-          className="relative block w-full max-w-2xl mx-auto my-12 mt-24 font-mono shadow-sm"
+        <div
+          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.91)",
           }}
@@ -129,101 +160,13 @@ const EpisodiosPage = () => {
             ></iframe>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
+            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
               <span className="flex-1">Sobres/Naturales</span>
             </h2>
           </div>
         </div>
-      <div
-        className="relative block w-full max-w-2xl mx-auto my-6 font-mono shadow-sm"
-        style={{
-          background: "rgba(40, 17, 54, 0.91)",
-        }}
-      >
         <div
-          className="flex items-center justify-between listen"
-          style={{
-            opacity: 0.9,
-          }}
-        >
-          <iframe
-            width="100%"
-            height="350"
-            scrolling="no"
-            title="La deuda"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1022292985&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-          ></iframe>
-        </div>
-
-        <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-          <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
-            <span className="flex-1">El Doble, Diario Intimo Y Ficción.</span>
-          </h2>
-        </div>
-      </div>
-      <div
-        className="relative block w-full max-w-2xl mx-auto my-6 font-mono shadow-sm"
-        style={{
-          background: "rgba(40, 17, 54, 0.91)",
-        }}
-      >
-        <div
-          className="flex items-center justify-between listen"
-          style={{
-            opacity: 0.9,
-          }}
-        >
-          <iframe
-            width="100%"
-            height="350"
-            scrolling="no"
-            title="La deuda"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1016611732&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-          ></iframe>
-        </div>
-
-        <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-          <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
-            <span className="flex-1">El Engaño</span>
-          </h2>
-        </div>
-      </div>
-      <div
-        className="relative block w-full max-w-2xl mx-auto my-6 font-mono shadow-sm"
-        style={{
-          background: "rgba(40, 17, 54, 0.91)",
-        }}
-      >
-        <div
-          className="flex items-center justify-between listen"
-          style={{
-            opacity: 0.9,
-          }}
-        >
-          <iframe
-            width="100%"
-            height="350"
-            scrolling="no"
-            title="La deuda"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1010060833&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-          ></iframe>
-        </div>
-
-        <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-          <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
-            <span className="flex-1">La nueva normalidad</span>
-          </h2>
-        </div>
-      </div>
-      <div>
-        <div
-          className="relative block w-full max-w-2xl mx-auto my-6 font-mono shadow-sm"
+          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.91)",
           }}
@@ -236,25 +179,23 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="250"
+              height="350"
               scrolling="no"
-              title="El Dia De Los Paneles"
+              title="La deuda"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1002130750&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1022292985&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
 
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Tomar</span>
+            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+              <span className="flex-1">El Doble, Diario Intimo Y Ficción.</span>
             </h2>
           </div>
         </div>
-      </div>
-      <div>
         <div
-          className="relative block w-full max-w-2xl mx-auto my-6 font-mono shadow-sm"
+          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.91)",
           }}
@@ -267,25 +208,23 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="250"
+              height="350"
               scrolling="no"
-              title="El Dia De Los Paneles"
+              title="La deuda"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/996365527&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1016611732&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
 
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">La Deuda</span>
+            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+              <span className="flex-1">El Engaño</span>
             </h2>
           </div>
         </div>
-      </div>
-      <div>
         <div
-          className="relative block w-full max-w-2xl mx-auto my-6 font-mono shadow-sm"
+          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.91)",
           }}
@@ -298,26 +237,119 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="250"
+              height="350"
               scrolling="no"
-              title="El Dia De Los Paneles"
+              title="La deuda"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/990778540&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1010060833&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
 
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-5xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Los Dorados 90´ By CSM</span>
-              <small className="text-red-500">2021</small>
+            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+              <span className="flex-1">La nueva normalidad</span>
             </h2>
           </div>
-          <div className="bottom-0 left-0 right-0 z-50 px-4 pb-4 mx-auto font-sans text-xl text-left shadow-xl ">
-            Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit de
-            su presidencia, la estética de una época con sus yeites y musicás,
-            un camino palindrómico sobre la superficie de un personaje que supo
-            ponerle su nombre a una década.
+        </div>
+        <div>
+          <div
+            className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
+            style={{
+              background: "rgba(40, 17, 54, 0.91)",
+            }}
+          >
+            <div
+              className="flex items-center justify-between listen"
+              style={{
+                opacity: 0.9,
+              }}
+            >
+              <iframe
+                width="100%"
+                height="250"
+                scrolling="no"
+                title="El Dia De Los Paneles"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1002130750&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              ></iframe>
+            </div>
+
+            <div className="relative flex flex-col items-center justify-center px-4 pb-1">
+              <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+                <span className="flex-1">Tomar</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
+            style={{
+              background: "rgba(40, 17, 54, 0.91)",
+            }}
+          >
+            <div
+              className="flex items-center justify-between listen"
+              style={{
+                opacity: 0.9,
+              }}
+            >
+              <iframe
+                width="100%"
+                height="250"
+                scrolling="no"
+                title="El Dia De Los Paneles"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/996365527&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              ></iframe>
+            </div>
+
+            <div className="relative flex flex-col items-center justify-center px-4 pb-1">
+              <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+                <span className="flex-1">La Deuda</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
+            style={{
+              background: "rgba(40, 17, 54, 0.91)",
+            }}
+          >
+            <div
+              className="flex items-center justify-between listen"
+              style={{
+                opacity: 0.9,
+              }}
+            >
+              <iframe
+                width="100%"
+                height="250"
+                scrolling="no"
+                title="El Dia De Los Paneles"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/990778540&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              ></iframe>
+            </div>
+
+            <div className="relative flex flex-col items-center justify-center px-4 pb-1">
+              <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+                <span className="flex-1">Los Dorados 90´ By CSM</span>
+                <small className="text-red-500">2021</small>
+              </h2>
+            </div>
+            <div className="bottom-0 left-0 right-0 z-50 px-4 pb-4 mx-auto font-sans text-xl text-left shadow-xl ">
+              Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit
+              de su presidencia, la estética de una época con sus yeites y
+              musicás, un camino palindrómico sobre la superficie de un
+              personaje que supo ponerle su nombre a una década.
+            </div>
           </div>
         </div>
       </div>
