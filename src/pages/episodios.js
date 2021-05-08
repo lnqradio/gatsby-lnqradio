@@ -98,11 +98,41 @@ const EpisodiosPage = () => {
               title="La deuda"
               frameBorder="no"
               allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1044271384&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+            ></iframe>
+          </div>
+          <div className="relative flex flex-col items-center justify-center px-4 pb-1">
+            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
+              <span className="flex-1">
+                Un Conjunto De Fantásticas Y Misteriosas Historias
+              </span>
+            </h2>
+          </div>
+        </div>
+        <div
+          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
+          style={{
+            background: "rgba(40, 17, 54, 0.91)",
+          }}
+        >
+          <div
+            className="flex items-center justify-between listen"
+            style={{
+              opacity: 0.9,
+            }}
+          >
+            <iframe
+              width="100%"
+              height="350"
+              scrolling="no"
+              title="La deuda"
+              frameBorder="no"
+              allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1039523236&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
               <span className="flex-1">
                 El Imprevisto Del Mameluco Y La Conchita De Arena
               </span>
@@ -132,7 +162,7 @@ const EpisodiosPage = () => {
             ></iframe>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
               <span className="flex-1">Las Aventuras Del Aragonés Errante</span>
             </h2>
           </div>
@@ -160,7 +190,7 @@ const EpisodiosPage = () => {
             ></iframe>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
               <span className="flex-1">Sobres/Naturales</span>
             </h2>
           </div>
@@ -189,7 +219,7 @@ const EpisodiosPage = () => {
           </div>
 
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
               <span className="flex-1">El Doble, Diario Intimo Y Ficción.</span>
             </h2>
           </div>
@@ -218,7 +248,7 @@ const EpisodiosPage = () => {
           </div>
 
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
               <span className="flex-1">El Engaño</span>
             </h2>
           </div>
@@ -247,7 +277,7 @@ const EpisodiosPage = () => {
           </div>
 
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
               <span className="flex-1">La nueva normalidad</span>
             </h2>
           </div>
@@ -267,7 +297,7 @@ const EpisodiosPage = () => {
             >
               <iframe
                 width="100%"
-                height="250"
+                height="350"
                 scrolling="no"
                 title="El Dia De Los Paneles"
                 frameBorder="no"
@@ -277,7 +307,7 @@ const EpisodiosPage = () => {
             </div>
 
             <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-              <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+              <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
                 <span className="flex-1">Tomar</span>
               </h2>
             </div>
@@ -298,7 +328,7 @@ const EpisodiosPage = () => {
             >
               <iframe
                 width="100%"
-                height="250"
+                height="350"
                 scrolling="no"
                 title="El Dia De Los Paneles"
                 frameBorder="no"
@@ -308,7 +338,7 @@ const EpisodiosPage = () => {
             </div>
 
             <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-              <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+              <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
                 <span className="flex-1">La Deuda</span>
               </h2>
             </div>
@@ -329,7 +359,7 @@ const EpisodiosPage = () => {
             >
               <iframe
                 width="100%"
-                height="250"
+                height="350"
                 scrolling="no"
                 title="El Dia De Los Paneles"
                 frameBorder="no"
@@ -339,21 +369,14 @@ const EpisodiosPage = () => {
             </div>
 
             <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-              <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
+              <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
                 <span className="flex-1">Los Dorados 90´ By CSM</span>
-                <small className="text-red-500">2021</small>
               </h2>
-            </div>
-            <div className="bottom-0 left-0 right-0 z-50 px-4 pb-4 mx-auto font-sans text-xl text-left shadow-xl ">
-              Un viaje por los 90´guiados por la magia de CSM. Los grandes Hit
-              de su presidencia, la estética de una época con sus yeites y
-              musicás, un camino palindrómico sobre la superficie de un
-              personaje que supo ponerle su nombre a una década.
             </div>
           </div>
         </div>
       </div>
-      <div className="max-w-6xl py-3 pb-12 m-auto text-center">
+      <div className="max-w-6xl py-3 py-12 m-auto text-center">
         <Link
           to={`/notanenvivo/`}
           className="px-4 py-3 my-3 font-sans text-lg text-white transition duration-150 ease-in-out bg-red-700 hover:text-red-100 hover:bg-red-800"
@@ -388,7 +411,7 @@ const EpisodiosPage = () => {
                   >
                     <h2 className="px-0 mb-3 text-xl text-red-500 hover:text-white">
                       {item.node.title}{" "}
-                      <b className="inline-block pt-2 mb-2 font-sans text-sm text-left text-gray-500 capitalize">
+                      <b className="inline-block pt-2 mb-2 font-sans text-sm text-center text-gray-500 capitalize">
                         / {item.node.publishDate}
                       </b>
                     </h2>
