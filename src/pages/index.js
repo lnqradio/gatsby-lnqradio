@@ -140,12 +140,12 @@ const IndexPage = () => {
               title="La deuda"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1048792522&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1052630854&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-left text-white uppercase">
-              <span className="flex-1">Pasar El Invierno (apuntes sobre la crisis)</span>
+              <span className="flex-1">El Misterio</span>
             </h2>
           </div>
         </div>
