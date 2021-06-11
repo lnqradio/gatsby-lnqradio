@@ -6,8 +6,7 @@ const QueryCategoriesComponent = () => {
   const data = useStaticQuery(graphql`
     query QueryCategoriesQuery {
       autores: allContentfulAutores(
-        sort: { fields: [name], order: DESC }
-        skip: 1
+        sort: { fields: [name], order: ASC }
       ) {
         edges {
           node {
