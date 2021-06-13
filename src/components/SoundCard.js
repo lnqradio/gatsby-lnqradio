@@ -21,7 +21,7 @@ export default ({ card }) => (
           to={`/columnas/${kebabCase(card.author.name)}/`}
           className="inline-block px-4 pb-1 mb-2 font-sans text-xl text-gray-500 hover:text-white"
         >
-          by {card.author.name}
+          x {card.author.name}
         </Link>
       </div>
 

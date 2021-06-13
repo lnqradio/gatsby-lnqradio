@@ -12,7 +12,7 @@ const ColumnasPage = () => {
   const data = useStaticQuery(graphql`
     query ColumnasQuery {
       contenful: allContentfulColumnas(
-        sort: { order: DESC, fields: [publishDate] }
+        sort: { order: ASC, fields: [title] }
         filter: { author: {}, destacar: { eq: "Si" } }
       ) {
         edges {
