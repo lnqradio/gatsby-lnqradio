@@ -140,12 +140,12 @@ const IndexPage = () => {
               title="La deuda"
               frameBorder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1097231977&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1105144891&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
             ></iframe>
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
             <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-center text-white uppercase">
-              <span className="flex-1">¿Quieres Ser Marcio Rizo?</span>
+              <span className="flex-1"> Historias De Gente Común (como Vos, Como Yo, Como Aquel)</span>
             </h2>
           </div>
         </div>
