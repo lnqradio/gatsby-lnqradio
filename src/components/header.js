@@ -36,6 +36,13 @@ const Header = ({ siteTitle }) => (
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"
+            to="/episodios/"
+          >
+            Episodios
+          </Link>
+          <Link
+            className="cursor-pointer"
+            activeClassName="font-bold active"
             to="/podcasts/"
           >
             Podcasts
@@ -43,19 +50,10 @@ const Header = ({ siteTitle }) => (
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"
-            to="/episodios/"
-          >
-            Episodios
-          </Link>
-
-          <Link
-            className="cursor-pointer"
-            activeClassName="font-bold active"
             to="/artisticas/"
           >
             Artisticas
           </Link>
-
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"
@@ -63,7 +61,6 @@ const Header = ({ siteTitle }) => (
           >
             Galería
           </Link>
-
           <Link
             className="cursor-pointer"
             activeClassName="font-bold active"

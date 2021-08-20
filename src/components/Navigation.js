@@ -7,12 +7,12 @@ const routes = [
     slug: "/",
   },
   {
-    title: "Podcasts",
-    slug: "/podcasts/",
-  },
-  {
     title: "Episodios",
     slug: "/episodios/",
+  },
+  {
+    title: "Podcasts",
+    slug: "/podcasts/",
   },
   //{
   //  title: "Entrevistas",
