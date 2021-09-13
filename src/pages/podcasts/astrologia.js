@@ -31,9 +31,9 @@ const AstrologiaPage = () => {
           >
             <iframe
               width="100%"
-              height="150"
+              height="250"
               scrolling="no"
-              title="La deuda"
+              title="2 - Eje Virgo/Piscis o las puertas de la percepción"
               frameBorder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1117475335&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
@@ -63,7 +63,7 @@ const AstrologiaPage = () => {
               width="100%"
               height="250"
               scrolling="no"
-              title="La deuda"
+              title="1 - Luna Nueva En Leo"
               frameBorder="no"
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1114139371&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
