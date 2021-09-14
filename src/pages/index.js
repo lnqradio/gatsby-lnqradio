@@ -8,6 +8,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import "react-awesome-slider/dist/styles.css"
 import Img from "gatsby-image"
 import BackgroundSlider from "gatsby-image-background-slider"
+import PodcastCategorias from "../components/PodcastCategoria"
+import tw from "twin.macro"
+import styled from "@emotion/styled"
 
 import "./index.css"
 import { Helmet } from "react-helmet"
@@ -116,7 +119,7 @@ const IndexPage = () => {
         <body className="home headroom-top-transparent" />
       </Helmet>
       <div
-        className="relative flex items-center justify-center w-full ml-auto mr-auto overflow-hidden solumedia"
+        className="relative flex flex-col items-center justify-center w-full ml-auto mr-auto overflow-hidden solumedia"
         style={{
           minHeight: "100vh",
         }}
@@ -150,23 +153,25 @@ const IndexPage = () => {
           </div>
         </div> */}
 
-        <div className="flex flex-col text-white">
+        <div className="flex flex-col mt-24 text-white md:mt-0">
           <Link
             to="/episodios"
             className="font-mono text-6xl font-bold text-center"
           >
             temporada 07
           </Link>
-          <Link
-            to="/podcasts"
-            className="font-sans text-6xl font-bold text-center border-b border-transparent hover:border-white"
+          <div
+            className="font-sans text-6xl font-bold text-center"
           >
             Escuchad de todo un poco
-          </Link>
+          </div>
         </div>
+        <HomeHeroLinks className="home-hero-links">
+          <PodcastCategorias />
+        </HomeHeroLinks>
 
         <BackgroundSlider
-          className="bg-gray-800 "
+          className="fixed inset-0 bg-gray-800 "
           style={{
             top: "0",
             maxHeight: "100vh",
@@ -258,3 +263,7 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+const HomeHeroLinks = styled.div`
+  ${tw`grid w-full grid-cols-2 gap-1 py-6 md:grid-cols-4 md:pt-24`}
+`
