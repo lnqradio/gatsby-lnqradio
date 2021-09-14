@@ -61,6 +61,9 @@ const EpisodiosPage = () => {
         <h1 className="font-mono text-6xl text-center text-white ">
           séptima temporada
         </h1>
+        <h3 className="font-mono text-3xl text-center text-white ">
+          La noche que ella soñio con el Centro Half
+        </h3>
         <BackgroundSlider
           className="bg-gray-800 "
           style={{
@@ -92,7 +95,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -120,7 +123,35 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
+              scrolling="no"
+              title="La deuda"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1119063610&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+            ></iframe>
+          </div>
+          <div className="relative flex flex-col items-center justify-center px-4 pb-1">
+            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
+              <span className="flex-1">La Runfla De Los Talibanes</span>
+            </h2>
+          </div>
+        </div>
+        <div
+          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
+          style={{
+            background: "rgba(40, 17, 54, 0.91)",
+          }}
+        >
+          <div
+            className="flex items-center justify-between listen"
+            style={{
+              opacity: 0.9,
+            }}
+          >
+            <iframe
+              width="100%"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -148,35 +179,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
-              scrolling="no"
-              title="La deuda"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1113834775&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-            ></iframe>
-          </div>
-          <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
-              <span className="flex-1">Lo Que Se Dice La Lleca</span>
-            </h2>
-          </div>
-        </div>
-        <div
-          className="relative block w-full max-w-2xl mx-auto font-mono shadow-sm"
-          style={{
-            background: "rgba(40, 17, 54, 0.91)",
-          }}
-        >
-          <div
-            className="flex items-center justify-between listen"
-            style={{
-              opacity: 0.9,
-            }}
-          >
-            <iframe
-              width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -204,7 +207,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -234,7 +237,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -262,7 +265,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -290,7 +293,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -318,7 +321,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -346,7 +349,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -374,7 +377,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -404,7 +407,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -432,7 +435,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -460,7 +463,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -488,7 +491,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -516,7 +519,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -546,7 +549,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -576,7 +579,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -606,7 +609,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -634,7 +637,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -662,7 +665,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -691,7 +694,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -720,7 +723,7 @@ const EpisodiosPage = () => {
           >
             <iframe
               width="100%"
-              height="350"
+              height="300"
               scrolling="no"
               title="La deuda"
               frameBorder="no"
@@ -750,7 +753,7 @@ const EpisodiosPage = () => {
             >
               <iframe
                 width="100%"
-                height="350"
+                height="300"
                 scrolling="no"
                 title="El Dia De Los Paneles"
                 frameBorder="no"
@@ -781,7 +784,7 @@ const EpisodiosPage = () => {
             >
               <iframe
                 width="100%"
-                height="350"
+                height="300"
                 scrolling="no"
                 title="El Dia De Los Paneles"
                 frameBorder="no"
@@ -812,7 +815,7 @@ const EpisodiosPage = () => {
             >
               <iframe
                 width="100%"
-                height="350"
+                height="300"
                 scrolling="no"
                 title="El Dia De Los Paneles"
                 frameBorder="no"

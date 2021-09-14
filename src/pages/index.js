@@ -153,15 +153,15 @@ const IndexPage = () => {
           </div>
         </div> */}
 
-        <div className="flex flex-col mt-24 text-white md:mt-0">
+        <div className="flex flex-col mt-24 text-white ">
           <Link
             to="/episodios"
-            className="font-mono text-6xl font-bold text-center"
+            className="inline-block font-mono text-6xl font-bold text-center border-b-2 border-white"
           >
-            temporada 07
+            temporada 07 - LNQESCECH
           </Link>
           <div
-            className="font-sans text-6xl font-bold text-center"
+            className="mt-12 font-sans text-6xl font-bold text-center"
           >
             Escuchad de todo un poco
           </div>
@@ -265,5 +265,5 @@ const IndexPage = () => {
 export default IndexPage
 
 const HomeHeroLinks = styled.div`
-  ${tw`grid w-full grid-cols-2 gap-1 py-6 md:grid-cols-4 md:pt-24`}
+  ${tw`grid w-full max-w-6xl grid-cols-2 gap-1 py-6 md:grid-cols-4 md:pt-4`}
 `
