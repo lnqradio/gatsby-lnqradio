@@ -62,7 +62,7 @@ const EpisodiosPage = () => {
           séptima temporada
         </h1>
         <h3 className="font-mono text-3xl text-center text-white ">
-          La noche que ella soñio con el Centro Half
+          La noche que ella soño con el Centro Half
         </h3>
         <BackgroundSlider
           className="bg-gray-800 "
