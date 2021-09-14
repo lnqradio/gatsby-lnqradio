@@ -72,7 +72,7 @@ const AstrologoPage = () => {
           </div>
         </div>
 
-        <section className="flex flex-col justify-center w-full">
+        <section className="flex flex-col justify-center w-full pt-24">
           <div className="flex flex-col items-center justify-center w-full p-8 m-auto md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
               <div

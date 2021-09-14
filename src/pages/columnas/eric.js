@@ -72,7 +72,7 @@ const EricPage = () => {
           </div>
         </div>
 
-        <section className="flex flex-col justify-center w-full">
+        <section className="flex flex-col justify-center w-full pt-24">
           <div className="flex flex-col items-center w-full p-8 m-auto jutify-center md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
               <div

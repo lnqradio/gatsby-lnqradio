@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 import Card from "../../components/SoundCard"
 import Authors from "../../components/queries/authors"
 
-const MuzzoPage = () => {
+const ChucaPage = () => {
   const data = useStaticQuery(graphql`
     query MuzzoQuery {
       contenful: allContentfulColumnas(
@@ -72,7 +72,7 @@ const MuzzoPage = () => {
           </div>
         </div>
 
-        <section className="flex flex-col justify-center w-full">
+        <section className="flex flex-col justify-center w-full pt-24">
           <div className="flex flex-col items-center w-full p-8 m-auto jutify-center md:my-12">
             {data.allContentfulAutores.edges.map((image, i) => (
               <div
@@ -93,14 +93,31 @@ const MuzzoPage = () => {
                 className="block my-1 font-sans text-base text-red-500 hover:text-white"
               >
                 <i className="text-xl fa fa-soundcloud" aria-hidden="true"></i>
-                <span className="pt-0">Escuchar identikit</span>
+                <span className="pt-0">Escuchar Playlist</span>
               </AnchorLink>
             </div>
           </div>
-          <div className="grid max-w-6xl grid-cols-1 gap-5 row-gap-5 px-6 pt-6 m-auto mb-12 md:grid-cols-1 lg:grid-cols-2">
-            {data.contenful.edges.map((item, i) => (
-              <Card key={item.node.id} card={item.node} />
-            ))}
+          <div className="grid w-full max-w-6xl grid-cols-1 gap-5 row-gap-5 px-6 pt-6 m-auto mb-12 md:grid-cols-1 lg:grid-cols-2">
+            <div>
+              <iframe
+                width="100%"
+                height="300"
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1136288890&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                width="100%"
+                height="300"
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1128432718&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              ></iframe>
+            </div>
           </div>
           <aside
             id="author-player"
@@ -109,7 +126,7 @@ const MuzzoPage = () => {
             {data.allContentfulAutores.edges.map((item, i) => (
               <div className="w-full max-w-xl m-auto post" key={item.node.id}>
                 <h2 className="font-sans text-2xl text-center text-white">
-                  Identikit Muzzopapi
+                  Playlist de Muzzo
                 </h2>
                 <div
                   className="mt-2 soundcloud-player"
@@ -126,4 +143,4 @@ const MuzzoPage = () => {
   )
 }
 
-export default MuzzoPage
+export default ChucaPage
