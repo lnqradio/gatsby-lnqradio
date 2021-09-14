@@ -156,14 +156,14 @@ const IndexPage = () => {
         <div className="flex flex-col mt-24 text-white ">
           <Link
             to="/episodios"
-            className="inline-block font-mono text-6xl font-bold text-center border-b-2 border-white"
+            className="inline-block font-mono text-6xl font-bold text-center border-b-2 border-white hover:border-indigo-900 hover:text-indigo-900"
           >
-            temporada 07 - LNQESCECH
+            LNQESCECH - Temporada 07 
           </Link>
           <div
             className="mt-12 font-sans text-6xl font-bold text-center"
           >
-            Escuchad de todo un poco
+            Pasen y hoyan
           </div>
         </div>
         <HomeHeroLinks className="home-hero-links">
