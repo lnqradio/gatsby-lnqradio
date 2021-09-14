@@ -121,7 +121,7 @@ const IndexPage = () => {
           minHeight: "100vh",
         }}
       >
-        <div
+        {/* <div
           className="relative block w-full max-w-2xl mx-auto my-12 mt-24 font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.91)",
@@ -148,6 +148,21 @@ const IndexPage = () => {
               <span className="flex-1">La Casa De Angélica</span>
             </h2>
           </div>
+        </div> */}
+
+        <div className="flex flex-col text-white">
+          <Link
+            to="/episodios"
+            className="font-mono text-6xl font-bold text-center"
+          >
+            temporada 07
+          </Link>
+          <Link
+            to="/podcasts"
+            className="font-sans text-6xl font-bold text-center border-b border-transparent hover:border-white"
+          >
+            Escuchad de todo un poco
+          </Link>
         </div>
 
         <BackgroundSlider
