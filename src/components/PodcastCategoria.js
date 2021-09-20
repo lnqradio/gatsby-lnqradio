@@ -2,13 +2,12 @@ import { Link } from "gatsby"
 import React from "react"
 import {
   GiSpellBook,
-  GiFlame,
   GiBookCover,
   GiRomanToga,
   GiRingedPlanet,
 } from "react-icons/gi"
 import { MdPersonPin, MdLocalMovies } from "react-icons/md"
-import { IoMdMicrophone, IoMdMusicalNotes, IoPlanet } from "react-icons/io"
+import { IoMdMicrophone, IoMdMusicalNotes } from "react-icons/io"
 
 const PodcastCategorias = () => (
   <>

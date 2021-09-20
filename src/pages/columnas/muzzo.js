@@ -4,7 +4,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Img from "gatsby-image"
-import Card from "../../components/SoundCard"
+// import Card from "../../components/SoundCard"
 import Authors from "../../components/queries/authors"
 
 const ChucaPage = () => {
@@ -101,6 +101,7 @@ const ChucaPage = () => {
             <div>
               <iframe
                 width="100%"
+                title="Muzzopapi"
                 height="300"
                 scrolling="no"
                 frameBorder="no"
@@ -112,6 +113,7 @@ const ChucaPage = () => {
               <iframe
                 width="100%"
                 height="300"
+                title="Muzzopappi"
                 scrolling="no"
                 frameBorder="no"
                 allow="autoplay"
