@@ -13,26 +13,26 @@ const PodcastCategorias = () => (
   <>
     <Link to={`/podcasts/musicales`} className="bg-gray-800 hover:text-white">
       <IoMdMusicalNotes />
-      <span>musicales</span>
+      <span>Musicales</span>
     </Link>
     <Link to={`/podcasts/cine`} className="bg-gray-800 hover:text-white">
       <MdLocalMovies />
-      <span>cine</span>
+      <span>Cine</span>
     </Link>
     <Link
       to={`/podcasts/entrevistas/`}
       className="bg-gray-800 hover:text-white"
     >
       <IoMdMicrophone />
-      <span>entrevistas</span>
+      <span>Entrevistas</span>
     </Link>
     <Link to={`/podcasts/perfiles`} className="bg-gray-800 hover:text-white">
       <MdPersonPin />
-      <span>perfiles</span>
+      <span>Perfiles</span>
     </Link>
     <Link to={`/podcasts/historias`} className="bg-gray-800 hover:text-white">
       <GiSpellBook />
-      <span>historias</span>
+      <span>Historias</span>
     </Link>
     <Link to={`/podcasts/astrologia`} className="bg-gray-800 hover:text-white">
       <GiRingedPlanet />
@@ -40,7 +40,7 @@ const PodcastCategorias = () => (
     </Link>
     <Link to={`/podcasts/politica`} className="bg-gray-800 hover:text-white">
       <GiRomanToga />
-      <span>política</span>
+      <span>Política</span>
     </Link>
     <Link to={`/podcasts/literatura`} className="bg-gray-800 hover:text-white">
       <GiBookCover />

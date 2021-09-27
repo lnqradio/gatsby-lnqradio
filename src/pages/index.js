@@ -119,50 +119,52 @@ const IndexPage = () => {
         <body className="home headroom-top-transparent" />
       </Helmet>
       <div
-        className="relative flex flex-col items-center justify-center w-full ml-auto mr-auto overflow-hidden solumedia"
+        className="relative flex flex-col items-center justify-center w-full mx-auto overflow-hidden solumedia"
         style={{
           minHeight: "100vh",
         }}
       >
-        {/* <div
-          className="relative block w-full max-w-2xl mx-auto my-12 mt-24 font-mono shadow-sm"
-          style={{
-            background: "rgba(40, 17, 54, 0.91)",
-          }}
-        >
-          <div
-            className="flex items-center justify-between listen"
-            style={{
-              opacity: 0.9,
-            }}
-          >
-            <iframe
-              width="100%"
-              height="350"
-              scrolling="no"
-              title="La deuda"
-              frameBorder="no"
-              allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1123559188&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-            ></iframe>
-          </div>
-          <div className="relative flex flex-col items-center justify-center px-4 pb-1">
-            <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-center text-white uppercase">
-              <span className="flex-1">La Casa De Angélica</span>
-            </h2>
-          </div>
-        </div> */}
-
-        <div className="flex flex-col mt-24 text-white ">
+        <div className="flex flex-col w-full mt-24 text-white ">
           <Link
             to="/episodios"
-            className="inline-block font-mono text-6xl font-bold text-center border-b-2 border-white hover:border-indigo-900 hover:text-indigo-900"
+            className="inline-block font-mono text-6xl font-bold text-center hover:text-red-300"
           >
-            LNQESCECH - Temporada 07 
+            LNQESCECH - Temporada 07
           </Link>
           <div
-            className="mt-12 font-sans text-6xl font-bold text-center"
+            className="relative block w-full max-w-5xl mx-auto my-12 font-mono shadow-sm"
+            style={{
+              background: "rgba(40, 17, 54, 0.91)",
+            }}
           >
+            <div className="relative flex flex-col items-center justify-center px-4 pb-1">
+              <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-center text-white uppercase">
+                <span className="flex-1">Episodio 500</span>
+              </h2>
+            </div>
+            <div
+              className="flex items-center justify-between listen"
+              style={{
+                opacity: 0.9,
+              }}
+            >
+              <iframe
+                width="100%"
+                height="350"
+                scrolling="no"
+                title="La deuda"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1132078261&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+              ></iframe>
+            </div>
+            <div className="relative flex flex-col items-center justify-center px-4 pb-1">
+              <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-center text-white uppercase">
+                <span className="flex-1">500 Programas Y Ninguna Flor</span>
+              </h2>
+            </div>
+          </div>
+          <div className="my-12 font-sans text-6xl font-bold text-center">
             Pasen y hoyan
           </div>
         </div>
