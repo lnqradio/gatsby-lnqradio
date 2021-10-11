@@ -132,14 +132,14 @@ const IndexPage = () => {
             LNQESCECH - Temporada 07
           </Link>
           <div
-            className="relative block w-full max-w-5xl mx-auto my-12 font-mono shadow-sm"
+            className="relative block w-full max-w-2xl mx-auto my-12 font-mono shadow-sm"
             style={{
               background: "rgba(40, 17, 54, 0.91)",
             }}
           >
             <div className="relative flex flex-col items-center justify-center px-4 pb-1">
               <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-center text-white uppercase">
-                <span className="flex-1">Episodio 500</span>
+                <span className="flex-1">Episodio 501</span>
               </h2>
             </div>
             <div
@@ -155,12 +155,12 @@ const IndexPage = () => {
                 title="La deuda"
                 frameBorder="no"
                 allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1132078261&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1137248413&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
               ></iframe>
             </div>
             <div className="relative flex flex-col items-center justify-center px-4 pb-1">
               <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-center text-white uppercase">
-                <span className="flex-1">500 Programas Y Ninguna Flor</span>
+                <span className="flex-1">La Noche De La Caridad (un Manguito X Fernandito)</span>
               </h2>
             </div>
           </div>
