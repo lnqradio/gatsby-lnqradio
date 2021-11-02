@@ -139,7 +139,7 @@ const IndexPage = () => {
           >
             <div className="relative flex flex-col items-center justify-center px-4 pb-1">
               <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-center text-white uppercase">
-                <span className="flex-1">Episodio 501</span>
+                <span className="flex-1">Episodio 502</span>
               </h2>
             </div>
             <div
@@ -155,17 +155,14 @@ const IndexPage = () => {
                 title="La deuda"
                 frameBorder="no"
                 allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1137248413&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1151550085&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
               ></iframe>
             </div>
             <div className="relative flex flex-col items-center justify-center px-4 pb-1">
               <h2 className="flex items-baseline w-full pt-2 text-4xl font-bold leading-normal text-center text-white uppercase">
-                <span className="flex-1">La Noche De La Caridad (un Manguito X Fernandito)</span>
+                <span className="flex-1">La Bibloteca De Papel</span>
               </h2>
             </div>
-          </div>
-          <div className="my-12 font-sans text-6xl font-bold text-center">
-            Pasen y hoyan
           </div>
         </div>
         <HomeHeroLinks className="home-hero-links">
