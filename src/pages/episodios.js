@@ -81,7 +81,7 @@ const EpisodiosPage = () => {
         />
       </div>
       <div className="grid max-w-6xl grid-cols-1 gap-6 mx-auto md:grid-cols-2">
-      <div
+        <div
           className="relative block w-full max-w-full col-span-2 mx-auto font-mono shadow-sm"
           style={{
             background: "rgba(40, 17, 54, 0.91)",
@@ -105,7 +105,9 @@ const EpisodiosPage = () => {
           </div>
           <div className="relative flex flex-col items-center justify-center px-4 pb-1">
             <h2 className="flex items-baseline w-full pt-2 text-3xl font-bold leading-normal text-center text-white uppercase">
-              <span className="flex-1">Los Dorados 2000, Feliz Y Con Miedo</span>
+              <span className="flex-1">
+                Los Dorados 2000, Feliz Y Con Miedo
+              </span>
             </h2>
           </div>
         </div>
