@@ -125,12 +125,11 @@ const IndexPage = () => {
         }}
       >
         <div className="flex flex-col w-full mt-24 text-white ">
-          <Link
-            to="/episodios"
+          <div
             className="inline-block font-mono text-6xl font-bold text-center hover:text-red-300"
           >
             LNQESCECH - Temporada 08
-          </Link>
+          </div>
           <div className="relative overflow-hidden text-center solumedia">
             <iframe
               title="En vivo"
