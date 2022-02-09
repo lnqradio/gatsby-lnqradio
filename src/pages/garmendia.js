@@ -1,5 +1,6 @@
 import React from "react"
-import Particles from "react-particles-js"
+// import Particles from "react-particles-js"
+import Particles from "react-tsparticles";
 import { Link } from "gatsby"
 import { GiAstronautHelmet } from "react-icons/gi"
 import Layout from "../components/layout"
@@ -7,7 +8,7 @@ import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
 
 //import ReactPlayer from "react-player"
-const NotFoundPage = () => (
+const GarmendiaPage = () => (
   <Layout>
     <SEO title="Laboratorios Garmendia" />
     <Helmet>
@@ -113,4 +114,4 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export default NotFoundPage
+export default GarmendiaPage
